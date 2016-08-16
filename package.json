@@ -1,0 +1,26 @@
+{
+  "name": "pokemon-api",
+  "version": "0.0.1",
+  "description": "This package scrapes the data from different data soruces and provies the api for using those data.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PokemonGoers/PokeData.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PokemonGoers/PokeData/issues"
+  },
+  "homepage": "https://github.com/PokemonGoers/PokeData#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
