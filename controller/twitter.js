@@ -1,6 +1,6 @@
 'use strict'
 
-var Twitter = require('twitter');
+let Twitter = require('twitter');
 
 //twitter credentials
 let consumerKey = '46yqEVwOOkf7dtN5Zfqxw4Nzu';
@@ -8,7 +8,7 @@ let consumerSecret = 'YuddFwV6Q36wfi48Ng9sutHcmwNKbxZs6betIbt9RhAiKobOKw';
 let accessTokenKey = '764827436576014337-Ljq7oKGQrAFYlalefsC8IymBjzSVpxO';
 let accessTokenSecret = 'P2MgOCT4kTvZRdnreNsHFdbL6hN4kYzwyHrW4Ktwz8pXp';
 
-var client = new Twitter({
+let client = new Twitter({
   consumer_key: consumerKey,
   consumer_secret: consumerSecret,
   access_token_key: accessTokenKey,
