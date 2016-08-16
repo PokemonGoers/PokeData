@@ -3,12 +3,12 @@
 let Twitter = require('twitter');
 
 //twitter credentials
-let consumerKey = '46yqEVwOOkf7dtN5Zfqxw4Nzu';
-let consumerSecret = 'YuddFwV6Q36wfi48Ng9sutHcmwNKbxZs6betIbt9RhAiKobOKw';
-let accessTokenKey = '764827436576014337-Ljq7oKGQrAFYlalefsC8IymBjzSVpxO';
-let accessTokenSecret = 'P2MgOCT4kTvZRdnreNsHFdbL6hN4kYzwyHrW4Ktwz8pXp';
+const consumerKey = '46yqEVwOOkf7dtN5Zfqxw4Nzu',
+    consumerSecret = 'YuddFwV6Q36wfi48Ng9sutHcmwNKbxZs6betIbt9RhAiKobOKw',
+    accessTokenKey = '764827436576014337-Ljq7oKGQrAFYlalefsC8IymBjzSVpxO',
+    accessTokenSecret = 'P2MgOCT4kTvZRdnreNsHFdbL6hN4kYzwyHrW4Ktwz8pXp';
 
-let client = new Twitter({
+const client = new Twitter({
   consumer_key: consumerKey,
   consumer_secret: consumerSecret,
   access_token_key: accessTokenKey,
