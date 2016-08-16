@@ -1,0 +1,13 @@
+{
+    "database" : {
+        "port": "27017",
+        "uri": "localhost",
+        "collection": "PokeData"
+    },
+    "twitter" : {
+        "consumer_key": "46yqEVwOOkf7dtN5Zfqxw4Nzu",
+        "consumer_secret": "YuddFwV6Q36wfi48Ng9sutHcmwNKbxZs6betIbt9RhAiKobOKw",
+        "access_token_key": "764827436576014337-Ljq7oKGQrAFYlalefsC8IymBjzSVpxO",
+        "access_token_secret": "P2MgOCT4kTvZRdnreNsHFdbL6hN4kYzwyHrW4Ktwz8pXp"
+    }
+}
