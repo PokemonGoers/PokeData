@@ -24,7 +24,7 @@ if(possibleRefillings.indexOf(requested) < 0) {
  */
 console.log('Refilling collection: '+ requested);
 
-var config = require('../cfg/config'),
+var config = require('../config/config'),
     mongoose = require('mongoose');
 
 

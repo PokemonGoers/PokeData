@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-let Twitter = require('twitter');
-let config = require('../config/config');
+let Twitter = require('twitter'),
+    config = require('../config/config');
 
 const client = new Twitter(config.twitter);
 
