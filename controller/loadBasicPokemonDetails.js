@@ -7,7 +7,7 @@ function loadBasicPokemonDetails() {
     console.log('Loading Basic Pokemon Details to MongoDB');
     let data = JSON.stringify(pokemonListPath, function(key,value) {
         var pokemonID, pokemonName;
-        if(key != 'name' && typeof value.name != 'undefined') {
+        if(key != 'name' && typeof value.name !== "undefined") {
             pokemonID = key;
             pokemonName = value.name;
             

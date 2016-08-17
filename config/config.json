@@ -5,9 +5,9 @@
         "collection": "PokeData"
     },
     "twitter" : {
-        "consumer_key": "46yqEVwOOkf7dtN5Zfqxw4Nzu",
-        "consumer_secret": "YuddFwV6Q36wfi48Ng9sutHcmwNKbxZs6betIbt9RhAiKobOKw",
-        "access_token_key": "764827436576014337-Ljq7oKGQrAFYlalefsC8IymBjzSVpxO",
-        "access_token_secret": "P2MgOCT4kTvZRdnreNsHFdbL6hN4kYzwyHrW4Ktwz8pXp"
+        "consumer_key": "CONSUMER_KEY_HERE",
+        "consumer_secret": "CONSUMER_SECRET_HERE",
+        "access_token_key": "ACCESS_TOKEN_KEY_HERE",
+        "access_token_secret": "ACCESS_TOKEN_SECRET HERE"
     }
 }
