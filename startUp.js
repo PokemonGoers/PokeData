@@ -1,11 +1,18 @@
 (function () {
     "use strict";
-    var express = require('express');
-    var twitter = require('./controller/twitter');
+    let express = require('express');
+    let twitterStreaming = require('./controller/twitter');
+    let loadBasicPokemonDetails = require('./controller/loadBasicPokemonDetails');
 
     module.exports = {
         start: function (done) {
-            console.log('App started');
+            console.log('App started');  
+
+            //load basic pokemon details
+            loadBasicPokemonDetails.start();
+
+            //twitter streaming
+            //twitterStreaming.startStreaming();       
         },
         stop: function (done) {
             console.log('App stopped');
