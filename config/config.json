@@ -1,7 +1,15 @@
 {
     "database" : {
+        "username": "",
+        "password": "",
         "port": "27017",
         "uri": "localhost",
+        "collection": "PokeData"
+    },
+    "shared_database": {
+        "username": "MLAB_USERNAME_HERE",
+        "password": "MLAB_PASSWORD_HERE",
+        "uri": "ds063725.mlab.com:63725/pokemongo",
         "collection": "PokeData"
     },
     "twitter" : {

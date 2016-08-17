@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let mongoose = require('mongoose');
 let BasicPokemonDetailSchema = new mongoose.Schema({
@@ -9,7 +9,7 @@ let BasicPokemonDetailSchema = new mongoose.Schema({
     },
     name: {
         type: String
-    },
-})
+    }
+});
 
-module.exports = mongoose.model('BasicPokemonDetail', BasicPokemonDetailSchema)
+module.exports = mongoose.model('BasicPokemonDetail', BasicPokemonDetailSchema);

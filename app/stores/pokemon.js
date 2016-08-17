@@ -5,8 +5,10 @@ module.exports = {
     add: function (data, callback) {
         var pokemon = new Pokemon();
 
-        for (var key in data) {
+        for(var key in data) {
+            if(data.hasOwnProperty(key)) {
                 pokemon[key] = data[key];
+            }
         }
         pokemon.save(function (err) {
             // on error

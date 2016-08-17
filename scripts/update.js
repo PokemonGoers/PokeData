@@ -24,17 +24,28 @@ if(possibleRefillings.indexOf(requested) < 0) {
  */
 console.log('Refilling collection: '+ requested);
 
-var config = require('../cfg/config'),
+var config = require('../config/config'),
     mongoose = require('mongoose');
 
 
 //Create the DB connection string
-var databaseParams = config.database;
+var databaseParams;
 var dbConnection = "mongodb://";
-if (databaseParams.username.length > 0 && databaseParams.password.length > 0) {
-    dbConnection += databaseParams.username + ":" + databaseParams.password + "@";
+
+/*Check whether local database is to be used. Else, use shared database.*/
+if(appConfig['IS_LOCAL_DB']) {
+    databaseParams = config['database'];
+    if (databaseParams.username.length > 0 && databaseParams.password.length > 0) {
+        dbConnection += databaseParams.username + ":" + databaseParams.password + "@";
+    }
+    dbConnection += databaseParams.uri + ":" + databaseParams.port + "/" + databaseParams.collection;
+} else {
+    databaseParams = config['shared_database'];
+    /*Connection parameters for a shared database instance*/
+    dbConnection += databaseParams.username + ":" + databaseParams.password+ "@" + databaseParams.uri + "/" +
+        databaseParams.collection;
+
 }
-dbConnection += databaseParams.uri + ":" + databaseParams.port + "/" + databaseParams.collection;
 
 //Create the connection to mongodb
 console.log("Going to connect to " + dbConnection);

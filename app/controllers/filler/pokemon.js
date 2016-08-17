@@ -2,7 +2,7 @@ const PokemonModel = require(__appbase + 'models/pokemon'),
     PokemonStore = require(__appbase + 'stores/pokemon'),
     jsonfile = require('jsonfile'),
     async = require('async'),
-    cfg = require(__appbase + '../cfg/config.json');
+    cfg = require(__appbase + '../config/config.json');
 
 module.exports = {
     fill: function(callback) {
@@ -25,7 +25,7 @@ module.exports = {
 
         var addPokemon = function(pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
-                console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.name);
+                console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.pokemonId);
                 callback(true);
             });
         };
