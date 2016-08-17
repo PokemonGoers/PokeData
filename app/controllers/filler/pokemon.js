@@ -1,4 +1,4 @@
-var PokemonModel = require(__appbase + 'models/pokemon'),
+const PokemonModel = require(__appbase + 'models/pokemon'),
     PokemonStore = require(__appbase + 'stores/pokemon'),
     jsonfile = require('jsonfile'),
     async = require('async'),
@@ -23,10 +23,10 @@ module.exports = {
     insertToDb: function(pokemons, callback) {
         console.log('MongoDb Insertion...');
 
-        var addPokemon = function(pokemon, callb) {
+        var addPokemon = function(pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
                 console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.name);
-                callb(true);
+                callback(true);
             });
         };
 
