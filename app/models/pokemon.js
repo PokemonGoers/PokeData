@@ -11,7 +11,14 @@ var pokemonSchema = new Schema({
     pokemonId  : {type: String},
     trainerName: {type: String},
     userId     : {type: String},
-    deviceId   : {type: String}
+    deviceId   : {type: String},
+    category   : {type: [Boolean]},
+    gender     : {male: Boolean, female: Boolean},
+    weight     : {type: Number},
+    height     : {type: Number},
+    move       : {type: [Boolean]},
+    evolution  : {type: [String]},
+    pre_form   : {type: [String]}
 });
 
 module.exports = mongoose.model('pokemon', pokemonSchema);

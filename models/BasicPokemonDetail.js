@@ -175,10 +175,10 @@ let BasicPokemonDetailSchema = new mongoose.Schema({
         struggle: Boolean
     },
     evolution: {
-        type: String
+        type: [String]
     },
     pre_form: {
-        type: String
+        type: [String]
     }
 });
 

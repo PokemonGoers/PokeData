@@ -7,8 +7,8 @@
         "collection": "PokeData"
     },
     "shared_database": {
-        "username": "MLAB_USERNAME_HERE",
-        "password": "MLAB_PASSWORD_HERE",
+        "username": "admin",
+        "password": "admin",
         "uri": "ds063725.mlab.com:63725/pokemongo",
         "collection": "PokeData"
     },
