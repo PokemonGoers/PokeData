@@ -2,7 +2,7 @@ const PokemonModel = require(__appbase + 'models/pokemon'),
     PokemonStore = require(__appbase + 'stores/pokemon'),
     jsonfile = require('jsonfile'),
     async = require('async'),
-    cfg = require(__appbase + '../config/config.json');
+    cfg = require(__appbase + '../config');
 
 module.exports = {
     fill: function (callback) {
