@@ -17,7 +17,7 @@ Output._write = function (obj, enc, next) {
 
 function twitterStreaming() {
     // listen to #pokemongo
-    Twitter.stream('statuses/filter', {track:['#pokemongo']});
+    Twitter.stream('statuses/filter', {track: ['#pokemongo']});
 
     //Twitter stream events
     Twitter.on('connection success', function (uri) {
@@ -60,5 +60,5 @@ function twitterStreaming() {
 }
 
 module.exports = {
-  startStreaming: twitterStreaming
+    startStreaming: twitterStreaming
 };

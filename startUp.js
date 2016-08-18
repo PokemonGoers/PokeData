@@ -6,7 +6,7 @@
 
     module.exports = {
         start: function (done) {
-            console.log('App started');  
+            console.log('App started');
 
             //load basic pokemon details
             loadBasicPokemonDetails.start();

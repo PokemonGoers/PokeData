@@ -5,25 +5,25 @@ const PokemonModel = require(__appbase + 'models/pokemon'),
     cfg = require(__appbase + '../config/config.json');
 
 module.exports = {
-    fill: function(callback) {
+    fill: function (callback) {
 
-        var afterInsertion = function() {
+        var afterInsertion = function () {
             console.log('Pokemon Insertion Completed');
             callback(false);
         };
 
         var file = __tmpbase + 'pokemon.json';
 
-        jsonfile.readFile(file, function(err, obj) {
-            if(obj !== undefined) {
-                module.exports.insertToDb(obj,afterInsertion);
+        jsonfile.readFile(file, function (err, obj) {
+            if (obj !== undefined) {
+                module.exports.insertToDb(obj, afterInsertion);
             }
         });
     },
-    insertToDb: function(pokemons, callback) {
+    insertToDb: function (pokemons, callback) {
         console.log('MongoDb Insertion...');
 
-        var addPokemon = function(pokemon, callback) {
+        var addPokemon = function (pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
                 console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.pokemonId);
                 callback(true);
@@ -33,13 +33,13 @@ module.exports = {
         var insert = function (pokemons) {
             // iterate through pokemons
             async.forEach(pokemons, function (pokemon, callback) {
-                
-                PokemonStore.getById(pokemon.id,function(success, oldId){
-                    if(success === 1) { // old entry is existing and discarded
+
+                PokemonStore.getById(pokemon.id, function (success, oldId) {
+                    if (success === 1) { // old entry is existing and discarded
                         console.log(pokemon.id + " is a duplicate entry and hence discarded.");
                         callback();
-                    } else{// new entry is added
-                        addPokemon(pokemon, function(){
+                    } else {// new entry is added
+                        addPokemon(pokemon, function () {
                             callback();
                         });
                     }
