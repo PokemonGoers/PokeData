@@ -7,8 +7,8 @@ module.exports = {
     add: function (data, callback) {
         var pokemon = new Pokemon();
 
-        for(var key in data) {
-            if(data.hasOwnProperty(key)) {
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
                 pokemon[key] = data[key];
             }
         }
@@ -39,7 +39,7 @@ module.exports = {
      * searching the pokemon details by Id
      */
     getById: function (id, callback) {
-        this.get(id , function (success, message) {
+        this.get(id, function (success, message) {
             if (success == 1) {// on successfully finding previous data
                 callback(success, message[0]);
             } else {//  no previous entry for the particular data exists

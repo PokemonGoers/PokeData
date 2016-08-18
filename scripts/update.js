@@ -4,7 +4,7 @@ require(__dirname + '/../' + 'constants');
  * collection that needs to be filled.
  */
 var requested = process.env.npm_config_collection;
-if(requested === undefined) {
+if (requested === undefined) {
     process.exit();
 }
 /*
@@ -15,14 +15,14 @@ var possibleRefillings = [
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
-if(possibleRefillings.indexOf(requested) < 0) {
+if (possibleRefillings.indexOf(requested) < 0) {
     process.exit();
 }
 
 /*
  * start
  */
-console.log('Refilling collection: '+ requested);
+console.log('Refilling collection: ' + requested);
 
 var config = require('../config/config'),
     mongoose = require('mongoose');
@@ -33,7 +33,7 @@ var databaseParams;
 var dbConnection = "mongodb://";
 
 /*Check whether local database is to be used. Else, use shared database.*/
-if(appConfig['IS_LOCAL_DB']) {
+if (appConfig['IS_LOCAL_DB']) {
     databaseParams = config['database'];
     if (databaseParams.username.length > 0 && databaseParams.password.length > 0) {
         dbConnection += databaseParams.username + ":" + databaseParams.password + "@";
@@ -42,7 +42,7 @@ if(appConfig['IS_LOCAL_DB']) {
 } else {
     databaseParams = config['shared_database'];
     /*Connection parameters for a shared database instance*/
-    dbConnection += databaseParams.username + ":" + databaseParams.password+ "@" + databaseParams.uri + "/" +
+    dbConnection += databaseParams.username + ":" + databaseParams.password + "@" + databaseParams.uri + "/" +
         databaseParams.collection;
 
 }
@@ -70,6 +70,8 @@ db.on('disconnected', function () {
 
 // When the connection is open
 db.on('open', function () {
-    var updateFiller = require(__base +'app/controllers/filler/' + requested);
-    updateFiller.fill(function() {process.exit();});
+    var updateFiller = require(__base + 'app/controllers/filler/' + requested);
+    updateFiller.fill(function () {
+        process.exit();
+    });
 });
