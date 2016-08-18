@@ -1,455 +1,1059 @@
 {
 	"1": {
-		"name": "Bulbasaur"
+		"name": "Bulbasaur",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"2": {
-		"name": "Ivysaur"
+		"name": "Ivysaur",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"3": {
-		"name": "Venusaur"
+		"name": "Venusaur",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"4": {
-		"name": "Charmander"
+		"name": "Charmander",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"5": {
-		"name": "Charmeleon"
+		"name": "Charmeleon",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"6": {
-		"name": "Charizard"
+		"name": "Charizard",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"7": {
-		"name": "Squirtle"
+		"name": "Squirtle",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"8": {
-		"name": "Wartortle"
+		"name": "Wartortle",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"9": {
-		"name": "Blastoise"
+		"name": "Blastoise",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"10": {
-		"name": "Caterpie"
+		"name": "Caterpie",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"11": {
-		"name": "Metapod"
+		"name": "Metapod",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"12": {
-		"name": "Butterfree"
+		"name": "Butterfree",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"13": {
-		"name": "Weedle"
+		"name": "Weedle",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"14": {
-		"name": "Kakuna"
+		"name": "Kakuna",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"15": {
-		"name": "Beedrill"
+		"name": "Beedrill",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"16": {
-		"name": "Pidgey"
+		"name": "Pidgey",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"17": {
-		"name": "Pidgeotto"
+		"name": "Pidgeotto",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"18": {
-		"name": "Pidgeot"
+		"name": "Pidgeot",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"19": {
-		"name": "Rattata"
+		"name": "Rattata",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"20": {
-		"name": "Raticate"
+		"name": "Raticate",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"21": {
-		"name": "Spearow"
+		"name": "Spearow",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"22": {
-		"name": "Fearow"
+		"name": "Fearow",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"23": {
-		"name": "Ekans"
+		"name": "Ekans",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"24": {
-		"name": "Arbok"
+		"name": "Arbok",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"25": {
-		"name": "Pikachu"
+		"name": "Pikachu",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"26": {
-		"name": "Raichu"
+		"name": "Raichu",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"27": {
-		"name": "Sandshrew"
+		"name": "Sandshrew",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"28": {
-		"name": "Sandslash"
+		"name": "Sandslash",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"29": {
-		"name": "Nidoran"
+		"name": "Nidoran",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"30": {
-		"name": "Nidorina"
+		"name": "Nidorina",
+		"gender": {
+			"male": false,
+			"female": true
+		}
 	},
 	"31": {
-		"name": "Nidoqueen"
+		"name": "Nidoqueen",
+		"gender": {
+			"male": false,
+			"female": true
+		}
 	},
 	"32": {
-		"name": "Nidoran"
+		"name": "Nidoran",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"33": {
-		"name": "Nidorino"
+		"name": "Nidorino",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"34": {
-		"name": "Nidoking"
+		"name": "Nidoking",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"35": {
-		"name": "Clefairy"
+		"name": "Clefairy",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"36": {
-		"name": "Clefable"
+		"name": "Clefable",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"37": {
-		"name": "Vulpix"
+		"name": "Vulpix",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"38": {
-		"name": "Ninetales"
+		"name": "Ninetales",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"39": {
-		"name": "Jigglypuff"
+		"name": "Jigglypuff",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"40": {
-		"name": "Wigglytuff"
+		"name": "Wigglytuff",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"41": {
-		"name": "Zubat"
+		"name": "Zubat",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"42": {
-		"name": "Golbat"
+		"name": "Golbat",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"43": {
-		"name": "Oddish"
+		"name": "Oddish",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"44": {
-		"name": "Gloom"
+		"name": "Gloom",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"45": {
-		"name": "Vileplume"
+		"name": "Vileplume",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"46": {
-		"name": "Paras"
+		"name": "Paras",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"47": {
-		"name": "Parasect"
+		"name": "Parasect",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"48": {
-		"name": "Venonat"
+		"name": "Venonat",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"49": {
-		"name": "Venomoth"
+		"name": "Venomoth",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"50": {
-		"name": "Diglett"
+		"name": "Diglett",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"51": {
-		"name": "Dugtrio"
+		"name": "Dugtrio",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"52": {
-		"name": "Meowth"
+		"name": "Meowth",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"53": {
-		"name": "Persian"
+		"name": "Persian",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"54": {
-		"name": "Psyduck"
+		"name": "Psyduck",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"55": {
-		"name": "Golduck"
+		"name": "Golduck",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"56": {
-		"name": "Mankey"
+		"name": "Mankey",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"57": {
-		"name": "Primeape"
+		"name": "Primeape",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"58": {
-		"name": "Growlithe"
+		"name": "Growlithe",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"59": {
-		"name": "Arcanine"
+		"name": "Arcanine",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"60": {
-		"name": "Poliwag"
+		"name": "Poliwag",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"61": {
-		"name": "Poliwhirl"
+		"name": "Poliwhirl",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"62": {
-		"name": "Poliwrath"
+		"name": "Poliwrath",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"63": {
-		"name": "Abra"
+		"name": "Abra",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"64": {
-		"name": "Kadabra"
+		"name": "Kadabra",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"65": {
-		"name": "Alakazam"
+		"name": "Alakazam",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"66": {
-		"name": "Machop"
+		"name": "Machop",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"67": {
-		"name": "Machoke"
+		"name": "Machoke",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"68": {
-		"name": "Machamp"
+		"name": "Machamp",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"69": {
-		"name": "Bellsprout"
+		"name": "Bellsprout",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"70": {
-		"name": "Weepinbell"
+		"name": "Weepinbell",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"71": {
-		"name": "Victreebel"
+		"name": "Victreebel",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"72": {
-		"name": "Tentacool"
+		"name": "Tentacool",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"73": {
-		"name": "Tentacruel"
+		"name": "Tentacruel",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"74": {
-		"name": "Geodude"
+		"name": "Geodude",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"75": {
-		"name": "Graveler"
+		"name": "Graveler",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"76": {
-		"name": "Golem"
+		"name": "Golem",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"77": {
-		"name": "Ponyta"
+		"name": "Ponyta",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"78": {
-		"name": "Rapidash"
+		"name": "Rapidash",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"79": {
-		"name": "Slowpoke"
+		"name": "Slowpoke",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"80": {
-		"name": "Slowbro"
+		"name": "Slowbro",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"81": {
-		"name": "Magnemite"
+		"name": "Magnemite",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"82": {
-		"name": "Magneton"
+		"name": "Magneton",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"83": {
-		"name": "Farfetch'd"
+		"name": "Farfetch'd",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"84": {
-		"name": "Doduo"
+		"name": "Doduo",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"85": {
-		"name": "Dodrio"
+		"name": "Dodrio",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"86": {
-		"name": "Seel"
+		"name": "Seel",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"87": {
-		"name": "Dewgong"
+		"name": "Dewgong",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"88": {
-		"name": "Grimer"
+		"name": "Grimer",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"89": {
-		"name": "Muk"
+		"name": "Muk",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"90": {
-		"name": "Shellder"
+		"name": "Shellder",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"91": {
-		"name": "Cloyster"
+		"name": "Cloyster",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"92": {
-		"name": "Gastly"
+		"name": "Gastly",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"93": {
-		"name": "Haunter"
+		"name": "Haunter",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"94": {
-		"name": "Gengar"
+		"name": "Gengar",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"95": {
-		"name": "Onix"
+		"name": "Onix",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"96": {
-		"name": "Drowzee"
+		"name": "Drowzee",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"97": {
-		"name": "Hypno"
+		"name": "Hypno",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"98": {
-		"name": "Krabby"
+		"name": "Krabby",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"99": {
-		"name": "Kingler"
+		"name": "Kingler",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"100": {
-		"name": "Voltorb"
+		"name": "Voltorb",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"101": {
-		"name": "Electrode"
+		"name": "Electrode",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"102": {
-		"name": "Exeggcute"
+		"name": "Exeggcute",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"103": {
-		"name": "Exeggutor"
+		"name": "Exeggutor",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"104": {
-		"name": "Cubone"
+		"name": "Cubone",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"105": {
-		"name": "Marowak"
+		"name": "Marowak",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"106": {
-		"name": "Hitmonlee"
+		"name": "Hitmonlee",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"107": {
-		"name": "Hitmonchan"
+		"name": "Hitmonchan",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"108": {
-		"name": "Lickitung"
+		"name": "Lickitung",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"109": {
-		"name": "Koffing"
+		"name": "Koffing",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"110": {
-		"name": "Weezing"
+		"name": "Weezing",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"111": {
-		"name": "Rhyhorn"
+		"name": "Rhyhorn",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"112": {
-		"name": "Rhydon"
+		"name": "Rhydon",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"113": {
-		"name": "Chansey"
+		"name": "Chansey",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"114": {
-		"name": "Tangela"
+		"name": "Tangela",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"115": {
-		"name": "Kangaskhan"
+		"name": "Kangaskhan",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"116": {
-		"name": "Horsea"
+		"name": "Horsea",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"117": {
-		"name": "Seadra"
+		"name": "Seadra",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"118": {
-		"name": "Goldeen"
+		"name": "Goldeen",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"119": {
-		"name": "Seaking"
+		"name": "Seaking",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"120": {
-		"name": "Staryu"
+		"name": "Staryu",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"121": {
-		"name": "Starmie"
+		"name": "Starmie",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"122": {
-		"name": "Mr.Mime"
+		"name": "Mr.Mime",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"123": {
-		"name": "Scyther"
+		"name": "Scyther",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"124": {
-		"name": "Jynx"
+		"name": "Jynx",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"125": {
-		"name": "Electabuzz"
+		"name": "Electabuzz",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"126": {
-		"name": "Magmar"
+		"name": "Magmar",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"127": {
-		"name": "Pinsir"
+		"name": "Pinsir",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"128": {
-		"name": "Tauros"
+		"name": "Tauros",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"129": {
-		"name": "Magikarp"
+		"name": "Magikarp",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"130": {
-		"name": "Gyarados"
+		"name": "Gyarados",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"131": {
-		"name": "Lapras"
+		"name": "Lapras",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"132": {
-		"name": "Ditto"
+		"name": "Ditto",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"133": {
-		"name": "Eevee"
+		"name": "Eevee",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"134": {
-		"name": "Vaporeon"
+		"name": "Vaporeon",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"135": {
-		"name": "Jolteon"
+		"name": "Jolteon",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"136": {
-		"name": "Flareon"
+		"name": "Flareon",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"137": {
-		"name": "Porygon"
+		"name": "Porygon",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"138": {
-		"name": "Omanyte"
+		"name": "Omanyte",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"139": {
-		"name": "Omastar"
+		"name": "Omastar",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"140": {
-		"name": "Kabuto"
+		"name": "Kabuto",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"141": {
-		"name": "Kabutops"
+		"name": "Kabutops",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"142": {
-		"name": "Aerodactyl"
+		"name": "Aerodactyl",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"143": {
-		"name": "Snorlax"
+		"name": "Snorlax",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"144": {
-		"name": "Articuno"
+		"name": "Articuno",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"145": {
-		"name": "Zapdos"
+		"name": "Zapdos",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"146": {
-		"name": "Moltres"
+		"name": "Moltres",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"147": {
-		"name": "Dratini"
+		"name": "Dratini",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"148": {
-		"name": "Dragonair"
+		"name": "Dragonair",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"149": {
-		"name": "Dragonite"
+		"name": "Dragonite",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"150": {
-		"name": "Mewtwo"
+		"name": "Mewtwo",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	},
 	"151": {
-		"name": "Mew"
+		"name": "Mew",
+		"gender": {
+			"male": true,
+			"female": false
+		}
 	}
 }
