@@ -32,15 +32,21 @@ module.exports = {
 
         var insert = function (pokemons) {
             // iterate through pokemons
-            async.forEach(pokemons, function (pokemon, _callback) {
-                addPokemon(pokemon, function(){
-                    _callback();
+            async.forEach(pokemons, function (pokemon, callback) {
+                
+                PokemonStore.getById(pokemon.id,function(success, oldId){
+                    if(success === 1) { // old entry is existing and discarded
+                        console.log(pokemon.id + " is a duplicate entry and hence discarded.");
+                        callback();
+                    } else{// new entry is added
+                        addPokemon(pokemon, function(){
+                            callback();
+                        });
+                    }
                 });
-            },
-                function (err) {
-                    callback(true);
-                }
-            );
+            }, function (err) {
+                callback(true);
+            });
         };
         insert(pokemons);
     }
