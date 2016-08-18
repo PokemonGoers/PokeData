@@ -4,9 +4,9 @@ let Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
     config = require('../config/config');
 
-let Twitter = new TwitterStream(config.twitter);
+const Twitter = new TwitterStream(config.twitter);
 
-var Output = Writable({objectMode: true});
+let Output = Writable({objectMode: true});
 Output._write = function (obj, enc, next) {
     // the tweet json
     console.log(JSON.stringify(obj));
