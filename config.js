@@ -7,8 +7,8 @@ module.exports = {
         "collection": "PokeData"
     },
     "shared_database": {
-        "username": "admin",
-        "password": "admin",
+        "username": "MLAB_USERNAME_HERE",
+        "password": "MLAB_PASSWORD_HERE",
         "uri": "ds063725.mlab.com:63725/pokemongo",
         "collection": "PokeData"
     },
