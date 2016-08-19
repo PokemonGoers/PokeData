@@ -12,6 +12,6 @@
    * Create an account with MLab.
    * Then follow this [link](http://docs.mlab.com/connecting/) for creating db user and using the connection settings. 
 
-* For executing the data collection and storing into MongoDB , npm run update --collection=<collection_wanted>
+* For executing the data collection and storing into MongoDB , npm run update --collection=\<collection_name\>
 
 * Copy the config.json template and add twitter keys, and for shared database add your user name and password which was used at Mlab database user creation.
