@@ -11,6 +11,12 @@ let BasicPokemonDetailSchema = new mongoose.Schema({
         type: String
     },
     gender: {
+        /*male: {
+            type: Boolean
+        },
+        female: {
+            type: Boolean
+        }*/
         male: Boolean,
         female: Boolean
     },
