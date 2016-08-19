@@ -17,5 +17,8 @@ module.exports = {
         "consumer_secret": process.env.CONSUMER_SECRET,
         "token": process.env.ACCESS_TOKEN,
         "token_secret": process.env.ACCESS_TOKEN_SECRET
+    },
+    "server":{
+        "port": "8080"
     }
 };

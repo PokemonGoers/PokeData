@@ -35,6 +35,19 @@ module.exports = {
             }
         });
     },
+
+    /*
+     * fetching all the pokemon details
+     */
+    getAll: function (callback) {
+        Pokemon.find(function (err, pokemons) {
+            if (err)
+                callback(false,err);
+            else
+                callback(true,pokemons);
+        });
+    },
+
     /*
      * searching the pokemon details by Id
      */
