@@ -107,7 +107,7 @@
             loadBasicPokemonDetails.start();
 
             //twitter streaming
-            //twitterStreaming.startStreaming();
+            twitterStreaming.startStreaming();
         },
         stop: function (done) {
             console.log('App stopped');
