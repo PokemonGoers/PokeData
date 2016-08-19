@@ -11,7 +11,7 @@ let twitter = new mongoose.Schema({
         latitude: Number,
         longitude: Number,
     },
-    appeared_on: {type: Date, default: Date.now}  
+    appeared_on: {type: String}  
 });
 
 module.exports = mongoose.model('twitter', twitter);

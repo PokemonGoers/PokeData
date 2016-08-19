@@ -119,42 +119,36 @@ let Writable = require('stream').Writable,
 
 const Twitter = new TwitterStream(config.twitter);
 
-const keywordsArray = 'caught,appeared,found,attacked';
+const keywords = 'pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon';
 
 let Output = Writable({objectMode: true});
 Output._write = function (obj, enc, next) {
     //only get tweets in english
-    //if(obj.coordinates !== null || obj.geo !== null || obj.place !== null) {
-        // the tweet json
-        //console.log(JSON.stringify(obj));
-        // the tweet id and text
-        console.log(obj.id, obj.text);
-		
-    //}
 	if(obj.lang === "en") {
+		        console.log(obj.id, obj.text);
 		let pokemonFoundLongitude = -1, pokemonFoundLatitude = -1;
 		if(obj.geo && obj.coordinates) {
 			pokemonFoundLongitude = obj.coordinates[0]
 			pokemonFoundLatitude = obj.coordinates[1]
 		}
 
-		pokemonTweet.create({pokemonName: "test", found_at: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appeared_on: new Date(obj.timestamp_ms/1000)}, function (err, post) {
+		pokemonTweet.create({pokemonName: obj.text, found_at: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appeared_on: obj.created_at}, function (err, post) {
 					if (err) {
 						if (err.name === 'MongoError' && err.code === 11000) {
-							// TODO Handling for duplicate pokemons
+							console.log("Duplicate error")
 						} else {
 							console.log(err);
 						}
 					}
 				});
 	}
-    //get timestamp_ms, lang, geo,coordinate,text
+
     next();
 };
 
 function twitterStreaming() {
-    // listen to #pokemongo
-    Twitter.stream('statuses/filter', {track: ['pokemongo']});
+    // listen to keywords
+    Twitter.stream('statuses/filter', {track: keywords});
 
     //Twitter stream events
     Twitter.on('connection success', function (uri) {
