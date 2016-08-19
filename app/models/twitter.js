@@ -4,8 +4,7 @@ let mongoose = require('mongoose');
 let twitter = new mongoose.Schema({
     pokemonName: {
         type: String,
-        unique: true,
-        index: true
+        unique: true
     },
     found_at: {
         latitude: Number,

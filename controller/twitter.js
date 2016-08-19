@@ -125,14 +125,27 @@ let Output = Writable({objectMode: true});
 Output._write = function (obj, enc, next) {
     //only get tweets in english
 	if(obj.lang === "en") {
-		        console.log(obj.id, obj.text);
+		console.log(obj.id, obj.text);
+		checkIfTweetHasPokemonName(obj);
+	}
+    next();
+};
+
+/*
+	check if tweet object has pokemon term
+ */
+function checkIfTweetHasPokemonName(tweetObj) {
+	let pokemonName = 'pokemon'
+	//get pokemon names array
+	if (tweetObj.text.toLowerCase().indexOf(pokemonName) != -1){
+		console.log("tweet has pokemon term");
 		let pokemonFoundLongitude = -1, pokemonFoundLatitude = -1;
-		if(obj.geo && obj.coordinates) {
-			pokemonFoundLongitude = obj.coordinates[0]
-			pokemonFoundLatitude = obj.coordinates[1]
+		if(tweetObj.geo && tweetObj.coordinates) {
+			pokemonFoundLongitude = tweetObj.coordinates[0]
+			pokemonFoundLatitude = tweetObj.coordinates[1]
 		}
 
-		pokemonTweet.create({pokemonName: obj.text, found_at: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appeared_on: obj.created_at}, function (err, post) {
+		pokemonTweet.create({pokemonName: tweetObj.text, found_at: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appeared_on: tweetObj.created_at}, function (err, post) {
 					if (err) {
 						if (err.name === 'MongoError' && err.code === 11000) {
 							console.log("Duplicate error")
@@ -141,10 +154,10 @@ Output._write = function (obj, enc, next) {
 						}
 					}
 				});
+	} else {
+		console.log("tweet doesnt have pokemon term");
 	}
-
-    next();
-};
+}
 
 function twitterStreaming() {
     // listen to keywords
