@@ -5,5 +5,5 @@ global.__appbase = appRoot + '/app/';
 global.__tmpbase = appRoot + '/tmp/';
 
 global.appConfig = {
-    IS_LOCAL_DB: false
+    IS_LOCAL_DB: true
 };
