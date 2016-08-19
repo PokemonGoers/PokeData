@@ -1009,7 +1009,10 @@
   },
   "145": {
     "name": "Zapdos",
-    "gender": "male"
+    "gender": {
+      "male": true,
+      "female": false
+    }
   },
   "146": {
     "name": "Moltres",
