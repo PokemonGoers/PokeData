@@ -110,23 +110,37 @@ example tweet json :
 	"lang": "en",
 	"timestamp_ms": "1471551440854"
 }
+
+important fields: 
+	create_at	: UTC time when this Tweet was created.
+	coordinates	: he longitude and latitude of the Tweet’s location.
+	text		: The actual UTF-8 text of the status update.T.
+
 */
 
-let Writable = require('stream').Writable,
+let fs = require('fs'),
+    config = require('../../config'),
+	Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
-    config = require('../../config');
+	pokemonTweet = require(__appbase + 'models/pokemonAppearances.js'),
+    pokemonListPath = require(__appbase + '../resources/json/pokemonIdAndName.json');
 
 const Twitter = new TwitterStream(config.twitter);
 
-const keywords = 'pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon';
+/*
+	keywords used to search for in the tweets
+	,  : represents OR
+	' ': space represents AND 
+*/
+const tweetSearchKeywords = 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo';
 
+// array of names of pokemons
+var pokemonNameList = [];
+
+// process the tweet object
 let Output = Writable({objectMode: true});
 Output._write = function (obj, enc, next) {
-    //only get tweets in english
-	if(obj.lang === "en") {
-		console.log(obj.id, obj.text);
-		checkIfTweetHasPokemonName(obj);
-	}
+	checkIfTweetHasPokemonName(obj);
     next();
 };
 
@@ -134,33 +148,63 @@ Output._write = function (obj, enc, next) {
 	check if tweet object has pokemon term
  */
 function checkIfTweetHasPokemonName(tweetObj) {
-	let pokemonName = 'pokemon'
-	//get pokemon names array
-	if (tweetObj.text.toLowerCase().indexOf(pokemonName) != -1){
-		console.log("tweet has pokemon term");
-		let pokemonFoundLongitude = -1, pokemonFoundLatitude = -1;
-		if(tweetObj.geo && tweetObj.coordinates) {
-			pokemonFoundLongitude = tweetObj.coordinates[0]
-			pokemonFoundLatitude = tweetObj.coordinates[1]
-		}
+	// check if the tweet text contains the important keywords
+	if (tweetObj.text.toLowerCase().indexOf('caught') != -1 || 
+		tweetObj.text.toLowerCase().indexOf('saw') != -1 || 
+		tweetObj.text.toLowerCase().indexOf('attacked') != -1 ||
+		tweetObj.text.toLowerCase().indexOf('found') != -1  ||
+		tweetObj.text.toLowerCase().indexOf('appeared') != -1 ) {
 
-		pokemonTweet.create({pokemonName: tweetObj.text, found_at: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appeared_on: tweetObj.created_at}, function (err, post) {
-					if (err) {
-						if (err.name === 'MongoError' && err.code === 11000) {
-							console.log("Duplicate error")
-						} else {
-							console.log(err);
-						}
-					}
-				});
-	} else {
-		console.log("tweet doesnt have pokemon term");
+		// for each pokemon name check if it is inside the tweet text
+		for(var i = 0; i < pokemonNameList.length; i++) {
+			if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
+				//get pokemon names array
+				console.log(tweetObj.text.toLowerCase());
+				console.log(pokemonNameList[i] + " was found");
+				addPokemonAppearanceToDB(tweetObj, pokemonNameList[i]);
+			}
+		}
 	}
 }
 
+/*
+	add pokemon appearance to DB 
+	properties: tweetId (unique), pokemonName, foundAt (latitude,longitude), appearedOn: (DateString UTC)
+ */
+
+function addPokemonAppearanceToDB(tweetObj, pokemonName) {
+	//default pokemon latitude and longitude set to -1, new values only if tweet contains coordinates
+	let pokemonFoundLongitude = -1, pokemonFoundLatitude = -1;
+	//get the location of the tweet
+	if (tweetObj.coordinates){
+		pokemonFoundLongitude = tweetObj.coordinates.coordinates[0]
+		pokemonFoundLatitude = tweetObj.coordinates.coordinates[1]
+	}
+
+	pokemonTweet.create({tweetId: tweetObj.id, pokemonName: pokemonName, foundAt: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appearedOn: tweetObj.created_at}, function (err, post) {
+		if (err) {
+			if (err.name === 'MongoError' && err.code === 11000) {
+				console.log("Duplicate error")
+			} else {
+				console.log(err);
+			}
+		} else {
+			console.log("Adding tweet to DB")
+		}
+	});
+}
+
 function twitterStreaming() {
-    // listen to keywords
-    Twitter.stream('statuses/filter', {track: keywords});
+	let data = JSON.stringify(pokemonListPath, function (key, value) {
+        var pokemonID, pokemonName;
+        if (key != 'name' && typeof value.name !== "undefined") {
+            pokemonNameList.push(value.name.toLowerCase());
+		}
+		return value;
+	});
+
+    // listen to keywords, get tweets in english language
+    Twitter.stream('statuses/filter', {track: tweetSearchKeywords, language: 'en'});
 
     //Twitter stream events
     Twitter.on('connection success', function (uri) {
@@ -199,6 +243,7 @@ function twitterStreaming() {
         console.log('Twitter stream data error');
     });
 
+	//send output of twitter to output
     Twitter.pipe(Output);
 }
 
