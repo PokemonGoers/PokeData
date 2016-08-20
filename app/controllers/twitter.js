@@ -148,15 +148,17 @@ Output._write = function (obj, enc, next) {
 	check if tweet object has pokemon term
  */
 function checkIfTweetHasPokemonName(tweetObj) {
+	let tweetText = tweetObj.text.toLowerCase();
 	// check if the tweet text contains the important keywords
-	if (tweetObj.text.toLowerCase().indexOf('caught') != -1 || 
-		tweetObj.text.toLowerCase().indexOf('saw') != -1 || 
-		tweetObj.text.toLowerCase().indexOf('attacked') != -1 ||
-		tweetObj.text.toLowerCase().indexOf('found') != -1  ||
-		tweetObj.text.toLowerCase().indexOf('appeared') != -1 ) {
+	if (tweetText.indexOf('caught') != -1 || 
+		tweetText.indexOf('saw') != -1 || 
+		tweetText.indexOf('attacked') != -1 ||
+		tweetText.indexOf('found') != -1  ||
+		tweetText.indexOf('appeared') != -1 ) {
 
 		// for each pokemon name check if it is inside the tweet text
-		for(var i = 0; i < pokemonNameList.length; i++) {
+		let pokemonNameListLength = pokemonNameList.length;
+		for(var i = 0; i < pokemonNameListLength; i++) {
 			if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
 				//get pokemon names array
 				console.log(tweetObj.text.toLowerCase());
