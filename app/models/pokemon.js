@@ -13,7 +13,7 @@ var pokemonSchema = new Schema({
     userId     : {type: String},
     deviceId   : {type: String},
     category   : {type: [Boolean]},
-    gender     : {male: Boolean, female: Boolean},
+    gender     : {male: Boolean},
     weight     : {type: Number},
     height     : {type: Number},
     move       : {type: [Boolean]},
