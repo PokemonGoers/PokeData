@@ -1,7 +1,7 @@
 'use strict';
 
 let fs = require('fs'),
-    basicPokemonDetail = require('../../models/BasicPokemonDetail.js'),
+    basicPokemonDetail = require('../models/BasicPokemonDetail.js'),
     pokemonListPath = require('../../resources/json/pokemonlist.json');
 
 function loadBasicPokemonDetails() {
