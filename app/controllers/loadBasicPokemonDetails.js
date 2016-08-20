@@ -13,14 +13,7 @@ function loadBasicPokemonDetails() {
             pokemonID = key;
             pokemonName = value.name;
             male = value.gender.male;
-            //female = value.gender.female;
-            /*if (female) {
-                gender = female;
-            } else {
-                gender = male;
-            }*/
-            //gender = value.gender.male;
-            //add pokemonID and pokemonName to collection
+
             basicPokemonDetail.create({pokemonID: pokemonID, name: pokemonName, gender: {male:male}}, function(err, post){
                 if(err) {
                     if (err.name === 'MongoError' && err.code === 11000) {
