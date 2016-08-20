@@ -181,7 +181,7 @@ function addPokemonAppearanceToDB(tweetObj, pokemonName) {
 		pokemonFoundLatitude = tweetObj.coordinates.coordinates[1]
 	}
 
-	pokemonTweet.create({tweetId: tweetObj.id, pokemonName: pokemonName, foundAt: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appearedOn: tweetObj.created_at}, function (err, post) {
+	pokemonTweet.create({tweetId: tweetObj.id_str, pokemonName: pokemonName, foundAt: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appearedOn: tweetObj.created_at}, function (err, post) {
 		if (err) {
 			if (err.name === 'MongoError' && err.code === 11000) {
 				console.log("Duplicate error")

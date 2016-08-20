@@ -3,7 +3,7 @@
 let mongoose = require('mongoose');
 let twitter = new mongoose.Schema({
     tweetId: {
-        type: Number,
+        type: String,
         unique: true
     },
     pokemonName: {
