@@ -185,6 +185,7 @@ function addPokemonAppearanceToDB(tweetObj, pokemonName) {
 		if (err) {
 			if (err.name === 'MongoError' && err.code === 11000) {
 				console.log("Duplicate error")
+				console.log(tweetObj.id_str + "tweet was discarded")
 			} else {
 				console.log(err);
 			}
