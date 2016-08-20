@@ -2,7 +2,7 @@
 
 let Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
-    config = require('../config');
+    config = require('../../config');
 
 const Twitter = new TwitterStream(config.twitter);
 

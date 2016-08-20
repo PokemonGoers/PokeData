@@ -2,7 +2,7 @@
 
 let fs = require('fs'),
     basicPokemonDetail = require('../models/BasicPokemonDetail.js'),
-    pokemonListPath = require('../resources/json/pokemonlist.json');
+    pokemonListPath = require('../../resources/json/pokemonlist.json');
 
 function loadBasicPokemonDetails() {
     console.log('Loading Basic Pokemon Details to MongoDB');
