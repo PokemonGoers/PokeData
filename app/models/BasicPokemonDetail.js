@@ -17,8 +17,8 @@ let BasicPokemonDetailSchema = new mongoose.Schema({
         female: {
             type: Boolean
         }*/
-        male: Boolean,
-        female: Boolean
+        male: Boolean
+
     },
     height: {
         value: Number
