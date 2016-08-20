@@ -114,8 +114,7 @@ example tweet json :
 
 let Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
-    config = require(__appbase + '../config'),
-	pokemonTweet = require(__appbase +'/models/twitter.js');
+    config = require('../../config');
 
 const Twitter = new TwitterStream(config.twitter);
 
