@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
+
 var pokemonSchema = new Schema({
     id         : {type: String, required: true, unique: true},
     created    : {type: Number},
@@ -11,7 +12,14 @@ var pokemonSchema = new Schema({
     pokemonId  : {type: String},
     trainerName: {type: String},
     userId     : {type: String},
-    deviceId   : {type: String}
+    deviceId   : {type: String},
+    category   : {type: [Boolean]},
+    gender     : {type: String, enum: ['m', 'f', 'u', 'h']},
+    weight     : {type: Number},
+    height     : {type: Number},
+    move       : {type: [Boolean]},
+    evolution  : {type: [String]},
+    pre_form   : {type: [String]}
 });
 
 module.exports = mongoose.model('pokemon', pokemonSchema);
