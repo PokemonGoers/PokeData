@@ -421,11 +421,11 @@
   },
   "106": {
     "name": "Hitmonlee",
-    "gender": "u"
+    "gender": "m"
   },
   "107": {
     "name": "Hitmonchan",
-    "gender": "u"
+    "gender": "m"
   },
   "108": {
     "name": "Lickitung",
@@ -449,7 +449,7 @@
   },
   "113": {
     "name": "Chansey",
-    "gender": "u"
+    "gender": "f"
   },
   "114": {
     "name": "Tangela",
@@ -457,7 +457,7 @@
   },
   "115": {
     "name": "Kangaskhan",
-    "gender": "u"
+    "gender": "f"
   },
   "116": {
     "name": "Horsea",
@@ -493,7 +493,7 @@
   },
   "124": {
     "name": "Jynx",
-    "gender": "u"
+    "gender": "f"
   },
   "125": {
     "name": "Electabuzz",
@@ -509,7 +509,7 @@
   },
   "128": {
     "name": "Tauros",
-    "gender": "u"
+    "gender": "m"
   },
   "129": {
     "name": "Magikarp",
