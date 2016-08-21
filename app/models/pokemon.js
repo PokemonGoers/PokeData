@@ -14,7 +14,7 @@ var pokemonSchema = new Schema({
     userId     : {type: String},
     deviceId   : {type: String},
     category   : {type: [Boolean]},
-    gender     : {type: String, enum: ['m', 'f', 'u', 'h']},
+    gender     : {abbreviation: {type: String, enum: ['m', 'f', 'u', 'h']}, male_ratio: Number, female_ratio: Number},
     weight     : {type: Number},
     height     : {type: Number},
     move       : {type: [Boolean]},

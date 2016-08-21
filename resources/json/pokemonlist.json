@@ -1,606 +1,1210 @@
 {
   "1": {
     "name": "Bulbasaur",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "2": {
     "name": "Ivysaur",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "3": {
     "name": "Venusaur",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "4": {
     "name": "Charmander",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "5": {
     "name": "Charmeleon",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "6": {
     "name": "Charizard",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "7": {
     "name": "Squirtle",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "8": {
     "name": "Wartortle",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "9": {
     "name": "Blastoise",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "10": {
     "name": "Caterpie",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "11": {
     "name": "Metapod",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "12": {
     "name": "Butterfree",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "13": {
     "name": "Weedle",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "14": {
     "name": "Kakuna",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "15": {
     "name": "Beedrill",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "16": {
     "name": "Pidgey",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "17": {
     "name": "Pidgeotto",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "18": {
     "name": "Pidgeot",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "19": {
     "name": "Rattata",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "20": {
     "name": "Raticate",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "21": {
     "name": "Spearow",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "22": {
     "name": "Fearow",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "23": {
     "name": "Ekans",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "24": {
     "name": "Arbok",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "25": {
     "name": "Pikachu",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "26": {
     "name": "Raichu",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "27": {
     "name": "Sandshrew",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "28": {
     "name": "Sandslash",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "29": {
     "name": "Nidoran",
-    "gender": "f"
+    "gender": {
+      "abbreviation": "f",
+      "male_ratio": "0",
+      "female_ratio": "1"
+    }
   },
   "30": {
     "name": "Nidorina",
-    "gender": "f"
+    "gender": {
+      "abbreviation": "f",
+      "male_ratio": "0",
+      "female_ratio": "1"
+    }
   },
   "31": {
     "name": "Nidoqueen",
-    "gender": "f"
+    "gender": {
+      "abbreviation": "f",
+      "male_ratio": "0",
+      "female_ratio": "1"
+    }
   },
   "32": {
     "name": "Nidoran",
-    "gender": "m"
+    "gender": {
+      "abbreviation": "m",
+      "male_ratio": "1",
+      "female_ratio": "0"
+    }
   },
   "33": {
     "name": "Nidorino",
-    "gender": "m"
+    "gender": {
+      "abbreviation": "m",
+      "male_ratio": "1",
+      "female_ratio": "0"
+    }
   },
   "34": {
     "name": "Nidoking",
-    "gender": "m"
+    "gender": {
+      "abbreviation": "m",
+      "male_ratio": "1",
+      "female_ratio": "0"
+    }
   },
   "35": {
     "name": "Clefairy",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "3"
+    }
   },
   "36": {
     "name": "Clefable",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "3"
+    }
   },
   "37": {
     "name": "Vulpix",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "3"
+    }
   },
   "38": {
     "name": "Ninetales",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "3"
+    }
   },
   "39": {
     "name": "Jigglypuff",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "3"
+    }
   },
   "40": {
     "name": "Wigglytuff",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "3"
+    }
   },
   "41": {
     "name": "Zubat",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "42": {
     "name": "Golbat",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "43": {
     "name": "Oddish",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "44": {
     "name": "Gloom",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "45": {
     "name": "Vileplume",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "46": {
     "name": "Paras",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "47": {
     "name": "Parasect",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "48": {
     "name": "Venonat",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "49": {
     "name": "Venomoth",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "50": {
     "name": "Diglett",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "51": {
     "name": "Dugtrio",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "52": {
     "name": "Meowth",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "53": {
     "name": "Persian",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "54": {
     "name": "Psyduck",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "55": {
     "name": "Golduck",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "56": {
     "name": "Mankey",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "57": {
     "name": "Primeape",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "58": {
     "name": "Growlithe",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "59": {
     "name": "Arcanine",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "60": {
     "name": "Poliwag",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "61": {
     "name": "Poliwhirl",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "62": {
     "name": "Poliwrath",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "63": {
     "name": "Abra",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "64": {
     "name": "Kadabra",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "65": {
     "name": "Alakazam",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "66": {
     "name": "Machop",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "67": {
     "name": "Machoke",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "68": {
     "name": "Machamp",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "69": {
     "name": "Bellsprout",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "70": {
     "name": "Weepinbell",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "71": {
     "name": "Victreebel",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "72": {
     "name": "Tentacool",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "73": {
     "name": "Tentacruel",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "74": {
     "name": "Geodude",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "75": {
     "name": "Graveler",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "76": {
     "name": "Golem",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "77": {
     "name": "Ponyta",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "78": {
     "name": "Rapidash",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "79": {
     "name": "Slowpoke",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "80": {
     "name": "Slowbro",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "81": {
     "name": "Magnemite",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "82": {
     "name": "Magneton",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "83": {
     "name": "Farfetch'd",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "84": {
     "name": "Doduo",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "85": {
     "name": "Dodrio",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "86": {
     "name": "Seel",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "87": {
     "name": "Dewgong",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "88": {
     "name": "Grimer",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "89": {
     "name": "Muk",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "90": {
     "name": "Shellder",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "91": {
     "name": "Cloyster",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "92": {
     "name": "Gastly",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "93": {
     "name": "Haunter",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "94": {
     "name": "Gengar",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "95": {
     "name": "Onix",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "96": {
     "name": "Drowzee",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "97": {
     "name": "Hypno",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "98": {
-    "name": "Krabby",
-    "gender": "u"
+    "name": "Krabbreviationy",
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "99": {
     "name": "Kingler",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "100": {
     "name": "Voltorb",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "101": {
     "name": "Electrode",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "102": {
     "name": "Exeggcute",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "103": {
     "name": "Exeggutor",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "104": {
     "name": "Cubone",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "105": {
     "name": "Marowak",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "106": {
     "name": "Hitmonlee",
-    "gender": "m"
+    "gender": {
+      "abbreviation": "m",
+      "male_ratio": "1",
+      "female_ratio": "0"
+    }
   },
   "107": {
     "name": "Hitmonchan",
-    "gender": "m"
+    "gender": {
+      "abbreviation": "m",
+      "male_ratio": "1",
+      "female_ratio": "0"
+    }
   },
   "108": {
     "name": "Lickitung",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "109": {
     "name": "Koffing",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "110": {
     "name": "Weezing",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "111": {
     "name": "Rhyhorn",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "112": {
     "name": "Rhydon",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "113": {
     "name": "Chansey",
-    "gender": "f"
+    "gender": {
+      "abbreviation": "f",
+      "male_ratio": "0",
+      "female_ratio": "1"
+    }
   },
   "114": {
     "name": "Tangela",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "115": {
     "name": "Kangaskhan",
-    "gender": "f"
+    "gender": {
+      "abbreviation": "f",
+      "male_ratio": "0",
+      "female_ratio": "1"
+    }
   },
   "116": {
     "name": "Horsea",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "117": {
     "name": "Seadra",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "118": {
     "name": "Goldeen",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "119": {
     "name": "Seaking",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "120": {
     "name": "Staryu",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "121": {
     "name": "Starmie",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "122": {
     "name": "Mr.Mime",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "123": {
     "name": "Scyther",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "124": {
     "name": "Jynx",
-    "gender": "f"
+    "gender": {
+      "abbreviation": "f",
+      "male_ratio": "0",
+      "female_ratio": "1"
+    }
   },
   "125": {
     "name": "Electabuzz",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "126": {
     "name": "Magmar",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "3",
+      "female_ratio": "1"
+    }
   },
   "127": {
     "name": "Pinsir",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "128": {
     "name": "Tauros",
-    "gender": "m"
+    "gender": {
+      "abbreviation": "m",
+      "male_ratio": "1",
+      "female_ratio": "0"
+    }
   },
   "129": {
     "name": "Magikarp",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "130": {
     "name": "Gyarados",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "131": {
     "name": "Lapras",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "132": {
     "name": "Ditto",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "133": {
     "name": "Eevee",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "134": {
     "name": "Vaporeon",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "135": {
     "name": "Jolteon",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "136": {
     "name": "Flareon",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "137": {
     "name": "Porygon",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "138": {
     "name": "Omanyte",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "139": {
     "name": "Omastar",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "140": {
     "name": "Kabuto",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "141": {
     "name": "Kabutops",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "142": {
     "name": "Aerodactyl",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "143": {
     "name": "Snorlax",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "7",
+      "female_ratio": "1"
+    }
   },
   "144": {
     "name": "Articuno",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "145": {
     "name": "Zapdos",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "146": {
     "name": "Moltres",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "147": {
     "name": "Dratini",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "148": {
     "name": "Dragonair",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "149": {
     "name": "Dragonite",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "u",
+      "male_ratio": "1",
+      "female_ratio": "1"
+    }
   },
   "150": {
     "name": "Mewtwo",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   },
   "151": {
     "name": "Mew",
-    "gender": "u"
+    "gender": {
+      "abbreviation": "h",
+      "male_ratio": "0",
+      "female_ratio": "0"
+    }
   }
 }
