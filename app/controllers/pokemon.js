@@ -31,11 +31,11 @@ module.exports = {
      * ]
      */
     getAll: function (req, res) {
-        console.log('GetAll');
+        logger.info('GetAll');
         var pokemonStore = require('../stores/pokemon');
 
         pokemonStore.getAll(function(success,pokemons) {
-            console.log(pokemons)
+            logger.info(pokemons);
             res.status(200).json(pokemons);
         });
     }

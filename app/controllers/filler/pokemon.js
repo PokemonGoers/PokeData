@@ -8,7 +8,7 @@ module.exports = {
     fill: function (callback) {
 
         var afterInsertion = function () {
-            console.log('Pokemon Insertion Completed');
+            logger.info('Pokemon Insertion Completed');
             callback(false);
         };
 
@@ -21,11 +21,15 @@ module.exports = {
         });
     },
     insertToDb: function (pokemons, callback) {
-        console.log('MongoDb Insertion...');
+        logger.info('MongoDb Insertion...');
 
         var addPokemon = function (pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
-                console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.pokemonId);
+                if (success != 1) {
+                    logger.success('Success: ' + data.pokemonId);
+                } else {
+                    logger.error('Error:' + data);
+                }
                 callback(true);
             });
         };
@@ -36,7 +40,7 @@ module.exports = {
 
                 PokemonStore.getById(pokemon.id, function (success, oldId) {
                     if (success === 1) { // old entry is existing and discarded
-                        console.log(pokemon.id + " is a duplicate entry and hence discarded.");
+                        logger.info(pokemon.id + ' is a duplicate entry and hence discarded.');
                         callback();
                     } else {// new entry is added
                         addPokemon(pokemon, function () {
