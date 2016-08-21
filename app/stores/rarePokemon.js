@@ -13,7 +13,7 @@ module.exports = {
             if (data.hasOwnProperty(key)) {
                // processing the data for coordinates since they are not separated as latitude
                // and longitudes in the original data source
-                if( key == 'coords'){
+                if( key === 'coords'){
                     let coordsArr = data[key].split(",");
                     rarePokemons['latitude'] = parseFloat(coordsArr[0]);
                     rarePokemons['longitude'] = parseFloat(coordsArr[1]);
