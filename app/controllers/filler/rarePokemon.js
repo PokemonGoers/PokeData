@@ -28,15 +28,20 @@ module.exports = {
 
         // reading the dfirectory under which all the files containing rarePokemon data is there
         fs.readdir(dirPath, function(err, filenames) {
+
+            let noOfFiles = filenames.length,
+                count =0;
+
             if (err) {
                 console.log('Error in reading directory' + dirPath);
                 process.exit();
             }
             // when no files are present then exit the process
-            if( filenames.length === 0){
+            if( noOfFiles === 0){
                 console.log('No files to read');
                 process.exit();
             }
+
             console.log('MongoDb Insertion...');
 
             // reading individual files for the data
@@ -53,6 +58,7 @@ module.exports = {
                     }
 
                     if (rarePokemons !== undefined) {
+
                         // inserting the read content into MongoDB
                         insert(rarePokemons);
                         // deleting the file after it has been read and data being stored into database
@@ -60,19 +66,15 @@ module.exports = {
                     }
 
                 });
-
             });
-
         });
-
 
         /*
          * inserting the read data into MongoDB
          */
-        let addRarePokemon = function (rarePokemon, callback) {
+        let addRarePokemon = function (rarePokemon) {
             rarePokemonStore.add(rarePokemon, function (success, data) {
                 //console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.id);
-                callback(true);
             });
         };
 
@@ -85,11 +87,7 @@ module.exports = {
 
             rarePokemonRecords.forEach(function (rarePokemon) {
                 length++;
-                addRarePokemon(rarePokemon, function (success) {
-                });
-
-            }, function (err) {
-
+                addRarePokemon(rarePokemon);
             });
             console.log('\n length',length);
         };
