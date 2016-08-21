@@ -7,29 +7,21 @@ const PokemonModel = require(__appbase + 'models/pokemon'),
 module.exports = {
     fill: function (callback) {
 
-        var afterInsertion = function () {
-            logger.info('Pokemon Insertion Completed');
-            callback(false);
-        };
 
-        var file = __tmpbase + 'pokemon.json';
+    },
+    insertToDb: function (callback) {
+        logger.info('MongoDb Insertion...');
+        const file = __tmpbase + 'pokemon.json';
 
-        jsonfile.readFile(file, function (err, obj) {
-            if (obj !== undefined) {
-                module.exports.insertToDb(obj, afterInsertion);
+        jsonfile.readFile(file, function (err, pokemons) {
+            if (pokemons !== undefined) {
+                insert(pokemons);
             }
         });
-    },
-    insertToDb: function (pokemons, callback) {
-        logger.info('MongoDb Insertion...');
 
         var addPokemon = function (pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
-                if (success != 1) {
-                    logger.success('Success: ' + data.pokemonId);
-                } else {
-                    logger.error('Error:' + data);
-                }
+                logger.success((success != 1) ? 'Error:' + data : 'Success: ' + data.pokemonId);
                 callback(true);
             });
         };
@@ -40,7 +32,7 @@ module.exports = {
 
                 PokemonStore.getById(pokemon.id, function (success, oldId) {
                     if (success === 1) { // old entry is existing and discarded
-                        logger.info(pokemon.id + ' is a duplicate entry and hence discarded.');
+                        logger.info(pokemon.id + " is a duplicate entry and hence discarded.");
                         callback();
                     } else {// new entry is added
                         addPokemon(pokemon, function () {
@@ -52,6 +44,5 @@ module.exports = {
                 callback(true);
             });
         };
-        insert(pokemons);
     }
 };
