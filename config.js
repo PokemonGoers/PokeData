@@ -19,6 +19,7 @@ module.exports = {
         "token_secret": process.env.ACCESS_TOKEN_SECRET
     },
     "twitterKeyWords" : 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
+    "pokesniperUrl" : "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
     "server":{
         "port": "8080"
     }
