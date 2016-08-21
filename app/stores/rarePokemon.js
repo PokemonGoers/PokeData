@@ -1,4 +1,5 @@
-var rarePokemon = require(__appbase + 'models/rarePokemon');
+"use strict";
+const rarePokemon = require(__appbase + 'models/rarePokemon');
 
 module.exports = {
     /*
@@ -9,7 +10,13 @@ module.exports = {
 
         for (var key in data) {
             if (data.hasOwnProperty(key)) {
-                rarePokemons[key] = data[key];
+                if( key == 'coords'){
+                    let coordsArr = data[key].split(",");
+                    rarePokemons['latitude'] = parseFloat(coordsArr[0]);
+                    rarePokemons['longitude'] = parseFloat(coordsArr[1]);
+                }
+                else
+                    rarePokemons[key] = data[key];
             }
         }
         rarePokemons.save(function (err) {
