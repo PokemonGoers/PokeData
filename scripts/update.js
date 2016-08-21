@@ -62,11 +62,13 @@ db.on('connected', function () {
 // If the connection throws an error
 db.on('error', function (err) {
     logger.error('Mongoose default connection error: ' + err);
+    process.exit();
 });
 
 // When the connection is disconnected
 db.on('disconnected', function () {
     logger.info('Mongoose default connection disconnected');
+    process.exit();
 });
 
 // When the connection is open
