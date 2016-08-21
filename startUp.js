@@ -33,33 +33,33 @@
         }
 
         //Create the connection to mongodb
-        console.log("Going to connect to " + dbConnection);
+        logger.info('DB Connection', 'Going to connect to ' + dbConnection);
         mongoose.connect(dbConnection);
         var db = mongoose.connection;
 
         // CONNECTION EVENTS: When successfully connected
         db.on('connected', function () {
-            console.log('Mongoose connected');
+            logger.success('DB Connection Successful', 'Connected to Mongoose');
         });
 
         // If the connection throws an error
         db.on('error', function (err) {
-            console.log('Mongoose default connection error: ' + err);
+            logger.error('Error in DB Connection', 'Mongoose default connection error: ' + err);
         });
 
         // When the connection is disconnected
         db.on('disconnected', function () {
-            console.log('Mongoose default connection disconnected');
+            logger.info('DB Disconnected', 'Mongoose default connection disconnected');
         });
 
         db.on('open', function () {
-            console.log("Mongoose connection open");
+            logger.info('Mongoose connection open');
         });
     }
 
     module.exports = {
         start: function (done) {
-            console.log('App started');
+            logger.success('Application started successfully');
 
             // set the database
             setupDb();
@@ -76,7 +76,7 @@
 
             // for every request
             router.use(function (req, res, next) {
-                console.log('Request incoming: ' + req.url);
+                logger.info('Request incoming: ' + req.url);
 
                 //Allow all GET requests as these do not modify data and we want users to be able to see that basic stuff
                 if (req.method === 'GET') {
@@ -100,7 +100,7 @@
             //listening for requests
             var port = config.server.port || 8080; //a default port if the config file does not contain it
             app.listen(port);
-            console.log('is listening on port ' + port);
+            logger.info('Listening on port ' + port);
 
 
             //load basic pokemon details
@@ -110,7 +110,7 @@
             twitterStreaming.startStreaming();
         },
         stop: function (done) {
-            console.log('App stopped');
+            logger.info('Application stopped');
         }
     };
 }());

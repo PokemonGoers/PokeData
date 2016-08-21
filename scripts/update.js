@@ -22,7 +22,7 @@ if (possibleRefillings.indexOf(requested) < 0) {
 /*
  * start
  */
-console.log('Refilling collection: ' + requested);
+logger.info('Refilling collection: ' + requested);
 
 var config = require('../config'),
     mongoose = require('mongoose');
@@ -48,24 +48,24 @@ if (appConfig['IS_LOCAL_DB']) {
 }
 
 //Create the connection to mongodb
-console.log("Going to connect to " + dbConnection);
+logger.info('Going to connect to ' + dbConnection);
 
 mongoose.connect(dbConnection);
 var db = mongoose.connection;
 
 // CONNECTION EVENTS: When successfully connected
 db.on('connected', function () {
-    console.log('Mongoose connected');
+    logger.info('Mongoose connected');
 });
 
 // If the connection throws an error
 db.on('error', function (err) {
-    console.log('Mongoose default connection error: ' + err);
+    logger.error('Mongoose default connection error: ' + err);
 });
 
 // When the connection is disconnected
 db.on('disconnected', function () {
-    console.log('Mongoose default connection disconnected');
+    logger.info('Mongoose default connection disconnected');
 });
 
 // When the connection is open

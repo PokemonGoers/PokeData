@@ -5,7 +5,7 @@ let fs = require('fs'),
     pokemonListPath = require('../../resources/json/pokemonlist.json');
 
 function loadBasicPokemonDetails() {
-    console.log('Loading Basic Pokemon Details to MongoDB');
+    logger.info('Loading Basic Pokemon Details to MongoDB');
 
     let data = JSON.stringify(pokemonListPath, function(key,value) {
         var pokemonID, pokemonName, gender;
@@ -19,10 +19,10 @@ function loadBasicPokemonDetails() {
                     if (err.name === 'MongoError' && err.code === 11000) {
                         // TODO Handling for duplicate pokemons
                     } else {
-                        console.log(err);
+                        logger.error(err);
                     }
                 } else {
-                    console.log(post);
+                    logger.info(post);
                 }
             });
         }

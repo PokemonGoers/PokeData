@@ -154,8 +154,8 @@ function checkIfTweetHasPokemonName(tweetObj) {
 		for(var i = 0; i < pokemonNameListLength; i++) {
 			if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
 				//get pokemon names array
-				console.log(tweetObj.text.toLowerCase());
-				console.log(pokemonNameList[i] + " was found");
+				logger.info(tweetObj.text.toLowerCase());
+				logger.info(pokemonNameList[i] + ' was found');
 				addPokemonAppearanceToDB(tweetObj, pokemonNameList[i]);
 			}
 		}
@@ -172,20 +172,20 @@ function addPokemonAppearanceToDB(tweetObj, pokemonName) {
 	let pokemonFoundLongitude = -1, pokemonFoundLatitude = -1;
 	//get the location of the tweet
 	if (tweetObj.coordinates){
-		pokemonFoundLongitude = tweetObj.coordinates.coordinates[0]
-		pokemonFoundLatitude = tweetObj.coordinates.coordinates[1]
+		pokemonFoundLongitude = tweetObj.coordinates.coordinates[0];
+		pokemonFoundLatitude = tweetObj.coordinates.coordinates[1];
 	}
 
 	pokemonTweet.create({tweetId: tweetObj.id_str, pokemonName: pokemonName, foundAt: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appearedOn: tweetObj.created_at}, function (err, post) {
 		if (err) {
 			if (err.name === 'MongoError' && err.code === 11000) {
-				console.log("Duplicate error")
-				console.log(tweetObj.id_str + "tweet was discarded")
+				logger.error('Duplicate error');
+				logger.info(tweetObj.id_str + 'tweet was discarded');
 			} else {
-				console.log(err);
+				logger.error(err);
 			}
 		} else {
-			console.log("Adding tweet to DB")
+			logger.info('Adding tweet to DB');
 		}
 	});
 }
@@ -204,39 +204,39 @@ function twitterStreaming() {
 
     //Twitter stream events
     Twitter.on('connection success', function (uri) {
-        console.log('Twitter stream connection success', uri);
+        logger.success('Connection successful', 'Twitter stream connection success' + uri);
     });
 
     Twitter.on('connection aborted', function () {
-        console.log('Twitter stream connection aborted');
+        logger.info('Twitter stream connection aborted');
     });
 
     Twitter.on('connection error network', function () {
-        console.log('Twitter stream connection error network');
+        logger.error('Twitter stream connection error network');
     });
 
     Twitter.on('connection error stall', function () {
-        console.log('Twitter stream connection error stall');
+        logger.error('Twitter stream connection error stall');
     });
 
     Twitter.on('connection error http', function (err) {
-        console.log('Twitter stream connection error http', err);
+        logger.error('Twitter stream connection error http', err);
     });
 
     Twitter.on('connection rate limit', function () {
-        console.log('Twitter stream connection rate limit');
+        logger.info('Twitter stream connection rate limit');
     });
 
     Twitter.on('connection error unknown', function () {
-        console.log('Twitter stream connection error unknown');
+        logger.error('Twitter stream connection error unknown');
     });
 
     Twitter.on('data keep-alive', function () {
-        console.log('Twitter stream data keep-alive');
+        logger.info('Twitter stream data keep-alive');
     });
 
     Twitter.on('data error', function () {
-        console.log('Twitter stream data error');
+        logger.error('Twitter stream data error');
     });
 
 	//send output of twitter to output
