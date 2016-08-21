@@ -8,5 +8,5 @@ global.logger = require(__appbase + '/services/logger');
 
 global.appConfig = {
     IS_LOCAL_DB: false,
-    ENV_DEVELOPMENT: process.env.ENV_DEVELOPMENT || 'dev'
+    APP_ENV: process.env.NODE_ENV || 'development'
 };

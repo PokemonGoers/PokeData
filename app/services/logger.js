@@ -2,9 +2,9 @@
 
 /*Log function*/
 let log = function(type, message, description) {
-    const env = appConfig['ENV_DEVELOPMENT'];
+    const env = appConfig['APP_ENV'];
     /*Print the message only if the environment is dev.*/
-    if (env === 'dev') {
+    if (env === 'development') {
         console.log(type, message, description || "");
     }
 };
