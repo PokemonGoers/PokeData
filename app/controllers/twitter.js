@@ -127,13 +127,6 @@ let fs = require('fs'),
 
 const Twitter = new TwitterStream(config.twitter);
 
-/*
-	keywords used to search for in the tweets
-	,  : represents OR
-	' ': space represents AND 
-*/
-const tweetSearchKeywords = 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo';
-
 // array of names of pokemons
 var pokemonNameList = [];
 
@@ -207,7 +200,7 @@ function twitterStreaming() {
 	});
 
     // listen to keywords, get tweets in english language
-    Twitter.stream('statuses/filter', {track: tweetSearchKeywords, language: 'en'});
+    Twitter.stream('statuses/filter', {track: config.twitterKeyWords, language: 'en'});
 
     //Twitter stream events
     Twitter.on('connection success', function (uri) {
