@@ -1,6 +1,7 @@
 'use strict';
 
 let mongoose = require('mongoose');
+
 let BasicPokemonDetailSchema = new mongoose.Schema({
     pokemonID: {
         type: Number,
@@ -11,14 +12,7 @@ let BasicPokemonDetailSchema = new mongoose.Schema({
         type: String
     },
     gender: {
-        /*male: {
-            type: Boolean
-        },
-        female: {
-            type: Boolean
-        }*/
-        male: Boolean
-
+        type: String  //only use of values 'm' for male, 'f' for female, 'u' for undefined and 'h'
     },
     height: {
         value: Number

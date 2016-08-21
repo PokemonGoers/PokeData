@@ -8,13 +8,13 @@ function loadBasicPokemonDetails() {
     console.log('Loading Basic Pokemon Details to MongoDB');
 
     let data = JSON.stringify(pokemonListPath, function(key,value) {
-        var pokemonID, pokemonName, male;
+        var pokemonID, pokemonName, gender;
         if(key != 'name' && typeof value.name !== "undefined") {
             pokemonID = key;
             pokemonName = value.name;
-            male = value.gender.male;
+            gender = value.gender;
 
-            basicPokemonDetail.create({pokemonID: pokemonID, name: pokemonName, gender: {male:male}}, function(err, post){
+            basicPokemonDetail.create({pokemonID: pokemonID, name: pokemonName, gender: gender}, function(err, post){
                 if(err) {
                     if (err.name === 'MongoError' && err.code === 11000) {
                         // TODO Handling for duplicate pokemons

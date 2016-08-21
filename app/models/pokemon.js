@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
+
 var pokemonSchema = new Schema({
     id         : {type: String, required: true, unique: true},
     created    : {type: Number},
@@ -13,7 +14,7 @@ var pokemonSchema = new Schema({
     userId     : {type: String},
     deviceId   : {type: String},
     category   : {type: [Boolean]},
-    gender     : {male: Boolean},
+    gender     : {type: String},  //only use of values 'm' for male, 'f' for female, 'u' for undefined and 'h'
     weight     : {type: Number},
     height     : {type: Number},
     move       : {type: [Boolean]},
