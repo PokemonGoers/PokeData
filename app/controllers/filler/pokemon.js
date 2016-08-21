@@ -7,21 +7,17 @@ const PokemonModel = require(__appbase + 'models/pokemon'),
 module.exports = {
     fill: function (callback) {
 
-        var afterInsertion = function () {
-            console.log('Pokemon Insertion Completed');
-            callback(false);
-        };
 
-        var file = __tmpbase + 'pokemon.json';
+    },
+    insertToDb: function (callback) {
+        console.log('MongoDb Insertion...');
+        const file = __tmpbase + 'pokemon.json';
 
-        jsonfile.readFile(file, function (err, obj) {
-            if (obj !== undefined) {
-                module.exports.insertToDb(obj, afterInsertion);
+        jsonfile.readFile(file, function (err, pokemons) {
+            if (pokemons !== undefined) {
+                insert(pokemons);
             }
         });
-    },
-    insertToDb: function (pokemons, callback) {
-        console.log('MongoDb Insertion...');
 
         var addPokemon = function (pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
@@ -48,6 +44,5 @@ module.exports = {
                 callback(true);
             });
         };
-        insert(pokemons);
     }
 };

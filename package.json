@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "update": "node scripts/update.js"
+    "update": "node scripts/update.js",
+    "listen" : "node scripts/listen.js"
   },
   "repository": {
     "type": "git",
