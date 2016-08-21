@@ -11,7 +11,8 @@ if (requested === undefined) {
  * choices of collection to be filled
  */
 var possibleRefillings = [
-    'pokemon'
+    'pokemon',
+    'rarePokemon'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
@@ -71,7 +72,7 @@ db.on('disconnected', function () {
 // When the connection is open
 db.on('open', function () {
     var updateFiller = require(__base + 'app/controllers/filler/' + requested);
-    updateFiller.fill(function () {
+    updateFiller.insertToDb(function () {
         process.exit();
     });
 });
