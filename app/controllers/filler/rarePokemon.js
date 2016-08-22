@@ -5,7 +5,7 @@ const rarePokemonModel = require(__appbase + 'models/rarePokemon'),
     fs = require('fs'),
     jsonfile = require('jsonfile'),
     async = require('async'),
-    services = require(__base + 'services'),
+    common = require(__base + 'app/services/common'),
     config = require(__base+'config');
 
 
@@ -16,7 +16,7 @@ module.exports = {
     fill: function (callback) {
         let url = config.pokesniperUrl;
             setInterval(function(){
-                services.getHttpRequestData(url)
+                common.getHttpRequestData(url)
             }, 10000);
     },
     /*
