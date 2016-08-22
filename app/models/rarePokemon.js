@@ -4,12 +4,12 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 var rarePokemonSchema = new Schema({
-    id           : {type: Number},
-    name         : {type: String},
+    id         : {type: Number},
+    name       : {type: String},
     latitude   : {type: Number},
     longitude  : {type: Number},
-    until        : {type: String},
-    icon_url     : {type: String}
+    seen_until : {type: Date},
+    icon_url   : {type: String}
 
 });
 
