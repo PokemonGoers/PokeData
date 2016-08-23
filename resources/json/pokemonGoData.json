@@ -66,10 +66,6 @@
          {
             "Number":2,
             "Name":"Ivysaur"
-         },
-         {
-            "Number":3,
-            "Name":"Venusaur"
          }
       ],
       "MaxCP":951,
@@ -291,10 +287,6 @@
          {
             "Number":5,
             "Name":"Charmeleon"
-         },
-         {
-            "Number":6,
-            "Name":"Charizard"
          }
       ],
       "MaxCP":841,
@@ -512,10 +504,6 @@
          {
             "Number":8,
             "Name":"Wartortle"
-         },
-         {
-            "Number":9,
-            "Name":"Blastoise"
          }
       ],
       "MaxCP":891,
@@ -726,10 +714,6 @@
          {
             "Number":11,
             "Name":"Metapod"
-         },
-         {
-            "Number":12,
-            "Name":"Butterfree"
          }
       ],
       "MaxCP":367,
@@ -928,10 +912,6 @@
          {
             "Number":14,
             "Name":"Kakuna"
-         },
-         {
-            "Number":15,
-            "Name":"Beedrill"
          }
       ],
       "MaxCP":372,
@@ -1142,10 +1122,6 @@
          {
             "Number":17,
             "Name":"Pidgeotto"
-         },
-         {
-            "Number":18,
-            "Name":"Pidgeot"
          }
       ],
       "MaxCP":585,
@@ -2015,10 +1991,6 @@
          {
             "Number":30,
             "Name":"Nidorina"
-         },
-         {
-            "Number":31,
-            "Name":"Nidoqueen"
          }
       ],
       "MaxCP":768,
@@ -2236,10 +2208,6 @@
          {
             "Number":33,
             "Name":"Nidorino"
-         },
-         {
-            "Number":34,
-            "Name":"Nidoking"
          }
       ],
       "MaxCP":737,
@@ -3004,10 +2972,6 @@
          {
             "Number":44,
             "Name":"Gloom"
-         },
-         {
-            "Number":45,
-            "Name":"Vileplume"
          }
       ],
       "MaxCP":1023,
@@ -4173,10 +4137,6 @@
          {
             "Number":61,
             "Name":"Poliwhirl"
-         },
-         {
-            "Number":62,
-            "Name":"Poliwrath"
          }
       ],
       "MaxCP":693,
@@ -4391,10 +4351,6 @@
          {
             "Number":64,
             "Name":"Kadabra"
-         },
-         {
-            "Number":65,
-            "Name":"Alakazam"
          }
       ],
       "MaxCP":508,
@@ -4603,10 +4559,6 @@
          {
             "Number":67,
             "Name":"Machoke"
-         },
-         {
-            "Number":68,
-            "Name":"Machamp"
          }
       ],
       "MaxCP":968,
@@ -4821,10 +4773,6 @@
          {
             "Number":70,
             "Name":"Weepinbell"
-         },
-         {
-            "Number":71,
-            "Name":"Victreebel"
          }
       ],
       "MaxCP":990,
@@ -5194,10 +5142,6 @@
          {
             "Number":75,
             "Name":"Graveler"
-         },
-         {
-            "Number":76,
-            "Name":"Golem"
          }
       ],
       "MaxCP":742,
@@ -6457,10 +6401,6 @@
          {
             "Number":93,
             "Name":"Haunter"
-         },
-         {
-            "Number":94,
-            "Name":"Gengar"
          }
       ],
       "MaxCP":696,
