@@ -12,11 +12,11 @@ module.exports = {
      * for getting raraPokemond data from pokesnipers.com through an api request and storing into files
      */
     fill: function (callback) {
-        let url = config.pokesniperUrl;
+        let url = config.pokesniper.url;
         common.getHttpRequestData(url);
         setInterval(function(){
             common.getHttpRequestData(url);
-        }, config.pokesniperListeningInterval);
+        }, config.pokesniper.listeningInterval);
     },
     /*
      * for inserting rarePokemon data to MongoDB
