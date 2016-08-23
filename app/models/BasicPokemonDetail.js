@@ -12,7 +12,12 @@ let BasicPokemonDetailSchema = new mongoose.Schema({
         type: String
     },
     gender: {
-        type: String, enum: ['m', 'f', 'u', 'h']
+        abbreviation: {
+            type: String, enum: ['m', 'f', 'g', 'h'] //m=male, f=female, g=genderless, h=hermaphrodite
+        },
+        male_ratio: Number,
+        female_ratio: Number,
+        breedable: Boolean
     },
     height: {
         value: Number
