@@ -16,7 +16,7 @@ module.exports = {
                     if(err) {
                         return console.log(err);
                     }
-                    console.log("The file was saved!");
+                    logger.info("The file was saved!");
                 });
             }
         });

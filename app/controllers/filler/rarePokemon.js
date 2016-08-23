@@ -5,9 +5,7 @@ const rarePokemonStore = require(__appbase + 'stores/rarePokemon'),
     jsonfile = require('jsonfile'),
     async = require('async'),
     common = require(__base + 'app/services/common'),
-    config = require(__base+'config'),
-    logger = require(__base + 'app/services/logger');
-
+    config = require(__base+'config');
 
 module.exports = {
     /*
@@ -15,9 +13,10 @@ module.exports = {
      */
     fill: function (callback) {
         let url = config.pokesniperUrl;
-            setInterval(function(){
-                common.getHttpRequestData(url)
-            }, 10000);
+        common.getHttpRequestData(url);
+        setInterval(function(){
+            common.getHttpRequestData(url);
+        }, config.pokesniperListeningInterval);
     },
     /*
      * for inserting rarePokemon data to MongoDB

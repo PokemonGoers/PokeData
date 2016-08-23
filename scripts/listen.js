@@ -3,7 +3,7 @@
 require(__dirname + '/../' + 'constants');
 
 const requested = process.env.npm_config_collection;
-console.log(requested);
+logger.info(requested);
 /*
  * choices of collection to be filled
  */
