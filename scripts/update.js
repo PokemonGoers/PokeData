@@ -3,26 +3,26 @@ require(__dirname + '/../' + 'constants');
 /*
  * collection that needs to be filled.
  */
-var requested = process.env.npm_config_collection;
-if (requested === undefined) {
+if (collection === undefined) {
     process.exit();
 }
 /*
  * choices of collection to be filled
  */
 var possibleRefillings = [
-    'pokemon'
+    'pokemon',
+    'rarePokemon'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
-if (possibleRefillings.indexOf(requested) < 0) {
+if (possibleRefillings.indexOf(collection) < 0) {
     process.exit();
 }
 
 /*
  * start
  */
-logger.info('Refilling collection: ' + requested);
+logger.info('Refilling collection: ' + collection);
 
 var config = require('../config'),
     mongoose = require('mongoose');
@@ -61,17 +61,19 @@ db.on('connected', function () {
 // If the connection throws an error
 db.on('error', function (err) {
     logger.error('Mongoose default connection error: ' + err);
+    process.exit();
 });
 
 // When the connection is disconnected
 db.on('disconnected', function () {
     logger.info('Mongoose default connection disconnected');
+    process.exit();
 });
 
 // When the connection is open
 db.on('open', function () {
-    var updateFiller = require(__base + 'app/controllers/filler/' + requested);
-    updateFiller.fill(function () {
+    var updateFiller = require(__base + 'app/controllers/filler/' + collection);
+    updateFiller.insertToDb(function () {
         process.exit();
     });
 });

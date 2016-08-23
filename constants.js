@@ -10,3 +10,5 @@ global.appConfig = {
     IS_LOCAL_DB: false,
     APP_ENV: process.env.NODE_ENV || 'development'
 };
+
+global.collection = process.env.npm_config_collection || 'rarePokemon';

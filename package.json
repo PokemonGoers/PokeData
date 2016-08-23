@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "update": "node scripts/update.js"
+    "update": "node scripts/update.js",
+    "listen" : "node scripts/listen.js"
   },
   "repository": {
     "type": "git",
