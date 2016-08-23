@@ -8,6 +8,7 @@ var rarePokemonSchema = new Schema({
     name       : {type: String},
     latitude   : {type: Number},
     longitude  : {type: Number},
+    spawn_time : {type: Date},
     seen_until : {type: Date},
     icon_url   : {type: String}
 

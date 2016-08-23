@@ -3,8 +3,7 @@ require(__dirname + '/../' + 'constants');
 /*
  * collection that needs to be filled.
  */
-var requested = process.env.npm_config_collection;
-if (requested === undefined) {
+if (collection === undefined) {
     process.exit();
 }
 /*
@@ -16,14 +15,14 @@ var possibleRefillings = [
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
-if (possibleRefillings.indexOf(requested) < 0) {
+if (possibleRefillings.indexOf(collection) < 0) {
     process.exit();
 }
 
 /*
  * start
  */
-logger.info('Refilling collection: ' + requested);
+logger.info('Refilling collection: ' + collection);
 
 var config = require('../config'),
     mongoose = require('mongoose');
@@ -73,7 +72,7 @@ db.on('disconnected', function () {
 
 // When the connection is open
 db.on('open', function () {
-    var updateFiller = require(__base + 'app/controllers/filler/' + requested);
+    var updateFiller = require(__base + 'app/controllers/filler/' + collection);
     updateFiller.insertToDb(function () {
         process.exit();
     });
