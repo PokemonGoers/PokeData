@@ -18,7 +18,7 @@ module.exports = {
     /*
      * for inserting rarePokemon data to MongoDB
      */
-    insertToDb: function (pokemons, callback) {
+    insertToDb: function (callback) {
 
         const dirPath = __tmpbase + 'pokeRadar/';
 
@@ -53,12 +53,17 @@ module.exports = {
                         return;
                     }
 
-                    if (rarePokemons !== undefined) {
+                    if (pokeRadar !== undefined) {
 
                         // inserting the read content into MongoDB
-                        insert(pokeRadar);
-                        // deleting the file after it has been read and data being stored into database
-                        fs.unlinkSync(dirPath + filename);
+                        insert(pokeRadar, function(success){
+                            noOfFiles--;
+                            // deleting the file after it has been read and data being stored into database
+                            fs.unlinkSync(dirPath + filename);
+                            // if no files then sent a callback to calling function
+                            if(noOfFiles === 0)
+                                callback(true);
+                        });
                     }
 
                 });
@@ -68,24 +73,28 @@ module.exports = {
         /*
          * inserting the read data into MongoDB
          */
-        let addPokemon = function (pokemon) {
+        let addPokemon = function (pokemon, callback) {
             pokeRadarStore.add(pokemon, function (success, data) {
-                //console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.id);
+                callback(success);
             });
         };
 
         /*
          * inserting the read data into MongoDB
          */
-        let insert = function (pokemons) {
+        let insert = function (pokemons, callback) {
             const pokemonRecords = JSON.parse(pokemons);
             let length = 0;
 
-            pokemonRecords.forEach(function (pokemon) {
+            async.forEach(pokemonRecords, function (pokemon, callback) {
                 length++;
-                addPokemon(pokemon);
+                addPokemon(pokemon, function(success){
+                    callback();
+                });
+            }, function(err){
+                callback(true);
             });
-            console.log('\n length',length);
+            logger.info('\n length',length);
         };
     }
 };

@@ -22,7 +22,7 @@ module.exports = {
         "pokeSnipers": 1,
         "pokeRadar": 2,
         "twitter": 3
-    }
+    },
     "twitterKeyWords" : 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{
         "url" : "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
