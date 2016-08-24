@@ -1,5 +1,4 @@
 require(__dirname + '/../' + 'constants');
-const common = require(__base + 'app/services/common');
 
 /*
  * collection that needs to be filled.

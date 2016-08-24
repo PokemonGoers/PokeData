@@ -5,8 +5,7 @@
         loadBasicPokemonDetails = require('./app/controllers/loadBasicPokemonDetails'),
         bodyParser = require('body-parser'),
         cors = require('cors'),
-        config = require('./config'),
-        common = require(__base + 'app/services/common');
+        config = require('./config');
 
 
     module.exports = {
