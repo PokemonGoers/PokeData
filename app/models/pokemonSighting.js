@@ -1,6 +1,7 @@
 'use strict';
 
-var pokemonSighting = new Schema({
+let mongoose = require('mongoose');
+let pokemonSighting = new Schema({
     source        : {type: Number},
     location      : {type: String, coordinates: [Number]},
     pokemonId     : {type: Number},
