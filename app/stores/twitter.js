@@ -6,7 +6,7 @@ module.exports = {
     /*
      * inserting the pokemon sighting details extracted from twitter
      */
-    add: function (data, callback) {
+    add: function (data) {
         //get the location of the tweet
         let coordinates = null;
         if (data.coordinates){
@@ -31,17 +31,19 @@ module.exports = {
             }
         });*/
         let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},appearedDate: new Date(data.timestamp_ms)});
-logger.info("SAVE,SAVE");
+        logger.info("SAVE,SAVE");
         // saving the data to the database
         pokemonSighting.save(function (err) {
             logger.info("SAVE");
             // on error
             if (err) {
-                callback(0, err);
+                logger.error("Error while saving pokmon sighting from source twitter");
+                //callback(0, err);
             }
             // on success
             else {
-                callback(1, pokemonSightings);
+                logger.info("Pokemon sighting data saved successfully from source twitter");
+                //callback(1, pokemonSightings);
             }
         });
     }

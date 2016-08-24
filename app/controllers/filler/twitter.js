@@ -122,7 +122,7 @@ let fs = require('fs'),
     config = require(__appbase + '../config'),
 	Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
-	twitterStore = require(__appbase + 'stores/twitter'),
+	TwitterStore = require(__appbase + 'stores/twitter'),
     pokemonListPath = require(__appbase + '../resources/json/pokemonIdAndName.json');
 
 const Twitter = new TwitterStream(config.twitter);
@@ -131,7 +131,7 @@ const Twitter = new TwitterStream(config.twitter);
 var pokemonNameList = [];
 
 module.exports = {
-    fill: function (callback) {
+    fill: function () {
 		let data = JSON.stringify(pokemonListPath, function (key, value) {
 			var pokemonID, pokemonName;
 			if (key != 'name' && typeof value.name !== "undefined") {
@@ -206,6 +206,7 @@ module.exports = {
 				let pokemonNameListLength = pokemonNameList.length;
 				for(var i = 0; i < pokemonNameListLength; i++) {
 					if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
+						//TODO: more reg exp check of the sentence, i caught pikachu, 
 						//get pokemon names array
 						logger.info(tweetObj.text.toLowerCase());
 						logger.info(pokemonNameList[i] + ' was found');
@@ -220,11 +221,10 @@ module.exports = {
 			properties: tweetId (unique), pokemonName, foundAt (latitude,longitude), appearedOn: (DateString UTC)
 		*/
 
-		function addPokemonAppearanceToDB(tweetObj, pokemonName) {
+		function addPokemonAppearanceToDB(tweetObj) {
 			logger.info("Add Pokemons");
-			twitterStore.add(tweetObj, function (success, data) {
-				logger.info("HEllo");
-				callback(success);
+			TwitterStore.add(tweetObj, function (success, data) {
+				logger.info("Hello");
 			});
 		}
 	}
