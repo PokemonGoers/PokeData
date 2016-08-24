@@ -1,5 +1,8 @@
 "use strict";
 module.exports = {
+    /*
+     *  required for http request to get JSON data and storing it into a file.
+     */
     getHttpRequestData : function(url){
         let request = require('request'),
             fs = require('fs'),
