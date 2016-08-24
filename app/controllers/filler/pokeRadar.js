@@ -1,12 +1,11 @@
 "use strict";
 
-const pokeRadarModel = require(__appbase + 'models/pokeRadar'),
-    //rarePokemonStore = require(__appbase + 'stores/pokeRadar'),
+const pokeRadarStore = require(__appbase + 'stores/pokeRadar'),
     fs = require('fs'),
     jsonfile = require('jsonfile'),
     async = require('async'),
     common = require(__base + 'app/services/pokeRadar'),
-    config = require(__base+'config');
+    config = require(__base + 'config');
 
 
 module.exports = {
@@ -43,7 +42,7 @@ module.exports = {
 
             // reading individual files for the data
             filenames.forEach(function(filename) {
-                fs.readFile(dirPath + filename, 'utf-8', function(err, rarePokemons) {
+                fs.readFile(dirPath + filename, 'utf-8', function(err, pokeRadar) {
 
                     console.log('filename', filename);
                     console.log('\n');
@@ -57,7 +56,7 @@ module.exports = {
                     if (rarePokemons !== undefined) {
 
                         // inserting the read content into MongoDB
-                        insert(rarePokemons);
+                        insert(pokeRadar);
                         // deleting the file after it has been read and data being stored into database
                         fs.unlinkSync(dirPath + filename);
                     }
@@ -69,8 +68,8 @@ module.exports = {
         /*
          * inserting the read data into MongoDB
          */
-        let addRarePokemon = function (rarePokemon) {
-            rarePokemonStore.add(rarePokemon, function (success, data) {
+        let addPokemon = function (pokemon) {
+            pokeRadarStore.add(pokemon, function (success, data) {
                 //console.log((success != 1) ? 'Error:' + data : 'Success: ' + data.id);
             });
         };
@@ -78,13 +77,13 @@ module.exports = {
         /*
          * inserting the read data into MongoDB
          */
-        let insert = function (rarePokemons) {
-            const rarePokemonRecords =JSON.parse(rarePokemons);
+        let insert = function (pokemons) {
+            const pokemonRecords = JSON.parse(pokemons);
             let length = 0;
 
-            rarePokemonRecords.forEach(function (rarePokemon) {
+            pokemonRecords.forEach(function (pokemon) {
                 length++;
-                addRarePokemon(rarePokemon);
+                addPokemon(pokemon);
             });
             console.log('\n length',length);
         };
