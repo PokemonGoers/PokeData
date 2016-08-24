@@ -122,16 +122,20 @@ let fs = require('fs'),
     config = require(__appbase + '../config'),
 	Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
+	jsonfile = require('jsonfile'),
+    async = require('async'),
 	TwitterStore = require(__appbase + 'stores/twitter'),
     pokemonListPath = require(__appbase + '../resources/json/pokemonIdAndName.json');
 
 const Twitter = new TwitterStream(config.twitter);
+const pathToSaveTwitterPokeData = __tmpbase + 'twitterPokemonData/';
+const jsonFileName = 'twitterPokemonData';
 
 // array of names of pokemons
 var pokemonNameList = [];
 
 module.exports = {
-    fill: function () {
+    fill : function () {
 		let data = JSON.stringify(pokemonListPath, function (key, value) {
 			var pokemonID, pokemonName;
 			if (key != 'name' && typeof value.name !== "undefined") {
@@ -180,20 +184,18 @@ module.exports = {
 			logger.error('Twitter stream data error');
 		});
 
-		// process the tweet object
-		let Output = Writable({objectMode: true});
-		Output._write = function (obj, enc, next) {
-			checkIfTweetHasPokemonName(obj);
-			next();
-		};
-
-		//send output of twitter to output
-		Twitter.pipe(Output);
-
 		/*
 			check if tweet object has pokemon term
 		*/
 		function checkIfTweetHasPokemonName(tweetObj) {
+			//write to file
+			if (!fs.existsSync(pathToSaveTwitterPokeData)){
+				fs.mkdirSync(pathToSaveTwitterPokeData);
+				logger.info("Created folder at " + pathToSaveTwitterPokeData);
+			}
+
+			const fileName = (__tmpbase+jsonFileName+"/"+jsonFileName+".json").toString();
+
 			let tweetText = tweetObj.text.toLowerCase();
 			// check if the tweet text contains the important keywords
 			if (tweetText.indexOf('caught') != -1 || 
@@ -210,11 +212,93 @@ module.exports = {
 						//get pokemon names array
 						logger.info(tweetObj.text.toLowerCase());
 						logger.info(pokemonNameList[i] + ' was found');
-						addPokemonAppearanceToDB(tweetObj, pokemonNameList[i]);
+						
+						fs.exists(fileName, function(exists) {
+							if (exists) {
+								fs.readFile(fileName, function (err, data) {
+									if(err) {
+										return logger.error(err);
+									}
+									if(Object.getPrototypeOf((JSON.parse(data)) === Object.prototype)) {
+										console.log("Object");
+										var json = [];
+										json.push(JSON.stringify(JSON.parse(data)));
+										json.push(JSON.stringify(tweetObj));
+									} else {
+										console.log("Array");
+										var json = JSON.stringify((JSON.parse(data)));
+										json.push(JSON.stringify(tweetObj));
+									}
+
+									fs.writeFile(fileName, json, function(err) {
+										logger.info("The file was saved!");
+									});
+								})
+							} else {
+								fs.writeFile(fileName, JSON.stringify(tweetObj), function(err) {
+									logger.info("The file was saved!");
+								});
+							}
+						});
 					}
 				}
 			}
 		}
+
+		// process the tweet object
+		let Output = Writable({objectMode: true});
+		Output._write = function (obj, enc, next) {
+			checkIfTweetHasPokemonName(obj);
+			next();
+		};
+
+		Twitter.pipe(Output);
+	},
+	insertToDb: function() {
+
+        // reading the directory under which all the files containing twitterPokemonData data is there
+        fs.readdir(pathToSaveTwitterPokeData, function(err, filenames) {
+
+            let noOfFiles = filenames.length,
+                count =0;
+
+            if (err) {
+                logger.error('Error in reading directory' + dirPath);
+                process.exit();
+            }
+            // when no files are present then exit the process
+            if( noOfFiles === 0){
+                logger.info('No files to read');
+                process.exit();
+            }
+
+            logger.info('MongoDb Insertion...');
+
+            // reading individual files for the data
+            filenames.forEach(function(filename) {
+                fs.readFile(pathToSaveTwitterPokeData + filename, 'utf-8', function(err, twitterPokemonData) {
+
+                    logger.info('filename', filename);
+                    logger.info('\n');
+
+                    // some error on reading the file
+                    if (err) {
+                        logger.error('Error in reading file' + filename);
+                        return;
+                    }
+
+                    if (twitterPokemonData !== undefined) {
+
+                        // inserting the read content into MongoDB
+                        addPokemonAppearanceToDB(twitterPokemonData);
+						//decrease the number of files to be read
+						noOfFiles--;
+						// deleting the file after it has been read and data being stored into database
+						fs.unlinkSync(pathToSaveTwitterPokeData + filename);
+                    }
+                });
+            });
+        });
 
 		/*
 			add pokemon appearance to DB 
@@ -222,10 +306,15 @@ module.exports = {
 		*/
 
 		function addPokemonAppearanceToDB(tweetObj) {
-			logger.info("Add Pokemons");
-			TwitterStore.add(tweetObj, function (success, data) {
-				logger.info("Hello");
+			//const pokemonDataFromTweets =JSON.parse(tweetObj);
+            let length = 0;
+
+            async.forEach(pokemonDataFromTweets,function (pokemonDataFromTweet, callback) {
+                length++;
+                TwitterStore.add(pokemonDataFromTweet);
 			});
+
+            logger.info('\n length',length);
 		}
 	}
 };

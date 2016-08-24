@@ -1,7 +1,6 @@
 (function () {
     "use strict";
     let express = require('express'),
-        twitterStreaming = require('./app/controllers/twitter'),
         loadBasicPokemonDetails = require('./app/controllers/loadBasicPokemonDetails'),
         bodyParser = require('body-parser'),
         cors = require('cors'),
