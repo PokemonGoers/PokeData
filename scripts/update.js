@@ -26,7 +26,7 @@ if (possibleRefillings.indexOf(collection) < 0) {
 logger.info('Refilling collection: ' + collection);
 
 
-common.getDbConnection(function (db) {
+database.connect(function (db) {
     /*The DB connection is open*/
     db.on('open', function () {
         var updateFiller = require(__base + 'app/controllers/filler/' + collection);

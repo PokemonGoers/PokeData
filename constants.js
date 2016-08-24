@@ -5,6 +5,7 @@ global.__appbase = appRoot + '/app/';
 global.__tmpbase = appRoot + '/tmp/';
 
 global.logger = require(__appbase + '/services/logger');
+global.database = require(__appbase + '/services/database');
 
 global.appConfig = {
     APP_ENV: process.env.NODE_ENV || 'development',

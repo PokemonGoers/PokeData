@@ -14,7 +14,7 @@
             logger.success('Application started successfully');
 
             // set the database
-            common.getDbConnection(function(db){
+            database.connect(function(db){
                 /*The DB connection is open*/
                 db.on('open', function () {
                     /*Perform operations that require DB connection*/
