@@ -3,6 +3,9 @@
 /*Expose Database functions that can be used by other files */
 module.exports = {
 
+    /*
+     *  Connect to the MongoDB
+     */
     connect: function (callback) {
         /*Create the DB connection string*/
         let databaseParams,
