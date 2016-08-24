@@ -61,9 +61,6 @@
 
             //load basic pokemon details
             loadBasicPokemonDetails.start();
-
-            //twitter streaming
-            twitterStreaming.startStreaming();
         },
         stop: function (done) {
             logger.info('Application stopped');

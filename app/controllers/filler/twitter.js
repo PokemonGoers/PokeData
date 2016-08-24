@@ -119,10 +119,10 @@ important fields:
 */
 
 let fs = require('fs'),
-    config = require('../../config'),
+    config = require(__appbase + '../config'),
 	Writable = require('stream').Writable,
     TwitterStream = require('twitter-stream-api'),
-	pokemonTweet = require(__appbase + 'models/pokemonAppearances.js'),
+	twitterStore = require(__appbase + 'stores/twitter'),
     pokemonListPath = require(__appbase + '../resources/json/pokemonIdAndName.json');
 
 const Twitter = new TwitterStream(config.twitter);
@@ -130,119 +130,102 @@ const Twitter = new TwitterStream(config.twitter);
 // array of names of pokemons
 var pokemonNameList = [];
 
-// process the tweet object
-let Output = Writable({objectMode: true});
-Output._write = function (obj, enc, next) {
-	checkIfTweetHasPokemonName(obj);
-    next();
-};
-
-/*
-	check if tweet object has pokemon term
- */
-function checkIfTweetHasPokemonName(tweetObj) {
-	let tweetText = tweetObj.text.toLowerCase();
-	// check if the tweet text contains the important keywords
-	if (tweetText.indexOf('caught') != -1 || 
-		tweetText.indexOf('saw') != -1 || 
-		tweetText.indexOf('attacked') != -1 ||
-		tweetText.indexOf('found') != -1  ||
-		tweetText.indexOf('appeared') != -1 ) {
-
-		// for each pokemon name check if it is inside the tweet text
-		let pokemonNameListLength = pokemonNameList.length;
-		for(var i = 0; i < pokemonNameListLength; i++) {
-			if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
-				//get pokemon names array
-				logger.info(tweetObj.text.toLowerCase());
-				logger.info(pokemonNameList[i] + ' was found');
-				addPokemonAppearanceToDB(tweetObj, pokemonNameList[i]);
-			}
-		}
-	}
-}
-
-/*
-	add pokemon appearance to DB 
-	properties: tweetId (unique), pokemonName, foundAt (latitude,longitude), appearedOn: (DateString UTC)
- */
-
-function addPokemonAppearanceToDB(tweetObj, pokemonName) {
-	//default pokemon latitude and longitude set to -1, new values only if tweet contains coordinates
-	let pokemonFoundLongitude = -1, pokemonFoundLatitude = -1;
-	//get the location of the tweet
-	if (tweetObj.coordinates){
-		pokemonFoundLongitude = tweetObj.coordinates.coordinates[0];
-		pokemonFoundLatitude = tweetObj.coordinates.coordinates[1];
-	}
-
-	pokemonTweet.create({tweetId: tweetObj.id_str, pokemonName: pokemonName, foundAt: {latitude: pokemonFoundLatitude, longitude: pokemonFoundLongitude}, appearedOn: tweetObj.created_at}, function (err, post) {
-		if (err) {
-			if (err.name === 'MongoError' && err.code === 11000) {
-				logger.error('Duplicate error');
-				logger.info(tweetObj.id_str + 'tweet was discarded');
-			} else {
-				logger.error(err);
-			}
-		} else {
-			logger.info('Adding tweet to DB');
-		}
-	});
-}
-
-function twitterStreaming() {
-	let data = JSON.stringify(pokemonListPath, function (key, value) {
-        var pokemonID, pokemonName;
-        if (key != 'name' && typeof value.name !== "undefined") {
-            pokemonNameList.push(value.name.toLowerCase());
-		}
-		return value;
-	});
-
-    // listen to keywords, get tweets in english language
-    Twitter.stream('statuses/filter', {track: config.twitterKeyWords, language: 'en'});
-
-    //Twitter stream events
-    Twitter.on('connection success', function (uri) {
-        logger.success('Connection successful', 'Twitter stream connection success' + uri);
-    });
-
-    Twitter.on('connection aborted', function () {
-        logger.info('Twitter stream connection aborted');
-    });
-
-    Twitter.on('connection error network', function () {
-        logger.error('Twitter stream connection error network');
-    });
-
-    Twitter.on('connection error stall', function () {
-        logger.error('Twitter stream connection error stall');
-    });
-
-    Twitter.on('connection error http', function (err) {
-        logger.error('Twitter stream connection error http', err);
-    });
-
-    Twitter.on('connection rate limit', function () {
-        logger.info('Twitter stream connection rate limit');
-    });
-
-    Twitter.on('connection error unknown', function () {
-        logger.error('Twitter stream connection error unknown');
-    });
-
-    Twitter.on('data keep-alive', function () {
-        logger.info('Twitter stream data keep-alive');
-    });
-
-    Twitter.on('data error', function () {
-        logger.error('Twitter stream data error');
-    });
-
-	//send output of twitter to output
-    Twitter.pipe(Output);
-}
-
 module.exports = {
-    startStreaming: twitterStreaming
+    fill: function (callback) {
+		let data = JSON.stringify(pokemonListPath, function (key, value) {
+			var pokemonID, pokemonName;
+			if (key != 'name' && typeof value.name !== "undefined") {
+				pokemonNameList.push(value.name.toLowerCase());
+			}
+			return value;
+		});
+
+		// listen to keywords, get tweets in english language
+		Twitter.stream('statuses/filter', {track: config.twitterKeyWords, language: 'en'});
+
+		//Twitter stream events
+		Twitter.on('connection success', function (uri) {
+			logger.success('Connection successful', 'Twitter stream connection success' + uri);
+		});
+
+		Twitter.on('connection aborted', function () {
+			logger.info('Twitter stream connection aborted');
+		});
+
+		Twitter.on('connection error network', function () {
+			logger.error('Twitter stream connection error network');
+		});
+
+		Twitter.on('connection error stall', function () {
+			logger.error('Twitter stream connection error stall');
+		});
+
+		Twitter.on('connection error http', function (err) {
+			logger.error('Twitter stream connection error http', err);
+		});
+
+		Twitter.on('connection rate limit', function () {
+			logger.info('Twitter stream connection rate limit');
+		});
+
+		Twitter.on('connection error unknown', function () {
+			logger.error('Twitter stream connection error unknown');
+		});
+
+		Twitter.on('data keep-alive', function () {
+			logger.info('Twitter stream data keep-alive');
+		});
+
+		Twitter.on('data error', function () {
+			logger.error('Twitter stream data error');
+		});
+
+		// process the tweet object
+		let Output = Writable({objectMode: true});
+		Output._write = function (obj, enc, next) {
+			checkIfTweetHasPokemonName(obj);
+			next();
+		};
+
+		//send output of twitter to output
+		Twitter.pipe(Output);
+
+		/*
+			check if tweet object has pokemon term
+		*/
+		function checkIfTweetHasPokemonName(tweetObj) {
+			let tweetText = tweetObj.text.toLowerCase();
+			// check if the tweet text contains the important keywords
+			if (tweetText.indexOf('caught') != -1 || 
+				tweetText.indexOf('saw') != -1 || 
+				tweetText.indexOf('attacked') != -1 ||
+				tweetText.indexOf('found') != -1  ||
+				tweetText.indexOf('appeared') != -1 ) {
+
+				// for each pokemon name check if it is inside the tweet text
+				let pokemonNameListLength = pokemonNameList.length;
+				for(var i = 0; i < pokemonNameListLength; i++) {
+					if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
+						//get pokemon names array
+						logger.info(tweetObj.text.toLowerCase());
+						logger.info(pokemonNameList[i] + ' was found');
+						addPokemonAppearanceToDB(tweetObj, pokemonNameList[i]);
+					}
+				}
+			}
+		}
+
+		/*
+			add pokemon appearance to DB 
+			properties: tweetId (unique), pokemonName, foundAt (latitude,longitude), appearedOn: (DateString UTC)
+		*/
+
+		function addPokemonAppearanceToDB(tweetObj, pokemonName) {
+			logger.info("Add Pokemons");
+			twitterStore.add(tweetObj, function (success, data) {
+				logger.info("HEllo");
+				callback(success);
+			});
+		}
+	}
 };
