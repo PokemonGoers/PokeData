@@ -7,7 +7,8 @@ logger.info(collection);
  * choices of collection to be filled
  */
 var possibleListeners = [
-    'rarePokemon'
+    'rarePokemon',
+    'pokeRadar'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
