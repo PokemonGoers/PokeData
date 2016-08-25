@@ -1,12 +1,13 @@
 "use strict";
 const config = require(__base+'config'),
-      PokemonSighting = require(__appbase + 'models/pokemonSighting')
+      PokemonSighting = require(__appbase + 'models/pokemonSighting'),
+      common = require(__base + 'app/services/common');
 
 module.exports = {
     /*
      * inserting the pokemon sighting details extracted from twitter
      */
-    add: function (data) {
+    add: function (data, pokemonName) {
         //get the location of the tweet
         let coordinates = null;
         if (data.coordinates){
@@ -15,7 +16,10 @@ module.exports = {
             coordinates = [pokemonFoundLongitude, pokemonFoundLatitude];
         }
 
-        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},appearedDate: new Date(data.timestamp_ms)});
+        let pokemonId = parseInt(common.getPokemonIdByName(pokemonName));
+
+        console.log(Math.floor(data.timestamp_ms/1000));
+        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedDate: new Date(Math.floor(data.timestamp_ms/1000))});
         // saving the data to the database
         pokemonSighting.save(function (err) {
             // on error

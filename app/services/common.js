@@ -1,4 +1,8 @@
 "use strict";
+
+const fs = require('fs'),
+      pokemonDataJson = __appbase + '../resources/json/pokemonGoData.json';
+
 module.exports = {
     /*
      *  required for http request to get JSON data and storing it into a file.
@@ -23,5 +27,33 @@ module.exports = {
                 });
             }
         });
+    },
+
+    /*
+     * get pokemon id for pokemon name
+     */
+    getPokemonIdByName : function(name) {
+        let pokemonId = null;
+        var jsonDataArray = JSON.parse(fs.readFileSync(pokemonDataJson, 'utf8'));;
+        
+        for(var i =0; i < jsonDataArray.length; i++) {
+            if(jsonDataArray[i].Name.toLowerCase() === name.toLowerCase()) {
+                pokemonId = jsonDataArray[i].Number;
+            }
+        }
+        return pokemonId;
+    },
+
+    /*
+     * get pokemon name list
+     */
+    getPokemonNameList : function() {
+        let pokemonNameArray = [];
+        var jsonDataArray = JSON.parse(fs.readFileSync(pokemonDataJson, 'utf8'));;
+        
+        for(var i =0; i < jsonDataArray.length; i++) {
+            pokemonNameArray.push(jsonDataArray[i].Name.toLowerCase())
+        }
+        return pokemonNameArray;
     }
 };
