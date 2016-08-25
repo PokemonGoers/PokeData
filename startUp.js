@@ -60,7 +60,7 @@
 
 
             //load basic pokemon details
-            loadBasicPokemonDetails.start();
+            //loadBasicPokemonDetails.start();
 
             //twitter streaming
             twitterStreaming.startStreaming();
