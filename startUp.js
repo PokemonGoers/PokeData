@@ -59,9 +59,6 @@
             logger.info('Listening on port ' + port);
 
 
-            //load basic pokemon details
-            //loadBasicPokemonDetails.start();
-
             //twitter streaming
             twitterStreaming.startStreaming();
         },
