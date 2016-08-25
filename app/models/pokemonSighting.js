@@ -5,7 +5,7 @@ var Schema   = mongoose.Schema;
 
 let pokemonSighting = new Schema({
     source        : {type: Number},
-    location      : {type: {type: String}, coordinates: [Number]},
+    location      : {type: {type: String, default: 'Point'}, coordinates: [Number]},
     pokemonId     : {type: Number},
     appearedDate  : {type: Date}
 });
