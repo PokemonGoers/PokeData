@@ -2,6 +2,9 @@
 
 require(__dirname + '/../' + 'constants');
 
+if (collection === undefined) {
+    process.exit();
+}
 logger.info(collection);
 /*
  * choices of collection to be filled
@@ -15,8 +18,13 @@ if (possibleListeners.indexOf(collection) < 0) {
     process.exit();
 }
 
-// listener for pokemons
-const listener = require(__base + 'app/controllers/filler/' + collection);
-listener.fill(function () {
-    process.exit();
+database.connect(function (db) {
+    db.on('open', function () {
+        // listener for pokemons
+        const listener = require(__base + 'app/controllers/filler/' + collection);
+        listener.fill(function () {
+            process.exit();
+        });
+
+    })
 });
