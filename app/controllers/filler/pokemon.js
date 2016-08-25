@@ -21,7 +21,7 @@ module.exports = {
 
         var addPokemon = function (pokemon, callback) {
             PokemonStore.add(pokemon, function (success, data) {
-                if (success != 1) {
+                if (success === 1) {
                     logger.success('Success: ' + data.pokemonId);
                 } else {
                     logger.error('Error:' + data);
