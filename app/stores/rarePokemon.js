@@ -32,7 +32,7 @@ module.exports = {
                                          h = Math.floor(tempTime / 3600),
                                          m = Math.floor(tempTime % 3600 / 60),
                                          s = Math.floor(tempTime % 3600 % 60),
-                                         spawnTime = ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s),
+                                         spawnTime = (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s  < 10 ? "0" + s : s),
                                          spawnTimeStamp = date + 'T' + spawnTime +'.' + temp1[1];
                                          rarePokemons['spawn_time'] = spawnTimeStamp;
                                    break;
