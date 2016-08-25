@@ -20,9 +20,9 @@ if (possibleListeners.indexOf(collection) < 0) {
 
 database.connect(function (db) {
     db.on('open', function () {
-        // listener for pokemons
-        const listener = require(__base + 'app/controllers/filler/' + collection);
-        listener.fill(function () {
+        // builder basic pokemon details
+        const builder = require(__storebase  + collection);
+        builder.fill(function () {
             process.exit();
         });
 

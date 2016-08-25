@@ -4,6 +4,7 @@ global.__base = appRoot + '/';
 global.__appbase = appRoot + '/app/';
 global.__tmpbase = appRoot + '/tmp/';
 global.__resourcebase = appRoot + '/resources/json/';
+global.__storebase = __appbase + 'stores/';
 
 global.logger = require(__appbase + '/services/logger');
 global.database = require(__appbase + '/services/database');
