@@ -193,7 +193,10 @@ module.exports = {
 				// for each pokemon name check if it is inside the tweet text
 				let pokemonNameListLength = pokemonNameList.length;
 				for(var i = 0; i < pokemonNameListLength; i++) {
-					if (tweetObj.text.toLowerCase().indexOf(pokemonNameList[i]) != -1){
+					// regular expression to check name of pokemon with one space in the front and end
+					// to not count pokemon twice if name is substring of another pokemon name e.g. mew and mewtwo
+					let pokemonNameRegEx = new RegExp('\\s' + pokemonNameList[i] + '\\s','g');
+					if (tweetText.match(pokemonNameRegEx)){
 						//TODO: more reg exp check of the sentence, i caught pikachu, 
 						//get pokemon names array
 						logger.info(tweetObj.text.toLowerCase());
