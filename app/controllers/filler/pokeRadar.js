@@ -4,8 +4,7 @@ const pokeRadarStore = require(__appbase + 'stores/pokeRadar'),
     fs = require('fs'),
     jsonfile = require('jsonfile'),
     async = require('async'),
-    common = require(__base + 'app/services/pokeRadar'),
-    config = require(__base + 'config');
+    common = require(__base + 'app/services/pokeRadar')
 
 
 module.exports = {
@@ -29,23 +28,23 @@ module.exports = {
                 count =0;
 
             if (err) {
-                console.log('Error in reading directory' + dirPath);
+                logger.error('Error in reading directory' + dirPath);
                 process.exit();
             }
             // when no files are present then exit the process
             if( noOfFiles === 0){
-                console.log('No files to read');
+                logger.info('No files to read');
                 process.exit();
             }
 
-            console.log('MongoDb Insertion...');
+            logger.info('MongoDb Insertion...');
 
             // reading individual files for the data
             filenames.forEach(function(filename) {
                 fs.readFile(dirPath + filename, 'utf-8', function(err, pokeRadar) {
 
-                    console.log('filename', filename);
-                    console.log('\n');
+                    logger.info('filename', filename);
+                    logger.info('\n');
 
                     // some error on reading the file
                     if (err) {

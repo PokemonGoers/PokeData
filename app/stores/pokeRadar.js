@@ -1,6 +1,5 @@
 "use strict";
-const commonPokemon = require(__appbase + 'models/pokemonSighting'),
-      config      = require(__base+'config');
+const commonPokemon = require(__appbase + 'models/pokemonSighting');
 
 module.exports = {
     /*
@@ -8,7 +7,7 @@ module.exports = {
      */
     add: function (data, callback) {
         var pokemon = new commonPokemon();
-        pokemon['source'] = config['pokemonDataSources']['pokeRadar'];
+        pokemon['source'] = "POKERADAR";
         pokemon['pokemonId'] = data['pokemonId'];
         pokemon['appearedDate'] = new Date(data['created'] * 1000);
         pokemon['location']['type'] = "Point";

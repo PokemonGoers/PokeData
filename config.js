@@ -7,21 +7,16 @@ module.exports = {
         "collection": "PokeData"
     },
     "shared_database": {
-        "username": "MLAB_USERNAME_HERE",
-        "password": "MLAB_PASSWORD_HERE",
-        "uri": "ds063725.mlab.com:63725/pokemongo",
-        "collection": "PokeData"
+        "username": process.env.MLAB_USERNAME,
+        "password": process.env.MLAB_PASSWORD,
+        "uri": process.env.MLAB_URI,
+        "collection": process.env.MLAB_COLLECTION
     },
     "twitter" : {
         "consumer_key": process.env.CONSUMER_KEY,
         "consumer_secret": process.env.CONSUMER_SECRET,
         "token": process.env.ACCESS_TOKEN,
         "token_secret": process.env.ACCESS_TOKEN_SECRET
-    },
-    "pokemonDataSources": {
-        "pokeSnipers": 1,
-        "pokeRadar": 2,
-        "twitter": 3
     },
     "twitterKeyWords" : 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{

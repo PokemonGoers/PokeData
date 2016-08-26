@@ -5,10 +5,11 @@ global.__appbase = appRoot + '/app/';
 global.__tmpbase = appRoot + '/tmp/';
 
 global.logger = require(__appbase + '/services/logger');
+global.database = require(__appbase + '/services/database');
 
 global.appConfig = {
-    IS_LOCAL_DB: false,
-    APP_ENV: process.env.NODE_ENV || 'development'
+    APP_ENV: process.env.NODE_ENV || 'development',
+    IS_LOCAL_DB: (process.env.NODE_ENV !== 'production')
 };
 
 global.collection = process.env.npm_config_collection || 'rarePokemon';
