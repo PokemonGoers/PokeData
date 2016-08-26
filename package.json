@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "update": "node scripts/update.js",
-    "listen" : "node scripts/listen.js"
+    "update": "NODE_ENV=production node scripts/update.js",
+    "listen": "NODE_ENV=production node scripts/listen.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +23,16 @@
     "grunt-contrib-jshint": "^1.0.0"
   },
   "dependencies": {
+    "async": "^2.0.1",
     "body-parser": "^1.15.2",
     "cors": "^2.7.1",
     "express": "^4.14.0",
+    "fs": "0.0.1-security",
     "jsonfile": "^2.3.1",
     "mongoose": "^4.5.9",
+    "path": "^0.12.7",
+    "request": "^2.74.0",
+    "stream": "0.0.2",
     "twitter-stream-api": "^0.4.3"
   }
 }
