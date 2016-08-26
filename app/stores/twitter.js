@@ -1,7 +1,8 @@
 "use strict";
 const config = require(__base+'config'),
       PokemonSighting = require(__appbase + 'models/pokemonSighting'),
-      common = require(__base + 'app/services/common');
+      common = require(__base + 'app/services/common'),
+      moment = require('moment');
 
 module.exports = {
     /*
@@ -19,7 +20,7 @@ module.exports = {
         let pokemonId = parseInt(common.getPokemonIdByName(pokemonName));
 
         console.log(Math.floor(data.timestamp_ms/1000));
-        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedDate: new Date(Math.floor(data.timestamp_ms/1000))});
+        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedDate: moment.unix(data.timestamp_ms/1000)});
         // saving the data to the database
         pokemonSighting.save(function (err) {
             // on error
