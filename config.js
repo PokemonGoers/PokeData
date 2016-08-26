@@ -19,7 +19,7 @@ module.exports = {
         "token_secret": process.env.ACCESS_TOKEN_SECRET
     },
     "pokemonDataSources": {
-        "twitter": 3
+        "twitter": "TWITTER"
     },
     "twitterKeyWords" : 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{
