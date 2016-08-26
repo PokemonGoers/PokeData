@@ -89,36 +89,35 @@ function searcher(minLat, minLng, boxSize, delta, proxied, callback) {
                     }
                     //if all requests are done we can callback
                     if(count === maxCount) {
-                        logger.info('Finished!\n');
                         if(!cb){
                             cb = true;
-                            callback(null, pokemons);
+                            //timeout between each search to avoid blocking
+                            setTimeout(function() {
+                                logger.info('Finished!\n');
+                                callback(null, pokemons);
+                            },2000);
                         }
                     }
                 });
             }).setMaxListeners(0);
-            //sets timeout of request to 5 seconds
-            req.on('socket', function (socket) {
-                socket.setTimeout(5000);
-                socket.on('timeout', function() {
-                    req.abort();
-                });
+
+            //sets timeout of request to 5 seconds, and if so request gets aborted, triggering req.on('error'...
+            req.setTimeout(5000, function() {
+                req.abort();
             });
-            //handles error in request
+
+            //handles error in request or timeout
             req.on('error', function(err) {
                 count++;
-                if (err.code === "ECONNRESET" || err.code === "ETIMEDOUT") {
-                    logger.error("Timeout/Connection Reset occured!");
-                } else {
-                    logger.error("Request Error occured!", err);
-                }
-                //if all requests are done we can callback
-                if(count === maxCount) {
-                    logger.info('Finished!\n');
-                    if(!cb){
-                        cb = true;
-                        callback(null, pokemons);
+                if(!cb) {
+                    cb = true;
+                    if (err.code === "ECONNRESET" || err.code === "ETIMEDOUT") {
+                        logger.error("Timeout/Connection Reset occured!");
+                    } else {
+                        logger.error("Request Error occured!", err);
                     }
+                    logger.info('Finished!\n');
+                    callback(null, pokemons);
                 }
             });
             req.end();
@@ -141,17 +140,17 @@ module.exports = {
         //currently takes 1-2 hours, also pokeradar doesnt answer requests after like 30 seconds of continous scanning
         //but then after 20-30 seconds of not answering, responses are again received => idea: switch to proxy
         //another idea: dont scan on on water => reduces scanning area about 60%
-        /*for (var i = -180.0; i <= 180.0 - boxSize; i = i + boxSize){
+        for (var i = -180.0; i <= 180.0 - boxSize; i = i + boxSize){
             for (var j = -90.0; j <= 90.0 - boxSize; j = j + boxSize){
                 funcs.push(createfunc(j, i, boxSize, delta, false));
             }
-        }*/
+        }
         //scan test for western USA
-        for (var i = -125.0; i <= -100.0 - boxSize; i = i + boxSize) {
+        /*for (var i = -125.0; i <= -100.0 - boxSize; i = i + boxSize) {
             for (var j = 30.0; j <= 50.0 - boxSize; j = j + boxSize) {
                 funcs.push(createfunc(j, i, boxSize, delta, false));
             }
-        }
+        }*/
         //scan test for LA area
         /*for (var i = -118.5; i <= -118.5; i = i + boxSize) {
             for (var j = 34; j <= 34; j = j + boxSize) {
@@ -166,7 +165,7 @@ module.exports = {
                 logger.info(final.length + ' pokemon found!');
                 fs.writeFile((__tmpbase+"pokeRadar/pokeRadar_"+parseInt(Math.floor(Date.now() / 1000))+".json").toString(), JSON.stringify(final), function (err) {
                     if (err) {
-                        return console.log(err);
+                        return logger.error(err);
                     }
                     logger.success("The file was saved!");
                 });
