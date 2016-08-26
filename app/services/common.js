@@ -16,15 +16,22 @@ module.exports = {
 
             if (!error && response.statusCode === 200) {
                 const data = JSON.parse(body),
-                      srcName = collection,
-                      fileName = (__tmpbase+srcName+"/"+srcName+"_"+parseInt(Math.floor(Date.now() / 1000))+".json").toString();
+                      dirName = __tmpbase + collection,
+                      fileName = (dirName + "/" + collection + "_" + parseInt(Math.floor(Date.now() / 1000)) + ".json").toString();
 
-                fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
-                    if(err) {
-                        return console.log(err);
-                    }
-                    logger.info("The file was saved!");
-                });
+                try {
+                    fs.statSync(dirName);
+                } catch(e) {
+                    fs.mkdirSync(dirName);
+
+                    fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
+                        if (err) {
+                            return logger.error(err);
+                        }
+                        logger.info("The file was saved!", fileName);
+                    });
+                }
+
             }
         });
     },
