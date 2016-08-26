@@ -34,6 +34,7 @@
     "path": "^0.12.7",
     "request": "^2.74.0",
     "stream": "0.0.2",
-    "twitter-stream-api": "^0.4.3"
+    "twitter-stream-api": "^0.4.3",
+    "tzwhere": "1.0.0"
   }
 }
