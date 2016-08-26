@@ -7,7 +7,7 @@ let pokemonSighting = new Schema({
     source        : {type: String},
     location      : {type: {type: String, default: 'Point'}, coordinates: [Number]},
     pokemonId     : {type: Number},
-    appearedDate  : {type: Date}
+    appearedOn    : {type: Date}
 });
 
 module.exports = mongoose.model('pokemonSighting', pokemonSighting);

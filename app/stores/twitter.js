@@ -19,7 +19,7 @@ module.exports = {
 
         let pokemonId = parseInt(common.getPokemonIdByName(pokemonName));
 
-        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedDate: moment.unix(data.timestamp_ms/1000)});
+        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedOn: moment.unix(data.timestamp_ms/1000)});
         // saving the data to the database
         pokemonSighting.save(function (err) {
             // on error
