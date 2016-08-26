@@ -9,7 +9,7 @@ module.exports = {
      * inserting the pokemon sighting details extracted from twitter
      */
     add: function (data, pokemonName) {
-        //get the location of the tweet
+        //get the location of the tweet if exist
         let coordinates = null;
         if (data.coordinates){
             pokemonFoundLongitude = data.coordinates.coordinates[0];
@@ -18,7 +18,7 @@ module.exports = {
         }
 
         let pokemonId = parseInt(common.getPokemonIdByName(pokemonName));
-        
+
         let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedDate: moment.unix(data.timestamp_ms/1000)});
         // saving the data to the database
         pokemonSighting.save(function (err) {
