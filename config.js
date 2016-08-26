@@ -18,6 +18,9 @@ module.exports = {
         "token": process.env.ACCESS_TOKEN,
         "token_secret": process.env.ACCESS_TOKEN_SECRET
     },
+    "pokemonDataSources": {
+        "twitter": "TWITTER"
+    },
     "twitterKeyWords" : 'pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{
         "url" : "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
