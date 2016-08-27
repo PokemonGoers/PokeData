@@ -24,13 +24,6 @@ module.exports = {
 
                 basicPokemonStore.add(pokemonID, pokemonName, gender, male_ratio, female_ratio, breedable);
 
-                /*basicPokemonStore.create({
-                    pokemonID: pokemonID, name: pokemonName,
-                    gender: {
-                        abbreviation: gender, male_ratio: male_ratio,
-                        female_ratio: female_ratio, breedable: breedable
-                    }
-                });*/
             }
             return value;
         });
