@@ -1,7 +1,6 @@
 (function () {
     "use strict";
     let express = require('express'),
-        twitterStreaming = require('./app/controllers/twitter'),
         loadBasicPokemonDetails = require('./app/controllers/loadBasicPokemonDetails'),
         bodyParser = require('body-parser'),
         cors = require('cors'),
@@ -59,8 +58,8 @@
             logger.info('Listening on port ' + port);
 
 
-            //twitter streaming
-            twitterStreaming.startStreaming();
+            //load basic pokemon details
+            loadBasicPokemonDetails.start();
         },
         stop: function (done) {
             logger.info('Application stopped');
