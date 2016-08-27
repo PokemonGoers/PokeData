@@ -1,34 +1,26 @@
 "use strict";
 
-let fs = require('fs'),
-    basicPokemonDetail = require(__appbase + '/models/BasicPokemonDetail.js'),
+let fs = require('fs');
+const basicPokemonDetail = require(__appbase + '/models/BasicPokemonDetail.js'),
     pokemonListPath = require(__resourcebase + '/pokemonlist.json');
 
 module.exports = {
 
-    fill: function loadBasicPokemonDetails() {
-        logger.info('Loading Basic Pokemon Details');
+    add: function (data) {
+        var basicPokemonDetail = new basicPokemonDetail();
 
-        let data = JSON.stringify(pokemonListPath, function (key, value) {
-            var pokemonID, pokemonName, gender, male_ratio, female_ratio, breedable;
-            if (key != 'name' && typeof value.name !== "undefined") {
-                pokemonID = key;
-                pokemonName = value.name;
-                gender = value.gender.abbreviation;
-                male_ratio = value.gender.male_ratio;
-                female_ratio = value.gender.female_ratio;
-                breedable = value.gender.breedable;
-
-
-                basicPokemonDetail.create({
-                    pokemonID: pokemonID, name: pokemonName,
-                    gender: {
-                        abbreviation: gender, male_ratio: male_ratio,
-                        female_ratio: female_ratio, breedable: breedable
-                    }
-                });
+        for (var entry in data) {
+            if(data.hasOwnProperty(entry)) {
+                basicPokemonDetail[entry] = data[entry];
             }
-            return value;
+        }
+
+        basicPokemonDetail.save(function(err) {
+            if(err) {
+                callback(0, err);
+            } else {
+                callback(1, basicPokemonDetail);
+            }
         });
     }
 };

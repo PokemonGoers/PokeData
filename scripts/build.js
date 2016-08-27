@@ -21,8 +21,8 @@ if (possibleListeners.indexOf(collection) < 0) {
 database.connect(function (db) {
     db.on('open', function () {
         // builder basic pokemon details
-        const builder = require(__storebase  + collection);
-        builder.fill(function () {
+        const builder = require(__base + 'app/controllers/filler/' + collection);
+        builder.insertToDb(function () {
             process.exit();
         });
 

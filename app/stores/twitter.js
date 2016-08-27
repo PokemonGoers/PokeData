@@ -12,8 +12,8 @@ module.exports = {
         //get the location of the tweet if exist
         let coordinates = null;
         if (data.coordinates){
-            pokemonFoundLongitude = data.coordinates.coordinates[0];
-            pokemonFoundLatitude = data.coordinates.coordinates[1];
+            var pokemonFoundLongitude = data.coordinates.coordinates[0];
+            var pokemonFoundLatitude = data.coordinates.coordinates[1];
             coordinates = [pokemonFoundLongitude, pokemonFoundLatitude];
         }
 
