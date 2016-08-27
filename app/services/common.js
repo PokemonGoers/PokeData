@@ -23,15 +23,13 @@ module.exports = {
                     fs.statSync(dirName);
                 } catch(e) {
                     fs.mkdirSync(dirName);
-
-                    fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
-                        if (err) {
-                            return logger.error(err);
-                        }
-                        logger.info("The file was saved!", fileName);
-                    });
                 }
-
+                fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
+                    if (err) {
+                        return logger.error(err);
+                    }
+                    logger.info("The file was saved!", fileName);
+                });
             }
         });
     },
