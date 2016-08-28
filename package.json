@@ -34,8 +34,10 @@
     "path": "^0.12.7",
     "proxy-checker": "1.0.0",
     "proxy-lists": "1.7.0",
+    "q": "^1.4.1",
     "request": "^2.74.0",
     "stream": "0.0.2",
-    "twitter-stream-api": "^0.4.3"
+    "twitter-stream-api": "^0.4.3",
+    "underscore": "^1.8.3"
   }
 }

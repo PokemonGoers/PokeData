@@ -4,27 +4,41 @@ const http = require('http'),
       fs = require('fs'),
       q = require('q'),
       async = require('async'),
-      ProxyLists = require('proxy-lists'),
-      proxyChecker = require('proxy-checker');
+      _ = require('underscore'),
+      coords = require(__tmpbase + 'coords.json'),
+      //ProxyLists = require('proxy-lists'),
+      //proxyChecker = require('proxy-checker'),
+      querystring = require('querystring');
 
 
 var proxyPointer = 0;
 var proxyList = [];
-
+var coordsFile = [];
 //constructs URL for request to pokeradars API
 //pokeradar will return pokemon in the window of lat to lat+delta and lng to lng+delta
 //proxied: boolean if specified proxy (host, port) should be used
 const baseLink = function (lat, lng, delta) {
     if (proxyPointer > 0) {
-        let hp = proxyList[proxyPointer - 1].split(':');
-        return {
-            host: hp[0],
-            port: hp[1],
-            path: 'http://www.pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13'
+        if (proxyPointer === 1) {
+            return {
+                host: proxyList[0][0],
+                path: proxyList[0][1] + '?url=' + querystring.escape('http://pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString()),
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13'
+                }
             }
-        };
+        } else {
+            let hp = proxyList[proxyPointer - 1].split(':');
+            return {
+                host: hp[0],
+                port: hp[1],
+                path: 'http://www.pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13'
+                }
+            };
+        }
+
     } else {
         return {
             host: 'www.pokeradar.io',
@@ -48,6 +62,7 @@ const baseLink = function (lat, lng, delta) {
 function searcher(minLat, minLng, boxSize, delta, callback) {
 
     logger.info("searcher active! latitude: " + minLat + " to " + (minLat+boxSize) + ", longitude: " + minLng + " to " + (minLng+boxSize));
+    logger.info("Using proxy number " + proxyPointer + ": " + proxyList[proxyPointer-1]);
     //count for how many requests finished (either "response.on('end'..." gets triggered or "req.on('error'...")
     var count = 0;
     var promises = [];
@@ -80,12 +95,23 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                 });
                 //the whole response has been received, so we append found pokemon
                 response.on('end', function () {
+                    //increment response counter
                     count++;
                     try {
+                        //parse the received string into a JSON
                         var data = JSON.parse(str);
-                        if (data.data.length > 0) {
-                            pokemons = pokemons.concat(data.data);
-                            logger.info(data.data.length + " Pokemon in this box!");
+                        //array to hold pokemon
+                        var arr = [];
+                        if (proxyPointer === 1) {
+                            //if using guys proxy
+                            arr = data.contents.data;
+                        } else {
+                            arr = data.data;
+                        }
+                        if (arr.length > 0) {
+                            //store received pokemon
+                            pokemons = pokemons.concat(arr);
+                            logger.info(arr.length + " Pokemon in this box!");
                         }
                     } catch (err) {
                         // Redirect or error in response. Unimportant.
@@ -98,11 +124,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         if(!cb){
                             cb = true;
                             if (pokemons.length > 0) {
-                                fs.appendFile("found.txt", minLat + "," + minLng + "\n", function(err) {
-                                    if(err) {
-                                        return console.log(err);
-                                    }
-                                });
+                                coordsFile.push(minLat + "," + minLng);
                             }
                             logger.info('Finished!\n');
                             callback(null, pokemons);
@@ -113,7 +135,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
             }).setMaxListeners(0);
 
             //sets timeout of request to 5 seconds, and if so request gets aborted, triggering req.on('error'...
-            req.setTimeout(5000, function() {
+            req.setTimeout(10000, function() {
                 req.abort();
             });
 
@@ -122,8 +144,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                 count++;
                 if(!cb) {
                     cb = true;
-                    proxyPointer = (++proxyPointer) % (proxyList.length + 1);
-                    logger.info("Using number " + proxyPointer + ": " + proxyList[proxyPointer-1]);
+                    //proxyPointer = (++proxyPointer) % (proxyList.length + 1);
                     if (err.code === "ECONNRESET" || err.code === "ETIMEDOUT") {
                         logger.error("Timeout/Connection Reset occured!");
                     } else {
@@ -144,7 +165,7 @@ function createfunc(j, i, boxSize, delta) {
 module.exports = {
     search: function() {
         //initialize proxies
-        var pOptions = {
+        /*var pOptions = {
             anonymityLevels: ['elite'],
             sourcesWhiteList: ['freeproxylists','bitproxies', 'hidemyass', 'proxydb'],
             bitproxies: {apiKey: 'J0Rkg7Y4p81lrquleGPU6MER4KYA1APc'}
@@ -170,7 +191,7 @@ module.exports = {
 
         gettingProxies.once('end', function() {
             //finished
-        });
+        });*/
         //initialize variables
         var funcs = [];
         var boxSize = 5.0;
@@ -181,11 +202,21 @@ module.exports = {
         //currently takes 1-2 hours, also pokeradar doesnt answer requests after like 30 seconds of continous scanning
         //but then after 20-30 seconds of not answering, responses are again received => idea: switch to proxy
         //another idea: dont scan on on water => reduces scanning area about 60%
-        for (var i = -180.0; i <= 180.0 - boxSize; i = i + boxSize){
-            for (var j = -90.0; j <= 90.0 - boxSize; j = j + boxSize){
-                funcs.push(createfunc(j, i, boxSize, delta));
+        if (scanType === 'global') {
+            for (var i = -180.0; i <= 180.0 - boxSize; i = i + boxSize){
+                for (var j = -90.0; j <= 90.0 - boxSize; j = j + boxSize){
+                    funcs.push(createfunc(j, i, boxSize, delta));
+                }
             }
+        } else if (scanType === 'optimized') {
+            for (var i = 0; i < coords.length; i++){
+                let c = coords[i].split(',');
+                funcs.push(createfunc(parseFloat(c[0]), parseFloat(c[1]), boxSize, delta));
+            }
+        } else {
+            logger.error("Wrong scanType specified!");
         }
+
         //scan test for western USA
         /*for (var i = -125.0; i <= -100.0 - boxSize; i = i + boxSize) {
             for (var j = 30.0; j <= 50.0 - boxSize; j = j + boxSize) {
@@ -210,6 +241,13 @@ module.exports = {
                     }
                     logger.success("The file was saved!");
                 });
+                if (scanType === 'global') {
+                    fs.writeFile(__tmpbase+"coords.json", JSON.stringify(_.union(coords, coordsFile)), function (err) {
+                        if (err) {
+                            return logger.error(err);
+                        }
+                    });
+                }
             });
     }
 };

@@ -13,3 +13,4 @@ global.appConfig = {
 };
 
 global.collection = process.env.npm_config_collection || 'rarePokemon';
+global.scanType = process.env.npm_config_scanType || 'global';
