@@ -5,7 +5,7 @@ const http = require('http'),
       q = require('q'),
       async = require('async'),
       _ = require('underscore'),
-      coords = require(__tmpbase + 'coords.json'),
+      coords = require(__base + 'resources/json/coords.json'),
       //ProxyLists = require('proxy-lists'),
       //proxyChecker = require('proxy-checker'),
       querystring = require('querystring');
@@ -242,7 +242,7 @@ module.exports = {
                     logger.success("The file was saved!");
                 });
                 if (scanType === 'global') {
-                    fs.writeFile(__tmpbase+"coords.json", JSON.stringify(_.union(coords, coordsFile)), function (err) {
+                    fs.writeFile(__base + 'resources/json/coords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
                         if (err) {
                             return logger.error(err);
                         }
