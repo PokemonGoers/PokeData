@@ -5,47 +5,30 @@ const http = require('http'),
       q = require('q'),
       async = require('async'),
       _ = require('underscore'),
-      coords = require(__base + 'resources/json/coords.json'),
-      //ProxyLists = require('proxy-lists'),
-      //proxyChecker = require('proxy-checker'),
-      querystring = require('querystring');
+      coords = require(__base + 'resources/json/coords.json');
 
-
+//To point to currently used proxy in proxyList (0 is no proxy, 1 is first in list...)
 var proxyPointer = 0;
+//must be array of Strings in format "host:port"
 var proxyList = [];
-var coordsFile = [];
+//holds coordinates of pokemon with at least 1 pokemon in them (required for global scan)
+if (scanType === 'global') {
+    var coordsFile = [];
+}
 //constructs URL for request to pokeradars API
 //pokeradar will return pokemon in the window of lat to lat+delta and lng to lng+delta
-//proxied: boolean if specified proxy (host, port) should be used
 const baseLink = function (lat, lng, delta) {
     if (proxyPointer > 0) {
-        if (proxyPointer === 1) {
-            return {
-                host: proxyList[0][0],
-                path: proxyList[0][1] + '?url=' + querystring.escape('http://pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString()),
-                headers: {
-                    'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13'
-                }
-            }
-        } else {
-            let hp = proxyList[proxyPointer - 1].split(':');
-            return {
-                host: hp[0],
-                port: hp[1],
-                path: 'http://www.pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
-                headers: {
-                    'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13'
-                }
-            };
-        }
-
+        let hp = proxyList[proxyPointer - 1].split(':');
+        return {
+            host: hp[0],
+            port: hp[1],
+            path: 'http://www.pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
+        };
     } else {
         return {
             host: 'www.pokeradar.io',
             path: '/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13'
-            }
         };
     }
 };
@@ -62,7 +45,7 @@ const baseLink = function (lat, lng, delta) {
 function searcher(minLat, minLng, boxSize, delta, callback) {
 
     logger.info("searcher active! latitude: " + minLat + " to " + (minLat+boxSize) + ", longitude: " + minLng + " to " + (minLng+boxSize));
-    logger.info("Using proxy number " + proxyPointer + ": " + proxyList[proxyPointer-1]);
+    logger.info("Using proxy number " + proxyPointer + ": " + (proxyPointer === 0 ? "0.0.0.0" : proxyList[proxyPointer-1]));
     //count for how many requests finished (either "response.on('end'..." gets triggered or "req.on('error'...")
     var count = 0;
     var promises = [];
@@ -101,13 +84,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         //parse the received string into a JSON
                         var data = JSON.parse(str);
                         //array to hold pokemon
-                        var arr = [];
-                        if (proxyPointer === 1) {
-                            //if using guys proxy
-                            arr = data.contents.data;
-                        } else {
-                            arr = data.data;
-                        }
+                        var arr = data.data;
                         if (arr.length > 0) {
                             //store received pokemon
                             pokemons = pokemons.concat(arr);
@@ -123,7 +100,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                     if(count === maxCount) {
                         if(!cb){
                             cb = true;
-                            if (pokemons.length > 0) {
+                            if (scanType === 'global' && pokemons.length > 0) {
                                 coordsFile.push(minLat + "," + minLng);
                             }
                             logger.info('Finished!\n');
@@ -135,22 +112,23 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
             }).setMaxListeners(0);
 
             //sets timeout of request to 5 seconds, and if so request gets aborted, triggering req.on('error'...
-            req.setTimeout(10000, function() {
+            req.setTimeout(50000, function() {
                 req.abort();
             });
 
             //handles error in request or timeout
             req.on('error', function(err) {
+                //increment because request has finished with error
                 count++;
                 if(!cb) {
                     cb = true;
-                    //proxyPointer = (++proxyPointer) % (proxyList.length + 1);
                     if (err.code === "ECONNRESET" || err.code === "ETIMEDOUT") {
                         logger.error("Timeout/Connection Reset occured!");
                     } else {
                         logger.error("Request Error occured!", err);
                     }
                     logger.info('Trying again!\n');
+                    //request not finished => try again
                     searcher(minLat, minLng, boxSize, delta, callback);
                 }
             });
@@ -164,34 +142,6 @@ function createfunc(j, i, boxSize, delta) {
 }
 module.exports = {
     search: function() {
-        //initialize proxies
-        /*var pOptions = {
-            anonymityLevels: ['elite'],
-            sourcesWhiteList: ['freeproxylists','bitproxies', 'hidemyass', 'proxydb'],
-            bitproxies: {apiKey: 'J0Rkg7Y4p81lrquleGPU6MER4KYA1APc'}
-        };
-        var gettingProxies = ProxyLists.getProxies(pOptions);
-        var proxySet = new Set();
-        gettingProxies.on('data', function(proxies) {
-            for(var i = 0; i < proxies.length; i++) {
-                var proxy = proxies[i];
-                proxyChecker.checkProxy(proxy.ipAddress, proxy.port, {url: 'http://www.pokeradar.io/api/v1/submissions?minLatitude=33.756886&maxLatitude=33.773&minLongitude=-118.175&maxLongitude=-118.1569', regex: /pokemonId/}, function(host, port, ok, statusCode, err) {
-                    if(ok){
-                        proxySet.add(host + ":" + port);
-                        proxyList = Array.from(proxySet);
-                    }
-                })
-            }
-        });
-
-        gettingProxies.on('error', function(error) {
-            // Some error has occurred.
-            logger.error(error);
-        });
-
-        gettingProxies.once('end', function() {
-            //finished
-        });*/
         //initialize variables
         var funcs = [];
         var boxSize = 5.0;
@@ -201,7 +151,6 @@ module.exports = {
         //scan for whole world, generates array of functions
         //currently takes 1-2 hours, also pokeradar doesnt answer requests after like 30 seconds of continous scanning
         //but then after 20-30 seconds of not answering, responses are again received => idea: switch to proxy
-        //another idea: dont scan on on water => reduces scanning area about 60%
         if (scanType === 'global') {
             for (var i = -180.0; i <= 180.0 - boxSize; i = i + boxSize){
                 for (var j = -90.0; j <= 90.0 - boxSize; j = j + boxSize){

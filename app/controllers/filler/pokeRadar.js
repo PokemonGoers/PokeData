@@ -4,7 +4,7 @@ const pokeRadarStore = require(__appbase + 'stores/pokeRadar'),
     fs = require('fs'),
     jsonfile = require('jsonfile'),
     async = require('async'),
-    common = require(__base + 'app/services/pokeRadar')
+    common = require(__base + 'app/services/pokeRadar');
 
 
 module.exports = {
@@ -44,7 +44,6 @@ module.exports = {
                 fs.readFile(dirPath + filename, 'utf-8', function(err, pokeRadar) {
 
                     logger.info('filename', filename);
-                    logger.info('\n');
 
                     // some error on reading the file
                     if (err) {
