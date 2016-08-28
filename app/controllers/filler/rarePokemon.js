@@ -1,6 +1,7 @@
 "use strict";
 
 const rarePokemonStore = require(__appbase + 'stores/rarePokemon'),
+    pokemonStore = require(__appbase + 'stores/pokemon'),
     fs = require('fs'),
     jsonfile = require('jsonfile'),
     async = require('async'),
@@ -9,7 +10,7 @@ const rarePokemonStore = require(__appbase + 'stores/rarePokemon'),
 
 module.exports = {
     /*
-     * for getting raraPokemond data from pokesnipers.com through an api request and storing into files
+     * for getting raraPokemons data from pokesnipers.com through an api request and storing into files
      */
     fill: function (callback) {
         let url = config.pokesniper.url;
@@ -57,7 +58,6 @@ module.exports = {
                     }
 
                     if (rarePokemons !== undefined) {
-
                         // inserting the read content into MongoDB
                         insert(rarePokemons, function(success){
                             //decrease the number of files to be read
@@ -69,9 +69,6 @@ module.exports = {
                                 callback(true);
                         });
                     }
-
-
-
                 });
             });
         });
@@ -90,12 +87,23 @@ module.exports = {
          */
         let insert = function (rarePokemons, callback) {
             const rarePokemonRecords =JSON.parse(rarePokemons);
-            let length = 0;
+            let length = 0,
+                pokemonName;
 
             async.forEach(rarePokemonRecords,function (rarePokemon, callback) {
                 length++;
-                addRarePokemon(rarePokemon, function(success){
-                    callback();
+                pokemonName = (rarePokemon.name);
+                // extracting pokemon id from the names
+                pokemonStore.getByName(pokemonName, function (success, data) {
+                    if (success == 1) {
+                        rarePokemon['id'] = data[0]['pokemonID'];
+                        addRarePokemon(rarePokemon, function(success){
+                            callback();
+                        });
+                    } else {
+                        logger.error('Error: no master data for the pokemon ' + pokemonName);
+                        callback();
+                    }
                 });
 
             }, function(err){
