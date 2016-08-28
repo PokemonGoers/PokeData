@@ -8,7 +8,8 @@ module.exports = {
 
     add: function (pokemonID, pokemonName, gender, male_ratio, female_ratio, breedable) {
 
-        basicPokemonDetail.create({
+        var base = new basicPokemonDetail();
+        base.save({
             pokemonID: pokemonID, name: pokemonName,
             gender: {
                 abbreviation: gender, male_ratio: male_ratio,
