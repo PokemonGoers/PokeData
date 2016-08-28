@@ -1,6 +1,7 @@
 "use strict";
 
 const fs = require('fs'),
+      tzwhere = require('tzwhere'),
       pokemonDataJson = __appbase + '../resources/json/pokemonGoData.json';
 
 module.exports = {
@@ -23,15 +24,13 @@ module.exports = {
                     fs.statSync(dirName);
                 } catch(e) {
                     fs.mkdirSync(dirName);
-
-                    fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
-                        if (err) {
-                            return logger.error(err);
-                        }
-                        logger.info("The file was saved!", fileName);
-                    });
                 }
-
+                fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
+                    if (err) {
+                        return logger.error(err);
+                    }
+                    logger.info("The file was saved!", fileName);
+                });
             }
         });
     },
@@ -62,5 +61,23 @@ module.exports = {
             pokemonNameArray.push(jsonDataArray[i].Name.toLowerCase())
         }
         return pokemonNameArray;
+    },
+    /*
+     * takes arbitrary date and coordinates
+     * and returns local time at this place as a String in "HH:MM:SS" format
+     */
+    getRelativeTime : function (date, lat, lng) {
+        tzwhere.init(); //takes 5 seconds to initialize (because of comlex timezone shapes and so on)
+        var d = new Date(date.getTime() + tzwhere.tzOffsetAt(lat,lng));
+        return d.toUTCString().split(' ')[4];
+    },
+    /*
+     * same as getRelativeTime but faster and sometimes not correct
+     * since it implies linear timezones every 15° longitude
+     */
+    getRelativeTimeFast : function (date, lat, lng) {
+        var offset = Math.sign(lng) * Math.ceil((Math.abs(lng) - 7.5)/15);
+        var d = new Date(date.getTime() + offset * 3600000);
+        return d.toUTCString().split(' ')[4];
     }
 };
