@@ -4,9 +4,9 @@
   "description": "This package scrapes the data from different data soruces and provies the api for using those data.",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
-    "update": "NODE_ENV=production node scripts/update.js",
-    "listen": "NODE_ENV=production node scripts/listen.js"
+    "start": "node app.js",
+    "update": "node scripts/update.js",
+    "listen": "node scripts/listen.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,8 @@
     "moment": "^2.14.1",
     "mongoose": "^4.5.9",
     "path": "^0.12.7",
+    "proxy-checker": "1.0.0",
+    "proxy-lists": "1.7.0",
     "request": "^2.74.0",
     "stream": "0.0.2",
     "twitter-stream-api": "^0.4.3"

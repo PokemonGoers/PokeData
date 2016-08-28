@@ -12,8 +12,8 @@ if (collection === undefined) {
 var possibleRefillings = [
     'pokemon',
     'rarePokemon',
-    'pokeRadar',
-    'twitter'
+    'twitter',
+    'pokeRadar'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process

@@ -16,7 +16,6 @@ module.exports = {
 
             if (!error && response.statusCode === 200) {
                 const data = JSON.parse(body),
-
                       dirName = __tmpbase + collection,
                       fileName = (dirName + "/" + collection + "_" + parseInt(Math.floor(Date.now() / 1000)) + ".json").toString();
 
@@ -64,4 +63,5 @@ module.exports = {
         }
         return pokemonNameArray;
     }
+
 };

@@ -9,7 +9,7 @@ module.exports = {
         var pokemon = new commonPokemon();
         pokemon['source'] = "POKERADAR";
         pokemon['pokemonId'] = data['pokemonId'];
-        pokemon['appearedDate'] = new Date(data['created'] * 1000);
+        pokemon['appearedOn'] = new Date(data['created'] * 1000);
         pokemon['location']['type'] = "Point";
         pokemon['location']['coordinates'] = [data['longitude'], data['latitude']];
 
