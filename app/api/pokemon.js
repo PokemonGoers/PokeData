@@ -4,11 +4,11 @@ const pokemon = require('../stores/pokemon');
 
 module.exports = {
     /**
-     * @api {get} /api/pokemons/ Get all pokemons
+     * @api {get} /api/pokemon/ GetAllPokemons
      * @apiVersion 0.0.1
      * @apiName GetAllPokemons
      * @apiDescription Get all pokemons.
-     * @apiGroup Pokemons
+     * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -44,10 +44,10 @@ module.exports = {
     },
 
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/id/:id GetPokemonById
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetPokemonById
+     * @apiDescription Get pokemon by specific id
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -85,10 +85,10 @@ module.exports = {
         });
    },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/gender/:gender GetPokemonByGender
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetPokemonByGender
+     * @apiDescription Get pokemon by specific gender
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -127,10 +127,10 @@ module.exports = {
     },
 
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/name/:name/ GetPokemonByName
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetPokemonByName
+     * @apiDescription Get pokemon by specific name
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -168,10 +168,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/type/:type/ GetPokemonByType
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetPokemonByType
+     * @apiDescription Get pokemon by specific type
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -209,10 +209,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/resistance/:resistance/ GetPokemonByResistance
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetPokemonByResistance
+     * @apiDescription Get pokemon by specific resistance
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -250,10 +250,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetPokemonByWeakness
+     * @apiDescription Get pokemon by specific weakness
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success

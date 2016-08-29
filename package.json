@@ -1,7 +1,7 @@
 {
-  "name": "pokemon-api",
+  "name": "pokemongo-api",
   "version": "0.0.1",
-  "description": "This package scrapes the data from different data soruces and provies the api for using those data.",
+  "description": "This API provides information about PokemonGo, extracted from various reliable data sources.",
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production node app.js",

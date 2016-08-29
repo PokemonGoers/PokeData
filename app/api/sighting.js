@@ -4,11 +4,11 @@ const sighting = require('../stores/sighting');
 
 module.exports = {
     /**
-     * @api {get} /pokemon/sighting Get all pokemon sightings
+     * @api {get} /pokemon/sighting/ GetAllSightings
      * @apiVersion 0.0.1
-     * @apiName GetSightings
+     * @apiName GetAllSightings
      * @apiDescription Get all Pokemon sightings
-     * @apiGroup Pokemons
+     * @apiGroup PokemonSighting
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -43,11 +43,11 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /pokemon/sighting/id/ Get all pokemon sightings by pokemon id
+     * @api {get} /pokemon/sighting/id/ GetSightingById
      * @apiVersion 0.0.1
      * @apiName GetSightingById
-     * @apiDescription Get all Pokemon sightings by pokemon id
-     * @apiGroup Pokemon
+     * @apiDescription Get Pokemon sightings by pokemon id
+     * @apiGroup PokemonSighting
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -84,11 +84,11 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings at particular coordinates
+     * @api {get} /api/pokemon/sighting/coordinates/:coordinates GetSightingAtCoordinates
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings at particular coordinates
-     * @apiDescription Get Pokemon Sightings at particular coordinates
-     * @apiGroup Pokemon
+     * @apiName GetSightingAtCoordinates
+     * @apiDescription Get Pokemon Sightings at specific coordinates
+     * @apiGroup PokemonSighting
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -125,11 +125,11 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/sighting/coordinates/from/:fromCoordinates/to/:toCoordinates GetSightingBetweenCoordinates
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
-     * @apiGroup Pokemon
+     * @apiName GetSightingBetweenCoordinates
+     * @apiDescription Get Pokemon Sightings between specific set of coordinates
+     * @apiGroup PokemonSighting
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -166,11 +166,11 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemon/sighting/source/:source GetSightingBySource
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
-     * @apiGroup Pokemon
+     * @apiName GetSightingBySource
+     * @apiDescription Get pokemon sightings by specific source
+     * @apiGroup PokemonSighting
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
