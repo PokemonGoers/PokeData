@@ -23,12 +23,12 @@ const baseLink = function (lat, lng, delta) {
         return {
             host: hp[0],
             port: hp[1],
-            path: 'http://www.pokeradar.io/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
+            path: 'http://' + config.pokeRadar.host + config.pokeRadar.path + '?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
         };
     } else {
         return {
-            host: 'www.pokeradar.io',
-            path: '/api/v1/submissions?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
+            host: config.pokeRadar.host,
+            path: config.pokeRadar.path + '?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString(),
         };
     }
 };
