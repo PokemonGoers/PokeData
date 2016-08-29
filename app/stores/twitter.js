@@ -10,21 +10,22 @@ module.exports = {
      */
     add: function (data, pokemonName) {
         //get the location of the tweet if exist
-        let coordinates = null;
+        let location = null,
+            pokemonId = parseInt(common.getPokemonIdByName(pokemonName)),
+            pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, pokemonId: pokemonId, appearedOn: moment.unix(data.timestamp_ms/1000)});
+
         if (data.coordinates){
             var pokemonFoundLongitude = data.coordinates.coordinates[0];
             var pokemonFoundLatitude = data.coordinates.coordinates[1];
-            coordinates = [pokemonFoundLongitude, pokemonFoundLatitude];
+            location = {type: "Point",coordinates: [pokemonFoundLongitude, pokemonFoundLatitude]};
         }
+        pokemonSighting.location = location;
 
-        let pokemonId = parseInt(common.getPokemonIdByName(pokemonName));
-
-        let pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, location:{type: "Point",coordinates: coordinates},pokemonId: pokemonId, appearedOn: moment.unix(data.timestamp_ms/1000)});
         // saving the data to the database
         pokemonSighting.save(function (err) {
             // on error
             if (err) {
-                logger.error("Error while saving pokmon sighting from source twitter");
+                logger.error("Error while saving pokmon sighting from source twitter " + err.message);
             }
             // on success
             else {
