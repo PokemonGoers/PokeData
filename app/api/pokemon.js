@@ -164,7 +164,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon details with this name exists!', data: message});
+                res.status(404).json({message: 'Failure. No pokemon details with this name exists!', data: {'name': req.params.name}});
         });
     },
     /**
