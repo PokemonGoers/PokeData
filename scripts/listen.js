@@ -15,8 +15,13 @@ if (possibleListeners.indexOf(collection) < 0) {
     process.exit();
 }
 
-// listener for pokemons
-const listener = require(__base + 'app/controllers/filler/' + collection);
-listener.fill(function () {
-    process.exit();
+database.connect(function (db) {
+    /*The DB connection is open*/
+    db.on('open', function () {
+        // listener for pokemons
+        const listener = require(__base + 'app/controllers/filler/' + collection);
+        listener.insertToDb(function () {
+            return;
+        });
+    });
 });

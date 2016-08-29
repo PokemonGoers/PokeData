@@ -1,4 +1,6 @@
-var Pokemon = require(__appbase + 'models/BasicPokemonDetail');
+"use strict";
+
+const Pokemon = require(__appbase + 'models/BasicPokemonDetail');
 
 module.exports = {
     /*
