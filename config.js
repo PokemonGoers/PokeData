@@ -20,7 +20,8 @@ module.exports = {
     },
     "pokemonDataSources": {
         "twitter": "TWITTER",
-        "pokesniper" : "POKESNIPER"
+        "pokesniper": "POKESNIPER",
+        "pokeRadar": "POKERADAR"
     },
     "twitterKeyWords" : 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{

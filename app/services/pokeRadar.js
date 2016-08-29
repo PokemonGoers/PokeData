@@ -5,7 +5,9 @@ const http = require('http'),
       q = require('q'),
       async = require('async'),
       _ = require('underscore'),
-      coords = require(__base + 'resources/json/coords.json');
+      coords = require(__base + 'resources/json/pokeRadarCoords.json'),
+      config = require(__base + 'config'),
+      store = require(__appbase + 'stores/pokeRadar');
 
 //To point to currently used proxy in proxyList (0 is no proxy, 1 is first in list...)
 var proxyPointer = 0;
@@ -50,7 +52,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
     var count = 0;
     var promises = [];
     //here found pokemon are stored
-    var pokemons = [];
+    var pokemons = 0;
     //maxCount is total number of requests (note that boxSize should be multiple of delta)
     var maxCount = Math.round((boxSize/delta)*(boxSize/delta));
     //flag if callback was already called
@@ -87,12 +89,13 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         var arr = data.data;
                         if (arr.length > 0) {
                             //store received pokemon
-                            pokemons = pokemons.concat(arr);
+                            store.insert(arr);
+                            pokemons += arr.length;
                             logger.info(arr.length + " Pokemon in this box!");
                         }
                     } catch (err) {
                         // Redirect or error in response. Unimportant.
-                        //console.log("Response is no JSON! Probably a redirect because search window too big: ",err);
+                        //logger.error(err);
                     } finally {
                         deferred.resolve();
                     }
@@ -111,8 +114,8 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                 });
             }).setMaxListeners(0);
 
-            //sets timeout of request to 5 seconds, and if so request gets aborted, triggering req.on('error'...
-            req.setTimeout(50000, function() {
+            //sets timeout of request to 10 seconds, and if so request gets aborted, triggering req.on('error'...
+            req.setTimeout(1000, function() {
                 req.abort();
             });
 
@@ -166,37 +169,20 @@ module.exports = {
             logger.error("Wrong scanType specified!");
         }
 
-        //scan test for western USA
-        /*for (var i = -125.0; i <= -100.0 - boxSize; i = i + boxSize) {
-            for (var j = 30.0; j <= 50.0 - boxSize; j = j + boxSize) {
-                funcs.push(createfunc(j, i, boxSize, delta));
-            }
-        }*/
-        //scan test for LA area
-        /*for (var i = -118.5; i <= -118.5; i = i + boxSize) {
-            for (var j = 34; j <= 34; j = j + boxSize) {
-                funcs.push(createfunc(j, i, boxSize, delta));
-            }
-        }*/
         //executes array of functions in a series (waits for first function to finish and the calls next one ...)
         //results get stored in pokemon.json file
         async.series(funcs,
             function(err, result) {
-                var final = [].concat.apply([], result);
-                logger.info(final.length + ' pokemon found!');
-                fs.writeFile((__tmpbase+"pokeRadar/pokeRadar_"+parseInt(Math.floor(Date.now() / 1000))+".json").toString(), JSON.stringify(final), function (err) {
-                    if (err) {
-                        return logger.error(err);
-                    }
-                    logger.success("The file was saved!");
-                });
+                var sum = result.reduce(function (a, b) {return a + b;}, 0);
+                logger.info(sum + ' pokemon found!');
                 if (scanType === 'global') {
-                    fs.writeFile(__base + 'resources/json/coords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
+                    fs.writeFile(__base + 'resources/json/pokeRadarCoords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
                         if (err) {
                             return logger.error(err);
                         }
                     });
                 }
+                module.exports.search();
             });
     }
 };
