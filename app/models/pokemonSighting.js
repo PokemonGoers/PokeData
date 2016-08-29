@@ -10,9 +10,6 @@ let pokemonSighting = new Schema({
     appearedOn    : {type: Date}
 });
 
-pokemonSighting.index({
-    "location": "2dsphere",
-    "sparse": true
-});
+pokemonSighting.index({ "location": "2dsphere"}, {"sparse": true});
 
 module.exports = mongoose.model('pokemonSighting', pokemonSighting);
