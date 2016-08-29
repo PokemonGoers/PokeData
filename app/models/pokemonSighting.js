@@ -5,9 +5,9 @@ var Schema   = mongoose.Schema;
 
 let pokemonSighting = new Schema({
     source        : {type: String},
-    location      : {type: {type: String, default: 'Point'}, coordinates: [Number]},
+    location      : {type: {type: String, default: 'Point'}, coordinates: {type: [Number]}},
     pokemonId     : {type: Number},
     appearedOn    : {type: Date}
 });
-
+pokemonSighting.index({location: "2dsphere"});
 module.exports = mongoose.model('pokemonSighting', pokemonSighting);
