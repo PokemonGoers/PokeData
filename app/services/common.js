@@ -6,31 +6,16 @@ const fs = require('fs'),
 
 module.exports = {
     /*
-     *  required for http request to get JSON data and storing it into a file.
+     *  required for http request to get JSON data
      */
-    getHttpRequestData : function(url){
-        let request = require('request'),
-            fs = require('fs'),
-            all = [];
+    getHttpRequestData : function(url, callback){
+        const request = require('request');
 
         request(url, function (error, response, body) {
 
             if (!error && response.statusCode === 200) {
-                const data = JSON.parse(body),
-                      dirName = __tmpbase + collection,
-                      fileName = (dirName + "/" + collection + "_" + parseInt(Math.floor(Date.now() / 1000)) + ".json").toString();
-
-                try {
-                    fs.statSync(dirName);
-                } catch(e) {
-                    fs.mkdirSync(dirName);
-                }
-                fs.appendFile(fileName, JSON.stringify(data.results), function(err) {
-                    if (err) {
-                        return logger.error(err);
-                    }
-                    logger.info("The file was saved!", fileName);
-                });
+                 const data = JSON.parse(body);
+                 callback(data);
             }
         });
     },
@@ -40,7 +25,7 @@ module.exports = {
      */
     getPokemonIdByName : function(name) {
         let pokemonId = null;
-        var jsonDataArray = JSON.parse(fs.readFileSync(pokemonDataJson, 'utf8'));;
+        var jsonDataArray = JSON.parse(fs.readFileSync(pokemonDataJson, 'utf8'));
         
         for(var i =0; i < jsonDataArray.length; i++) {
             if(jsonDataArray[i].Name.toLowerCase() === name.toLowerCase()) {
