@@ -20,7 +20,8 @@ module.exports = {
     },
     "pokemonDataSources": {
         "twitter": "TWITTER",
-        "pokesniper" : "POKESNIPER"
+        "pokesniper": "POKESNIPER",
+        "pokeRadar": "POKERADAR"
     },
     "twitterKeyWords" : 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{
@@ -28,7 +29,11 @@ module.exports = {
         "listeningInterval" : 600000 // 10 minutes in milliseconds
     },
     "pokemonSpawnTime" : 900 ,// 15 minutes in seconds
-    "server":{
+    "server": {
         "port": "8080"
+    },
+    "pokeRadar": {
+        "host": "www.pokeradar.io",
+        "path": "/api/v1/submissions"
     }
 };
