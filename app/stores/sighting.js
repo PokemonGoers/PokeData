@@ -42,11 +42,8 @@ module.exports = {
      * fetching all the pokemon details
      */
     getAll: function (callback) {
-        Sighting.find(function (err, pokemons) {
-            if (err)
-                callback(false,err);
-            else
-                callback(true,pokemons);
+        this.get(undefined, function (status, response) {
+            callback(status, response);
         });
     },
 
