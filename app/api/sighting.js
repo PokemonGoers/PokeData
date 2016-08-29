@@ -1,32 +1,32 @@
 "use strict";
 
-const pokemon = require('../stores/pokemon');
+const sighting = require('../stores/sighting');
 
 module.exports = {
     /**
-     * @api {get} /api/pokemons/ Get all pokemons
+     * @api {get} /pokemon/sighting Get all pokemon sightings
      * @apiVersion 0.0.1
-     * @apiName GetAllPokemons
-     * @apiDescription Get all pokemons.
+     * @apiName GetSightings
+     * @apiDescription Get all Pokemon sightings
      * @apiGroup Pokemons
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
      * [
      *    {
-     *      "_id": "57b60a60f3981b52102ef562",
-     *      "deviceId": "80sxy0vumg2h5hhv8hgc0axt9jr29al7",
-     *       "userId": "13661365",
-     *       "trainerName": "(Poke Radar Prediction)",
-     *       "pokemonId": "133",
-     *       "longitude": 2.3887459103,
-     *       "latitude": 48.8923425896,
-     *       "upvotes": 1,
-     *       "downvotes": 0,
-     *       "created": 1470888182,
-     *       "id": "Sybxo5uYt",
-     *       "__v": 0
-          }
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *              "coordinates": [
+     *                  14.017842,
+     *                  14.017842
+     *              ],
+     *              "type": "Point"
+     *             }
+     *   }
      * ]
      *
      * @apiSuccessExample {json} No db-entries:
@@ -35,19 +35,18 @@ module.exports = {
      * ]
      */
     getAll: function (req, res) {
-        logger.info('GetAllPokemons');
+        logger.info('Get all pokemon sightings');
 
-        pokemon.getAll(function(success, pokemons) {
-            logger.info(pokemons);
-            res.status(200).json(pokemons);
+        sighting.getAll(function(success, pokemonSighting) {
+            logger.info(pokemonSighting);
+            res.status(200).json(pokemonSighting);
         });
     },
-
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /pokemon/sighting/id/ Get all pokemon sightings by pokemon id
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName GetSightingById
+     * @apiDescription Get all Pokemon sightings by pokemon id
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -74,63 +73,21 @@ module.exports = {
      * [
      * ]
      */
-    getById : function (req, res) {
-        logger.info('Get Pokemon details of a particular pokemon by id');
+    getById: function (req, res) {
+        logger.info('Get all pokemon sightings by pokemon id');
 
-        pokemon.getById(req.params.id, function(success, message) {
+        sighting.getById(req.params.id, function(success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon details with this id exists!', data: message});
-        });
-   },
-    /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
-     * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
-     * @apiGroup Pokemon
-     *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
-     */
-    getByGender : function (req, res) {
-        logger.info('Get Pokemon details by gender');
-
-        pokemon.getByGender(req.params.gender.toLowerCase(), function(success, message) {
-            if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
-            else
-                res.status(404).json({message: 'Failure. No pokemon details with this gender exists!', data: message});
+                res.status(404).json({message: 'Failure. No sighting details with the particular pokemon id exists!', data: message });
         });
     },
-
     /**
-     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @api {get} /api/pokemonsSighting/ Get pokemons sightings at particular coordinates
      * @apiVersion 0.0.1
-     * @apiName Get Pokemon Sightings between particular set of coordinates
-     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiName Get Pokemon Sightings at particular coordinates
+     * @apiDescription Get Pokemon Sightings at particular coordinates
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -157,14 +114,14 @@ module.exports = {
      * [
      * ]
      */
-    getByName : function (req, res) {
-        logger.info('Get Pokemon details by name');
+    getAtCoordinates: function (req, res) {
+        logger.info('Get Pokemon Sightings at particular coordinates');
 
-        pokemon.getByName(req.params.name, function(success, message) {
+        sighting.getAtCoordinates(req.params, function(success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon details with this name exists!', data: message});
+                res.status(404).json({message: 'Failure. No sighting details along this latitude exists!', data: message});
         });
     },
     /**
@@ -198,14 +155,14 @@ module.exports = {
      * [
      * ]
      */
-    getByResistance : function (req, res) {
-        logger.info('Get Pokemon details by resistance');
+    getBetweenCoordinates: function (req, res) {
+        logger.info('Get Pokemon Sightings between particular coordinates');
 
-        pokemon.getByResistance(req.params.resistance, function(success, message) {
+        sighting.getBetweenCoordinates(req.params, function(success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure. No sighting details between these set of coordinate exists!', data: message });
         });
     },
     /**
@@ -239,14 +196,14 @@ module.exports = {
      * [
      * ]
      */
-    getByWeakness : function (req, res) {
-        logger.info('Get Pokemon details by weakness');
+    getBySource: function (req, res) {
+        logger.info('Get Pokemon Sightings from a particular source');
 
-        pokemon.getByWeakness(req.params.weakness, function(success, message) {
+        sighting.getFromSource(req.params.source.toUpperCase(), function(success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure. No sighting details from this source exists!', data: message});
         });
     }
 };

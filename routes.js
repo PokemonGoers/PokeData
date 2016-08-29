@@ -1,37 +1,38 @@
 module.exports = function (app, router) {
-    const api = require(__appbase + 'api/pokemon');
+    const pokemon = require(__appbase + 'api/pokemon'),
+        sighting = require(__appbase + 'api/sighting');
 
     //route for all pokemon sightings
-    router.get('/pokemon/sighting/', api.getAllSightings);
+    router.get('/pokemon/sighting/', sighting.getAll);
 
     //route for pokemon sightings by specific id
-    router.get('/pokemon/sighting/id/:id', api.getSightingsById);
+    router.get('/pokemon/sighting/id/:id', sighting.getById);
 
     //route for pokemon sightings at particular coordinates
-    router.get('/pokemon/sighting/coordinates/:longitude,:latitude', api.getPokemonAtCoordinates);
+    router.get('/pokemon/sighting/coordinates/:longitude,:latitude', sighting.getAtCoordinates);
 
     //route for pokemon sightings between set of coordinates
-    router.get('/pokemon/sighting/coordinates/from/:startLongitude,:startLatitude/to/:endLongitude,:endLatitude', api.getPokemonBetweenCoordinates);
+    router.get('/pokemon/sighting/coordinates/from/:startLongitude,:startLatitude/to/:endLongitude,:endLatitude', sighting.getBetweenCoordinates);
 
     //route for pokemon sightings by specific source
-    router.get('/pokemon/sighting/source/:source', api.getPokemonFromSource);
+    router.get('/pokemon/sighting/source/:source', sighting.getBySource);
 
 
     //route for getting all pokemon details
-    router.get('/pokemon/', api.getAllPokemons);
+    router.get('/pokemon/', pokemon.getAll);
 
     //route for getting pokemon details by specific id
-    router.get('/pokemon/id/:id', api.getPokemonById);
+    router.get('/pokemon/id/:id', pokemon.getById);
 
     //route for getting pokemon details by specific gender
-    router.get('/pokemon/gender/:gender', api.getPokemonByGender);
+    router.get('/pokemon/gender/:gender', pokemon.getByGender);
 
     //route for getting pokemon details by specific name
-    router.get('/pokemon/name/:name', api.getPokemonByName);
+    router.get('/pokemon/name/:name', pokemon.getByName);
 
     //route for getting pokemon details by specific resistance
-    router.get('/pokemon/resistance/:resistance', api.getPokemonByResistance);
+    router.get('/pokemon/resistance/:resistance', pokemon.getByResistance);
 
     //route for getting pokemon details by specific weakness
-    router.get('/pokemon/weakness/:weakness', api.getPokemonByWeakness);
+    router.get('/pokemon/weakness/:weakness', pokemon.getByWeakness);
 };
