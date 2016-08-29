@@ -155,7 +155,7 @@ module.exports = {
      * get the pokemon details of particular pokemon based on name
      */
     getPokemonByName : function (name, callback) {
-        pokemonDetail.find({'name': name }, function (err, pokemons) {
+        pokemonDetail.find({'name': new RegExp('^' + name + '$', 'i') }, function (err, pokemons) {
             if (err)
                 callback(0,err);
             else
