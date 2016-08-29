@@ -34,6 +34,7 @@ module.exports = {
     getAllPokemons: function (req, res) {
         logger.info('GetAllPokemons');
         let pokemonStore = require('../stores/pokemon');
+
         pokemonStore.getAllPokemons(function(success,pokemons) {
             logger.info(pokemons);
             res.status(200).json(pokemons);
@@ -73,6 +74,7 @@ module.exports = {
     getAllSightings: function (req, res) {
         logger.info('Get all pokemon sightings');
         let pokemonAppearancesStore = require('../stores/pokemon');
+
         pokemonAppearancesStore.getAll(function(success,pokemonSighting) {
             logger.info(pokemonSighting);
             res.status(200).json(pokemonSighting);
@@ -112,11 +114,12 @@ module.exports = {
     getSightingsById: function (req, res) {
         logger.info('Get all pokemon sightings by pokemon id');
         let pokemonStore = require('../stores/pokemon');
+
         pokemonStore.getById(req.params.id, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No sighting details with the particular pokemon id exists!',data: message });
+                res.status(404).json({message: 'Failure. No sighting details with the particular pokemon id exists!', data: message });
         });
     },
     /**
@@ -152,17 +155,13 @@ module.exports = {
      */
     getPokemonAtCoordinates: function (req, res) {
         logger.info('Get Pokemon Sightings at particular coordinates');
-        let pokemonStore = require('../stores/pokemon'),
-            reqObj ={
-                longitude: req.params.longitude,
-                latitude : req.params.latitude,
-            };
-        pokemonStore.getAtCoordinates(reqObj, function(success, message) {
+        let pokemonStore = require('../stores/pokemon');
 
+        pokemonStore.getAtCoordinates(req.params, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No sighting details along this latitude exists!',data: message });
+                res.status(404).json({message: 'Failure. No sighting details along this latitude exists!', data: message});
         });
     },
     /**
@@ -199,12 +198,12 @@ module.exports = {
     getPokemonBetweenCoordinates: function (req, res) {
         logger.info('Get Pokemon Sightings between particular coordinates');
         let pokemonStore = require('../stores/pokemon');
-        pokemonStore.getBetweenCoordinates(req.params, function(success, message) {
 
+        pokemonStore.getBetweenCoordinates(req.params, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No sighting details between these set of coordinate exists!',data: message });
+                res.status(404).json({message: 'Failure. No sighting details between these set of coordinate exists!', data: message });
         });
     },
     /**
@@ -240,16 +239,13 @@ module.exports = {
      */
     getPokemonFromSource: function (req, res) {
         logger.info('Get Pokemon Sightings from a particular source');
-        let pokemonStore = require('../stores/pokemon'),
-            reqObj = {
-                source: (req.params.source).toUpperCase()
-            };
-        pokemonStore.getFromSource(reqObj, function(success, message) {
+        let pokemonStore = require('../stores/pokemon');
 
+        pokemonStore.getFromSource(req.params.source.toUpperCase(), function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No sighting details from this source exists!',data: message });
+                res.status(404).json({message: 'Failure. No sighting details from this source exists!', data: message});
         });
     },
     /**
@@ -289,9 +285,9 @@ module.exports = {
 
         pokemonStore.getPokemonById(req.params.id, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No pokemon details with this id exists!',data: message });
+                res.status(404).json({message: 'Failure. No pokemon details with this id exists!', data: message});
         });
    },
     /**
@@ -329,11 +325,11 @@ module.exports = {
         logger.info('Get Pokemon details by gender');
         let pokemonStore = require('../stores/pokemon');
 
-        pokemonStore.getPokemonByGender(req.params.gender, function(success, message) {
+        pokemonStore.getPokemonByGender(req.params.gender.toLowerCase(), function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No pokemon details with this gender exists!',data: message });
+                res.status(404).json({message: 'Failure. No pokemon details with this gender exists!', data: message});
         });
     },
 
@@ -374,9 +370,9 @@ module.exports = {
 
         pokemonStore.getPokemonByName(req.params.name, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure. No pokemon details with this name exists!',data: message });
+                res.status(404).json({message: 'Failure. No pokemon details with this name exists!', data: message});
         });
     },
     /**
@@ -416,9 +412,9 @@ module.exports = {
 
         pokemonStore.getPokemonByResistance(req.params.resistance, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure.',data: message });
+                res.status(404).json({message: 'Failure.', data: message});
         });
     },
     /**
@@ -458,9 +454,9 @@ module.exports = {
 
         pokemonStore.getPokemonByWeakness(req.params.weakness, function(success, message) {
             if(success === 1)
-                res.status(200).json({ message: 'Success', data: message });
+                res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({ message: 'Failure.',data: message });
+                res.status(404).json({message: 'Failure.', data: message});
         });
     }
 };

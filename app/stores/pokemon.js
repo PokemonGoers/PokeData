@@ -109,7 +109,7 @@ module.exports = {
      */
     getFromSource : function (source, callback) {
         logger.info(source);
-        this.get(source , function (success, message) {
+        this.get({'source': source}, function (success, message) {
             if (success === 1) {// on successfully finding previous data
                 logger.info('message',message);
                 callback(success, message);
@@ -133,7 +133,7 @@ module.exports = {
      * get the pokemon details of particular pokemon based on id
      */
     getPokemonById : function (id, callback) {
-        pokemonDetail.find({'pokemonID' :id }, function (err, pokemons) {
+        this.get({'pokemonID' :id}, function (err, pokemons) {
             if (err)
                 callback(0,err);
             else
@@ -144,7 +144,7 @@ module.exports = {
      * get the pokemon details of pokemons based on gender
      */
     getPokemonByGender : function (gender, callback) {
-        pokemonDetail.find({'gender.abbreviation': gender }, function (err, pokemons) {
+        this.get({'gender.abbreviation': gender}, function (err, pokemons) {
             if (err)
                 callback(0,err);
             else
@@ -155,7 +155,7 @@ module.exports = {
      * get the pokemon details of particular pokemon based on name
      */
     getPokemonByName : function (name, callback) {
-        pokemonDetail.find({'name': new RegExp('^' + name + '$', 'i') }, function (err, pokemons) {
+        this.get({'name': new RegExp('^' + name + '$', 'i')}, function (err, pokemons) {
             if (err)
                 callback(0,err);
             else
@@ -166,7 +166,7 @@ module.exports = {
      * get the pokemon details of pokemons based on resistance
      */
     getPokemonByResistance: function (resistance, callback) {
-        pokemonDetail.find({'resistance': resistance }, function (err, pokemons) {
+        this.get({'resistance': resistance}, function (err, pokemons) {
             if (err)
                 callback(0,err);
             else
@@ -178,7 +178,7 @@ module.exports = {
      * get the pokemon details of pokemons based on weakness
      */
     getPokemonByWeakness: function (weakness, callback) {
-        pokemonDetail.find({'weakness': weakness }, function (err, pokemons) {
+        this.get({'weakness': weakness}, function (err, pokemons) {
             if (err)
                 callback(0,err);
             else
