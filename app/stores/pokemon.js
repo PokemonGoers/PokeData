@@ -55,7 +55,7 @@ module.exports = {
      */
     getById: function (id, callback) {
         this.get(id, function (success, message) {
-            if (success == 1) {// on successfully finding previous data
+            if (success === 1) {// on successfully finding previous data
                 callback(success, message[0]);
             } else {//  no previous entry for the particular data exists
                 callback(success, message);
@@ -68,7 +68,7 @@ module.exports = {
      */
     getByName: function (name, callback) {
         this.get({'name': name}, function (success, message) {
-            if (success == 1) {// on successfully finding previous data
+            if (success === 1) {// on successfully finding previous data
                 callback(success, message);
             } else {//  no previous entry for the particular data exists
                 callback(0, message);
