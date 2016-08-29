@@ -48,7 +48,7 @@ module.exports = {
 
         async.forEach(rarePokemons, function(rarePokemon){
             length++;
-            pokemonName = (rarePokemons[0].name);
+            pokemonName = (rarePokemon.name);
             // extracting pokemon id from the names
             pokemonStore.getByName(pokemonName, function (success, data) {
                 if (success === 1) {
