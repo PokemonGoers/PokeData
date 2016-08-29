@@ -1,27 +1,28 @@
 "use strict";
 
-const Pokemon = require(__appbase + 'models/BasicPokemonDetail');
+const pokemonSighting = require(__appbase + 'models/pokemonSighting'),
+    pokemonDetail = require(__appbase + 'models/BasicPokemonDetail');
 
 module.exports = {
     /*
      * inserting the pokemon details
      */
     add: function (data, callback) {
-        var pokemon = new Pokemon();
+        var pokemonSights = new pokemonSighting();
 
         for (var key in data) {
             if (data.hasOwnProperty(key)) {
-                pokemon[key] = data[key];
+                pokemonSights[key] = data[key];
             }
         }
-        pokemon.save(function (err) {
+        pokemonSights.save(function (err) {
             // on error
             if (err) {
                 callback(0, err);
             }
             // on success
             else {
-                callback(1, pokemon);
+                callback(1, pokemonSights);
             }
         });
     },
@@ -29,7 +30,7 @@ module.exports = {
      * fetching the particular pokemon details
      */
     get: function (data, callback) {
-        Pokemon.find(data, function (err, obj) {
+        pokemonSighting.find(data, function (err, obj) {
             if (obj.length === 0) {// already existing data and return 0 for indicating
                 callback(0, data);
             } else { // new data and return 1 for indicating
@@ -42,7 +43,7 @@ module.exports = {
      * fetching all the pokemon details
      */
     getAll: function (callback) {
-        Pokemon.find(function (err, pokemons) {
+        pokemonSighting.find(function (err, pokemons) {
             if (err)
                 callback(false,err);
             else
@@ -54,9 +55,10 @@ module.exports = {
      * searching the pokemon details by Id
      */
     getById: function (id, callback) {
-        this.get(id, function (success, message) {
+        this.get({'pokemonId': id}, function (success, message) {
             if (success === 1) {// on successfully finding previous data
-                callback(success, message[0]);
+                logger.info('message',message);
+                callback(success, message);
             } else {//  no previous entry for the particular data exists
                 callback(success, message);
             }
@@ -64,15 +66,123 @@ module.exports = {
     },
 
     /*
-     * searching the pokemon details by name
+     * searching the pokemon sightings at a particular coordinate
      */
-    getByName: function (name, callback) {
-        this.get({'name': name}, function (success, message) {
+    getAtCoordinates: function (reqObj, callback) {
+        this.get({
+            "location" : {
+                "$near" : {
+                    "$geometry" : { "coordinates" : [reqObj.longitude, reqObj.latitude] },
+                    "$maxDistance" : 0
+                }
+            }
+        }, function (success, message) {
             if (success === 1) {// on successfully finding previous data
                 callback(success, message);
             } else {//  no previous entry for the particular data exists
-                callback(0, message);
+                callback(success, message);
             }
         });
-    }
+    },
+
+    /*
+     * searching the pokemon sightings between a set of coordinates
+     */
+    getBetweenCoordinates: function (reqObj, callback) {
+        this.get({
+            location: {
+                $within: {
+                    $box: [
+                        [reqObj.startLongitude, reqObj.startLatitude], [reqObj.endLongitude,reqObj.endLatitude] ]
+                }
+            }
+        }, function (success, message) {
+            if (success === 1) {// on successfully finding previous data
+                callback(success, message);
+            } else {//  no previous entry for the particular data exists
+                callback(success, message);
+            }
+        });
+    },
+    /*
+     * get the pokemon sightings from a particular source
+     */
+    getFromSource : function (source, callback) {
+        logger.info(source);
+        this.get(source , function (success, message) {
+            if (success === 1) {// on successfully finding previous data
+                logger.info('message',message);
+                callback(success, message);
+            } else {//  no previous entry for the particular data exists
+                callback(success, message);
+            }
+        });
+    },
+    /*
+     * get all pokemon details
+     */
+    getAllPokemons : function (callback) {
+        pokemonDetail.find(function (err, pokemons) {
+            if (err)
+                callback(0,err);
+            else
+                callback(1,pokemons);
+        });
+    },
+    /*
+     * get the pokemon details of particular pokemon based on id
+     */
+    getPokemonById : function (id, callback) {
+        pokemonDetail.find({'pokemonID' :id }, function (err, pokemons) {
+            if (err)
+                callback(0,err);
+            else
+                callback(1,pokemons);
+        });
+    },
+    /*
+     * get the pokemon details of pokemons based on gender
+     */
+    getPokemonByGender : function (gender, callback) {
+        pokemonDetail.find({'gender.abbreviation': gender }, function (err, pokemons) {
+            if (err)
+                callback(0,err);
+            else
+                callback(1,pokemons);
+        });
+    },
+    /*
+     * get the pokemon details of particular pokemon based on name
+     */
+    getPokemonByName : function (name, callback) {
+        pokemonDetail.find({'name': name }, function (err, pokemons) {
+            if (err)
+                callback(0,err);
+            else
+                callback(1,pokemons);
+        });
+    },
+    /*
+     * get the pokemon details of pokemons based on resistance
+     */
+    getPokemonByResistance: function (resistance, callback) {
+        pokemonDetail.find({'resistance': resistance }, function (err, pokemons) {
+            if (err)
+                callback(0,err);
+            else
+                callback(1,pokemons);
+        });
+    },
+
+    /*
+     * get the pokemon details of pokemons based on weakness
+     */
+    getPokemonByWeakness: function (weakness, callback) {
+        pokemonDetail.find({'weakness': weakness }, function (err, pokemons) {
+            if (err)
+                callback(0,err);
+            else
+                callback(1,pokemons);
+        });
+    },
 };
