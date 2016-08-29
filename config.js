@@ -7,10 +7,10 @@ module.exports = {
         "collection": "PokeData"
     },
     "shared_database": {
-        "username": "pokemongo",
-        "password": "!Pokemon123",
-        "uri": "ds063725.mlab.com:63725/pokemongo",
-        "collection": "PokeData"
+        "username": process.env.MLAB_USERNAME,
+        "password": process.env.MLAB_PASSWORD,
+        "uri": process.env.MLAB_URI,
+        "collection": process.env.MLAB_COLLECTION
     },
     "twitter" : {
         "consumer_key": process.env.CONSUMER_KEY,
