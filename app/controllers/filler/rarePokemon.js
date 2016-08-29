@@ -10,106 +10,55 @@ const rarePokemonStore = require(__appbase + 'stores/rarePokemon'),
 
 module.exports = {
     /*
-     * for getting raraPokemons data from pokesnipers.com through an api request and storing into files
-     */
-    fill: function (callback) {
-        let url = config.pokesniper.url;
-        common.getHttpRequestData(url);
-        setInterval(function(){
-            common.getHttpRequestData(url);
-        }, config.pokesniper.listeningInterval);
-    },
-    /*
      * for inserting rarePokemon data to MongoDB
      */
-    insertToDb: function (callback) {
-
-        const dirPath = __tmpbase + 'rarePokemon/';
-
-        // reading the dfirectory under which all the files containing rarePokemon data is there
-        fs.readdir(dirPath, function(err, filenames) {
-
-            let noOfFiles = filenames.length,
-                count =0;
-
-            if (err) {
-                logger.error('Error in reading directory' + dirPath);
-                process.exit();
-            }
-            // when no files are present then exit the process
-            if( noOfFiles === 0){
-                logger.info('No files to read');
-                process.exit();
-            }
-
-            logger.info('MongoDb Insertion...');
-
-            // reading individual files for the data
-            filenames.forEach(function(filename) {
-                fs.readFile(dirPath + filename, 'utf-8', function(err, rarePokemons) {
-
-                    logger.info('filename', filename);
-                    logger.info('\n');
-
-                    // some error on reading the file
-                    if (err) {
-                        logger.error('Error in reading file' + filename);
-                        return;
-                    }
-
-                    if (rarePokemons !== undefined) {
-                        // inserting the read content into MongoDB
-                        insert(rarePokemons, function(success){
-                            //decrease the number of files to be read
-                            noOfFiles--;
-                            // deleting the file after it has been read and data being stored into database
-                            fs.unlinkSync(dirPath + filename);
-                            // if no files then sent a callback to calling function
-                            if(noOfFiles === 0)
-                                callback(true);
-                        });
-                    }
-                });
-            });
+    insertToDb: function () {
+        // url of fetching the rarepokemons from pokesniper api
+        const url = config.pokesniper.url;
+        // for getting raraPokemons data from pokesnipers.com through an api request
+        let rarePokemons = common.getHttpRequestData(url, function(rarePokemons){
+            module.exports.insert(rarePokemons.results);
         });
+        // recursively calling the function for continuius listening
+        setTimeout(function(){
+            module.exports.insertToDb();
+        },  config.pokesniper.listeningInterval);
+    },
 
-        /*
-         * inserting the read data into MongoDB
-         */
-        let addRarePokemon = function (rarePokemon, callback) {
-            rarePokemonStore.add(rarePokemon, function (success, data) {
-                callback(success);
-            });
-        };
 
-        /*
-         * inserting the read data into MongoDB
-         */
-        let insert = function (rarePokemons, callback) {
-            const rarePokemonRecords =JSON.parse(rarePokemons);
-            let length = 0,
-                pokemonName;
+    /*
+     * inserting the read data into MongoDB
+     */
+    addRarePokemon : function (rarePokemon) {
+        rarePokemonStore.add(rarePokemon, function (success, data) {
+            if (success === 1) {
+                logger.success('Success: ' + data);
+            } else {
+                logger.error('Error:' + data);
+            }
+        });
+    },
 
-            async.forEach(rarePokemonRecords,function (rarePokemon, callback) {
+/*
+ * inserting the read data into MongoDB
+ */
+    insert : function (rarePokemons) {
+        const rarePokemonRecords =rarePokemons;
+        let length = 0,
+            pokemonName;
+            async.forEach(rarePokemonRecords, function(rarePokemon){
                 length++;
-                pokemonName = (rarePokemon.name);
+                pokemonName = (rarePokemonRecords[0].name);
                 // extracting pokemon id from the names
                 pokemonStore.getByName(pokemonName, function (success, data) {
                     if (success == 1) {
                         rarePokemon['id'] = data[0]['pokemonID'];
-                        addRarePokemon(rarePokemon, function(success){
-                            callback();
-                        });
+                        module.exports.addRarePokemon(rarePokemon);
                     } else {
                         logger.error('Error: no master data for the pokemon ' + pokemonName);
-                        callback();
                     }
                 });
-
-            }, function(err){
-                callback(true);
             });
-            logger.info('\n length',length);
-        };
+        logger.info('\n length',length);
     }
 };
