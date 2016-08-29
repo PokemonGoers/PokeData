@@ -50,6 +50,14 @@ module.exports = {
         });
     },
     /*
+     * get the pokemon details of particular pokemon based on type
+     */
+    getByType : function (type, callback) {
+        this.get({'Types': new RegExp('^' + type + '$', 'i')}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    /*
      * get the pokemon details of pokemons based on resistance
      */
     getByResistance: function (resistance, callback) {

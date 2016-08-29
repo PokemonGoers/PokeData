@@ -198,6 +198,47 @@ module.exports = {
      * [
      * ]
      */
+    getByType : function (req, res) {
+        logger.info('Get Pokemon details by type');
+
+        pokemon.getByType(req.params.type, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure. No pokemon details with this type exists!', data: {'type': req.params.type}});
+        });
+    },
+    /**
+     * @api {get} /api/pokemonsSighting/ Get pokemons sightings between particular set of coordinates
+     * @apiVersion 0.0.1
+     * @apiName Get Pokemon Sightings between particular set of coordinates
+     * @apiDescription Get Pokemon Sightings between particular set of coordinates
+     * @apiGroup Pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
     getByResistance : function (req, res) {
         logger.info('Get Pokemon details by resistance');
 
