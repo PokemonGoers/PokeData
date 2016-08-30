@@ -51,6 +51,8 @@
             // prefix for all routes
             app.use('/api', router);
 
+            app.use('/doc', express.static('apidoc'));
+
             //listening for requests
             var port = config.server.port || 8080; //a default port if the config file does not contain it
             app.listen(port);

@@ -12,22 +12,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     *      "_id": "57b60a60f3981b52102ef562",
-     *      "deviceId": "80sxy0vumg2h5hhv8hgc0axt9jr29al7",
-     *       "userId": "13661365",
-     *       "trainerName": "(Poke Radar Prediction)",
-     *       "pokemonId": "133",
-     *       "longitude": 2.3887459103,
-     *       "latitude": 48.8923425896,
-     *       "upvotes": 1,
-     *       "downvotes": 0,
-     *       "created": 1470888182,
-     *       "id": "Sybxo5uYt",
-     *       "__v": 0
-          }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -52,22 +55,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -93,22 +99,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -135,22 +144,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -176,22 +188,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -217,22 +232,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -258,22 +276,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -299,22 +320,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -348,22 +372,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -397,22 +424,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -446,22 +476,25 @@ module.exports = {
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
@@ -489,28 +522,31 @@ module.exports = {
     /**
      * @api {get} /api/pokemon/evolution/:category/name/:name GetPokemonByEvolutionName
      * @apiVersion 0.0.1
-     * @apiName GetPokemonByEvolutionId
+     * @apiName GetPokemonByEvolutionName
      * @apiDescription Get pokemon by specific evolution name
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
+     * {"message":"Success",
+     *  "data": [{
+     *          "maxHP":1071,
+     *          "maxCP":951,
+     *          "fleeRate":0.1,
+     *          "classification":"Seed Pokèmon",
+     *          "name":"Bulbasaur",
+     *          "pokemonID":1,
+     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
+     *          "previousEvolutions":[],
+     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
+     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
+     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
+     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
+     *          "weakness":["fire","ice","flying","psychic"],
+     *          "resistance":["water","electric","grass","fighting","fairy"],
+     *          "types":["grass","poison"]
+     * }] }
      *
      * @apiSuccessExample {json} No db-entries:
      * HTTP/1.1 200 OK
