@@ -9,12 +9,12 @@ logger.info(collection);
 /*
  * choices of collection to be filled
  */
-var possibleListeners = [
+var possibleCollections = [
     'basicPokemonDetail'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
-if (possibleListeners.indexOf(collection) < 0) {
+if (possibleCollections.indexOf(collection) < 0) {
     process.exit();
 }
 
