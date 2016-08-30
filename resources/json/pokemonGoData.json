@@ -20,7 +20,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Tackle",
             "Type":"Normal",
@@ -32,7 +32,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -49,11 +49,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"6.04kg",
          "Maximum":"7.76kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.61m",
          "Maximum":"0.79m"
       },
@@ -62,7 +62,7 @@
          "Amount":25,
          "Name":"Bulbasaur candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":2,
             "Name":"Ivysaur"
@@ -72,8 +72,8 @@
       "MaxHP":1071,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -98,7 +98,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Razor Leaf",
             "Type":"Grass",
@@ -110,7 +110,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -127,16 +127,16 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"11.38kg",
          "Maximum":"14.63kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":1,
             "Name":"Bulbasaur"
@@ -146,7 +146,7 @@
          "Amount":100,
          "Name":"Bulbasaur candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":3,
             "Name":"Venusaur"
@@ -156,8 +156,8 @@
       "MaxHP":1632,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -182,7 +182,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Razor Leaf",
             "Type":"Grass",
@@ -194,7 +194,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Petal Blizzard",
             "Type":"Grass",
@@ -211,16 +211,16 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"87.5kg",
          "Maximum":"112.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.75m",
          "Maximum":"2.25m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":1,
             "Name":"Bulbasaur"
@@ -234,8 +234,8 @@
       "MaxHP":2580,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -259,7 +259,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -271,7 +271,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Flame Burst",
             "Type":"Fire",
@@ -288,11 +288,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"7.44kg",
          "Maximum":"9.56kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -301,7 +301,7 @@
          "Amount":25,
          "Name":"Charmander candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":5,
             "Name":"Charmeleon"
@@ -311,8 +311,8 @@
       "MaxHP":955,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -336,7 +336,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -348,7 +348,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Fire Punch",
             "Type":"Fire",
@@ -365,16 +365,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"16.63kg",
          "Maximum":"21.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":4,
             "Name":"Charmander"
@@ -384,7 +384,7 @@
          "Amount":100,
          "Name":"Charmander candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":6,
             "Name":"Charizard"
@@ -394,8 +394,8 @@
       "MaxHP":1557,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -420,7 +420,7 @@
          "Electric",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -432,7 +432,7 @@
             "Damage":9
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dragon Claw",
             "Type":"Dragon",
@@ -449,16 +449,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"79.19kg",
          "Maximum":"101.81kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.49m",
          "Maximum":"1.91m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":4,
             "Name":"Charmander"
@@ -472,8 +472,8 @@
       "MaxHP":2602,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -494,7 +494,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -506,7 +506,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -523,11 +523,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"7.88kg",
          "Maximum":"10.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -536,7 +536,7 @@
          "Amount":25,
          "Name":"Squirtle candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":8,
             "Name":"Wartortle"
@@ -546,8 +546,8 @@
       "MaxHP":1008,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -568,7 +568,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -580,7 +580,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -602,16 +602,16 @@
             "Damage":65
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"19.69kg",
          "Maximum":"25.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":7,
             "Name":"Squirtle"
@@ -621,7 +621,7 @@
          "Amount":100,
          "Name":"Squirtle candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":9,
             "Name":"Blastoise"
@@ -631,8 +631,8 @@
       "MaxHP":1582,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -653,7 +653,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -665,7 +665,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Flash Cannon",
             "Type":"Steel",
@@ -687,16 +687,16 @@
             "Damage":65
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"74.81kg",
          "Maximum":"96.19kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":7,
             "Name":"Squirtle"
@@ -710,8 +710,8 @@
       "MaxHP":2542,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -732,7 +732,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -744,18 +744,18 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
             "Damage":15
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"2.54kg",
          "Maximum":"3.26kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -764,7 +764,7 @@
          "Amount":12,
          "Name":"Caterpie candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":11,
             "Name":"Metapod"
@@ -774,8 +774,8 @@
       "MaxHP":443,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -796,7 +796,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -808,23 +808,23 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
             "Damage":15
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"8.66kg",
          "Maximum":"11.14kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.61m",
          "Maximum":"0.79m"
       },
       "FleeRate":0.09,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":10,
             "Name":"Caterpie"
@@ -834,7 +834,7 @@
          "Amount":50,
          "Name":"Caterpie candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":12,
             "Name":"Butterfree"
@@ -844,8 +844,8 @@
       "MaxHP":477,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -870,7 +870,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -882,7 +882,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bug Buzz",
             "Type":"Bug",
@@ -899,16 +899,16 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"28kg",
          "Maximum":"36kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":10,
             "Name":"Caterpie"
@@ -922,8 +922,8 @@
       "MaxHP":1454,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -948,7 +948,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -960,18 +960,18 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
             "Damage":15
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"2.8kg",
          "Maximum":"3.6kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -980,7 +980,7 @@
          "Amount":12,
          "Name":"Weedle candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":14,
             "Name":"Kakuna"
@@ -990,8 +990,8 @@
       "MaxHP":449,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1016,7 +1016,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -1028,23 +1028,23 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
             "Damage":15
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"8.75kg",
          "Maximum":"11.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
       "FleeRate":0.09,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":13,
             "Name":"Weedle"
@@ -1054,7 +1054,7 @@
          "Amount":50,
          "Name":"Weedle candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":15,
             "Name":"Beedrill"
@@ -1064,8 +1064,8 @@
       "MaxHP":485,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1090,7 +1090,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -1102,7 +1102,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1119,16 +1119,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"25.81kg",
          "Maximum":"33.19kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":13,
             "Name":"Weedle"
@@ -1142,8 +1142,8 @@
       "MaxHP":1439,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1166,7 +1166,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -1178,7 +1178,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1195,11 +1195,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"1.57kg",
          "Maximum":"2.02kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -1208,7 +1208,7 @@
          "Amount":12,
          "Name":"Pidgey candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":17,
             "Name":"Pidgeotto"
@@ -1218,8 +1218,8 @@
       "MaxHP":679,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1242,7 +1242,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Steel Wing",
             "Type":"Steel",
@@ -1254,7 +1254,7 @@
             "Damage":9
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1271,16 +1271,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
       "FleeRate":0.09,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":16,
             "Name":"Pidgey"
@@ -1290,7 +1290,7 @@
          "Amount":50,
          "Name":"Pidgey candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":18,
             "Name":"Pidgeot"
@@ -1300,8 +1300,8 @@
       "MaxHP":1223,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1324,7 +1324,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Steel Wing",
             "Type":"Steel",
@@ -1336,7 +1336,7 @@
             "Damage":9
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1353,16 +1353,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"34.56kg",
          "Maximum":"44.44kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":16,
             "Name":"Pidgey"
@@ -1376,8 +1376,8 @@
       "MaxHP":2091,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1394,7 +1394,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -1406,7 +1406,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -1423,11 +1423,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"3.06kg",
          "Maximum":"3.94kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -1436,7 +1436,7 @@
          "Amount":25,
          "Name":"Rattata candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":20,
             "Name":"Raticate"
@@ -1446,8 +1446,8 @@
       "MaxHP":581,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1464,7 +1464,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -1476,7 +1476,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -1493,16 +1493,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"16.19kg",
          "Maximum":"20.81kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.61m",
          "Maximum":"0.79m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":19,
             "Name":"Rattata"
@@ -1512,8 +1512,8 @@
       "MaxHP":1444,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1536,7 +1536,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -1548,7 +1548,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1565,11 +1565,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"1.75kg",
          "Maximum":"2.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -1578,7 +1578,7 @@
          "Amount":50,
          "Name":"Spearow candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":22,
             "Name":"Fearow"
@@ -1588,8 +1588,8 @@
       "MaxHP":686,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1612,7 +1612,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -1624,7 +1624,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1641,16 +1641,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"33.25kg",
          "Maximum":"42.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":21,
             "Name":"Spearow"
@@ -1660,8 +1660,8 @@
       "MaxHP":1746,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1683,7 +1683,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -1695,7 +1695,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Gunk Shot",
             "Type":"Poison",
@@ -1712,11 +1712,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"6.04kg",
          "Maximum":"7.76kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.75m",
          "Maximum":"2.25m"
       },
@@ -1725,7 +1725,7 @@
          "Amount":50,
          "Name":"Ekans candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":24,
             "Name":"Arbok"
@@ -1735,8 +1735,8 @@
       "MaxHP":824,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1758,7 +1758,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -1770,7 +1770,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -1787,16 +1787,16 @@
             "Damage":70
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"56.88kg",
          "Maximum":"73.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"3.06m",
          "Maximum":"3.94m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":23,
             "Name":"Ekans"
@@ -1806,8 +1806,8 @@
       "MaxHP":1767,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1826,7 +1826,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -1838,7 +1838,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -1855,11 +1855,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"5.25kg",
          "Maximum":"6.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -1868,7 +1868,7 @@
          "Amount":50,
          "Name":"Pikachu candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":26,
             "Name":"Raichu"
@@ -1878,8 +1878,8 @@
       "MaxHP":887,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1898,7 +1898,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -1910,7 +1910,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -1927,16 +1927,16 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":25,
             "Name":"Pikachu"
@@ -1946,8 +1946,8 @@
       "MaxHP":2028,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -1968,7 +1968,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -1980,7 +1980,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -1997,11 +1997,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"10.5kg",
          "Maximum":"13.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -2010,7 +2010,7 @@
          "Amount":50,
          "Name":"Sandshrew candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":28,
             "Name":"Sandslash"
@@ -2020,8 +2020,8 @@
       "MaxHP":798,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -2042,7 +2042,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Metal Claw",
             "Type":"Steel",
@@ -2054,7 +2054,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -2071,16 +2071,16 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"25.81kg",
          "Maximum":"33.19kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":27,
             "Name":"Sandshrew"
@@ -2090,8 +2090,8 @@
       "MaxHP":1810,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -2113,7 +2113,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2125,7 +2125,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2142,11 +2142,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"6.13kg",
          "Maximum":"7.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -2155,7 +2155,7 @@
          "Amount":25,
          "Name":"Nidoran♀ candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":30,
             "Name":"Nidorina"
@@ -2165,8 +2165,8 @@
       "MaxHP":876,
       "gender": {
          "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
+         "maleRatio": "0",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -2188,7 +2188,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2200,7 +2200,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -2217,16 +2217,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.5kg",
          "Maximum":"22.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":29,
             "Name":"Nidoran ♀"
@@ -2236,7 +2236,7 @@
          "Amount":100,
          "Name":"Nidoran♀ candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":31,
             "Name":"Nidoqueen"
@@ -2246,8 +2246,8 @@
       "MaxHP":1404,
       "gender": {
          "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
+         "maleRatio": "0",
+         "femaleRatio": "1",
          "breedable": false
       }
    },
@@ -2273,7 +2273,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2285,7 +2285,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -2302,16 +2302,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"52.5kg",
          "Maximum":"67.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":29,
             "Name":"Nidoran ♀"
@@ -2325,8 +2325,8 @@
       "MaxHP":2485,
       "gender": {
          "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
+         "maleRatio": "0",
+         "femaleRatio": "1",
          "breedable": false
       }
    },
@@ -2348,7 +2348,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -2360,7 +2360,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2377,11 +2377,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"7.88kg",
          "Maximum":"10.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -2390,7 +2390,7 @@
          "Amount":25,
          "Name":"Nidoran♂ candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":33,
             "Name":"Nidorino"
@@ -2400,8 +2400,8 @@
       "MaxHP":843,
       "gender": {
          "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
+         "maleRatio": "1",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -2423,7 +2423,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2435,7 +2435,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -2452,16 +2452,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.06kg",
          "Maximum":"21.94kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.79m",
          "Maximum":"1.01m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":32,
             "Name":"Nidoran ♂"
@@ -2471,7 +2471,7 @@
          "Amount":100,
          "Name":"Nidoran♂ candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":34,
             "Name":"Nidoking"
@@ -2481,8 +2481,8 @@
       "MaxHP":1372,
       "gender": {
          "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
+         "maleRatio": "1",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -2508,7 +2508,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -2520,7 +2520,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -2537,16 +2537,16 @@
             "Damage":70
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"54.25kg",
          "Maximum":"69.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.22m",
          "Maximum":"1.57m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":32,
             "Name":"Nidoran ♂"
@@ -2560,8 +2560,8 @@
       "MaxHP":2475,
       "gender": {
          "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
+         "maleRatio": "1",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -2582,7 +2582,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
@@ -2594,7 +2594,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2611,11 +2611,11 @@
             "Damage":85
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"6.56kg",
          "Maximum":"8.44kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -2624,7 +2624,7 @@
          "Amount":50,
          "Name":"Clefairy candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":36,
             "Name":"Clefable"
@@ -2634,8 +2634,8 @@
       "MaxHP":1200,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
+         "maleRatio": "1",
+         "femaleRatio": "3",
          "breedable": true
       }
    },
@@ -2656,7 +2656,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
@@ -2668,7 +2668,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -2685,16 +2685,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"35kg",
          "Maximum":"45kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":35,
             "Name":"Clefairy"
@@ -2704,8 +2704,8 @@
       "MaxHP":2397,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
+         "maleRatio": "1",
+         "femaleRatio": "3",
          "breedable": true
       }
    },
@@ -2729,7 +2729,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -2741,7 +2741,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2758,11 +2758,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"8.66kg",
          "Maximum":"11.14kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -2771,7 +2771,7 @@
          "Amount":50,
          "Name":"Vulpi"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":38,
             "Name":"Ninetales"
@@ -2781,8 +2781,8 @@
       "MaxHP":831,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
+         "maleRatio": "1",
+         "femaleRatio": "3",
          "breedable": true
       }
    },
@@ -2806,7 +2806,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -2818,7 +2818,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -2835,16 +2835,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.41kg",
          "Maximum":"22.39kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":37,
             "Name":"Vulpix"
@@ -2854,8 +2854,8 @@
       "MaxHP":2188,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
+         "maleRatio": "1",
+         "femaleRatio": "3",
          "breedable": true
       }
    },
@@ -2877,7 +2877,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -2889,7 +2889,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2906,11 +2906,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"4.81kg",
          "Maximum":"6.19kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -2919,7 +2919,7 @@
          "Amount":50,
          "Name":"Jigglypuff candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":39,
             "Name":"Jigglypuff"
@@ -2929,8 +2929,8 @@
       "MaxHP":917,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
+         "maleRatio": "1",
+         "femaleRatio": "3",
          "breedable": true
       }
    },
@@ -2952,7 +2952,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -2964,7 +2964,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -2981,16 +2981,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"10.5kg",
          "Maximum":"13.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":40,
             "Name":"Wigglytuff"
@@ -3000,8 +3000,8 @@
       "MaxHP":2177,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
+         "maleRatio": "1",
+         "femaleRatio": "3",
          "breedable": true
       }
    },
@@ -3026,7 +3026,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -3038,7 +3038,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Air Cutter",
             "Type":"Flying",
@@ -3055,11 +3055,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"6.56kg",
          "Maximum":"8.44kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
@@ -3068,7 +3068,7 @@
          "Amount":50,
          "Name":"Zubat candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":42,
             "Name":"Golbat"
@@ -3078,8 +3078,8 @@
       "MaxHP":642,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3104,7 +3104,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -3116,7 +3116,7 @@
             "Damage":9
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Air Cutter",
             "Type":"Flying",
@@ -3133,16 +3133,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"48.13kg",
          "Maximum":"61.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":41,
             "Name":"Zubat"
@@ -3152,8 +3152,8 @@
       "MaxHP":1921,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3178,7 +3178,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -3190,7 +3190,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Moonblast",
             "Type":"Fairy",
@@ -3207,11 +3207,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"4.73kg",
          "Maximum":"6.08kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -3220,7 +3220,7 @@
          "Amount":25,
          "Name":"Oddish candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":44,
             "Name":"Gloom"
@@ -3230,8 +3230,8 @@
       "MaxHP":1148,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3256,7 +3256,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -3268,7 +3268,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Moonblast",
             "Type":"Fairy",
@@ -3285,16 +3285,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"7.53kg",
          "Maximum":"9.68kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":43,
             "Name":"Oddish"
@@ -3304,7 +3304,7 @@
          "Amount":100,
          "Name":"Oddish candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":45,
             "Name":"Vileplume"
@@ -3314,8 +3314,8 @@
       "MaxHP":1689,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3340,7 +3340,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -3352,7 +3352,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Moonblast",
             "Type":"Fairy",
@@ -3369,16 +3369,16 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"16.28kg",
          "Maximum":"20.93kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":43,
             "Name":"Oddish"
@@ -3392,8 +3392,8 @@
       "MaxHP":2492,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3420,7 +3420,7 @@
          "Bug",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3432,7 +3432,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Cross Poison",
             "Type":"Poison",
@@ -3449,11 +3449,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"4.73kg",
          "Maximum":"6.08kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -3462,7 +3462,7 @@
          "Amount":50,
          "Name":"Paras candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":47,
             "Name":"Parasect"
@@ -3472,8 +3472,8 @@
       "MaxHP":916,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3500,7 +3500,7 @@
          "Bug",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3512,7 +3512,7 @@
             "Damage":3
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Cross Poison",
             "Type":"Poison",
@@ -3529,16 +3529,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"25.81kg",
          "Maximum":"33.19kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":46,
             "Name":"Paras"
@@ -3548,8 +3548,8 @@
       "MaxHP":1747,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3574,7 +3574,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3586,7 +3586,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Poison Fang",
             "Type":"Poison",
@@ -3603,11 +3603,11 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
@@ -3616,7 +3616,7 @@
          "Amount":50,
          "Name":"Venonat candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":49,
             "Name":"Venomoth"
@@ -3626,8 +3626,8 @@
       "MaxHP":1029,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3652,7 +3652,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3664,7 +3664,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bug Buzz",
             "Type":"Bug",
@@ -3681,16 +3681,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"10.94kg",
          "Maximum":"14.06kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":48,
             "Name":"Venonat"
@@ -3700,8 +3700,8 @@
       "MaxHP":1890,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3722,7 +3722,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -3734,7 +3734,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -3751,11 +3751,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"0.7kg",
          "Maximum":"0.9kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.18m",
          "Maximum":"0.23m"
       },
@@ -3764,7 +3764,7 @@
          "Amount":50,
          "Name":"Diglett candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":51,
             "Name":"Dugtrio"
@@ -3774,8 +3774,8 @@
       "MaxHP":456,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3796,7 +3796,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -3808,7 +3808,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -3825,16 +3825,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"29.14kg",
          "Maximum":"37.46kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.61m",
          "Maximum":"0.79m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":50,
             "Name":"Diglett"
@@ -3844,8 +3844,8 @@
       "MaxHP":1168,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3862,7 +3862,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -3874,7 +3874,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -3891,11 +3891,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"3.67kg",
          "Maximum":"4.72kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -3904,7 +3904,7 @@
          "Amount":50,
          "Name":"Meowth candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":53,
             "Name":"Persian"
@@ -3914,8 +3914,8 @@
       "MaxHP":756,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -3932,7 +3932,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -3944,7 +3944,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Night Slash",
             "Type":"Dark",
@@ -3961,16 +3961,16 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"28kg",
          "Maximum":"36kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":52,
             "Name":"Meowth"
@@ -3980,8 +3980,8 @@
       "MaxHP":1631,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4002,7 +4002,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Water Gun",
             "Type":"Water",
@@ -4014,7 +4014,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -4031,11 +4031,11 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.15kg",
          "Maximum":"22.05kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
@@ -4044,7 +4044,7 @@
          "Amount":50,
          "Name":"Psyduck candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":55,
             "Name":"Golduck"
@@ -4054,8 +4054,8 @@
       "MaxHP":1109,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4076,7 +4076,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -4088,7 +4088,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Gunk Shot",
             "Type":"Poison",
@@ -4110,16 +4110,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"67.02kg",
          "Maximum":"86.17kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.49m",
          "Maximum":"1.91m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":54,
             "Name":"Psyduck"
@@ -4129,8 +4129,8 @@
       "MaxHP":2386,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4151,7 +4151,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4163,7 +4163,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -4180,11 +4180,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"24.5kg",
          "Maximum":"31.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -4193,7 +4193,7 @@
          "Amount":50,
          "Name":"Mankey candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":57,
             "Name":"Primeape"
@@ -4203,8 +4203,8 @@
       "MaxHP":878,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4225,7 +4225,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4237,7 +4237,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Cross Chop",
             "Type":"Fighting",
@@ -4254,16 +4254,16 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"28kg",
          "Maximum":"36kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":56,
             "Name":"Mankey"
@@ -4273,8 +4273,8 @@
       "MaxHP":1864,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4298,7 +4298,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -4310,7 +4310,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -4327,11 +4327,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"16.63kg",
          "Maximum":"21.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.61m",
          "Maximum":"0.79m"
       },
@@ -4340,7 +4340,7 @@
          "Amount":50,
          "Name":"Growlithe candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":59,
             "Name":"Arcanine"
@@ -4350,8 +4350,8 @@
       "MaxHP":1335,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4375,7 +4375,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -4387,7 +4387,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -4404,16 +4404,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"135.63kg",
          "Maximum":"174.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.66m",
          "Maximum":"2.14m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":58,
             "Name":"Growlithe"
@@ -4423,8 +4423,8 @@
       "MaxHP":2983,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4445,7 +4445,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -4457,7 +4457,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -4474,11 +4474,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"10.85kg",
          "Maximum":"13.95kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -4487,7 +4487,7 @@
          "Amount":25,
          "Name":"Poliwag candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":61,
             "Name":"Poliwhirl"
@@ -4497,8 +4497,8 @@
       "MaxHP":795,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4519,7 +4519,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -4531,7 +4531,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -4548,16 +4548,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.5kg",
          "Maximum":"22.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":60,
             "Name":"Poliwag"
@@ -4567,7 +4567,7 @@
          "Amount":100,
          "Name":"Poliwag candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":62,
             "Name":"Poliwrath"
@@ -4577,8 +4577,8 @@
       "MaxHP":1340,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4606,7 +4606,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -4618,7 +4618,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Hydro Pump",
             "Type":"Water",
@@ -4635,16 +4635,16 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"47.25kg",
          "Maximum":"60.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":60,
             "Name":"Poliwag"
@@ -4658,8 +4658,8 @@
       "MaxHP":2505,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4679,7 +4679,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
 
          },
@@ -4689,7 +4689,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Psyshock",
             "Type":"Psychic",
@@ -4706,11 +4706,11 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.06kg",
          "Maximum":"21.94kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.79m",
          "Maximum":"1.01m"
       },
@@ -4719,7 +4719,7 @@
          "Amount":25,
          "Name":"Abra candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":64,
             "Name":"Kadabra"
@@ -4729,8 +4729,8 @@
       "MaxHP":600,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4750,7 +4750,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -4762,7 +4762,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -4779,16 +4779,16 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"49.44kg",
          "Maximum":"63.56kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":63,
             "Name":"Abra"
@@ -4798,7 +4798,7 @@
          "Amount":100,
          "Name":"Abra candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":65,
             "Name":"Alakazam"
@@ -4808,8 +4808,8 @@
       "MaxHP":1131,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4829,7 +4829,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -4841,7 +4841,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -4858,16 +4858,16 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"42kg",
          "Maximum":"54kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":63,
             "Name":"Abra"
@@ -4881,8 +4881,8 @@
       "MaxHP":1813,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4903,7 +4903,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4915,7 +4915,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -4932,11 +4932,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.06kg",
          "Maximum":"21.94kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
@@ -4945,7 +4945,7 @@
          "Amount":25,
          "Name":"Machop candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":67,
             "Name":"Machoke"
@@ -4955,8 +4955,8 @@
       "MaxHP":1089,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -4977,7 +4977,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4989,7 +4989,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -5006,16 +5006,16 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"61.69kg",
          "Maximum":"79.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":66,
             "Name":"Machop"
@@ -5025,7 +5025,7 @@
          "Amount":100,
          "Name":"Machop candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":68,
             "Name":"Machamp"
@@ -5035,8 +5035,8 @@
       "MaxHP":1760,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5057,7 +5057,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bullet Punch",
             "Type":"Steel",
@@ -5069,7 +5069,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Cross Chop",
             "Type":"Fighting",
@@ -5086,16 +5086,16 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"113.75kg",
          "Maximum":"146.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":66,
             "Name":"Machop"
@@ -5109,8 +5109,8 @@
       "MaxHP":2594,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5135,7 +5135,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5147,7 +5147,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -5164,11 +5164,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"3.5kg",
          "Maximum":"4.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.61m",
          "Maximum":"0.79m"
       },
@@ -5177,7 +5177,7 @@
          "Amount":25,
          "Name":"Bellsprout candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":70,
             "Name":"Weepinbell"
@@ -5187,8 +5187,8 @@
       "MaxHP":1117,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5213,7 +5213,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5225,7 +5225,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -5242,16 +5242,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"5.6kg",
          "Maximum":"7.2kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":69,
             "Name":"Bellsprout"
@@ -5261,7 +5261,7 @@
          "Amount":100,
          "Name":"Bellsprout candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":71,
             "Name":"Victreebel"
@@ -5271,8 +5271,8 @@
       "MaxHP":1723,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5297,7 +5297,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5309,7 +5309,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Leaf Blade",
             "Type":"Grass",
@@ -5326,16 +5326,16 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"13.56kg",
          "Maximum":"17.44kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.49m",
          "Maximum":"1.91m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":69,
             "Name":"Bellsprout"
@@ -5349,8 +5349,8 @@
       "MaxHP":2530,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5377,7 +5377,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -5389,7 +5389,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -5406,11 +5406,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"39.81kg",
          "Maximum":"51.19kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.79m",
          "Maximum":"1.01m"
       },
@@ -5419,7 +5419,7 @@
          "Amount":50,
          "Name":"Tentacool candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":73,
             "Name":"Tentacruel"
@@ -5429,8 +5429,8 @@
       "MaxHP":905,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5457,7 +5457,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5469,7 +5469,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -5486,16 +5486,16 @@
             "Damage":70
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"48.13kg",
          "Maximum":"61.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":72,
             "Name":"Tentacool"
@@ -5505,8 +5505,8 @@
       "MaxHP":2220,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5534,7 +5534,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Rock Throw",
             "Type":"Rock",
@@ -5546,7 +5546,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -5563,11 +5563,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"17.5kg",
          "Maximum":"22.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -5576,7 +5576,7 @@
          "Amount":25,
          "Name":"Geodude candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":75,
             "Name":"Graveler"
@@ -5586,8 +5586,8 @@
       "MaxHP":849,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5615,7 +5615,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -5627,7 +5627,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -5644,16 +5644,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"91.88kg",
          "Maximum":"118.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":74,
             "Name":"Geodude"
@@ -5663,7 +5663,7 @@
          "Amount":100,
          "Name":"Geodude candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":76,
             "Name":"Golem"
@@ -5673,8 +5673,8 @@
       "MaxHP":1433,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5702,7 +5702,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -5714,7 +5714,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -5731,16 +5731,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"262.5kg",
          "Maximum":"337.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.22m",
          "Maximum":"1.57m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":74,
             "Name":"Geodude"
@@ -5754,8 +5754,8 @@
       "MaxHP":2303,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5779,7 +5779,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -5791,7 +5791,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -5808,11 +5808,11 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
@@ -5821,7 +5821,7 @@
          "Amount":50,
          "Name":"Ponyta candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":78,
             "Name":"Rapidash"
@@ -5831,8 +5831,8 @@
       "MaxHP":1516,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5856,7 +5856,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -5868,7 +5868,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Drill Run",
             "Type":"Ground",
@@ -5885,16 +5885,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"83.13kg",
          "Maximum":"106.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.49m",
          "Maximum":"1.91m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":77,
             "Name":"Ponyta"
@@ -5904,8 +5904,8 @@
       "MaxHP":2199,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -5932,7 +5932,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -5944,7 +5944,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Psychic",
             "Type":"Psychic",
@@ -5961,11 +5961,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"31.5kg",
          "Maximum":"40.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
@@ -5974,7 +5974,7 @@
          "Amount":50,
          "Name":"Slowpoke candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":80,
             "Name":"Slowbro"
@@ -5984,8 +5984,8 @@
       "MaxHP":1218,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6012,7 +6012,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -6024,7 +6024,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ice Beam",
             "Type":"Ice",
@@ -6041,16 +6041,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"68.69kg",
          "Maximum":"88.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":79,
             "Name":"Slowpoke"
@@ -6060,8 +6060,8 @@
       "MaxHP":2597,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6092,7 +6092,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -6104,7 +6104,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -6121,11 +6121,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"5.25kg",
          "Maximum":"6.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -6134,7 +6134,7 @@
          "Amount":50,
          "Name":"Magnemite candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":82,
             "Name":"Magneton"
@@ -6144,8 +6144,8 @@
       "MaxHP":890,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -6176,7 +6176,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -6188,7 +6188,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -6205,16 +6205,16 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"52.5kg",
          "Maximum":"67.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":81,
             "Name":"Magnemite"
@@ -6224,8 +6224,8 @@
       "MaxHP":1879,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -6248,7 +6248,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
 
          },
@@ -6258,7 +6258,7 @@
             "Damage":3
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -6275,11 +6275,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"13.13kg",
          "Maximum":"16.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
@@ -6290,8 +6290,8 @@
       "MaxHP":1263,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6314,7 +6314,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -6326,7 +6326,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -6343,11 +6343,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"34.3kg",
          "Maximum":"44.1kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.22m",
          "Maximum":"1.57m"
       },
@@ -6356,7 +6356,7 @@
          "Amount":50,
          "Name":"Doduo candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":85,
             "Name":"Dodrio"
@@ -6366,8 +6366,8 @@
       "MaxHP":855,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6390,7 +6390,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -6402,7 +6402,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -6419,16 +6419,16 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"74.55kg",
          "Maximum":"95.85kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.57m",
          "Maximum":"2.02m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":84,
             "Name":"Doduo"
@@ -6438,8 +6438,8 @@
       "MaxHP":1836,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6460,7 +6460,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ice Shard",
             "Type":"Ice",
@@ -6472,7 +6472,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -6489,11 +6489,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"78.75kg",
          "Maximum":"101.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
@@ -6502,7 +6502,7 @@
          "Amount":50,
          "Name":"Seel candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":87,
             "Name":"Dewgong"
@@ -6512,8 +6512,8 @@
       "MaxHP":1107,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6535,7 +6535,7 @@
          "Fighting",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -6547,7 +6547,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -6564,16 +6564,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"105kg",
          "Maximum":"135kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.49m",
          "Maximum":"1.91m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":86,
             "Name":"Seel"
@@ -6583,8 +6583,8 @@
       "MaxHP":2145,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6606,7 +6606,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -6618,7 +6618,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Mud Bomb",
             "Type":"Ground",
@@ -6635,11 +6635,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.79m",
          "Maximum":"1.01m"
       },
@@ -6648,7 +6648,7 @@
          "Amount":50,
          "Name":"Grimer candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":89,
             "Name":"Muk"
@@ -6658,8 +6658,8 @@
       "MaxHP":1284,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6681,7 +6681,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -6693,7 +6693,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -6710,16 +6710,16 @@
             "Damage":70
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":88,
             "Name":"Grimer"
@@ -6729,8 +6729,8 @@
       "MaxHP":2602,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6751,7 +6751,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ice Shard",
             "Type":"Ice",
@@ -6763,7 +6763,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -6780,11 +6780,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"3.5kg",
          "Maximum":"4.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -6793,7 +6793,7 @@
          "Amount":50,
          "Name":"Shellder candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":91,
             "Name":"Cloyster"
@@ -6803,8 +6803,8 @@
       "MaxHP":822,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6826,7 +6826,7 @@
          "Fighting",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -6838,7 +6838,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -6855,16 +6855,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"115.94kg",
          "Maximum":"149.06kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":90,
             "Name":"Shellder"
@@ -6874,8 +6874,8 @@
       "MaxHP":2052,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6901,7 +6901,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -6913,7 +6913,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -6930,11 +6930,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"0.09kg",
          "Maximum":"0.11kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
@@ -6943,7 +6943,7 @@
          "Amount":25,
          "Name":"Gastly candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":93,
             "Name":"Haunter"
@@ -6953,8 +6953,8 @@
       "MaxHP":804,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -6980,7 +6980,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -6992,7 +6992,7 @@
             "Damage":11
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -7009,16 +7009,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"0.09kg",
          "Maximum":"0.11kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":92,
             "Name":"Gastly"
@@ -7028,7 +7028,7 @@
          "Amount":100,
          "Name":"Gastly candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":94,
             "Name":"Gengar"
@@ -7038,8 +7038,8 @@
       "MaxHP":1380,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7065,7 +7065,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Shadow Claw",
             "Type":"Ghost",
@@ -7077,7 +7077,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -7094,16 +7094,16 @@
             "Damage":70
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"35.44kg",
          "Maximum":"45.56kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":92,
             "Name":"Gastly"
@@ -7117,8 +7117,8 @@
       "MaxHP":2078,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7146,7 +7146,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Rock Throw",
             "Type":"Rock",
@@ -7158,7 +7158,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Iron Head",
             "Type":"Steel",
@@ -7175,11 +7175,11 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"183.75kg",
          "Maximum":"236.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"7.7m",
          "Maximum":"9.9m"
       },
@@ -7188,8 +7188,8 @@
       "MaxHP":857,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7209,7 +7209,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -7221,7 +7221,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Psybeam",
             "Type":"Psychic",
@@ -7238,11 +7238,11 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"28.35kg",
          "Maximum":"36.45kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
@@ -7251,7 +7251,7 @@
          "Amount":50,
          "Name":"Drowzee candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":97,
             "Name":"Hypno"
@@ -7261,8 +7261,8 @@
       "MaxHP":1075,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7282,7 +7282,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -7294,7 +7294,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Psychic",
             "Type":"Psychic",
@@ -7311,16 +7311,16 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"66.15kg",
          "Maximum":"85.05kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":96,
             "Name":"Drowzee"
@@ -7330,8 +7330,8 @@
       "MaxHP":2184,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7352,7 +7352,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -7364,7 +7364,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -7381,11 +7381,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"5.69kg",
          "Maximum":"7.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -7394,7 +7394,7 @@
          "Amount":50,
          "Name":"Krabby candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":99,
             "Name":"Kingler"
@@ -7404,8 +7404,8 @@
       "MaxHP":792,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7426,7 +7426,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Metal Claw",
             "Type":"Steel",
@@ -7438,7 +7438,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Vice Grip",
             "Type":"Normal",
@@ -7455,16 +7455,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"52.5kg",
          "Maximum":"67.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":98,
             "Name":"Krabby"
@@ -7474,8 +7474,8 @@
       "MaxHP":1823,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7494,7 +7494,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -7506,7 +7506,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -7523,11 +7523,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"9.1kg",
          "Maximum":"11.7kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -7536,7 +7536,7 @@
          "Amount":50,
          "Name":"Voltorb candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":101,
             "Name":"Electrode"
@@ -7546,8 +7546,8 @@
       "MaxHP":839,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -7566,7 +7566,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -7578,7 +7578,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -7595,16 +7595,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"58.27kg",
          "Maximum":"74.92kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":100,
             "Name":"Voltorb"
@@ -7614,8 +7614,8 @@
       "MaxHP":1646,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -7644,14 +7644,14 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -7668,11 +7668,11 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"2.19kg",
          "Maximum":"2.81kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -7681,7 +7681,7 @@
          "Amount":50,
          "Name":"E"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":103,
             "Name":"Exeggutor"
@@ -7691,8 +7691,8 @@
       "MaxHP":1099,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7721,7 +7721,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -7733,7 +7733,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Psychic",
             "Type":"Psychic",
@@ -7750,16 +7750,16 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"105kg",
          "Maximum":"135kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.75m",
          "Maximum":"2.25m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":102,
             "Name":"Exeggcute"
@@ -7769,8 +7769,8 @@
       "MaxHP":2955,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7791,7 +7791,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -7803,7 +7803,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -7820,11 +7820,11 @@
             "Damage":100
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"5.69kg",
          "Maximum":"7.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -7833,7 +7833,7 @@
          "Amount":50,
          "Name":"Cubone candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":105,
             "Name":"Marowak"
@@ -7843,8 +7843,8 @@
       "MaxHP":1006,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7865,7 +7865,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -7877,7 +7877,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bone Club",
             "Type":"Ground",
@@ -7894,16 +7894,16 @@
             "Damage":100
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"39.38kg",
          "Maximum":"50.63kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":104,
             "Name":"Cubone"
@@ -7913,8 +7913,8 @@
       "MaxHP":1656,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -7935,7 +7935,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Low Kick",
             "Type":"Fighting",
@@ -7947,7 +7947,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Low Sweep",
             "Type":"Fighting",
@@ -7964,11 +7964,11 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"43.57kg",
          "Maximum":"56.02kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
@@ -7977,8 +7977,8 @@
       "MaxHP":1492,
       "gender": {
          "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
+         "maleRatio": "1",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -7999,7 +7999,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bullet Punch",
             "Type":"Steel",
@@ -8011,7 +8011,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -8033,11 +8033,11 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"43.93kg",
          "Maximum":"56.48kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.22m",
          "Maximum":"1.57m"
       },
@@ -8046,8 +8046,8 @@
       "MaxHP":1516,
       "gender": {
          "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
+         "maleRatio": "1",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -8064,7 +8064,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -8076,7 +8076,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Hyper Beam",
             "Type":"Normal",
@@ -8093,11 +8093,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"57.31kg",
          "Maximum":"73.69kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
@@ -8106,8 +8106,8 @@
       "MaxHP":1626,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8129,7 +8129,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -8141,7 +8141,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -8158,11 +8158,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"0.88kg",
          "Maximum":"1.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -8171,7 +8171,7 @@
          "Amount":50,
          "Name":"Koffing candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":110,
             "Name":"Weezing"
@@ -8181,8 +8181,8 @@
       "MaxHP":1151,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8204,7 +8204,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -8216,7 +8216,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -8233,16 +8233,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"8.31kg",
          "Maximum":"10.69kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":109,
             "Name":"Koffing"
@@ -8252,8 +8252,8 @@
       "MaxHP":2250,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8281,7 +8281,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -8293,7 +8293,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -8310,11 +8310,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"100.63kg",
          "Maximum":"129.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
@@ -8323,7 +8323,7 @@
          "Amount":50,
          "Name":"Rhyhorn candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":112,
             "Name":"Rhydon"
@@ -8333,8 +8333,8 @@
       "MaxHP":1182,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8362,7 +8362,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -8374,7 +8374,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -8391,16 +8391,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"105kg",
          "Maximum":"135kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.66m",
          "Maximum":"2.14m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":111,
             "Name":"Rhyhorn"
@@ -8410,8 +8410,8 @@
       "MaxHP":2243,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8428,7 +8428,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
@@ -8440,7 +8440,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -8457,11 +8457,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"30.27kg",
          "Maximum":"38.92kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
@@ -8470,8 +8470,8 @@
       "MaxHP":675,
       "gender": {
          "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
+         "maleRatio": "0",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8495,14 +8495,14 @@
          "Flying",
          "Bug"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Vine Whip",
             "Type":"Grass",
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -8519,11 +8519,11 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"30.63kg",
          "Maximum":"39.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
@@ -8532,8 +8532,8 @@
       "MaxHP":1739,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8550,7 +8550,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Low Kick",
             "Type":"Fighting",
@@ -8562,7 +8562,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -8579,11 +8579,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"70kg",
          "Maximum":"90kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.93m",
          "Maximum":"2.48m"
       },
@@ -8594,8 +8594,8 @@
       "MaxHP":2043,
       "gender": {
          "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
+         "maleRatio": "0",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8616,7 +8616,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -8628,7 +8628,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -8645,11 +8645,11 @@
             "Damage":60
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"7kg",
          "Maximum":"9kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -8658,7 +8658,7 @@
          "Amount":50,
          "Name":"Horsea candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":117,
             "Name":"Seadra"
@@ -8668,8 +8668,8 @@
       "MaxHP":794,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8690,7 +8690,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
@@ -8702,7 +8702,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -8719,16 +8719,16 @@
             "Damage":90
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"21.88kg",
          "Maximum":"28.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.05m",
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":116,
             "Name":"Horsea"
@@ -8738,8 +8738,8 @@
       "MaxHP":1713,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8760,7 +8760,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -8772,7 +8772,7 @@
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -8789,11 +8789,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"13.13kg",
          "Maximum":"16.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.53m",
          "Maximum":"0.68m"
       },
@@ -8802,7 +8802,7 @@
          "Amount":50,
          "Name":"Goldeen candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":119,
             "Name":"Seaking"
@@ -8812,8 +8812,8 @@
       "MaxHP":965,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8834,7 +8834,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -8846,7 +8846,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Drill Run",
             "Type":"Ground",
@@ -8863,16 +8863,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"34.13kg",
          "Maximum":"43.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":118,
             "Name":"Goldeen"
@@ -8882,8 +8882,8 @@
       "MaxHP":2043,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -8904,7 +8904,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -8916,7 +8916,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -8933,11 +8933,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"30.19kg",
          "Maximum":"38.81kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
@@ -8946,7 +8946,7 @@
          "Amount":50,
          "Name":"Staryu candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":121,
             "Name":"Starmie"
@@ -8956,8 +8956,8 @@
       "MaxHP":937,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -8984,7 +8984,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -8996,7 +8996,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Hydro Pump",
             "Type":"Water",
@@ -9013,16 +9013,16 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"70kg",
          "Maximum":"90kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":120,
             "Name":"Staryu"
@@ -9032,8 +9032,8 @@
       "MaxHP":2182,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -9055,7 +9055,7 @@
          "Ghost",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -9067,7 +9067,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Psybeam",
             "Type":"Psychic",
@@ -9084,11 +9084,11 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"47.69kg",
          "Maximum":"61.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
@@ -9099,8 +9099,8 @@
       "MaxHP":1494,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9125,7 +9125,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -9137,7 +9137,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Bug Buzz",
             "Type":"Bug",
@@ -9154,11 +9154,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"49kg",
          "Maximum":"63kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
@@ -9167,8 +9167,8 @@
       "MaxHP":2073,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9192,7 +9192,7 @@
          "Dark",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -9204,7 +9204,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Draining Kiss",
             "Type":"Fairy",
@@ -9221,11 +9221,11 @@
             "Damage":40
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"35.52kg",
          "Maximum":"45.67kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.22m",
          "Maximum":"1.57m"
       },
@@ -9234,8 +9234,8 @@
       "MaxHP":1716,
       "gender": {
          "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
+         "maleRatio": "0",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9254,7 +9254,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Low Kick",
             "Type":"Fighting",
@@ -9266,7 +9266,7 @@
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Thunder",
             "Type":"Electric",
@@ -9283,11 +9283,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"26.25kg",
          "Maximum":"33.75kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.96m",
          "Maximum":"1.24m"
       },
@@ -9296,8 +9296,8 @@
       "MaxHP":2119,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9321,7 +9321,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -9333,7 +9333,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -9350,11 +9350,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"38.94kg",
          "Maximum":"50.06kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
@@ -9363,8 +9363,8 @@
       "MaxHP":2265,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
+         "maleRatio": "3",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9385,7 +9385,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -9397,7 +9397,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Submission",
             "Type":"Fighting",
@@ -9414,11 +9414,11 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"48.13kg",
          "Maximum":"61.88kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.31m",
          "Maximum":"1.69m"
       },
@@ -9427,8 +9427,8 @@
       "MaxHP":2121,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9445,7 +9445,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Tackle",
             "Type":"Normal",
@@ -9457,7 +9457,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -9474,11 +9474,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"77.35kg",
          "Maximum":"99.45kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.22m",
          "Maximum":"1.57m"
       },
@@ -9489,8 +9489,8 @@
       "MaxHP":1844,
       "gender": {
          "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
+         "maleRatio": "1",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -9511,25 +9511,25 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Splash",
             "Type":"Water",
             "Damage":0
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
             "Damage":15
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"8.75kg",
          "Maximum":"11.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.79m",
          "Maximum":"1.01m"
       },
@@ -9538,7 +9538,7 @@
          "Amount":400,
          "Name":"Magikarp candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":130,
             "Name":"Gyarados"
@@ -9548,8 +9548,8 @@
       "MaxHP":262,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9573,7 +9573,7 @@
          "Electric",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -9585,7 +9585,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dragon Pulse",
             "Type":"Dragon",
@@ -9602,16 +9602,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"205.63kg",
          "Maximum":"264.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"5.69m",
          "Maximum":"7.31m"
       },
       "FleeRate":0.07,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":129,
             "Name":"Magikarp"
@@ -9621,8 +9621,8 @@
       "MaxHP":2688,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9644,7 +9644,7 @@
          "Fighting",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -9656,7 +9656,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -9673,11 +9673,11 @@
             "Damage":65
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"192.5kg",
          "Maximum":"247.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"2.19m",
          "Maximum":"2.81m"
       },
@@ -9686,8 +9686,8 @@
       "MaxHP":2980,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9704,25 +9704,25 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
             "Damage":15
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"3.5kg",
          "Maximum":"4.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -9731,8 +9731,8 @@
       "MaxHP":919,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": false
       }
    },
@@ -9749,7 +9749,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -9761,7 +9761,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -9778,11 +9778,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"5.69kg",
          "Maximum":"7.31kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.26m",
          "Maximum":"0.34m"
       },
@@ -9791,7 +9791,7 @@
          "Amount":25,
          "Name":"Eevee candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":134,
             "Name":"Vaporeon"
@@ -9809,8 +9809,8 @@
       "MaxHP":1077,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9831,14 +9831,14 @@
          "Electric",
          "Grass"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Water Gun",
             "Type":"Water",
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -9855,16 +9855,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"25.38kg",
          "Maximum":"32.63kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":133,
             "Name":"Eevee"
@@ -9874,8 +9874,8 @@
       "MaxHP":2816,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9894,14 +9894,14 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Thunder Shock",
             "Type":"Electric",
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -9918,16 +9918,16 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"21.44kg",
          "Maximum":"27.56kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":133,
             "Name":"Eevee"
@@ -9937,8 +9937,8 @@
       "MaxHP":2140,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -9962,14 +9962,14 @@
          "Ground",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -9986,16 +9986,16 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"21.88kg",
          "Maximum":"28.13kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.79m",
          "Maximum":"1.01m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":133,
             "Name":"Eevee"
@@ -10005,8 +10005,8 @@
       "MaxHP":2643,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10023,7 +10023,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -10035,7 +10035,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -10052,11 +10052,11 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"31.94kg",
          "Maximum":"41.06kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.7m",
          "Maximum":"0.9m"
       },
@@ -10065,8 +10065,8 @@
       "MaxHP":1691,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": true
       }
    },
@@ -10091,7 +10091,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -10103,7 +10103,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10120,11 +10120,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"6.56kg",
          "Maximum":"8.44kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -10133,7 +10133,7 @@
          "Amount":50,
          "Name":"Omanyte candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":139,
             "Name":"Omastar"
@@ -10143,8 +10143,8 @@
       "MaxHP":1119,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10169,7 +10169,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Rock Throw",
             "Type":"Rock",
@@ -10181,7 +10181,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10198,16 +10198,16 @@
             "Damage":50
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"30.63kg",
          "Maximum":"39.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.88m",
          "Maximum":"1.13m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":138,
             "Name":"Omanyte"
@@ -10217,8 +10217,8 @@
       "MaxHP":2233,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10243,7 +10243,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -10255,7 +10255,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10272,11 +10272,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"10.06kg",
          "Maximum":"12.94kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.44m",
          "Maximum":"0.56m"
       },
@@ -10285,7 +10285,7 @@
          "Amount":50,
          "Name":"Kabuto candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":141,
             "Name":"Kabutops"
@@ -10295,8 +10295,8 @@
       "MaxHP":1104,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10321,7 +10321,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -10333,7 +10333,7 @@
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10350,16 +10350,16 @@
             "Damage":35
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"35.44kg",
          "Maximum":"45.56kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.14m",
          "Maximum":"1.46m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":140,
             "Name":"Kabuto"
@@ -10369,8 +10369,8 @@
       "MaxHP":2130,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10396,7 +10396,7 @@
          "Rock",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -10408,7 +10408,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10425,11 +10425,11 @@
             "Damage":30
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"51.63kg",
          "Maximum":"66.38kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.57m",
          "Maximum":"2.02m"
       },
@@ -10438,8 +10438,8 @@
       "MaxHP":2165,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10456,7 +10456,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -10468,7 +10468,7 @@
             "Damage":12
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -10485,11 +10485,11 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"402.5kg",
          "Maximum":"517.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.84m",
          "Maximum":"2.36m"
       },
@@ -10498,8 +10498,8 @@
       "MaxHP":3112,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
+         "maleRatio": "7",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10522,14 +10522,14 @@
          "Rock",
          "Steel"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
             "Damage":9
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -10546,11 +10546,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"48.48kg",
          "Maximum":"62.33kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.49m",
          "Maximum":"1.91m"
       },
@@ -10561,8 +10561,8 @@
       "MaxHP":2978,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": false
       }
    },
@@ -10585,14 +10585,14 @@
          "Ice",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Thunder Shock",
             "Type":"Electric",
             "Damage":5
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -10609,11 +10609,11 @@
             "Damage":55
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"46.02kg",
          "Maximum":"59.17kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.4m",
          "Maximum":"1.8m"
       },
@@ -10624,8 +10624,8 @@
       "MaxHP":3114,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": false
       }
    },
@@ -10650,14 +10650,14 @@
          "Electric",
          "Rock"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
             "Damage":10
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -10674,11 +10674,11 @@
             "Damage":80
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"52.5kg",
          "Maximum":"67.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.75m",
          "Maximum":"2.25m"
       },
@@ -10689,8 +10689,8 @@
       "MaxHP":3240,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": false
       }
    },
@@ -10712,14 +10712,14 @@
          "Dragon",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -10736,11 +10736,11 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"2.89kg",
          "Maximum":"3.71kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.57m",
          "Maximum":"2.02m"
       },
@@ -10749,7 +10749,7 @@
          "Amount":25,
          "Name":"Dratini candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":148,
             "Name":"Dragonair"
@@ -10759,8 +10759,8 @@
       "MaxHP":983,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10782,14 +10782,14 @@
          "Dragon",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
             "Damage":6
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -10806,16 +10806,16 @@
             "Damage":25
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"14.44kg",
          "Maximum":"18.56kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"3.5m",
          "Maximum":"4.5m"
       },
       "FleeRate":0.06,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":147,
             "Name":"Dratini"
@@ -10825,7 +10825,7 @@
          "Amount":100,
          "Name":"Dratini candies"
       },
-      "Next_evolutions":[
+      "nextEvolutions":[
          {
             "Number":149,
             "Name":"Dragonite"
@@ -10835,8 +10835,8 @@
       "MaxHP":1747,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10862,7 +10862,7 @@
          "Dragon",
          "Fairy"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
@@ -10874,7 +10874,7 @@
             "Damage":15
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dragon Claw",
             "Type":"Dragon",
@@ -10891,16 +10891,16 @@
             "Damage":120
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"183.75kg",
          "Maximum":"236.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.93m",
          "Maximum":"2.48m"
       },
       "FleeRate":0.05,
-      "Previous_evolutions":[
+      "previousEvolutions":[
          {
             "Number":147,
             "Name":"Dratini"
@@ -10914,8 +10914,8 @@
       "MaxHP":3500,
       "gender": {
          "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
+         "maleRatio": "1",
+         "femaleRatio": "1",
          "breedable": true
       }
    },
@@ -10935,7 +10935,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -10947,7 +10947,7 @@
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Hyper Beam",
             "Type":"Normal",
@@ -10964,11 +10964,11 @@
             "Damage":45
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"106.75kg",
          "Maximum":"137.25kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"1.75m",
          "Maximum":"2.25m"
       },
@@ -10979,8 +10979,8 @@
       "MaxHP":4144,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": false
       }
    },
@@ -11000,14 +11000,14 @@
          "Ghost",
          "Dark"
       ],
-      "Fast_Attacks":[
+      "fastAttacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
             "Damage":7
          }
       ],
-      "Special_Attacks":[
+      "specialAttacks":[
          {
             "Name":"Dragon Pulse",
             "Type":"Dragon",
@@ -11054,11 +11054,11 @@
             "Damage":100
          }
       ],
-      "Weight":{
+      "weight":{
          "Minimum":"3.5kg",
          "Maximum":"4.5kg"
       },
-      "Height":{
+      "height":{
          "Minimum":"0.35m",
          "Maximum":"0.45m"
       },
@@ -11069,8 +11069,8 @@
       "MaxHP":3299,
       "gender": {
          "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
+         "maleRatio": "0",
+         "femaleRatio": "0",
          "breedable": false
       }
    }

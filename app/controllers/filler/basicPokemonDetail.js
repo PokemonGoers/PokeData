@@ -13,59 +13,59 @@ module.exports = {
         let len = pokemon.length;
         for (var i = 0; i < len; i++) {
             var base = new basicPokemonDetail();
-            base.Name = pokemon[i].Name;
-            base.Number = pokemon[i].Number;
-            base.Classification = pokemon[i].Classification;
-            base.Types = [];
+            base.name = pokemon[i].Name;
+            base.number = pokemon[i].Number;
+            base.classification = pokemon[i].Classification;
+            base.types = [];
             let typeLength = pokemon[i].Types.length;
             for (var j = 0; j < typeLength; j++) {
-                base.Types.push(pokemon[i].Types[j]);
+                base.types.push(pokemon[i].Types[j]);
 
             }
 
-            base.Resistant = [];
+            base.resistant = [];
             let resistantLength = pokemon[i].Resistant.length;
             for (var k = 0; k < resistantLength; k++) {
-                base.Resistant.push(pokemon[k].Resistant[k]);
+                base.resistant.push(pokemon[k].Resistant[k]);
 
             }
 
-            base.Weaknesses = [];
+            base.weaknesses = [];
             let weaknessLength = pokemon[i].Weaknesses.length;
             for (var j = 0; j < weaknessLength; j++) {
-                base.Weaknesses.push(pokemon[i].Weaknesses[j]);
+                base.weaknesses.push(pokemon[i].Weaknesses[j]);
             }
 
-            base.Fast_Attacks = [];
-            let fastAttackLength = pokemon[i].Fast_Attacks.length;
+            base.fastAttacks = [];
+            let fastAttackLength = pokemon[i].fastAttacks.length;
             for (var j = 0; j < fastAttackLength; j++) {
-                base.Fast_Attacks.push(pokemon[i].Fast_Attacks[j]);
+                base.fastAttacks.push(pokemon[i].fastAttacks[j]);
             }
 
-            base.Special_Attacks = [];
-            let specialAttackLength = pokemon[i].Special_Attacks.length;
+            base.specialAttacks = [];
+            let specialAttackLength = pokemon[i].specialAttacks.length;
             for (var j = 0; j < specialAttackLength; j++) {
-                base.Special_Attacks.push(pokemon[i].Special_Attacks[j]);
+                base.specialAttacks.push(pokemon[i].specialAttacks[j]);
             }
 
-            base.Weight = pokemon[i].Weight;
-            base.Height = pokemon[i].Height;
-            base.FleeRate = pokemon[i].FleeRate;
-            base.MaxCP = pokemon[i].MaxCP;
-            base.MaxHP = pokemon[i].MaxHP;
+            base.weight = pokemon[i].weight;
+            base.height = pokemon[i].height;
+            base.fleeRate = pokemon[i].FleeRate;
+            base.maxCP = pokemon[i].MaxCP;
+            base.maxHP = pokemon[i].MaxHP;
             base.gender = pokemon[i].gender;
-            if (pokemon[i].Next_evolutions !== undefined) {
-                base.Next_evolutions = [];
-                let nextEvoultionlen = pokemon[i].Next_evolutions.length;
+            if (pokemon[i].nextEvolutions !== undefined) {
+                base.nextEvolutions = [];
+                let nextEvoultionlen = pokemon[i].nextEvolutions.length;
                 for (var j = 0; j < nextEvoultionlen; j++) {
-                    base.Next_evolutions.push(pokemon[i].Next_evolutions[j]);
+                    base.nextEvolutions.push(pokemon[i].nextEvolutions[j]);
                 }
             }
-            if (pokemon[i].Previous_evolutions !== undefined) {
-                base.Previous_evolutions = [];
-                let previousEvoultionlen = pokemon[i].Previous_evolutions.length;
+            if (pokemon[i].previousEvolutions !== undefined) {
+                base.previousEvolutions = [];
+                let previousEvoultionlen = pokemon[i].previousEvolutions.length;
                 for (var j = 0; j < previousEvoultionlen; j++) {
-                    base.Previous_evolutions.push(pokemon[i].Previous_evolutions[j]);
+                    base.previousEvolutions.push(pokemon[i].previousEvolutions[j]);
                 }
 
             }
