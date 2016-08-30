@@ -36,4 +36,4 @@ var pokemonGoBasicSchema = new Schema({
 
 });
 
-module.exports = mongoose.model('BasicPokemonDetail', pokemonGoBasicSchema);
+module.exports = mongoose.model('pokemon', pokemonGoBasicSchema);
