@@ -94,5 +94,43 @@ module.exports = {
         this.get({'source': source}, function (status, response) {
             callback(status, response);
         });
+    },
+
+    /*
+     * get the pokemon sightings within a specific time range
+     */
+    getByTimeRange : function (req, callback) {
+        let range = (req.range) || '1d',
+            fromTs = new Date(req.ts),
+            toTs;
+
+        let rangeValue = parseInt(range, 10),
+            rangeSpan = range.replace(/\d+/g, '');
+
+        switch(rangeSpan) {
+            // week
+            case 'w':
+                toTs = new Date(fromTs.getTime() + rangeValue * 7 * 24 * 60 * 60 * 1000);
+                break;
+            // day
+            case 'd':
+                toTs = new Date(fromTs.getTime() + rangeValue * 24 * 60 * 60 * 1000);
+                break;
+            // hour
+            case 'h':
+                toTs = new Date(fromTs.getTime() + rangeValue * 60 * 60 * 1000);
+                break;
+            // minute
+            case 'm':
+                toTs = new Date(fromTs.getTime() + rangeValue * 60 * 1000);
+                break;
+        }
+
+        this.get({"appearedOn": {
+            $gte: fromTs.toUTCString(),
+            $lte: toTs.toUTCString()
+        }}, function (status, response) {
+            callback(status, response);
+        });
     }
 };

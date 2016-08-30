@@ -205,5 +205,46 @@ module.exports = {
             else
                 res.status(404).json({message: 'Failure. No sighting details from this source exists!', data: message});
         });
+    },
+    /**
+     * @api {get} /api/pokemon/sighting/ts/:ts/range/:range GetSightingByTimeRange
+     * @apiVersion 0.0.1
+     * @apiName GetSightingByTimeRange
+     * @apiDescription Get pokemon sightings within a specific time range
+     * @apiGroup PokemonSighting
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
+    getByTimeRange: function (req, res) {
+        logger.info('Get Pokemon Sightings within a specific time range');
+
+        sighting.getByTimeRange(req.params, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure. No sighting details within this time range exists!', data: message});
+        });
     }
 };
