@@ -1,53 +1,83 @@
-const PokemonModel = require(__appbase + 'models/pokemon'),
-    PokemonStore = require(__appbase + 'stores/pokemon'),
-    SightingStore = require(__appbase + 'stores/sighting'),
-    jsonfile = require('jsonfile'),
-    async = require('async'),
-    cfg = require(__appbase + '../config');
+"use strict";
+
+let fs = require('fs'),
+    pokemon = require(__resourcebase + '/pokemonGoData.json');
+    const pokemon = require(__appbase + '/models/pokemon');
 
 module.exports = {
-    fill: function (callback) {
+
+    insertToDb: function () {
 
 
-    },
-    insertToDb: function (callback) {
-        logger.info('MongoDb Insertion...');
-        const file = __tmpbase + 'pokemon.json';
+        logger.info('Loading Basic Pokemon Details');
+        let len = pokemon.length;
+        for (var i = 0; i < len; i++) {
+            var base = new pokemon();
+            base.pokemonId = pokemon[i].Number;
+            base.number = pokemon[i].Number;
+            base.classification = pokemon[i].Classification;
+            base.types = [];
+            let typeLength = pokemon[i].Types.length;
+            for (var j = 0; j < typeLength; j++) {
+                base.types.push(pokemon[i].Types[j]);
 
-        jsonfile.readFile(file, function (err, pokemons) {
-            if (pokemons !== undefined) {
-                insert(pokemons);
             }
-        });
 
-        var addPokemon = function (pokemon, callback) {
-            SightingStore.add(pokemon, function (success, data) {
-                if (success === 1) {
-                    logger.success('Success: ' + data.pokemonId);
-                } else {
-                    logger.error('Error:' + data);
+            base.resistant = [];
+            let resistantLength = pokemon[i].Resistant.length;
+            for (var k = 0; k < resistantLength; k++) {
+                base.resistant.push(pokemon[k].Resistant[k]);
+
+            }
+
+            base.weaknesses = [];
+            let weaknessLength = pokemon[i].Weaknesses.length;
+            for (var j = 0; j < weaknessLength; j++) {
+                base.weaknesses.push(pokemon[i].Weaknesses[j]);
+            }
+
+            base.fastAttacks = [];
+            let fastAttackLength = pokemon[i].fastAttacks.length;
+            for (var j = 0; j < fastAttackLength; j++) {
+                base.fastAttacks.push(pokemon[i].fastAttacks[j]);
+            }
+
+            base.specialAttacks = [];
+            let specialAttackLength = pokemon[i].specialAttacks.length;
+            for (var j = 0; j < specialAttackLength; j++) {
+                base.specialAttacks.push(pokemon[i].specialAttacks[j]);
+            }
+
+            base.weight = pokemon[i].weight;
+            base.height = pokemon[i].height;
+            base.fleeRate = pokemon[i].FleeRate;
+            base.maxCP = pokemon[i].MaxCP;
+            base.maxHP = pokemon[i].MaxHP;
+            base.gender = pokemon[i].gender;
+            if (pokemon[i].nextEvolutions !== undefined) {
+                base.nextEvolutions = [];
+                let nextEvoultionlen = pokemon[i].nextEvolutions.length;
+                for (var j = 0; j < nextEvoultionlen; j++) {
+                    base.nextEvolutions.push(pokemon[i].nextEvolutions[j]);
                 }
-                callback(true);
-            });
-        };
+            }
+            if (pokemon[i].previousEvolutions !== undefined) {
+                base.previousEvolutions = [];
+                let previousEvoultionlen = pokemon[i].previousEvolutions.length;
+                for (var j = 0; j < previousEvoultionlen; j++) {
+                    base.previousEvolutions.push(pokemon[i].previousEvolutions[j]);
+                }
 
-        var insert = function (pokemons) {
-            // iterate through pokemons
-            async.forEach(pokemons, function (pokemon, callback) {
-
-                PokemonStore.getById(pokemon.id, function (success, oldId) {
-                    if (success === 1) { // old entry is existing and discarded
-                        logger.info(pokemon.id + " is a duplicate entry and hence discarded.");
-                        callback();
-                    } else {// new entry is added
-                        addPokemon(pokemon, function () {
-                            callback();
-                        });
-                    }
-                });
-            }, function (err) {
-                callback(true);
+            }
+            base.save(function (err) {
+                if (err) {
+                    logger.error("Error");
+                } else {
+                    logger.info("Success");
+                }
             });
-        };
+
+        }
+
     }
 };
