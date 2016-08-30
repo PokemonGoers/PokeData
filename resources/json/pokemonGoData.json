@@ -20,7 +20,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Tackle",
             "Type":"Normal",
@@ -32,7 +32,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -62,7 +62,7 @@
          "Amount":25,
          "Name":"Bulbasaur candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":2,
             "Name":"Ivysaur"
@@ -98,7 +98,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Razor Leaf",
             "Type":"Grass",
@@ -110,7 +110,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -136,7 +136,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":1,
             "Name":"Bulbasaur"
@@ -146,7 +146,7 @@
          "Amount":100,
          "Name":"Bulbasaur candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":3,
             "Name":"Venusaur"
@@ -182,7 +182,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Razor Leaf",
             "Type":"Grass",
@@ -194,7 +194,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Petal Blizzard",
             "Type":"Grass",
@@ -220,7 +220,7 @@
          "Maximum":"2.25m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":1,
             "Name":"Bulbasaur"
@@ -259,7 +259,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -271,7 +271,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Flame Burst",
             "Type":"Fire",
@@ -301,7 +301,7 @@
          "Amount":25,
          "Name":"Charmander candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":5,
             "Name":"Charmeleon"
@@ -336,7 +336,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -348,7 +348,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Fire Punch",
             "Type":"Fire",
@@ -374,7 +374,7 @@
          "Maximum":"1.24m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":4,
             "Name":"Charmander"
@@ -384,7 +384,7 @@
          "Amount":100,
          "Name":"Charmander candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":6,
             "Name":"Charizard"
@@ -420,7 +420,7 @@
          "Electric",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -432,7 +432,7 @@
             "Damage":9
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dragon Claw",
             "Type":"Dragon",
@@ -458,7 +458,7 @@
          "Maximum":"1.91m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":4,
             "Name":"Charmander"
@@ -494,7 +494,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -506,7 +506,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -536,7 +536,7 @@
          "Amount":25,
          "Name":"Squirtle candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":8,
             "Name":"Wartortle"
@@ -568,7 +568,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -580,7 +580,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -611,7 +611,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":7,
             "Name":"Squirtle"
@@ -621,7 +621,7 @@
          "Amount":100,
          "Name":"Squirtle candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":9,
             "Name":"Blastoise"
@@ -653,7 +653,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -665,7 +665,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Flash Cannon",
             "Type":"Steel",
@@ -696,7 +696,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":7,
             "Name":"Squirtle"
@@ -732,7 +732,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -744,7 +744,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
@@ -764,7 +764,7 @@
          "Amount":12,
          "Name":"Caterpie candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":11,
             "Name":"Metapod"
@@ -796,7 +796,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -808,7 +808,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
@@ -824,7 +824,7 @@
          "Maximum":"0.79m"
       },
       "FleeRate":0.09,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":10,
             "Name":"Caterpie"
@@ -834,7 +834,7 @@
          "Amount":50,
          "Name":"Caterpie candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":12,
             "Name":"Butterfree"
@@ -870,7 +870,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -882,7 +882,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bug Buzz",
             "Type":"Bug",
@@ -908,7 +908,7 @@
          "Maximum":"1.24m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":10,
             "Name":"Caterpie"
@@ -948,7 +948,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -960,7 +960,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
@@ -980,7 +980,7 @@
          "Amount":12,
          "Name":"Weedle candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":14,
             "Name":"Kakuna"
@@ -1016,7 +1016,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -1028,7 +1028,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
@@ -1044,7 +1044,7 @@
          "Maximum":"0.68m"
       },
       "FleeRate":0.09,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":13,
             "Name":"Weedle"
@@ -1054,7 +1054,7 @@
          "Amount":50,
          "Name":"Weedle candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":15,
             "Name":"Beedrill"
@@ -1090,7 +1090,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -1102,7 +1102,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1128,7 +1128,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":13,
             "Name":"Weedle"
@@ -1166,7 +1166,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -1178,7 +1178,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1208,7 +1208,7 @@
          "Amount":12,
          "Name":"Pidgey candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":17,
             "Name":"Pidgeotto"
@@ -1242,7 +1242,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Steel Wing",
             "Type":"Steel",
@@ -1254,7 +1254,7 @@
             "Damage":9
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1280,7 +1280,7 @@
          "Maximum":"1.24m"
       },
       "FleeRate":0.09,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":16,
             "Name":"Pidgey"
@@ -1290,7 +1290,7 @@
          "Amount":50,
          "Name":"Pidgey candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":18,
             "Name":"Pidgeot"
@@ -1324,7 +1324,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Steel Wing",
             "Type":"Steel",
@@ -1336,7 +1336,7 @@
             "Damage":9
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1362,7 +1362,7 @@
          "Maximum":"1.69m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":16,
             "Name":"Pidgey"
@@ -1394,7 +1394,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -1406,7 +1406,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -1436,7 +1436,7 @@
          "Amount":25,
          "Name":"Rattata candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":20,
             "Name":"Raticate"
@@ -1464,7 +1464,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -1476,7 +1476,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -1502,7 +1502,7 @@
          "Maximum":"0.79m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":19,
             "Name":"Rattata"
@@ -1536,7 +1536,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -1548,7 +1548,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1578,7 +1578,7 @@
          "Amount":50,
          "Name":"Spearow candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":22,
             "Name":"Fearow"
@@ -1612,7 +1612,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -1624,7 +1624,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -1650,7 +1650,7 @@
          "Maximum":"1.35m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":21,
             "Name":"Spearow"
@@ -1683,7 +1683,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -1695,7 +1695,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Gunk Shot",
             "Type":"Poison",
@@ -1725,7 +1725,7 @@
          "Amount":50,
          "Name":"Ekans candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":24,
             "Name":"Arbok"
@@ -1758,7 +1758,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -1770,7 +1770,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -1796,7 +1796,7 @@
          "Maximum":"3.94m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":23,
             "Name":"Ekans"
@@ -1826,7 +1826,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -1838,7 +1838,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -1868,7 +1868,7 @@
          "Amount":50,
          "Name":"Pikachu candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":26,
             "Name":"Raichu"
@@ -1898,7 +1898,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -1910,7 +1910,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -1936,7 +1936,7 @@
          "Maximum":"0.9m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":25,
             "Name":"Pikachu"
@@ -1968,7 +1968,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -1980,7 +1980,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -2010,7 +2010,7 @@
          "Amount":50,
          "Name":"Sandshrew candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":28,
             "Name":"Sandslash"
@@ -2042,7 +2042,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Metal Claw",
             "Type":"Steel",
@@ -2054,7 +2054,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -2080,7 +2080,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":27,
             "Name":"Sandshrew"
@@ -2113,7 +2113,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2125,7 +2125,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2155,7 +2155,7 @@
          "Amount":25,
          "Name":"Nidoran♀ candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":30,
             "Name":"Nidorina"
@@ -2188,7 +2188,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2200,7 +2200,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -2226,7 +2226,7 @@
          "Maximum":"0.9m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":29,
             "Name":"Nidoran ♀"
@@ -2236,7 +2236,7 @@
          "Amount":100,
          "Name":"Nidoran♀ candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":31,
             "Name":"Nidoqueen"
@@ -2273,7 +2273,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2285,7 +2285,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -2311,7 +2311,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":29,
             "Name":"Nidoran ♀"
@@ -2348,7 +2348,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -2360,7 +2360,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2390,7 +2390,7 @@
          "Amount":25,
          "Name":"Nidoran♂ candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":33,
             "Name":"Nidorino"
@@ -2423,7 +2423,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -2435,7 +2435,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -2461,7 +2461,7 @@
          "Maximum":"1.01m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":32,
             "Name":"Nidoran ♂"
@@ -2471,7 +2471,7 @@
          "Amount":100,
          "Name":"Nidoran♂ candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":34,
             "Name":"Nidoking"
@@ -2508,7 +2508,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -2520,7 +2520,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -2546,7 +2546,7 @@
          "Maximum":"1.57m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":32,
             "Name":"Nidoran ♂"
@@ -2582,7 +2582,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
@@ -2594,7 +2594,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2624,7 +2624,7 @@
          "Amount":50,
          "Name":"Clefairy candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":36,
             "Name":"Clefable"
@@ -2656,7 +2656,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
@@ -2668,7 +2668,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -2694,7 +2694,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":35,
             "Name":"Clefairy"
@@ -2729,7 +2729,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -2741,7 +2741,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2771,7 +2771,7 @@
          "Amount":50,
          "Name":"Vulpi"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":38,
             "Name":"Ninetales"
@@ -2806,7 +2806,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -2818,7 +2818,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -2844,7 +2844,7 @@
          "Maximum":"1.24m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":37,
             "Name":"Vulpix"
@@ -2877,7 +2877,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -2889,7 +2889,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -2919,7 +2919,7 @@
          "Amount":50,
          "Name":"Jigglypuff candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":39,
             "Name":"Jigglypuff"
@@ -2952,7 +2952,7 @@
          "Poison",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -2964,7 +2964,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -2990,7 +2990,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":40,
             "Name":"Wigglytuff"
@@ -3026,7 +3026,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -3038,7 +3038,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Air Cutter",
             "Type":"Flying",
@@ -3068,7 +3068,7 @@
          "Amount":50,
          "Name":"Zubat candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":42,
             "Name":"Golbat"
@@ -3104,7 +3104,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -3116,7 +3116,7 @@
             "Damage":9
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Air Cutter",
             "Type":"Flying",
@@ -3142,7 +3142,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":41,
             "Name":"Zubat"
@@ -3178,7 +3178,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -3190,7 +3190,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Moonblast",
             "Type":"Fairy",
@@ -3220,7 +3220,7 @@
          "Amount":25,
          "Name":"Oddish candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":44,
             "Name":"Gloom"
@@ -3256,7 +3256,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -3268,7 +3268,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Moonblast",
             "Type":"Fairy",
@@ -3294,7 +3294,7 @@
          "Maximum":"0.9m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":43,
             "Name":"Oddish"
@@ -3304,7 +3304,7 @@
          "Amount":100,
          "Name":"Oddish candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":45,
             "Name":"Vileplume"
@@ -3340,7 +3340,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -3352,7 +3352,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Moonblast",
             "Type":"Fairy",
@@ -3378,7 +3378,7 @@
          "Maximum":"1.35m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":43,
             "Name":"Oddish"
@@ -3420,7 +3420,7 @@
          "Bug",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3432,7 +3432,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Cross Poison",
             "Type":"Poison",
@@ -3462,7 +3462,7 @@
          "Amount":50,
          "Name":"Paras candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":47,
             "Name":"Parasect"
@@ -3500,7 +3500,7 @@
          "Bug",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3512,7 +3512,7 @@
             "Damage":3
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Cross Poison",
             "Type":"Poison",
@@ -3538,7 +3538,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":46,
             "Name":"Paras"
@@ -3574,7 +3574,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3586,7 +3586,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Poison Fang",
             "Type":"Poison",
@@ -3616,7 +3616,7 @@
          "Amount":50,
          "Name":"Venonat candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":49,
             "Name":"Venomoth"
@@ -3652,7 +3652,7 @@
          "Psychic",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bug Bite",
             "Type":"Bug",
@@ -3664,7 +3664,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bug Buzz",
             "Type":"Bug",
@@ -3690,7 +3690,7 @@
          "Maximum":"1.69m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":48,
             "Name":"Venonat"
@@ -3722,7 +3722,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -3734,7 +3734,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -3764,7 +3764,7 @@
          "Amount":50,
          "Name":"Diglett candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":51,
             "Name":"Dugtrio"
@@ -3796,7 +3796,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -3808,7 +3808,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -3834,7 +3834,7 @@
          "Maximum":"0.79m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":50,
             "Name":"Diglett"
@@ -3862,7 +3862,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -3874,7 +3874,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -3904,7 +3904,7 @@
          "Amount":50,
          "Name":"Meowth candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":53,
             "Name":"Persian"
@@ -3932,7 +3932,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -3944,7 +3944,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Night Slash",
             "Type":"Dark",
@@ -3970,7 +3970,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":52,
             "Name":"Meowth"
@@ -4002,7 +4002,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Water Gun",
             "Type":"Water",
@@ -4014,7 +4014,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -4044,7 +4044,7 @@
          "Amount":50,
          "Name":"Psyduck candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":55,
             "Name":"Golduck"
@@ -4076,7 +4076,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -4088,7 +4088,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Gunk Shot",
             "Type":"Poison",
@@ -4119,7 +4119,7 @@
          "Maximum":"1.91m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":54,
             "Name":"Psyduck"
@@ -4151,7 +4151,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4163,7 +4163,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -4193,7 +4193,7 @@
          "Amount":50,
          "Name":"Mankey candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":57,
             "Name":"Primeape"
@@ -4225,7 +4225,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4237,7 +4237,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Cross Chop",
             "Type":"Fighting",
@@ -4263,7 +4263,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":56,
             "Name":"Mankey"
@@ -4298,7 +4298,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -4310,7 +4310,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -4340,7 +4340,7 @@
          "Amount":50,
          "Name":"Growlithe candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":59,
             "Name":"Arcanine"
@@ -4375,7 +4375,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -4387,7 +4387,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -4413,7 +4413,7 @@
          "Maximum":"2.14m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":58,
             "Name":"Growlithe"
@@ -4445,7 +4445,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -4457,7 +4457,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -4487,7 +4487,7 @@
          "Amount":25,
          "Name":"Poliwag candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":61,
             "Name":"Poliwhirl"
@@ -4519,7 +4519,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -4531,7 +4531,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -4557,7 +4557,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":60,
             "Name":"Poliwag"
@@ -4567,7 +4567,7 @@
          "Amount":100,
          "Name":"Poliwag candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":62,
             "Name":"Poliwrath"
@@ -4606,7 +4606,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -4618,7 +4618,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Hydro Pump",
             "Type":"Water",
@@ -4644,7 +4644,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":60,
             "Name":"Poliwag"
@@ -4679,7 +4679,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
 
          },
@@ -4689,7 +4689,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Psyshock",
             "Type":"Psychic",
@@ -4719,7 +4719,7 @@
          "Amount":25,
          "Name":"Abra candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":64,
             "Name":"Kadabra"
@@ -4750,7 +4750,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -4762,7 +4762,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -4788,7 +4788,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":63,
             "Name":"Abra"
@@ -4798,7 +4798,7 @@
          "Amount":100,
          "Name":"Abra candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":65,
             "Name":"Alakazam"
@@ -4829,7 +4829,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -4841,7 +4841,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -4867,7 +4867,7 @@
          "Maximum":"1.69m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":63,
             "Name":"Abra"
@@ -4903,7 +4903,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4915,7 +4915,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -4945,7 +4945,7 @@
          "Amount":25,
          "Name":"Machop candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":67,
             "Name":"Machoke"
@@ -4977,7 +4977,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Karate Chop",
             "Type":"Fighting",
@@ -4989,7 +4989,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -5015,7 +5015,7 @@
          "Maximum":"1.69m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":66,
             "Name":"Machop"
@@ -5025,7 +5025,7 @@
          "Amount":100,
          "Name":"Machop candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":68,
             "Name":"Machamp"
@@ -5057,7 +5057,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bullet Punch",
             "Type":"Steel",
@@ -5069,7 +5069,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Cross Chop",
             "Type":"Fighting",
@@ -5095,7 +5095,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":66,
             "Name":"Machop"
@@ -5135,7 +5135,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5147,7 +5147,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -5177,7 +5177,7 @@
          "Amount":25,
          "Name":"Bellsprout candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":70,
             "Name":"Weepinbell"
@@ -5213,7 +5213,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5225,7 +5225,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -5251,7 +5251,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":69,
             "Name":"Bellsprout"
@@ -5261,7 +5261,7 @@
          "Amount":100,
          "Name":"Bellsprout candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":71,
             "Name":"Victreebel"
@@ -5297,7 +5297,7 @@
          "Flying",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5309,7 +5309,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Leaf Blade",
             "Type":"Grass",
@@ -5335,7 +5335,7 @@
          "Maximum":"1.91m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":69,
             "Name":"Bellsprout"
@@ -5377,7 +5377,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -5389,7 +5389,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -5419,7 +5419,7 @@
          "Amount":50,
          "Name":"Tentacool candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":73,
             "Name":"Tentacruel"
@@ -5457,7 +5457,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -5469,7 +5469,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -5495,7 +5495,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":72,
             "Name":"Tentacool"
@@ -5534,7 +5534,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Rock Throw",
             "Type":"Rock",
@@ -5546,7 +5546,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -5576,7 +5576,7 @@
          "Amount":25,
          "Name":"Geodude candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":75,
             "Name":"Graveler"
@@ -5615,7 +5615,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -5627,7 +5627,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dig",
             "Type":"Ground",
@@ -5653,7 +5653,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":74,
             "Name":"Geodude"
@@ -5663,7 +5663,7 @@
          "Amount":100,
          "Name":"Geodude candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":76,
             "Name":"Golem"
@@ -5702,7 +5702,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -5714,7 +5714,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -5740,7 +5740,7 @@
          "Maximum":"1.57m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":74,
             "Name":"Geodude"
@@ -5779,7 +5779,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -5791,7 +5791,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -5821,7 +5821,7 @@
          "Amount":50,
          "Name":"Ponyta candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":78,
             "Name":"Rapidash"
@@ -5856,7 +5856,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -5868,7 +5868,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Drill Run",
             "Type":"Ground",
@@ -5894,7 +5894,7 @@
          "Maximum":"1.91m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":77,
             "Name":"Ponyta"
@@ -5932,7 +5932,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -5944,7 +5944,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Psychic",
             "Type":"Psychic",
@@ -5974,7 +5974,7 @@
          "Amount":50,
          "Name":"Slowpoke candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":80,
             "Name":"Slowbro"
@@ -6012,7 +6012,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -6024,7 +6024,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ice Beam",
             "Type":"Ice",
@@ -6050,7 +6050,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":79,
             "Name":"Slowpoke"
@@ -6092,7 +6092,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -6104,7 +6104,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -6134,7 +6134,7 @@
          "Amount":50,
          "Name":"Magnemite candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":82,
             "Name":"Magneton"
@@ -6176,7 +6176,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -6188,7 +6188,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -6214,7 +6214,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":81,
             "Name":"Magnemite"
@@ -6248,7 +6248,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
 
          },
@@ -6258,7 +6258,7 @@
             "Damage":3
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -6314,7 +6314,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -6326,7 +6326,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -6356,7 +6356,7 @@
          "Amount":50,
          "Name":"Doduo candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":85,
             "Name":"Dodrio"
@@ -6390,7 +6390,7 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Feint Attack",
             "Type":"Dark",
@@ -6402,7 +6402,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aerial Ace",
             "Type":"Flying",
@@ -6428,7 +6428,7 @@
          "Maximum":"2.02m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":84,
             "Name":"Doduo"
@@ -6460,7 +6460,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ice Shard",
             "Type":"Ice",
@@ -6472,7 +6472,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -6502,7 +6502,7 @@
          "Amount":50,
          "Name":"Seel candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":87,
             "Name":"Dewgong"
@@ -6535,7 +6535,7 @@
          "Fighting",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -6547,7 +6547,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Jet",
             "Type":"Water",
@@ -6573,7 +6573,7 @@
          "Maximum":"1.91m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":86,
             "Name":"Seel"
@@ -6606,7 +6606,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -6618,7 +6618,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Mud Bomb",
             "Type":"Ground",
@@ -6648,7 +6648,7 @@
          "Amount":50,
          "Name":"Grimer candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":89,
             "Name":"Muk"
@@ -6681,7 +6681,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -6693,7 +6693,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -6719,7 +6719,7 @@
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":88,
             "Name":"Grimer"
@@ -6751,7 +6751,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ice Shard",
             "Type":"Ice",
@@ -6763,7 +6763,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -6793,7 +6793,7 @@
          "Amount":50,
          "Name":"Shellder candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":91,
             "Name":"Cloyster"
@@ -6826,7 +6826,7 @@
          "Fighting",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -6838,7 +6838,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -6864,7 +6864,7 @@
          "Maximum":"1.69m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":90,
             "Name":"Shellder"
@@ -6901,7 +6901,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -6913,7 +6913,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -6943,7 +6943,7 @@
          "Amount":25,
          "Name":"Gastly candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":93,
             "Name":"Haunter"
@@ -6980,7 +6980,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -6992,7 +6992,7 @@
             "Damage":11
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -7018,7 +7018,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":92,
             "Name":"Gastly"
@@ -7028,7 +7028,7 @@
          "Amount":100,
          "Name":"Gastly candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":94,
             "Name":"Gengar"
@@ -7065,7 +7065,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Shadow Claw",
             "Type":"Ghost",
@@ -7077,7 +7077,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -7103,7 +7103,7 @@
          "Maximum":"1.69m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":92,
             "Name":"Gastly"
@@ -7146,7 +7146,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Rock Throw",
             "Type":"Rock",
@@ -7158,7 +7158,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Iron Head",
             "Type":"Steel",
@@ -7209,7 +7209,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -7221,7 +7221,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Psybeam",
             "Type":"Psychic",
@@ -7251,7 +7251,7 @@
          "Amount":50,
          "Name":"Drowzee candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":97,
             "Name":"Hypno"
@@ -7282,7 +7282,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -7294,7 +7294,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Psychic",
             "Type":"Psychic",
@@ -7320,7 +7320,7 @@
          "Maximum":"1.8m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":96,
             "Name":"Drowzee"
@@ -7352,7 +7352,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -7364,7 +7364,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -7394,7 +7394,7 @@
          "Amount":50,
          "Name":"Krabby candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":99,
             "Name":"Kingler"
@@ -7426,7 +7426,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Metal Claw",
             "Type":"Steel",
@@ -7438,7 +7438,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Vice Grip",
             "Type":"Normal",
@@ -7464,7 +7464,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":98,
             "Name":"Krabby"
@@ -7494,7 +7494,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -7506,7 +7506,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -7536,7 +7536,7 @@
          "Amount":50,
          "Name":"Voltorb candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":101,
             "Name":"Electrode"
@@ -7566,7 +7566,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Spark",
             "Type":"Electric",
@@ -7578,7 +7578,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -7604,7 +7604,7 @@
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":100,
             "Name":"Voltorb"
@@ -7644,14 +7644,14 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -7681,7 +7681,7 @@
          "Amount":50,
          "Name":"E"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":103,
             "Name":"Exeggutor"
@@ -7721,7 +7721,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -7733,7 +7733,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Psychic",
             "Type":"Psychic",
@@ -7759,7 +7759,7 @@
          "Maximum":"2.25m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":102,
             "Name":"Exeggcute"
@@ -7791,7 +7791,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -7803,7 +7803,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -7833,7 +7833,7 @@
          "Amount":50,
          "Name":"Cubone candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":105,
             "Name":"Marowak"
@@ -7865,7 +7865,7 @@
          "Grass",
          "Ice"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -7877,7 +7877,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bone Club",
             "Type":"Ground",
@@ -7903,7 +7903,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":104,
             "Name":"Cubone"
@@ -7935,7 +7935,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Low Kick",
             "Type":"Fighting",
@@ -7947,7 +7947,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Low Sweep",
             "Type":"Fighting",
@@ -7999,7 +7999,7 @@
          "Psychic",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bullet Punch",
             "Type":"Steel",
@@ -8011,7 +8011,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -8064,7 +8064,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -8076,7 +8076,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Hyper Beam",
             "Type":"Normal",
@@ -8129,7 +8129,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -8141,7 +8141,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -8171,7 +8171,7 @@
          "Amount":50,
          "Name":"Koffing candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":110,
             "Name":"Weezing"
@@ -8204,7 +8204,7 @@
          "Ground",
          "Psychic"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Acid",
             "Type":"Poison",
@@ -8216,7 +8216,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dark Pulse",
             "Type":"Dark",
@@ -8242,7 +8242,7 @@
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":109,
             "Name":"Koffing"
@@ -8281,7 +8281,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -8293,7 +8293,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bulldoze",
             "Type":"Ground",
@@ -8323,7 +8323,7 @@
          "Amount":50,
          "Name":"Rhyhorn candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":112,
             "Name":"Rhydon"
@@ -8362,7 +8362,7 @@
          "Ground",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Slap",
             "Type":"Ground",
@@ -8374,7 +8374,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -8400,7 +8400,7 @@
          "Maximum":"2.14m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":111,
             "Name":"Rhyhorn"
@@ -8428,7 +8428,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
@@ -8440,7 +8440,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dazzling Gleam",
             "Type":"Fairy",
@@ -8495,14 +8495,14 @@
          "Flying",
          "Bug"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Vine Whip",
             "Type":"Grass",
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Power Whip",
             "Type":"Grass",
@@ -8550,7 +8550,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Low Kick",
             "Type":"Fighting",
@@ -8562,7 +8562,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Brick Break",
             "Type":"Fighting",
@@ -8616,7 +8616,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bubble",
             "Type":"Water",
@@ -8628,7 +8628,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -8658,7 +8658,7 @@
          "Amount":50,
          "Name":"Horsea candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":117,
             "Name":"Seadra"
@@ -8690,7 +8690,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
@@ -8702,7 +8702,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -8728,7 +8728,7 @@
          "Maximum":"1.35m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":116,
             "Name":"Horsea"
@@ -8760,7 +8760,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -8772,7 +8772,7 @@
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -8802,7 +8802,7 @@
          "Amount":50,
          "Name":"Goldeen candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":119,
             "Name":"Seaking"
@@ -8834,7 +8834,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Peck",
             "Type":"Flying",
@@ -8846,7 +8846,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Drill Run",
             "Type":"Ground",
@@ -8872,7 +8872,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":118,
             "Name":"Goldeen"
@@ -8904,7 +8904,7 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -8916,7 +8916,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bubble Beam",
             "Type":"Water",
@@ -8946,7 +8946,7 @@
          "Amount":50,
          "Name":"Staryu candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":121,
             "Name":"Starmie"
@@ -8984,7 +8984,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -8996,7 +8996,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Hydro Pump",
             "Type":"Water",
@@ -9022,7 +9022,7 @@
          "Maximum":"1.24m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":120,
             "Name":"Staryu"
@@ -9055,7 +9055,7 @@
          "Ghost",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -9067,7 +9067,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Psybeam",
             "Type":"Psychic",
@@ -9125,7 +9125,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -9137,7 +9137,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Bug Buzz",
             "Type":"Bug",
@@ -9192,7 +9192,7 @@
          "Dark",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -9204,7 +9204,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Draining Kiss",
             "Type":"Fairy",
@@ -9254,7 +9254,7 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Low Kick",
             "Type":"Fighting",
@@ -9266,7 +9266,7 @@
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Thunder",
             "Type":"Electric",
@@ -9321,7 +9321,7 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
@@ -9333,7 +9333,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -9385,7 +9385,7 @@
          "Flying",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -9397,7 +9397,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Submission",
             "Type":"Fighting",
@@ -9445,7 +9445,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Tackle",
             "Type":"Normal",
@@ -9457,7 +9457,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Earthquake",
             "Type":"Ground",
@@ -9511,14 +9511,14 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Splash",
             "Type":"Water",
             "Damage":0
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
@@ -9538,7 +9538,7 @@
          "Amount":400,
          "Name":"Magikarp candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":130,
             "Name":"Gyarados"
@@ -9573,7 +9573,7 @@
          "Electric",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -9585,7 +9585,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dragon Pulse",
             "Type":"Dragon",
@@ -9611,7 +9611,7 @@
          "Maximum":"7.31m"
       },
       "FleeRate":0.07,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":129,
             "Name":"Magikarp"
@@ -9644,7 +9644,7 @@
          "Fighting",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
@@ -9656,7 +9656,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -9704,14 +9704,14 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Struggle",
             "Type":"Normal",
@@ -9749,7 +9749,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -9761,7 +9761,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -9791,7 +9791,7 @@
          "Amount":25,
          "Name":"Eevee candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":134,
             "Name":"Vaporeon"
@@ -9831,14 +9831,14 @@
          "Electric",
          "Grass"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Water Gun",
             "Type":"Water",
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -9864,7 +9864,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":133,
             "Name":"Eevee"
@@ -9894,14 +9894,14 @@
       "Weaknesses":[
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Thunder Shock",
             "Type":"Electric",
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -9927,7 +9927,7 @@
          "Maximum":"0.9m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":133,
             "Name":"Eevee"
@@ -9962,14 +9962,14 @@
          "Ground",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -9995,7 +9995,7 @@
          "Maximum":"1.01m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":133,
             "Name":"Eevee"
@@ -10023,7 +10023,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Quick Attack",
             "Type":"Normal",
@@ -10035,7 +10035,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -10091,7 +10091,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -10103,7 +10103,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10133,7 +10133,7 @@
          "Amount":50,
          "Name":"Omanyte candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":139,
             "Name":"Omastar"
@@ -10169,7 +10169,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Rock Throw",
             "Type":"Rock",
@@ -10181,7 +10181,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10207,7 +10207,7 @@
          "Maximum":"1.13m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":138,
             "Name":"Omanyte"
@@ -10243,7 +10243,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Mud Shot",
             "Type":"Ground",
@@ -10255,7 +10255,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10285,7 +10285,7 @@
          "Amount":50,
          "Name":"Kabuto candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":141,
             "Name":"Kabutops"
@@ -10321,7 +10321,7 @@
          "Fighting",
          "Ground"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Fury Cutter",
             "Type":"Bug",
@@ -10333,7 +10333,7 @@
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10359,7 +10359,7 @@
          "Maximum":"1.46m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":140,
             "Name":"Kabuto"
@@ -10396,7 +10396,7 @@
          "Rock",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Bite",
             "Type":"Dark",
@@ -10408,7 +10408,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Ancient Power",
             "Type":"Rock",
@@ -10456,7 +10456,7 @@
       "Weaknesses":[
          "Fighting"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Lick",
             "Type":"Ghost",
@@ -10468,7 +10468,7 @@
             "Damage":12
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Body Slam",
             "Type":"Normal",
@@ -10522,14 +10522,14 @@
          "Rock",
          "Steel"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Frost Breath",
             "Type":"Ice",
             "Damage":9
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Blizzard",
             "Type":"Ice",
@@ -10585,14 +10585,14 @@
          "Ice",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Thunder Shock",
             "Type":"Electric",
             "Damage":5
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Discharge",
             "Type":"Electric",
@@ -10650,14 +10650,14 @@
          "Electric",
          "Rock"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Ember",
             "Type":"Fire",
             "Damage":10
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Fire Blast",
             "Type":"Fire",
@@ -10712,14 +10712,14 @@
          "Dragon",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -10749,7 +10749,7 @@
          "Amount":25,
          "Name":"Dratini candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":148,
             "Name":"Dragonair"
@@ -10782,14 +10782,14 @@
          "Dragon",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
             "Damage":6
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Aqua Tail",
             "Type":"Water",
@@ -10815,7 +10815,7 @@
          "Maximum":"4.5m"
       },
       "FleeRate":0.06,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":147,
             "Name":"Dratini"
@@ -10825,7 +10825,7 @@
          "Amount":100,
          "Name":"Dratini candies"
       },
-      "Next evolution(s)":[
+      "Next_evolutions":[
          {
             "Number":149,
             "Name":"Dragonite"
@@ -10862,7 +10862,7 @@
          "Dragon",
          "Fairy"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Dragon Breath",
             "Type":"Dragon",
@@ -10874,7 +10874,7 @@
             "Damage":15
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dragon Claw",
             "Type":"Dragon",
@@ -10900,7 +10900,7 @@
          "Maximum":"2.48m"
       },
       "FleeRate":0.05,
-      "Previous evolution(s)":[
+      "Previous_evolutions":[
          {
             "Number":147,
             "Name":"Dratini"
@@ -10935,7 +10935,7 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Confusion",
             "Type":"Psychic",
@@ -10947,7 +10947,7 @@
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Hyper Beam",
             "Type":"Normal",
@@ -11000,14 +11000,14 @@
          "Ghost",
          "Dark"
       ],
-      "Fast Attack(s)":[
+      "Fast_Attacks":[
          {
             "Name":"Pound",
             "Type":"Normal",
             "Damage":7
          }
       ],
-      "Special Attack(s)":[
+      "Special_Attacks":[
          {
             "Name":"Dragon Pulse",
             "Type":"Dragon",
