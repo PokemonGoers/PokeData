@@ -118,7 +118,7 @@ module.exports = {
     getByGender : function (req, res) {
         logger.info('Get Pokemon details by gender');
 
-        pokemon.getByGender(req.params.gender.toLowerCase(), function(success, message) {
+        pokemon.getByGender(req.params.gender, function(success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
@@ -284,6 +284,251 @@ module.exports = {
         logger.info('Get Pokemon details by weakness');
 
         pokemon.getByWeakness(req.params.weakness, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonByWeakness
+     * @apiDescription Get pokemon by specific weakness
+     * @apiGroup Pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
+    getByAttackType : function (req, res) {
+        logger.info('Get Pokemon details by attack type');
+
+        let handler;
+
+        if (req.params.category === 'fast') {
+            handler = pokemon.getByFastAttackType.bind(pokemon);
+        } else if (req.params.category === 'special') {
+            handler = pokemon.getBySpecialAttackType.bind(pokemon);
+        }
+
+        handler(req.params.type, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonByWeakness
+     * @apiDescription Get pokemon by specific weakness
+     * @apiGroup Pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
+    getByAttackName : function (req, res) {
+        logger.info('Get Pokemon details by attack name');
+
+        let handler;
+
+        if (req.params.category === 'fast') {
+            handler = pokemon.getByFastAttackName.bind(pokemon);
+        } else if (req.params.category === 'special') {
+            handler = pokemon.getBySpecialAttackName.bind(pokemon);
+        }
+
+        handler(req.params.name, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonByWeakness
+     * @apiDescription Get pokemon by specific weakness
+     * @apiGroup Pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
+    getByAttackDamage : function (req, res) {
+        logger.info('Get Pokemon details by attack damage');
+
+        let handler;
+
+        if (req.params.category === 'fast') {
+            handler = pokemon.getByFastAttackDamage.bind(pokemon);
+        } else if (req.params.category === 'special') {
+            handler = pokemon.getBySpecialAttackDamage.bind(pokemon);
+        }
+
+        handler(req.params.damage, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonByWeakness
+     * @apiDescription Get pokemon by specific weakness
+     * @apiGroup Pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
+    getByEvolutionId: function (req, res) {
+        logger.info('Get Pokemon details by evolution id');
+
+        let handler;
+
+        if (req.params.category === 'prev') {
+            handler = pokemon.getByPrevEvolutionId.bind(pokemon);
+        } else if (req.params.category === 'next') {
+            handler = pokemon.getByNextEvolutionId.bind(pokemon);
+        }
+
+        handler(req.params.id, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonByWeakness
+     * @apiDescription Get pokemon by specific weakness
+     * @apiGroup Pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     * "_id": "57c029e830632cbc2954518d",
+     * "source": "TWITTER",
+     *  "pokemonId": 54,
+     * "appearedOn": "2016-08-26T11:37:12.469Z",
+     * "__v": 0,
+     * "location": {
+     *     "coordinates": [
+     *        14.017842,
+     *        14.017842
+           ]
+     *     "type": "Point"
+     *  }
+     * }
+     * ]
+     *
+     * @apiSuccessExample {json} No db-entries:
+     * HTTP/1.1 200 OK
+     * [
+     * ]
+     */
+    getByEvolutionName: function (req, res) {
+        logger.info('Get Pokemon details by evolution name');
+
+        let handler;
+
+        if (req.params.category === 'prev') {
+            handler = pokemon.getByPrevEvolutionName.bind(pokemon);
+        } else if (req.params.category === 'next') {
+            handler = pokemon.getByNextEvolutionName.bind(pokemon);
+        }
+
+        handler(req.params.name, function(success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
