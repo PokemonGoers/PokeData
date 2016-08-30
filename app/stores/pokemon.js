@@ -1,6 +1,6 @@
 "use strict";
 
-const Pokemon = require(__appbase + 'models/BasicPokemonDetail');
+const Pokemon = require(__appbase + 'models/pokemon');
 
 module.exports = {
     /*
