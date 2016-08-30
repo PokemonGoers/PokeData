@@ -22,6 +22,7 @@
     "GetSightingById",
     "GetSightingBySource",
     "GetSightingAtCoordinates",
-    "GetSightingBetweenCoordinates"
+    "GetSightingBetweenCoordinates",
+    "GetSightingByTimeRange"
   ]
 }
