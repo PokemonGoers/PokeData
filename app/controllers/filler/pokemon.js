@@ -2,82 +2,120 @@
 
 let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json');
-    const pokemon = require(__appbase + '/models/pokemon');
+    const Pokemon = require(__appbase + '/models/pokemon');
 
 module.exports = {
 
     insertToDb: function () {
 
-
         logger.info('Loading Basic Pokemon Details');
         let len = pokemon.length;
         for (var i = 0; i < len; i++) {
-            var base = new pokemon();
-            base.pokemonId = pokemon[i].Number;
-            base.number = pokemon[i].Number;
-            base.classification = pokemon[i].Classification;
+
+            var base = new Pokemon();
+
+            base.pokemonID = Number(pokemon[i]['Number']);
+            base.name = pokemon[i]['Name'];
+            base.classification = pokemon[i]['Classification'];
+
             base.types = [];
             let typeLength = pokemon[i].Types.length;
-            for (var j = 0; j < typeLength; j++) {
+            for (let j = 0; j < typeLength; j++) {
                 base.types.push(pokemon[i].Types[j]);
-
             }
 
-            base.resistant = [];
-            let resistantLength = pokemon[i].Resistant.length;
-            for (var k = 0; k < resistantLength; k++) {
-                base.resistant.push(pokemon[k].Resistant[k]);
-
+            base.resistance = [];
+            let resistanceLength = pokemon[i]['Resistant'].length;
+            for (let j = 0; j < resistanceLength; j++) {
+                base.resistance.push(pokemon[i]['Resistant'][j]);
             }
 
-            base.weaknesses = [];
-            let weaknessLength = pokemon[i].Weaknesses.length;
-            for (var j = 0; j < weaknessLength; j++) {
-                base.weaknesses.push(pokemon[i].Weaknesses[j]);
+            base.weakness = [];
+            let weaknessLength = pokemon[i]['Weaknesses'].length;
+            for (let j = 0; j < weaknessLength; j++) {
+                base.weakness.push(pokemon[i]['Weaknesses'][j]);
             }
 
             base.fastAttacks = [];
-            let fastAttackLength = pokemon[i].fastAttacks.length;
-            for (var j = 0; j < fastAttackLength; j++) {
-                base.fastAttacks.push(pokemon[i].fastAttacks[j]);
+            let fastAttackLength = pokemon[i]['Fast_Attacks'].length;
+            for (let j = 0; j < fastAttackLength; j++) {
+                let fastAttack = pokemon[i]['Fast_Attacks'][j],
+                    attack = {
+                        'type': fastAttack['Type'],
+                        'name': fastAttack['Name'],
+                        'damage': fastAttack['Damage']
+                    };
+                base.fastAttacks.push(attack);
             }
 
             base.specialAttacks = [];
-            let specialAttackLength = pokemon[i].specialAttacks.length;
-            for (var j = 0; j < specialAttackLength; j++) {
-                base.specialAttacks.push(pokemon[i].specialAttacks[j]);
+            let specialAttackLength = pokemon[i]['Special_Attacks'].length;
+            for (let j = 0; j < specialAttackLength; j++) {
+                let specialAttack = pokemon[i]['Special_Attacks'][j],
+                    attack = {
+                        'type': specialAttack['Type'],
+                        'name': specialAttack['Name'],
+                        'damage': specialAttack['Damage']
+                    };
+                base.specialAttacks.push(attack);
             }
 
-            base.weight = pokemon[i].weight;
-            base.height = pokemon[i].height;
-            base.fleeRate = pokemon[i].FleeRate;
-            base.maxCP = pokemon[i].MaxCP;
-            base.maxHP = pokemon[i].MaxHP;
-            base.gender = pokemon[i].gender;
-            if (pokemon[i].nextEvolutions !== undefined) {
+            let weight = pokemon[i]['Weight'];
+            base.weight = {
+                'maximum': weight['Maximum'],
+                'minimum': weight['Minimum']
+            };
+
+            let height = pokemon[i]['Height'];
+            base.height = {
+                'maximum': height['Maximum'],
+                'minimum': height['Minimum']
+            };
+
+            base.fleeRate = pokemon[i]['FleeRate'];
+            base.maxCP = pokemon[i]['MaxCP'];
+            base.maxHP = pokemon[i]['MaxHP'];
+
+            let gender = pokemon[i]['gender'];
+            base.gender = {
+                'abbreviation': gender['abbreviation'],
+                'maleRatio': Number(gender['male_ratio']),
+                'femaleRatio': Number(gender['female_ratio']),
+                'breedable': gender['breedable']
+            };
+
+            if (pokemon[i]['Next_evolutions'] !== undefined) {
                 base.nextEvolutions = [];
-                let nextEvoultionlen = pokemon[i].nextEvolutions.length;
-                for (var j = 0; j < nextEvoultionlen; j++) {
-                    base.nextEvolutions.push(pokemon[i].nextEvolutions[j]);
+                let nextEvoultionlen = pokemon[i]['Next_evolutions'].length;
+                for (let j = 0; j < nextEvoultionlen; j++) {
+                    let next = pokemon[i]['Next_evolutions'][j],
+                        evolution = {
+                            'pokemonID': Number(next['Number']),
+                            'name': next['Name']
+                        };
+                    base.nextEvolutions.push(evolution);
                 }
             }
-            if (pokemon[i].previousEvolutions !== undefined) {
+            if (pokemon[i]['Previous_evolutions'] !== undefined) {
                 base.previousEvolutions = [];
-                let previousEvoultionlen = pokemon[i].previousEvolutions.length;
-                for (var j = 0; j < previousEvoultionlen; j++) {
-                    base.previousEvolutions.push(pokemon[i].previousEvolutions[j]);
+                let previousEvoultionlen = pokemon[i]['Previous_evolutions'].length;
+                for (let j = 0; j < previousEvoultionlen; j++) {
+                    let prev = pokemon[i]['Previous_evolutions'][j],
+                        evolution = {
+                        'pokemonID': Number(prev['Number']),
+                        'name': prev['Name']
+                    };
+                    base.previousEvolutions.push(evolution);
                 }
 
             }
             base.save(function (err) {
                 if (err) {
-                    logger.error("Error");
+                    logger.error("Error in insertion");
                 } else {
-                    logger.info("Success");
+                    logger.success("Insertion Successful");
                 }
             });
-
         }
-
     }
 };
