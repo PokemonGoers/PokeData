@@ -35,6 +35,8 @@
                 //Allow all GET requests as these do not modify data and we want users to be able to see that basic stuff
                 if (req.method === 'GET') {
                     return next();
+                } else if(req.method == 'POST') {
+                    return next();
                 }
 
             });

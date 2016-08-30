@@ -1,7 +1,8 @@
 module.exports = function (app, router) {
     const pokemon = require(__appbase + 'api/pokemon'),
         sighting = require(__appbase + 'api/sighting');
-
+        pokemonIcon = require(__appbase + 'api/pokemonIcon');
+    
     //route for all pokemon sightings
     router.get('/pokemon/sighting/', sighting.getAll);
 
@@ -53,4 +54,10 @@ module.exports = function (app, router) {
 
     //route for getting pokemon details by specific weakness
     router.get('/pokemon/evolution/:category(prev|next)/name/:name', pokemon.getByEvolutionName);
+
+    //route for posting pokemon icons
+    router.post('/pokemon/pokemonIcon', pokemonIcon.add)
+
+    //route getting posting pokemon icons by id
+    router.get('/pokemon/pokemonIcon/:id', pokemonIcon.getByPokemonId);
 };
