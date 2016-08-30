@@ -22,6 +22,7 @@
     "grunt": "^1.0.1"
   },
   "dependencies": {
+    "apidoc": "^0.16.1",
     "async": "^2.0.1",
     "body-parser": "^1.15.2",
     "cors": "^2.7.1",
