@@ -6,7 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=production node app.js",
     "update": "NODE_ENV=production node scripts/update.js",
-    "listen": "NODE_ENV=production node scripts/listen.js"
+    "listen" : "NODE_ENV=production node scripts/listen.js",
+    "build" : "NODE_ENV=production node scripts/build.js"
   },
   "repository": {
     "type": "git",
