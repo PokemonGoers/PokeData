@@ -1,6 +1,7 @@
 "use strict";
 
 require(__dirname + '/../' + 'constants');
+const config = require(__base + 'config');
 
 logger.info(collection);
 /*
@@ -9,7 +10,8 @@ logger.info(collection);
 var possibleListeners = [
     'rarePokemon',
     'pokeRadar',
-    'twitter'
+    'twitter',
+    'skiplagged'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
@@ -21,7 +23,7 @@ database.connect(function (db) {
     /*The DB connection is open*/
     db.on('open', function () {
         // listener for pokemons
-        const listener = require(__base + 'app/controllers/filler/' + collection);
+        const listener = require(__base + 'app/controllers/filler/' + config.sourceToFiller[collection]);
         listener.insertToDb(function () {
             return;
         });

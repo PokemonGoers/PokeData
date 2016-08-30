@@ -1,12 +1,12 @@
 "use strict";
 
-const pokeRadar = require(__appbase + 'services/pokeRadar');
+const service = require(__appbase + 'services/mapService');
 
 module.exports = {
     /*
      * for inserting pokemon data to MongoDB
      */
     insertToDb: function () {
-        pokeRadar.search();
+        service.search();
     }
 };
