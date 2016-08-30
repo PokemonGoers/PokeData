@@ -19,8 +19,7 @@
   },
   "homepage": "https://github.com/PokemonGoers/PokeData#readme",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0"
+    "grunt": "^1.0.1"
   },
   "dependencies": {
     "async": "^2.0.1",
