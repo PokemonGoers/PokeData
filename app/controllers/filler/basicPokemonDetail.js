@@ -2,7 +2,7 @@
 
 let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json');
-    const basicPokemonDetail = require(__appbase + '/models/pokemonGoBasic');
+    const basicPokemonDetail = require(__appbase + '/models/pokemon');
 
 module.exports = {
 
