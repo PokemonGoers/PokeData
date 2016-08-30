@@ -1,0 +1,27 @@
+{
+  "name": "pokemongo-api",
+  "version": "0.0.1",
+  "description": "This API provides information about PokemonGo, extracted from various reliable data sources.",
+  "title": "PokemonGo API",
+  "url" : "",
+  "sampleUrl": "",
+  "order": [
+    "GetAllPokemons",
+    "GetPokemonById",
+    "GetPokemonByName",
+    "GetPokemonByGender",
+    "GetPokemonByType",
+    "GetPokemonByWeakness",
+    "GetPokemonByResistance",
+    "GetPokemonByAttackType",
+    "GetPokemonByAttackName",
+    "GetPokemonByAttackDamage",
+    "GetPokemonByEvolutionId",
+    "GetPokemonByEvolutionName",
+    "GetAllSightings",
+    "GetSightingById",
+    "GetSightingBySource",
+    "GetSightingAtCoordinates",
+    "GetSightingBetweenCoordinates"
+  ]
+}

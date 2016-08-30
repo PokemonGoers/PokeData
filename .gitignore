@@ -46,3 +46,6 @@ jspm_packages
 # User-specific stuff:
 .idea/
 /mongodb/
+
+# API Documentation
+apidoc
