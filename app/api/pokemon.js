@@ -291,10 +291,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @api {get} /api/pokemon/attack/:category/type/:type GetPokemonByAttackType
      * @apiVersion 0.0.1
-     * @apiName GetPokemonByWeakness
-     * @apiDescription Get pokemon by specific weakness
+     * @apiName GetPokemonByAttackType
+     * @apiDescription Get pokemon by specific attack type
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -340,10 +340,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @api {get} /api/pokemon/attack/:category/name/:name GetPokemonByAttackName
      * @apiVersion 0.0.1
-     * @apiName GetPokemonByWeakness
-     * @apiDescription Get pokemon by specific weakness
+     * @apiName GetPokemonByAttackName
+     * @apiDescription Get pokemon by specific attack name
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -389,10 +389,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @api {get} /api/pokemon/attack/:category/damage/:damage GetPokemonByAttackDamage
      * @apiVersion 0.0.1
-     * @apiName GetPokemonByWeakness
-     * @apiDescription Get pokemon by specific weakness
+     * @apiName GetPokemonByAttackDamage
+     * @apiDescription Get pokemon by specific attack damage
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -438,10 +438,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @api {get} /api/pokemon/evolution/:category/id/:id GetPokemonByEvolutionId
      * @apiVersion 0.0.1
-     * @apiName GetPokemonByWeakness
-     * @apiDescription Get pokemon by specific weakness
+     * @apiName GetPokemonByEvolutionId
+     * @apiDescription Get pokemon by specific evolution ID
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
@@ -487,10 +487,10 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/weakness/:weakness/ GetPokemonByWeakness
+     * @api {get} /api/pokemon/evolution/:category/name/:name GetPokemonByEvolutionName
      * @apiVersion 0.0.1
-     * @apiName GetPokemonByWeakness
-     * @apiDescription Get pokemon by specific weakness
+     * @apiName GetPokemonByEvolutionId
+     * @apiDescription Get pokemon by specific evolution name
      * @apiGroup Pokemon
      *
      * @apiSuccessExample {json} Success
