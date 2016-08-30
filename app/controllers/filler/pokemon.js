@@ -19,21 +19,21 @@ module.exports = {
             base.classification = pokemon[i]['Classification'];
 
             base.types = [];
-            let typeLength = pokemon[i].Types.length;
+            let typeLength = pokemon[i]['Types'].length;
             for (let j = 0; j < typeLength; j++) {
-                base.types.push(pokemon[i].Types[j]);
+                base.types.push(pokemon[i]['Types'][j].toLowerCase());
             }
 
             base.resistance = [];
             let resistanceLength = pokemon[i]['Resistant'].length;
             for (let j = 0; j < resistanceLength; j++) {
-                base.resistance.push(pokemon[i]['Resistant'][j]);
+                base.resistance.push(pokemon[i]['Resistant'][j].toLowerCase());
             }
 
             base.weakness = [];
             let weaknessLength = pokemon[i]['Weaknesses'].length;
             for (let j = 0; j < weaknessLength; j++) {
-                base.weakness.push(pokemon[i]['Weaknesses'][j]);
+                base.weakness.push(pokemon[i]['Weaknesses'][j].toLowerCase());
             }
 
             base.fastAttacks = [];

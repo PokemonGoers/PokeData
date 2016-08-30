@@ -37,7 +37,7 @@ module.exports = {
      * get the pokemon details of particular pokemon based on gender
      */
     getByGender : function (gender, callback) {
-        this.get({'gender.abbreviation': gender}, function (status, response) {
+        this.get({'gender.abbreviation': gender.toLowerCase()}, function (status, response) {
             callback(status, response);
         });
     },
@@ -53,7 +53,7 @@ module.exports = {
      * get the pokemon details of particular pokemon based on type
      */
     getByType : function (type, callback) {
-        this.get({'Types': new RegExp('^' + type + '$', 'i')}, function (status, response) {
+        this.get({'types': type.toLowerCase()}, function (status, response) {
             callback(status, response);
         });
     },
@@ -61,7 +61,7 @@ module.exports = {
      * get the pokemon details of pokemons based on resistance
      */
     getByResistance: function (resistance, callback) {
-        this.get({'resistance': resistance}, function (status, response) {
+        this.get({'resistance': resistance.toLowerCase()}, function (status, response) {
             callback(status, response);
         });
     },
@@ -70,7 +70,57 @@ module.exports = {
      * get the pokemon details of pokemons based on weakness
      */
     getByWeakness: function (weakness, callback) {
-        this.get({'weakness': weakness}, function (status, response) {
+        this.get({'weakness': weakness.toLowerCase()}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByFastAttackType: function (type, callback) {
+        this.get({'fastAttacks.type': type}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getBySpecialAttackType: function (type, callback) {
+        this.get({'specialAttacks.type': type}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByFastAttackName: function (name, callback) {
+        this.get({'fastAttacks.name': name}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getBySpecialAttackName: function (name, callback) {
+        this.get({'specialAttacks.name': name}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByFastAttackDamage: function (damage, callback) {
+        this.get({'fastAttacks.damage': damage}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getBySpecialAttackDamage: function (damage, callback) {
+        this.get({'specialAttacks.damage': damage}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByPrevEvolutionId: function (id, callback) {
+        this.get({'previousEvolutions.pokemonID': id}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByNextEvolutionId: function (id, callback) {
+        this.get({'nextEvolutions.pokemonID': id}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByPrevEvolutionName: function (name, callback) {
+        this.get({'previousEvolutions.name': name}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    getByNextEvolutionName: function (name, callback) {
+        this.get({'nextEvolutions.name': name}, function (status, response) {
             callback(status, response);
         });
     }

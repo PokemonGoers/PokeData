@@ -38,4 +38,19 @@ module.exports = function (app, router) {
 
     //route for getting pokemon details by specific weakness
     router.get('/pokemon/weakness/:weakness', pokemon.getByWeakness);
+
+    //route for getting pokemon details by specific weakness
+    router.get('/pokemon/attack/:category(fast|special)/type/:type', pokemon.getByAttackType);
+
+    //route for getting pokemon details by specific weakness
+    router.get('/pokemon/attack/:category(fast|special)/name/:name', pokemon.getByAttackName);
+
+    //route for getting pokemon details by specific weakness
+    router.get('/pokemon/attack/:category(fast|special)/damage/:damage', pokemon.getByAttackDamage);
+
+    //route for getting pokemon details by specific weakness
+    router.get('/pokemon/evolution/:category(prev|next)/id/:id', pokemon.getByEvolutionId);
+
+    //route for getting pokemon details by specific weakness
+    router.get('/pokemon/evolution/:category(prev|next)/name/:name', pokemon.getByEvolutionName);
 };
