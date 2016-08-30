@@ -4,25 +4,25 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var pokemonGoBasicSchema = new Schema({
-    pokemonId: Number,
+    pokemonID: Number,
     name: {type: String},
     classification: {type: String},
     types: [String],
-    resistant: [String],
-    weaknesses: [String],
-    fastAttacks: [{Name: {type: String}, Type: {type: String}, Damage: {type: Number}}],
-    specialAttacks: [{Name: {type: String}, Type: {type: String}, Damage: {type: Number}}],
+    resistance: [String],
+    weakness: [String],
+    fastAttacks: [{name: {type: String}, type: {type: String}, damage: {type: Number}}],
+    specialAttacks: [{name: {type: String}, type: {type: String}, damage: {type: Number}}],
     weight: {
-        Minimum: {type: String},
-        Maximum: {type: String}
+        minimum: {type: String},
+        maximum: {type: String}
     },
     height: {
-        Minimum: {type: String},
-        Maximum: {type: String}
+        minimum: {type: String},
+        maximum: {type: String}
     },
     fleeRate: Number,
-    nextEvolutions: [{Number: Number, Name: {type: String}}],
-    previousEvolutions: [{Number: Number, Name: {type: String}}],
+    nextEvolutions: [{pokemonID: Number, name: {type: String}}],
+    previousEvolutions: [{pokemonID: Number, name: {type: String}}],
     maxCP: Number,
     maxHP: Number,
     gender: {

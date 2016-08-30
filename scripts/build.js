@@ -10,7 +10,7 @@ logger.info(collection);
  * choices of collection to be filled
  */
 var possibleCollections = [
-    'basicPokemonDetail'
+    'pokemon'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process

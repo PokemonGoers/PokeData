@@ -1,53 +1,121 @@
-const PokemonModel = require(__appbase + 'models/pokemon'),
-    PokemonStore = require(__appbase + 'stores/pokemon'),
-    SightingStore = require(__appbase + 'stores/sighting'),
-    jsonfile = require('jsonfile'),
-    async = require('async'),
-    cfg = require(__appbase + '../config');
+"use strict";
+
+let fs = require('fs'),
+    pokemon = require(__resourcebase + '/pokemonGoData.json');
+    const Pokemon = require(__appbase + '/models/pokemon');
 
 module.exports = {
-    fill: function (callback) {
 
+    insertToDb: function () {
 
-    },
-    insertToDb: function (callback) {
-        logger.info('MongoDb Insertion...');
-        const file = __tmpbase + 'pokemon.json';
+        logger.info('Loading Basic Pokemon Details');
+        let len = pokemon.length;
+        for (var i = 0; i < len; i++) {
 
-        jsonfile.readFile(file, function (err, pokemons) {
-            if (pokemons !== undefined) {
-                insert(pokemons);
+            var base = new Pokemon();
+
+            base.pokemonID = Number(pokemon[i]['Number']);
+            base.name = pokemon[i]['Name'];
+            base.classification = pokemon[i]['Classification'];
+
+            base.types = [];
+            let typeLength = pokemon[i].Types.length;
+            for (let j = 0; j < typeLength; j++) {
+                base.types.push(pokemon[i].Types[j]);
             }
-        });
 
-        var addPokemon = function (pokemon, callback) {
-            SightingStore.add(pokemon, function (success, data) {
-                if (success === 1) {
-                    logger.success('Success: ' + data.pokemonId);
-                } else {
-                    logger.error('Error:' + data);
+            base.resistance = [];
+            let resistanceLength = pokemon[i]['Resistant'].length;
+            for (let j = 0; j < resistanceLength; j++) {
+                base.resistance.push(pokemon[i]['Resistant'][j]);
+            }
+
+            base.weakness = [];
+            let weaknessLength = pokemon[i]['Weaknesses'].length;
+            for (let j = 0; j < weaknessLength; j++) {
+                base.weakness.push(pokemon[i]['Weaknesses'][j]);
+            }
+
+            base.fastAttacks = [];
+            let fastAttackLength = pokemon[i]['Fast_Attacks'].length;
+            for (let j = 0; j < fastAttackLength; j++) {
+                let fastAttack = pokemon[i]['Fast_Attacks'][j],
+                    attack = {
+                        'type': fastAttack['Type'],
+                        'name': fastAttack['Name'],
+                        'damage': fastAttack['Damage']
+                    };
+                base.fastAttacks.push(attack);
+            }
+
+            base.specialAttacks = [];
+            let specialAttackLength = pokemon[i]['Special_Attacks'].length;
+            for (let j = 0; j < specialAttackLength; j++) {
+                let specialAttack = pokemon[i]['Special_Attacks'][j],
+                    attack = {
+                        'type': specialAttack['Type'],
+                        'name': specialAttack['Name'],
+                        'damage': specialAttack['Damage']
+                    };
+                base.specialAttacks.push(attack);
+            }
+
+            let weight = pokemon[i]['Weight'];
+            base.weight = {
+                'maximum': weight['Maximum'],
+                'minimum': weight['Minimum']
+            };
+
+            let height = pokemon[i]['Height'];
+            base.height = {
+                'maximum': height['Maximum'],
+                'minimum': height['Minimum']
+            };
+
+            base.fleeRate = pokemon[i]['FleeRate'];
+            base.maxCP = pokemon[i]['MaxCP'];
+            base.maxHP = pokemon[i]['MaxHP'];
+
+            let gender = pokemon[i]['gender'];
+            base.gender = {
+                'abbreviation': gender['abbreviation'],
+                'maleRatio': Number(gender['male_ratio']),
+                'femaleRatio': Number(gender['female_ratio']),
+                'breedable': gender['breedable']
+            };
+
+            if (pokemon[i]['Next_evolutions'] !== undefined) {
+                base.nextEvolutions = [];
+                let nextEvoultionlen = pokemon[i]['Next_evolutions'].length;
+                for (let j = 0; j < nextEvoultionlen; j++) {
+                    let next = pokemon[i]['Next_evolutions'][j],
+                        evolution = {
+                            'pokemonID': Number(next['Number']),
+                            'name': next['Name']
+                        };
+                    base.nextEvolutions.push(evolution);
                 }
-                callback(true);
-            });
-        };
+            }
+            if (pokemon[i]['Previous_evolutions'] !== undefined) {
+                base.previousEvolutions = [];
+                let previousEvoultionlen = pokemon[i]['Previous_evolutions'].length;
+                for (let j = 0; j < previousEvoultionlen; j++) {
+                    let prev = pokemon[i]['Previous_evolutions'][j],
+                        evolution = {
+                        'pokemonID': Number(prev['Number']),
+                        'name': prev['Name']
+                    };
+                    base.previousEvolutions.push(evolution);
+                }
 
-        var insert = function (pokemons) {
-            // iterate through pokemons
-            async.forEach(pokemons, function (pokemon, callback) {
-
-                PokemonStore.getById(pokemon.id, function (success, oldId) {
-                    if (success === 1) { // old entry is existing and discarded
-                        logger.info(pokemon.id + " is a duplicate entry and hence discarded.");
-                        callback();
-                    } else {// new entry is added
-                        addPokemon(pokemon, function () {
-                            callback();
-                        });
-                    }
-                });
-            }, function (err) {
-                callback(true);
+            }
+            base.save(function (err) {
+                if (err) {
+                    logger.error("Error in insertion");
+                } else {
+                    logger.success("Insertion Successful");
+                }
             });
-        };
+        }
     }
 };
