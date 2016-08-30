@@ -23,7 +23,7 @@ database.connect(function (db) {
         // builder basic pokemon details
         const builder = require(__base + 'app/controllers/filler/' + collection);
         builder.insertToDb(function () {
-            process.exit();
+            return;
         });
 
     })

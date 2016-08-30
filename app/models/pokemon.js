@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var pokemonGoBasicSchema = new Schema({
-    number: {type: String},
+    pokemonId: Number,
     name: {type: String},
     classification: {type: String},
     types: [String],
