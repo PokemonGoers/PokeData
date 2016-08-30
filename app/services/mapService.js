@@ -5,9 +5,9 @@ const http = require('http'),
       q = require('q'),
       async = require('async'),
       _ = require('underscore'),
-      coords = require(__base + 'resources/json/skiplaggedCoords.json'),
+      coords = require(__base + 'resources/json/' + collection + 'Coords.json'),
       config = require(__base + 'config'),
-      store = require(__appbase + 'stores/skiplagged');
+      store = require(__appbase + 'stores/mapService');
 
 //To point to currently used proxy in proxyList (0 is no proxy, 1 is first in list...)
 var proxyPointer = 0;
@@ -17,35 +17,44 @@ var proxyList = [];
 if (scanType === 'global') {
     var coordsFile = [];
 }
-//constructs URL for request to pokeradars API
-//pokeradar will return pokemon in the window of lat to lat+delta and lng to lng+delta
+//constructs URL for request to the services API
+//service will return pokemon in the window of lat to lat+delta and lng to lng+delta
 const baseLink = function (lat, lng, delta) {
-    let hd = {
+    var hd = {
         'Host': 'skiplagged.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'de,en-US;q=0.7,en;q=0.3',
         'Accept-Encoding': 'gzip, deflate',
-        //'Cookie': 'src=HAM; when=Tue%2C%20Sep%2013%2C%202016; tz=-120; whenBack=; _ga=GA1.2.2096047495.1472557821; __uvt=; uvts=4yfPSdKTMaFQ4vAo',
         'Referer': 'https://skiplagged.com/catch-that/',
         'Connection': 'keep-alive'
     };
-    let queryString = '?bounds=' + lat.toFixed(6) + ',' + lng.toFixed(6) + ',' + (lat + delta).toFixed(6) + ',' + (lng + delta).toFixed(6);
+    var queryString = '';
+    var link = {};
     if (proxyPointer > 0) {
-        let hp = proxyList[proxyPointer - 1].split(':');
-        return {
-            host: hp[0],
-            port: hp[1],
-            path: 'http://' + config.skiplagged.host + config.skiplagged.path + queryString,
-            headers: hd
-        };
+        var hp = proxyList[proxyPointer - 1].split(':');
+        link.host = hp[0];
+        link.port = hp[1];
+        link.path = 'http://' + config[collection].host + config[collection].path;
     } else {
-        return {
-            host: config.skiplagged.host,
-            path: config.skiplagged.path + queryString,
-            headers: hd
-        };
+        link.host = config[collection].host;
+        link.path = config[collection].path;
     }
+    switch (collection) {
+        case 'pokeRadar':
+            queryString = '?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString();
+            link.path += queryString;
+            break;
+        case 'skiplagged':
+            queryString = '?bounds=' + lat.toFixed(6) + ',' + lng.toFixed(6) + ',' + (lat + delta).toFixed(6) + ',' + (lng + delta).toFixed(6);
+            link.path += queryString;
+            link['headers'] = hd;
+            break;
+        default:
+            logger.error("Collection not known!");
+    }
+    return link;
+
 };
 
 
@@ -99,7 +108,17 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         //parse the received string into a JSON
                         var data = JSON.parse(str);
                         //array to hold pokemon
-                        var arr = data.pokemons;
+                        var arr = [];
+                        switch (collection) {
+                            case 'pokeRadar':
+                                arr = data.data;
+                                break;
+                            case 'skiplagged':
+                                arr = data.pokemons;
+                                break;
+                            default:
+                                logger.error("Collection not known!");
+                        }
                         if (arr.length > 0) {
                             //store received pokemon
                             store.insert(arr);
@@ -128,7 +147,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
             }).setMaxListeners(0);
 
             //sets timeout of request to 10 seconds, and if so request gets aborted, triggering req.on('error'...
-            req.setTimeout(5000, function() {
+            req.setTimeout(10000, function() {
                 req.abort();
             });
 
@@ -189,7 +208,7 @@ module.exports = {
                 var sum = result.reduce(function (a, b) {return a + b;}, 0);
                 logger.info(sum + ' pokemon found!');
                 if (scanType === 'global') {
-                    fs.writeFile(__base + 'resources/json/skiplaggedCoords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
+                    fs.writeFile(__base + 'resources/json/' + collection + 'Coords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
                         if (err) {
                             return logger.error(err);
                         }

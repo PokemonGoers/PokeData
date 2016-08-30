@@ -1,6 +1,7 @@
 "use strict";
 
 require(__dirname + '/../' + 'constants');
+const config = require(__base + 'config');
 
 logger.info(collection);
 /*
@@ -22,7 +23,7 @@ database.connect(function (db) {
     /*The DB connection is open*/
     db.on('open', function () {
         // listener for pokemons
-        const listener = require(__base + 'app/controllers/filler/' + collection);
+        const listener = require(__base + 'app/controllers/filler/' + config.sourceToFiller[collection]);
         listener.insertToDb(function () {
             return;
         });
