@@ -1,5 +1,6 @@
 const PokemonModel = require(__appbase + 'models/pokemon'),
     PokemonStore = require(__appbase + 'stores/pokemon'),
+    SightingStore = require(__appbase + 'stores/sighting'),
     jsonfile = require('jsonfile'),
     async = require('async'),
     cfg = require(__appbase + '../config');
@@ -20,7 +21,7 @@ module.exports = {
         });
 
         var addPokemon = function (pokemon, callback) {
-            PokemonStore.add(pokemon, function (success, data) {
+            SightingStore.add(pokemon, function (success, data) {
                 if (success === 1) {
                     logger.success('Success: ' + data.pokemonId);
                 } else {
