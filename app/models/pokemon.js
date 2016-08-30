@@ -1,28 +1,39 @@
+"use strict";
+
 var mongoose = require('mongoose');
-var Schema   = mongoose.Schema;
+var Schema = mongoose.Schema;
 
+var pokemonGoBasicSchema = new Schema({
+    pokemonId: Number,
+    name: {type: String},
+    classification: {type: String},
+    types: [String],
+    resistant: [String],
+    weaknesses: [String],
+    fastAttacks: [{Name: {type: String}, Type: {type: String}, Damage: {type: Number}}],
+    specialAttacks: [{Name: {type: String}, Type: {type: String}, Damage: {type: Number}}],
+    weight: {
+        Minimum: {type: String},
+        Maximum: {type: String}
+    },
+    height: {
+        Minimum: {type: String},
+        Maximum: {type: String}
+    },
+    fleeRate: Number,
+    nextEvolutions: [{Number: Number, Name: {type: String}}],
+    previousEvolutions: [{Number: Number, Name: {type: String}}],
+    maxCP: Number,
+    maxHP: Number,
+    gender: {
+        abbreviation: {
+            type: String, enum: ['m', 'f', 'g', 'h'] //m=male, f=female, g=genderless, h=hermaphrodite
+        },
+        maleRatio: Number,
+        femaleRatio: Number,
+        breedable: Boolean
+    }
 
-var pokemonSchema = new Schema({
-    id         : {type: String, required: true, unique: true},
-    created    : {type: Number},
-    downvotes  : {type: Number},
-    upvotes    : {type: Number},
-    latitude   : {type: Number},
-    longitude  : {type: Number},
-    pokemonId  : {type: String},
-    trainerName: {type: String},
-    userId     : {type: String},
-    deviceId   : {type: String},
-    category   : {type: [Boolean]},
-    gender     : {abbreviation: {type: String, enum: ['m', 'f', 'g', 'h']},
-                  male_ratio: Number,
-                  female_ratio: Number,
-                  breedable: Boolean},
-    weight     : {type: Number},
-    height     : {type: Number},
-    move       : {type: [Boolean]},
-    evolution  : {type: [String]},
-    pre_form   : {type: [String]}
 });
 
-module.exports = mongoose.model('pokemon', pokemonSchema);
+module.exports = mongoose.model('pokemon', pokemonGoBasicSchema);

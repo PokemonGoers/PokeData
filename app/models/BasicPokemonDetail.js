@@ -1,8 +1,8 @@
 'use strict';
 
-let mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-let BasicPokemonDetailSchema = new mongoose.Schema({
+var BasicPokemonDetailSchema = new mongoose.Schema({
     pokemonID: {
         type: Number,
         unique: true,
