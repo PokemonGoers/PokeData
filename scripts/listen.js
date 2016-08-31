@@ -11,7 +11,8 @@ var possibleListeners = [
     'rarePokemon',
     'pokeRadar',
     'twitter',
-    'skiplagged'
+    'skiplagged',
+    'pokecrew'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process
