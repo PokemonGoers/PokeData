@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "stable"
+env:
+ - NODE_ENV="development"
+ - NODE_ENV="production"
+services:
+ - mongodb
+before_script:
+  - npm install grunt-cli -g
+  - npm install
