@@ -11,8 +11,8 @@
   - [Twitter](https://twitter.com/)
   - [PokeSniper](https://pokesnipers.com)
   - [PokeRadar](https://www.pokeradar.io)
-  - [SkipLagged]()
-  - [PokeCrew]()
+  - [SkipLagged](https://skiplagged.com/catch-that)
+  - [PokeCrew](https://www.pokecrew.com)
  
 ## Docker Build
 

@@ -123,7 +123,7 @@ module.exports = {
      * @apiName GetSightingBySource
      * @apiDescription Get pokemon sightings by specific source
      * @apiGroup PokemonSighting
-     * @apiParam {String=twitter,pokesniper,pokeradar} source Source of the data extraction
+     * @apiParam {String=twitter,pokesniper,pokeradar,skiplagged,pokecrew} source Source of the data extraction
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
