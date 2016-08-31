@@ -52,6 +52,7 @@ module.exports = {
      * @apiName GetPokemonById
      * @apiDescription Get pokemon by specific id
      * @apiGroup Pokemon
+     * @apiParam {Integer{1-151}} id Pokemon ID
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -96,6 +97,7 @@ module.exports = {
      * @apiName GetPokemonByGender
      * @apiDescription Get pokemon by specific gender
      * @apiGroup Pokemon
+     * @apiParam {String{1}="m","f","g","h"} gender Gender of the pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -141,6 +143,7 @@ module.exports = {
      * @apiName GetPokemonByName
      * @apiDescription Get pokemon by specific name
      * @apiGroup Pokemon
+     * @apiParam {String} name Name of the pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -185,6 +188,7 @@ module.exports = {
      * @apiName GetPokemonByType
      * @apiDescription Get pokemon by specific type
      * @apiGroup Pokemon
+     * @apiParam {String} type Type of the pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -229,6 +233,7 @@ module.exports = {
      * @apiName GetPokemonByResistance
      * @apiDescription Get pokemon by specific resistance
      * @apiGroup Pokemon
+     * @apiParam {String} resistance Resistance factor of the pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -273,6 +278,7 @@ module.exports = {
      * @apiName GetPokemonByWeakness
      * @apiDescription Get pokemon by specific weakness
      * @apiGroup Pokemon
+     * @apiParam {String} weakness Weakness of the pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -317,6 +323,8 @@ module.exports = {
      * @apiName GetPokemonByAttackType
      * @apiDescription Get pokemon by specific attack type
      * @apiGroup Pokemon
+     * @apiParam {String="fast","special"} category Category of attack
+     * @apiParam {String} type Type of the attack
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -369,6 +377,8 @@ module.exports = {
      * @apiName GetPokemonByAttackName
      * @apiDescription Get pokemon by specific attack name
      * @apiGroup Pokemon
+     * @apiParam {String="fast","special"} category Category of attack
+     * @apiParam {String} name Name of the attack
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -421,6 +431,8 @@ module.exports = {
      * @apiName GetPokemonByAttackDamage
      * @apiDescription Get pokemon by specific attack damage
      * @apiGroup Pokemon
+     * @apiParam {String="fast","special"} category Category of attack
+     * @apiParam {Integer} damage Damage value of the attack
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -473,6 +485,8 @@ module.exports = {
      * @apiName GetPokemonByEvolutionId
      * @apiDescription Get pokemon by specific evolution ID
      * @apiGroup Pokemon
+     * @apiParam {String="prev","next"} category Category of evolution
+     * @apiParam {Integer{1-151}} id ID of the evolved Pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
@@ -525,6 +539,8 @@ module.exports = {
      * @apiName GetPokemonByEvolutionName
      * @apiDescription Get pokemon by specific evolution name
      * @apiGroup Pokemon
+     * @apiParam {String="prev","next"} category Category of evolution
+     * @apiParam {String} name Name of the evolved Pokemon
      *
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
