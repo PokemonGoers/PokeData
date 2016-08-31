@@ -4,35 +4,43 @@ const sighting = require('../stores/sighting');
 
 module.exports = {
     /**
+     * @apiDefine NoRecords
+     * @apiSuccessExample {json} No records
+     * HTTP/1.1 200 OK
+     * {"message":"Success",
+     *  "data": []
+     * }
+     *
+     */
+
+    /**
+     * @apiDefine SampleSighting
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * {"message":"Success",
+     *  "data": [{
+     *      "_id": "57c029e830632cbc2954518d",
+     *      "source": "TWITTER",
+     *      "pokemonId": 54,
+     *      "appearedOn": "2016-08-26T11:37:12.469Z",
+     *      "__v": 0,
+     *      "location": {
+     *          "coordinates": [ 14.017842, 14.017842 ],
+     *          "type": "Point"}
+     *  }] }
+     *
+     */
+
+    /**
      * @api {get} /pokemon/sighting/ GetAllSightings
      * @apiVersion 0.0.1
      * @apiName GetAllSightings
      * @apiDescription Get all Pokemon sightings
      * @apiGroup PokemonSighting
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *              "coordinates": [
-     *                  14.017842,
-     *                  14.017842
-     *              ],
-     *              "type": "Point"
-     *             }
-     *   }
-     * ]
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
      */
     getAll: function (req, res) {
         logger.info('Get all pokemon sightings');
@@ -48,30 +56,11 @@ module.exports = {
      * @apiName GetSightingById
      * @apiDescription Get Pokemon sightings by pokemon id
      * @apiGroup PokemonSighting
+     * @apiParam {Integer{1-151}} id Pokemon ID
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
+     * 
      */
     getById: function (req, res) {
         logger.info('Get all pokemon sightings by pokemon id');
@@ -89,30 +78,11 @@ module.exports = {
      * @apiName GetSightingAtCoordinates
      * @apiDescription Get Pokemon Sightings at specific coordinates
      * @apiGroup PokemonSighting
+     * @apiParam {String=Longitude,Latitude} coordinates Location coordinates specified by Longitude, Latitude
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
+     * 
      */
     getAtCoordinates: function (req, res) {
         logger.info('Get Pokemon Sightings at particular coordinates');
@@ -130,30 +100,12 @@ module.exports = {
      * @apiName GetSightingBetweenCoordinates
      * @apiDescription Get Pokemon Sightings between specific set of coordinates
      * @apiGroup PokemonSighting
+     * @apiParam {String=Longitude,Latitude} fromCoordinates Coordinates of starting location specified by Longitude, Latitude
+     * @apiParam {String=Longitude,Latitude} toCoordinates Coordinates of end location specified by Longitude, Latitude
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
+     * 
      */
     getBetweenCoordinates: function (req, res) {
         logger.info('Get Pokemon Sightings between particular coordinates');
@@ -171,30 +123,11 @@ module.exports = {
      * @apiName GetSightingBySource
      * @apiDescription Get pokemon sightings by specific source
      * @apiGroup PokemonSighting
+     * @apiParam {String=twitter,pokesniper,pokeradar} source Source of the data extraction
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
+     * 
      */
     getBySource: function (req, res) {
         logger.info('Get Pokemon Sightings from a particular source');
@@ -212,30 +145,13 @@ module.exports = {
      * @apiName GetSightingByTimeRange
      * @apiDescription Get pokemon sightings within a specific time range
      * @apiGroup PokemonSighting
+     * @apiParam {String} ts Starting time-stamp in UTC format
+     * @apiParam {String=w,d,h,m} range w(Week), d(Day), h(Hour), m(Minute)
+     * Values can be specified preceding the letters. Example: 1w, 5d, 2h, 30m etc.
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * [
-     *    {
-     * "_id": "57c029e830632cbc2954518d",
-     * "source": "TWITTER",
-     *  "pokemonId": 54,
-     * "appearedOn": "2016-08-26T11:37:12.469Z",
-     * "__v": 0,
-     * "location": {
-     *     "coordinates": [
-     *        14.017842,
-     *        14.017842
-           ]
-     *     "type": "Point"
-     *  }
-     * }
-     * ]
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
+     * 
      */
     getByTimeRange: function (req, res) {
         logger.info('Get Pokemon Sightings within a specific time range');
