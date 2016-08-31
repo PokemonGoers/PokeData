@@ -4,6 +4,17 @@ const pokemon = require('../stores/pokemon');
 
 module.exports = {
     /**
+     * @apiDefine NoRecords
+     * @apiSuccessExample {json} No records
+     * HTTP/1.1 200 OK
+     * {"message":"Success",
+     *  "data": []
+     * }
+     * 
+     */
+
+
+    /**
      * @api {get} /api/pokemon/ GetAllPokemons
      * @apiVersion 0.0.1
      * @apiName GetAllPokemons
@@ -32,10 +43,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     *
      */
     getAll: function (req, res) {
         logger.info('GetAllPokemons');
@@ -76,10 +85,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getById : function (req, res) {
         logger.info('Get Pokemon details of a particular pokemon by id');
@@ -121,10 +128,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByGender : function (req, res) {
         logger.info('Get Pokemon details by gender');
@@ -167,10 +172,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByName : function (req, res) {
         logger.info('Get Pokemon details by name');
@@ -212,10 +215,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     *
      */
     getByType : function (req, res) {
         logger.info('Get Pokemon details by type');
@@ -257,10 +258,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByResistance : function (req, res) {
         logger.info('Get Pokemon details by resistance');
@@ -302,10 +301,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByWeakness : function (req, res) {
         logger.info('Get Pokemon details by weakness');
@@ -348,10 +345,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByAttackType : function (req, res) {
         logger.info('Get Pokemon details by attack type');
@@ -402,10 +397,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByAttackName : function (req, res) {
         logger.info('Get Pokemon details by attack name');
@@ -456,10 +449,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByAttackDamage : function (req, res) {
         logger.info('Get Pokemon details by attack damage');
@@ -510,10 +501,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByEvolutionId: function (req, res) {
         logger.info('Get Pokemon details by evolution id');
@@ -564,10 +553,8 @@ module.exports = {
      *          "types":["grass","poison"]
      * }] }
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse NoRecords
+     * 
      */
     getByEvolutionName: function (req, res) {
         logger.info('Get Pokemon details by evolution name');
