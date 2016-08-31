@@ -51,7 +51,7 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/sighting/id/ GetSightingById
+     * @api {get} /api/pokemon/sighting/id/:id GetSightingById
      * @apiVersion 0.0.1
      * @apiName GetSightingById
      * @apiDescription Get Pokemon sightings by pokemon id
