@@ -33,7 +33,8 @@ var pokemonGoBasicSchema = new Schema({
         femaleRatio: Number,
         breedable: Boolean
     }
-
 });
+
+pokemonGoBasicSchema.index({"pokemonID": 1}, {"unique": true});
 
 module.exports = mongoose.model('pokemon', pokemonGoBasicSchema);
