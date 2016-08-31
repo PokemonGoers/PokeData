@@ -32,7 +32,7 @@ module.exports = {
      */
 
     /**
-     * @api {get} /pokemon/sighting/ GetAllSightings
+     * @api {get} /api/pokemon/sighting/ GetAllSightings
      * @apiVersion 0.0.1
      * @apiName GetAllSightings
      * @apiDescription Get all Pokemon sightings
@@ -51,7 +51,7 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /pokemon/sighting/id/ GetSightingById
+     * @api {get} /api/pokemon/sighting/id/ GetSightingById
      * @apiVersion 0.0.1
      * @apiName GetSightingById
      * @apiDescription Get Pokemon sightings by pokemon id
