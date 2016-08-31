@@ -25,7 +25,7 @@ module.exports = {
                 break;
             case 'pokecrew':
                 pokemon['pokemonId'] = data['pokemon_id'];
-                pokemon['appearedOn'] = new Date(Date.parse(data['expires_at']) - 15 * 60 * 1000);
+                pokemon['appearedOn'] = new Date(Date.parse(data['expires_at'] + ' GMT') - 15 * 60 * 1000);
                 break;
             default:
                 logger.error("Collection not known!");
