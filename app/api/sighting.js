@@ -82,6 +82,8 @@ module.exports = {
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
+     *
+     * @apiSampleRequest off
      * 
      */
     getAtCoordinates: function (req, res) {
@@ -105,6 +107,8 @@ module.exports = {
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
+     *
+     * @apiSampleRequest off
      * 
      */
     getBetweenCoordinates: function (req, res) {
@@ -151,6 +155,8 @@ module.exports = {
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
+     *
+     * @apiSampleRequest off
      * 
      */
     getByTimeRange: function (req, res) {
