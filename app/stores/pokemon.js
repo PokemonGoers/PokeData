@@ -8,7 +8,7 @@ module.exports = {
      */
     get: function (data, callback) {
         Pokemon.find(data, function (err, obj) {
-            if (!obj || obj.length === 0) {// already existing data and return 0 for indicating
+            if (!obj || err) {// already existing data and return 0 for indicating
                 callback(0, data);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
