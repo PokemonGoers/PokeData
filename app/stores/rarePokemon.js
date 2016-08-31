@@ -16,7 +16,7 @@ module.exports = {
                // and longitudes in the original data source
                 switch(key){
 
-                    case 'id'    : rarePokemons['pokemonId'] = data[key];
+                    case 'id'    : rarePokemons['pokemonID'] = data[key];
                                    break;
 
                     case 'coords': let coordsArr = data[key].split(",");

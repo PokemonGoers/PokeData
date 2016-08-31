@@ -21,7 +21,7 @@ module.exports = {
      *  "data": [{
      *      "_id": "57c029e830632cbc2954518d",
      *      "source": "TWITTER",
-     *      "pokemonId": 54,
+     *      "pokemonID": 54,
      *      "appearedOn": "2016-08-26T11:37:12.469Z",
      *      "__v": 0,
      *      "location": {

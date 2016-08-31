@@ -51,7 +51,7 @@ module.exports = {
      * searching the pokemon details by Id
      */
     getById: function (id, callback) {
-        this.get({'pokemonId': id}, function (status, response) {
+        this.get({'pokemonID': id}, function (status, response) {
             callback(status, response);
         });
     },
