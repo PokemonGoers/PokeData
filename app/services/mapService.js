@@ -1,11 +1,12 @@
 "use strict";
 
 const http = require('http'),
+      https = require('https'),
       fs = require('fs'),
       q = require('q'),
       async = require('async'),
       _ = require('underscore'),
-      coords = require(__base + 'resources/json/' + collection + 'Coords.json'),
+      coords = require(__base + 'resources/json/coords/' + collection + 'Coords.json'),
       config = require(__base + 'config'),
       store = require(__appbase + 'stores/mapService');
 
@@ -35,6 +36,7 @@ const baseLink = function (lat, lng, delta) {
         var hp = proxyList[proxyPointer - 1].split(':');
         link.host = hp[0];
         link.port = hp[1];
+        //TODO: https for pokecrew has to be implemented
         link.path = 'http://' + config[collection].host + config[collection].path;
     } else {
         link.host = config[collection].host;
@@ -49,6 +51,10 @@ const baseLink = function (lat, lng, delta) {
             queryString = '?bounds=' + lat.toFixed(6) + ',' + lng.toFixed(6) + ',' + (lat + delta).toFixed(6) + ',' + (lng + delta).toFixed(6);
             link.path += queryString;
             link['headers'] = hd;
+            break;
+        case 'pokecrew':
+            queryString = '?northeast_latitude=' + lat.toString() + '&northeast_longitude=' + lng.toString() + '&southwest_latitude=' + (lat + delta).toString() + '&southwest_longitude=' + (lng + delta).toString();
+            link.path += queryString;
             break;
         default:
             logger.error("Collection not known!");
@@ -85,7 +91,15 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
             //generate url
             var options = baseLink(i, j, delta);
             //generate api call
-            var req = http.request(options, function (response) {
+            var proto;
+            switch (collection) {
+                case 'pokecrew':
+                    proto = https;
+                    break;
+                default:
+                    proto = http;
+            }
+            var req = proto.request(options, function (response) {
                 //needed for control flow
                 var deferred = q.defer();
                 promises.push(deferred.promise);
@@ -115,6 +129,9 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                                 break;
                             case 'skiplagged':
                                 arr = data.pokemons;
+                                break;
+                            case 'pokecrew':
+                                arr = data.seens;
                                 break;
                             default:
                                 logger.error("Collection not known!");
@@ -194,7 +211,7 @@ module.exports = {
             }
         } else if (scanType === 'optimized') {
             for (var i = 0; i < coords.length; i++){
-                let c = coords[i].split(',');
+                var c = coords[i].split(',');
                 funcs.push(createfunc(parseFloat(c[0]), parseFloat(c[1]), boxSize, delta));
             }
         } else {
@@ -208,7 +225,7 @@ module.exports = {
                 var sum = result.reduce(function (a, b) {return a + b;}, 0);
                 logger.info(sum + ' pokemon found!');
                 if (scanType === 'global') {
-                    fs.writeFile(__base + 'resources/json/' + collection + 'Coords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
+                    fs.writeFile(__base + 'resources/json/coords/' + collection + 'Coords.json', JSON.stringify(_.union(coords, coordsFile)), function (err) {
                         if (err) {
                             return logger.error(err);
                         }
