@@ -2,6 +2,9 @@
 
 require(__dirname + '/../' + 'constants');
 
-require(__testbase + 'startUp').start(function () {
-    logger.success('Start-up done!');
+require(__testbase + 'startUp').start(function (success) {
+        if(success === 1){
+             logger.success('Start-up done!');
+             process.exit();
+        }
 });

@@ -2,7 +2,7 @@
     "use strict";
 
     module.exports = {
-        start: function (done) {
+        start: function (callback) {
             logger.success('Application started successfully');
 
             // set the database
@@ -10,7 +10,7 @@
                 /*The DB connection is open*/
                 db.on('open', function () {
                     logger.success('Database connection open.');
-                    return;
+                    callback(1);
                 });
             });
         },
