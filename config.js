@@ -7,16 +7,16 @@ module.exports = {
         "collection": "PokeData"
     },
     "shared_database": {
-        "username": process.env.MLAB_USERNAME,
-        "password": process.env.MLAB_PASSWORD,
-        "uri": process.env.MLAB_URI,
-        "collection": process.env.MLAB_COLLECTION
+        "username": process.env.PD_MLAB_USERNAME,
+        "password": process.env.PD_MLAB_PASSWORD,
+        "uri": process.env.PD_MLAB_URI,
+        "collection": process.env.PD_MLAB_COLLECTION
     },
     "twitter" : {
-        "consumer_key": process.env.CONSUMER_KEY,
-        "consumer_secret": process.env.CONSUMER_SECRET,
-        "token": process.env.ACCESS_TOKEN,
-        "token_secret": process.env.ACCESS_TOKEN_SECRET
+        "consumer_key": process.env.PD_CONSUMER_KEY,
+        "consumer_secret": process.env.PD_CONSUMER_SECRET,
+        "token": process.env.PD_ACCESS_TOKEN,
+        "token_secret": process.env.PD_ACCESS_TOKEN_SECRET
     },
     "pokemonDataSources": {
         "twitter": "TWITTER",
