@@ -16,15 +16,15 @@ module.exports = {
 
         switch (collection) {
             case 'pokeRadar':
-                pokemon['pokemonId'] = data['pokemonId'];
+                pokemon['pokemonID'] = data['pokemonId'];
                 pokemon['appearedOn'] = new Date(data['created'] * 1000);
                 break;
             case 'skiplagged':
-                pokemon['pokemonId'] = data['pokemon_id'];
+                pokemon['pokemonID'] = data['pokemon_id'];
                 pokemon['appearedOn'] = new Date((data['expires'] * 1000) - 15 * 60 * 1000);
                 break;
             case 'pokecrew':
-                pokemon['pokemonId'] = data['pokemon_id'];
+                pokemon['pokemonID'] = data['pokemon_id'];
                 if (data['expires_at'].endsWith('Z')) {
                     pokemon['appearedOn'] = new Date(Date.parse(data['expires_at']) - 15 * 60 * 1000);
                 } else {
