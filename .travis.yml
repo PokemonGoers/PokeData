@@ -20,9 +20,10 @@ env:
   - secure: vH6+yZ54ig5Q9BHDIcHvikry+/HnyLHF8CwAUqhGD+f2o9M0UGP9bBKm0pD+u3xg9ugV9ZRNbDx08izU4ayspp61kKWptBy4TSZM2LPsKsduc6lwG9rIGbsTDJkUmHdiLAWSsw1hqEvt42zHjUSe2/s3v7Ai82pR/t9CppGSgtZb3tcusOOdd7+9rZBHdcrlZsfN7ZE75O+E4EI99537wFDFjY4PCD8QmuNGeYQB5SFZr00vElsVKjpTzf6qEo6ItYuCBoB0TV0IWEGUYPfZUsEQaXM6NpLTPj6NTnHiFWI6qmd0UrOV/WAseg+uSL24hmIlOe5Z/MIINev0q1dMpbAlVzSUT3oIuhlTeSs/isxDG8BD+1C4/g7ehlu31JG4mIXz1szEibQJDoGx0447+GhUP5TuemYXftxzTLQwTpRVueVAYwBgCEbSlHT4mtxs8ofZrVOm7nry2b0CtGoIynZ3WAVZ5/1nIMR6uBKfu3TNtzNK+WWBE3divcfyu9M82jV5XDFOgAKis48N8kMqbn6VgS11FXxJ0iSnxFJabLul64tu5/D1jbjEakTA7XquHazgk4LTCsuL8kGPxiZRFzovrucaH9hR5k5fSfoJ0sR2mNYRK0sGNNPtK7ZFwvEjU5CAJ0HIOFiBcUpfZcOv9WpdoreusrTz1mqAf66bFZc=
 
 before_install:
-- docker pull pokemongoers/pokedata:develop
-- docker run -p 49160:8080 --name apidev -d pokemongoers/pokedata:develop npm start
+- docker build -t PokemonGoers/PokeData .
+- docker run -p 49160:8080 --name apidev -d PokemonGoers/PokeData npm start
 - docker ps -a
+- docker logs apidev
 
 services:
 - mongodb
