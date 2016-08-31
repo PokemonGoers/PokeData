@@ -51,7 +51,7 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/sighting/id/ GetSightingById
+     * @api {get} /api/pokemon/sighting/id/:id GetSightingById
      * @apiVersion 0.0.1
      * @apiName GetSightingById
      * @apiDescription Get Pokemon sightings by pokemon id
@@ -82,6 +82,8 @@ module.exports = {
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
+     *
+     * @apiSampleRequest off
      * 
      */
     getAtCoordinates: function (req, res) {
@@ -105,6 +107,8 @@ module.exports = {
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
+     *
+     * @apiSampleRequest off
      * 
      */
     getBetweenCoordinates: function (req, res) {
@@ -151,6 +155,8 @@ module.exports = {
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords
+     *
+     * @apiSampleRequest off
      * 
      */
     getByTimeRange: function (req, res) {
