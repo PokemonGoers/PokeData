@@ -30,7 +30,7 @@ module.exports = {
      */
     get: function (data, callback) {
         Sighting.find(data, function (err, obj) {
-            if (!obj || obj.length === 0) {// already existing data and return 0 for indicating
+            if (!obj || err) {// already existing data and return 0 for indicating
                 callback(0, data);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
@@ -51,7 +51,7 @@ module.exports = {
      * searching the pokemon details by Id
      */
     getById: function (id, callback) {
-        this.get({'pokemonId': id}, function (status, response) {
+        this.get({'pokemonID': id}, function (status, response) {
             callback(status, response);
         });
     },
@@ -92,6 +92,44 @@ module.exports = {
      */
     getFromSource : function (source, callback) {
         this.get({'source': source}, function (status, response) {
+            callback(status, response);
+        });
+    },
+
+    /*
+     * get the pokemon sightings within a specific time range
+     */
+    getByTimeRange : function (req, callback) {
+        let range = (req.range) || '1d',
+            fromTs = new Date(req.ts),
+            toTs;
+
+        let rangeValue = parseInt(range, 10),
+            rangeSpan = range.replace(/\d+/g, '');
+
+        switch(rangeSpan) {
+            // week
+            case 'w':
+                toTs = new Date(fromTs.getTime() + rangeValue * 7 * 24 * 60 * 60 * 1000);
+                break;
+            // day
+            case 'd':
+                toTs = new Date(fromTs.getTime() + rangeValue * 24 * 60 * 60 * 1000);
+                break;
+            // hour
+            case 'h':
+                toTs = new Date(fromTs.getTime() + rangeValue * 60 * 60 * 1000);
+                break;
+            // minute
+            case 'm':
+                toTs = new Date(fromTs.getTime() + rangeValue * 60 * 1000);
+                break;
+        }
+
+        this.get({"appearedOn": {
+            $gte: fromTs.toUTCString(),
+            $lte: toTs.toUTCString()
+        }}, function (status, response) {
             callback(status, response);
         });
     }

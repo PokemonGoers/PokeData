@@ -10,11 +10,30 @@ module.exports = {
      */
     add: function (data, callback) {
         var pokemon = new commonPokemon();
-        pokemon['source'] = config.pokemonDataSources.pokeRadar;
-        pokemon['pokemonId'] = data['pokemonId'];
-        pokemon['appearedOn'] = new Date(data['created'] * 1000);
+        pokemon['source'] = config.pokemonDataSources[collection];
         pokemon['location']['type'] = "Point";
         pokemon['location']['coordinates'] = [data['longitude'], data['latitude']];
+
+        switch (collection) {
+            case 'pokeRadar':
+                pokemon['pokemonID'] = data['pokemonId'];
+                pokemon['appearedOn'] = new Date(data['created'] * 1000);
+                break;
+            case 'skiplagged':
+                pokemon['pokemonID'] = data['pokemon_id'];
+                pokemon['appearedOn'] = new Date((data['expires'] * 1000) - 15 * 60 * 1000);
+                break;
+            case 'pokecrew':
+                pokemon['pokemonID'] = data['pokemon_id'];
+                if (data['expires_at'].endsWith('Z')) {
+                    pokemon['appearedOn'] = new Date(Date.parse(data['expires_at']) - 15 * 60 * 1000);
+                } else {
+                    pokemon['appearedOn'] = new Date(Date.parse(data['expires_at'] + ' GMT') - 15 * 60 * 1000);
+                }
+                break;
+            default:
+                logger.error("Collection not known!");
+        }
 
 
         // saving the data to the database

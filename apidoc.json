@@ -1,10 +1,9 @@
 {
-  "name": "pokemongo-api",
+  "name": "PokemonGo - PokeData",
   "version": "0.0.1",
   "description": "This API provides information about PokemonGo, extracted from various reliable data sources.",
-  "title": "PokemonGo API",
-  "url" : "",
-  "sampleUrl": "",
+  "title": "PokemonGo - PokeData",
+  "sampleUrl": "http://pokedata.c4e3f8c7.svc.dockerapp.io:65014",
   "order": [
     "GetAllPokemons",
     "GetPokemonById",
@@ -22,6 +21,7 @@
     "GetSightingById",
     "GetSightingBySource",
     "GetSightingAtCoordinates",
-    "GetSightingBetweenCoordinates"
+    "GetSightingBetweenCoordinates",
+    "GetSightingByTimeRange"
   ]
 }

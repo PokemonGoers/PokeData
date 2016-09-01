@@ -50,9 +50,15 @@
             //routes inclusion
             require(__base + 'routes')(app, router);
 
+            // Redirect default route / to the API documentation
+            app.get('/', function (req, res) {
+                return res.redirect('/doc');
+            });
+
             // prefix for all routes
             app.use('/api', router);
 
+            // Render the api documentation
             app.use('/doc', express.static('apidoc'));
 
             //listening for requests

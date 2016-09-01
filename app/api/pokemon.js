@@ -4,12 +4,17 @@ const pokemon = require('../stores/pokemon');
 
 module.exports = {
     /**
-     * @api {get} /api/pokemon/ GetAllPokemons
-     * @apiVersion 0.0.1
-     * @apiName GetAllPokemons
-     * @apiDescription Get all pokemons.
-     * @apiGroup Pokemon
-     *
+     * @apiDefine NoRecords
+     * @apiSuccessExample {json} No records
+     * HTTP/1.1 200 OK
+     * {"message":"Success",
+     *  "data": []
+     * }
+     * 
+     */
+
+    /**
+     * @apiDefine SamplePokemon
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
      * {"message":"Success",
@@ -31,11 +36,20 @@ module.exports = {
      *          "resistance":["water","electric","grass","fighting","fairy"],
      *          "types":["grass","poison"]
      * }] }
+     * 
+     */
+
+
+    /**
+     * @api {get} /api/pokemon/ GetAllPokemons
+     * @apiVersion 0.0.1
+     * @apiName GetAllPokemons
+     * @apiDescription Get all pokemons.
+     * @apiGroup Pokemon
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     *
      */
     getAll: function (req, res) {
         logger.info('GetAllPokemons');
@@ -52,33 +66,11 @@ module.exports = {
      * @apiName GetPokemonById
      * @apiDescription Get pokemon by specific id
      * @apiGroup Pokemon
+     * @apiParam {Integer{1-151}} id Pokemon ID
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getById : function (req, res) {
         logger.info('Get Pokemon details of a particular pokemon by id');
@@ -96,33 +88,11 @@ module.exports = {
      * @apiName GetPokemonByGender
      * @apiDescription Get pokemon by specific gender
      * @apiGroup Pokemon
+     * @apiParam {String{1}=m,f,g,h} gender Gender of the pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByGender : function (req, res) {
         logger.info('Get Pokemon details by gender');
@@ -141,33 +111,11 @@ module.exports = {
      * @apiName GetPokemonByName
      * @apiDescription Get pokemon by specific name
      * @apiGroup Pokemon
+     * @apiParam {String} name Name of the pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByName : function (req, res) {
         logger.info('Get Pokemon details by name');
@@ -185,33 +133,11 @@ module.exports = {
      * @apiName GetPokemonByType
      * @apiDescription Get pokemon by specific type
      * @apiGroup Pokemon
+     * @apiParam {String} type Type of the pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
      *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
      */
     getByType : function (req, res) {
         logger.info('Get Pokemon details by type');
@@ -229,33 +155,11 @@ module.exports = {
      * @apiName GetPokemonByResistance
      * @apiDescription Get pokemon by specific resistance
      * @apiGroup Pokemon
+     * @apiParam {String} resistance Resistance factor of the pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByResistance : function (req, res) {
         logger.info('Get Pokemon details by resistance');
@@ -273,33 +177,11 @@ module.exports = {
      * @apiName GetPokemonByWeakness
      * @apiDescription Get pokemon by specific weakness
      * @apiGroup Pokemon
+     * @apiParam {String} weakness Weakness of the pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByWeakness : function (req, res) {
         logger.info('Get Pokemon details by weakness');
@@ -317,33 +199,12 @@ module.exports = {
      * @apiName GetPokemonByAttackType
      * @apiDescription Get pokemon by specific attack type
      * @apiGroup Pokemon
+     * @apiParam {String=fast,special} category Category of attack
+     * @apiParam {String} type Type of the attack
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByAttackType : function (req, res) {
         logger.info('Get Pokemon details by attack type');
@@ -369,33 +230,12 @@ module.exports = {
      * @apiName GetPokemonByAttackName
      * @apiDescription Get pokemon by specific attack name
      * @apiGroup Pokemon
+     * @apiParam {String=fast,special} category Category of attack
+     * @apiParam {String} name Name of the attack
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByAttackName : function (req, res) {
         logger.info('Get Pokemon details by attack name');
@@ -421,33 +261,12 @@ module.exports = {
      * @apiName GetPokemonByAttackDamage
      * @apiDescription Get pokemon by specific attack damage
      * @apiGroup Pokemon
+     * @apiParam {String=fast,special} category Category of attack
+     * @apiParam {Integer} damage Damage value of the attack
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByAttackDamage : function (req, res) {
         logger.info('Get Pokemon details by attack damage');
@@ -473,33 +292,12 @@ module.exports = {
      * @apiName GetPokemonByEvolutionId
      * @apiDescription Get pokemon by specific evolution ID
      * @apiGroup Pokemon
+     * @apiParam {String=prev,next} category Category of evolution
+     * @apiParam {Integer{1-151}} id ID of the evolved Pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByEvolutionId: function (req, res) {
         logger.info('Get Pokemon details by evolution id');
@@ -525,33 +323,12 @@ module.exports = {
      * @apiName GetPokemonByEvolutionName
      * @apiDescription Get pokemon by specific evolution name
      * @apiGroup Pokemon
+     * @apiParam {String=prev,next} category Category of evolution
+     * @apiParam {String} name Name of the evolved Pokemon
      *
-     * @apiSuccessExample {json} Success
-     * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *          "maxHP":1071,
-     *          "maxCP":951,
-     *          "fleeRate":0.1,
-     *          "classification":"Seed Pokèmon",
-     *          "name":"Bulbasaur",
-     *          "pokemonID":1,
-     *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
-     *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
-     *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
-     *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
-     *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
-     *          "fastAttacks":[{ "type":"Normal", "name":"Tackle", "damage":12, "_id":"57c58dd4a9da492b16052d88" }],
-     *          "weakness":["fire","ice","flying","psychic"],
-     *          "resistance":["water","electric","grass","fighting","fairy"],
-     *          "types":["grass","poison"]
-     * }] }
-     *
-     * @apiSuccessExample {json} No db-entries:
-     * HTTP/1.1 200 OK
-     * [
-     * ]
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     * 
      */
     getByEvolutionName: function (req, res) {
         logger.info('Get Pokemon details by evolution name');
