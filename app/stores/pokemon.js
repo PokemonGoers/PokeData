@@ -105,22 +105,22 @@ module.exports = {
         });
     },
     getByPrevEvolutionId: function (id, callback) {
-        this.get({'previousEvolutions.pokemonID': id}, function (status, response) {
-            callback(status, response);
-        });
-    },
-    getByNextEvolutionId: function (id, callback) {
         this.get({'nextEvolutions.pokemonID': id}, function (status, response) {
             callback(status, response);
         });
     },
+    getByNextEvolutionId: function (id, callback) {
+        this.get({'previousEvolutions.pokemonID': id}, function (status, response) {
+            callback(status, response);
+        });
+    },
     getByPrevEvolutionName: function (name, callback) {
-        this.get({'previousEvolutions.name': name}, function (status, response) {
+        this.get({'nextEvolutions.name': name}, function (status, response) {
             callback(status, response);
         });
     },
     getByNextEvolutionName: function (name, callback) {
-        this.get({'nextEvolutions.name': name}, function (status, response) {
+        this.get({'previousEvolutions.name': name}, function (status, response) {
             callback(status, response);
         });
     }

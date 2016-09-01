@@ -70,11 +70,11 @@
       ],
       "MaxCP":951,
       "MaxHP":1071,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -154,11 +154,11 @@
       ],
       "MaxCP":1483,
       "MaxHP":1632,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -222,21 +222,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":1,
-            "Name":"Bulbasaur"
-         },
-         {
             "Number":2,
             "Name":"Ivysaur"
          }
       ],
       "MaxCP":2392,
       "MaxHP":2580,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -309,11 +305,11 @@
       ],
       "MaxCP":841,
       "MaxHP":955,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -392,11 +388,11 @@
       ],
       "MaxCP":1411,
       "MaxHP":1557,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -460,21 +456,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":4,
-            "Name":"Charmander"
-         },
-         {
             "Number":5,
             "Name":"Charmeleon"
          }
       ],
       "MaxCP":2413,
       "MaxHP":2602,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -544,11 +536,11 @@
       ],
       "MaxCP":891,
       "MaxHP":1008,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -629,11 +621,11 @@
       ],
       "MaxCP":1435,
       "MaxHP":1582,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -698,21 +690,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":7,
-            "Name":"Squirtle"
-         },
-         {
             "Number":8,
             "Name":"Wartortle"
          }
       ],
       "MaxCP":2355,
       "MaxHP":2542,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -772,11 +760,11 @@
       ],
       "MaxCP":367,
       "MaxHP":443,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -842,11 +830,11 @@
       ],
       "MaxCP":397,
       "MaxHP":477,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -910,21 +898,17 @@
       "FleeRate":0.06,
       "Previous_evolutions":[
          {
-            "Number":10,
-            "Name":"Caterpie"
-         },
-         {
             "Number":11,
             "Name":"Metapod"
          }
       ],
       "MaxCP":1315,
       "MaxHP":1454,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -988,11 +972,11 @@
       ],
       "MaxCP":372,
       "MaxHP":449,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1062,11 +1046,11 @@
       ],
       "MaxCP":405,
       "MaxHP":485,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1130,21 +1114,17 @@
       "FleeRate":0.06,
       "Previous_evolutions":[
          {
-            "Number":13,
-            "Name":"Weedle"
-         },
-         {
             "Number":14,
             "Name":"Kakuna"
          }
       ],
       "MaxCP":1301,
       "MaxHP":1439,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1216,11 +1196,11 @@
       ],
       "MaxCP":585,
       "MaxHP":679,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1298,11 +1278,11 @@
       ],
       "MaxCP":1096,
       "MaxHP":1223,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1364,21 +1344,17 @@
       "FleeRate":0.06,
       "Previous_evolutions":[
          {
-            "Number":16,
-            "Name":"Pidgey"
-         },
-         {
             "Number":17,
             "Name":"Pidgeotto"
          }
       ],
       "MaxCP":1923,
       "MaxHP":2091,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1444,11 +1420,11 @@
       ],
       "MaxCP":493,
       "MaxHP":581,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1510,11 +1486,11 @@
       ],
       "MaxCP":1304,
       "MaxHP":1444,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1586,11 +1562,11 @@
       ],
       "MaxCP":591,
       "MaxHP":686,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1658,11 +1634,11 @@
       ],
       "MaxCP":1592,
       "MaxHP":1746,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1733,11 +1709,11 @@
       ],
       "MaxCP":718,
       "MaxHP":824,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1804,11 +1780,11 @@
       ],
       "MaxCP":1611,
       "MaxHP":1767,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1876,11 +1852,11 @@
       ],
       "MaxCP":777,
       "MaxHP":887,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -1944,11 +1920,11 @@
       ],
       "MaxCP":1859,
       "MaxHP":2028,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -2018,11 +1994,11 @@
       ],
       "MaxCP":695,
       "MaxHP":798,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -2088,11 +2064,11 @@
       ],
       "MaxCP":1654,
       "MaxHP":1810,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -2163,11 +2139,11 @@
       ],
       "MaxCP":768,
       "MaxHP":876,
-      "gender": {
-         "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"f",
+         "male_ratio":"0",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -2244,11 +2220,11 @@
       ],
       "MaxCP":1267,
       "MaxHP":1404,
-      "gender": {
-         "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
-         "breedable": false
+      "gender":{
+         "abbreviation":"f",
+         "male_ratio":"0",
+         "female_ratio":"1",
+         "breedable":false
       }
    },
    {
@@ -2313,21 +2289,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":29,
-            "Name":"Nidoran ♀"
-         },
-         {
             "Number":30,
             "Name":"Nidorina"
          }
       ],
       "MaxCP":2301,
       "MaxHP":2485,
-      "gender": {
-         "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
-         "breedable": false
+      "gender":{
+         "abbreviation":"f",
+         "male_ratio":"0",
+         "female_ratio":"1",
+         "breedable":false
       }
    },
    {
@@ -2398,11 +2370,11 @@
       ],
       "MaxCP":737,
       "MaxHP":843,
-      "gender": {
-         "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"m",
+         "male_ratio":"1",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -2479,11 +2451,11 @@
       ],
       "MaxCP":1236,
       "MaxHP":1372,
-      "gender": {
-         "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"m",
+         "male_ratio":"1",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -2548,21 +2520,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":32,
-            "Name":"Nidoran ♂"
-         },
-         {
             "Number":33,
             "Name":"Nidorino"
          }
       ],
       "MaxCP":2291,
       "MaxHP":2475,
-      "gender": {
-         "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"m",
+         "male_ratio":"1",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -2632,11 +2600,11 @@
       ],
       "MaxCP":1074,
       "MaxHP":1200,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"3",
+         "breedable":true
       }
    },
    {
@@ -2702,11 +2670,11 @@
       ],
       "MaxCP":2217,
       "MaxHP":2397,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"3",
+         "breedable":true
       }
    },
    {
@@ -2779,11 +2747,11 @@
       ],
       "MaxCP":725,
       "MaxHP":831,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"3",
+         "breedable":true
       }
    },
    {
@@ -2852,11 +2820,11 @@
       ],
       "MaxCP":2015,
       "MaxHP":2188,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"3",
+         "breedable":true
       }
    },
    {
@@ -2927,11 +2895,11 @@
       ],
       "MaxCP":796,
       "MaxHP":917,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"3",
+         "breedable":true
       }
    },
    {
@@ -2998,11 +2966,11 @@
       ],
       "MaxCP":1997,
       "MaxHP":2177,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "3",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"3",
+         "breedable":true
       }
    },
    {
@@ -3076,11 +3044,11 @@
       ],
       "MaxCP":550,
       "MaxHP":642,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3150,11 +3118,11 @@
       ],
       "MaxCP":1760,
       "MaxHP":1921,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3228,11 +3196,11 @@
       ],
       "MaxCP":1023,
       "MaxHP":1148,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3312,11 +3280,11 @@
       ],
       "MaxCP":1537,
       "MaxHP":1689,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3380,21 +3348,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":43,
-            "Name":"Oddish"
-         },
-         {
             "Number":44,
             "Name":"Gloom"
          }
       ],
       "MaxCP":2307,
       "MaxHP":2492,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3470,11 +3434,11 @@
       ],
       "MaxCP":804,
       "MaxHP":916,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3546,11 +3510,11 @@
       ],
       "MaxCP":1592,
       "MaxHP":1747,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3624,11 +3588,11 @@
       ],
       "MaxCP":912,
       "MaxHP":1029,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3698,11 +3662,11 @@
       ],
       "MaxCP":1730,
       "MaxHP":1890,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3772,11 +3736,11 @@
       ],
       "MaxCP":365,
       "MaxHP":456,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3842,11 +3806,11 @@
       ],
       "MaxCP":1038,
       "MaxHP":1168,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3912,11 +3876,11 @@
       ],
       "MaxCP":656,
       "MaxHP":756,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -3978,11 +3942,11 @@
       ],
       "MaxCP":1483,
       "MaxHP":1631,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4052,11 +4016,11 @@
       ],
       "MaxCP":987,
       "MaxHP":1109,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4127,11 +4091,11 @@
       ],
       "MaxCP":2206,
       "MaxHP":2386,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4201,11 +4165,11 @@
       ],
       "MaxCP":769,
       "MaxHP":878,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4271,11 +4235,11 @@
       ],
       "MaxCP":1704,
       "MaxHP":1864,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4348,11 +4312,11 @@
       ],
       "MaxCP":1199,
       "MaxHP":1335,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4421,11 +4385,11 @@
       ],
       "MaxCP":2781,
       "MaxHP":2983,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4495,11 +4459,11 @@
       ],
       "MaxCP":693,
       "MaxHP":795,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4575,11 +4539,11 @@
       ],
       "MaxCP":1206,
       "MaxHP":1340,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4646,21 +4610,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":60,
-            "Name":"Poliwag"
-         },
-         {
             "Number":61,
             "Name":"Poliwhirl"
          }
       ],
       "MaxCP":2321,
       "MaxHP":2505,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4727,11 +4687,11 @@
       ],
       "MaxCP":508,
       "MaxHP":600,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4806,11 +4766,11 @@
       ],
       "MaxCP":1005,
       "MaxHP":1131,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4869,21 +4829,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":63,
-            "Name":"Abra"
-         },
-         {
             "Number":64,
             "Name":"Kadabra"
          }
       ],
       "MaxCP":1654,
       "MaxHP":1813,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -4953,11 +4909,11 @@
       ],
       "MaxCP":968,
       "MaxHP":1089,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5033,11 +4989,11 @@
       ],
       "MaxCP":1606,
       "MaxHP":1760,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5097,21 +5053,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":66,
-            "Name":"Machop"
-         },
-         {
             "Number":67,
             "Name":"Machoke"
          }
       ],
       "MaxCP":2406,
       "MaxHP":2594,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5185,11 +5137,11 @@
       ],
       "MaxCP":990,
       "MaxHP":1117,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5269,11 +5221,11 @@
       ],
       "MaxCP":1567,
       "MaxHP":1723,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5337,21 +5289,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":69,
-            "Name":"Bellsprout"
-         },
-         {
             "Number":70,
             "Name":"Weepinbell"
          }
       ],
       "MaxCP":2342,
       "MaxHP":2530,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5427,11 +5375,11 @@
       ],
       "MaxCP":794,
       "MaxHP":905,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5503,11 +5451,11 @@
       ],
       "MaxCP":2046,
       "MaxHP":2220,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5584,11 +5532,11 @@
       ],
       "MaxCP":742,
       "MaxHP":849,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5671,11 +5619,11 @@
       ],
       "MaxCP":1294,
       "MaxHP":1433,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5742,21 +5690,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":74,
-            "Name":"Geodude"
-         },
-         {
             "Number":75,
             "Name":"Graveler"
          }
       ],
       "MaxCP":2126,
       "MaxHP":2303,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5829,11 +5773,11 @@
       ],
       "MaxCP":1370,
       "MaxHP":1516,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5902,11 +5846,11 @@
       ],
       "MaxCP":2024,
       "MaxHP":2199,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -5982,11 +5926,11 @@
       ],
       "MaxCP":1089,
       "MaxHP":1218,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6058,11 +6002,11 @@
       ],
       "MaxCP":2409,
       "MaxHP":2597,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6142,11 +6086,11 @@
       ],
       "MaxCP":774,
       "MaxHP":890,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -6222,11 +6166,11 @@
       ],
       "MaxCP":1715,
       "MaxHP":1879,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -6288,11 +6232,11 @@
       "Asia":"Common Capture Area",
       "MaxCP":1133,
       "MaxHP":1263,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6364,11 +6308,11 @@
       ],
       "MaxCP":746,
       "MaxHP":855,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6436,11 +6380,11 @@
       ],
       "MaxCP":1677,
       "MaxHP":1836,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6510,11 +6454,11 @@
       ],
       "MaxCP":985,
       "MaxHP":1107,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6581,11 +6525,11 @@
       ],
       "MaxCP":1975,
       "MaxHP":2145,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6656,11 +6600,11 @@
       ],
       "MaxCP":1152,
       "MaxHP":1284,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6727,11 +6671,11 @@
       ],
       "MaxCP":2414,
       "MaxHP":2602,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6801,11 +6745,11 @@
       ],
       "MaxCP":715,
       "MaxHP":822,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6872,11 +6816,11 @@
       ],
       "MaxCP":1879,
       "MaxHP":2052,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -6951,11 +6895,11 @@
       ],
       "MaxCP":696,
       "MaxHP":804,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7036,11 +6980,11 @@
       ],
       "MaxCP":1240,
       "MaxHP":1380,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7105,21 +7049,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":92,
-            "Name":"Gastly"
-         },
-         {
             "Number":93,
             "Name":"Haunter"
          }
       ],
       "MaxCP":1907,
       "MaxHP":2078,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7186,11 +7126,11 @@
       "FleeRate":0.09,
       "MaxCP":745,
       "MaxHP":857,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7259,11 +7199,11 @@
       ],
       "MaxCP":955,
       "MaxHP":1075,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7328,11 +7268,11 @@
       ],
       "MaxCP":2012,
       "MaxHP":2184,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7402,11 +7342,11 @@
       ],
       "MaxCP":686,
       "MaxHP":792,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7472,11 +7412,11 @@
       ],
       "MaxCP":1663,
       "MaxHP":1823,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7544,11 +7484,11 @@
       ],
       "MaxCP":733,
       "MaxHP":839,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -7612,11 +7552,11 @@
       ],
       "MaxCP":1496,
       "MaxHP":1646,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -7689,11 +7629,11 @@
       ],
       "MaxCP":978,
       "MaxHP":1099,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7767,11 +7707,11 @@
       ],
       "MaxCP":2752,
       "MaxHP":2955,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7841,11 +7781,11 @@
       ],
       "MaxCP":889,
       "MaxHP":1006,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7911,11 +7851,11 @@
       ],
       "MaxCP":1505,
       "MaxHP":1656,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -7975,11 +7915,11 @@
       "FleeRate":0.09,
       "MaxCP":1349,
       "MaxHP":1492,
-      "gender": {
-         "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"m",
+         "male_ratio":"1",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -8044,11 +7984,11 @@
       "FleeRate":0.09,
       "MaxCP":1370,
       "MaxHP":1516,
-      "gender": {
-         "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"m",
+         "male_ratio":"1",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -8104,11 +8044,11 @@
       "FleeRate":0.09,
       "MaxCP":1477,
       "MaxHP":1626,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8179,11 +8119,11 @@
       ],
       "MaxCP":1025,
       "MaxHP":1151,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8250,11 +8190,11 @@
       ],
       "MaxCP":2073,
       "MaxHP":2250,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8331,11 +8271,11 @@
       ],
       "MaxCP":1055,
       "MaxHP":1182,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8408,11 +8348,11 @@
       ],
       "MaxCP":2068,
       "MaxHP":2243,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8468,11 +8408,11 @@
       "FleeRate":0.09,
       "MaxCP":549,
       "MaxHP":675,
-      "gender": {
-         "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"f",
+         "male_ratio":"0",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8530,11 +8470,11 @@
       "FleeRate":0.09,
       "MaxCP":1586,
       "MaxHP":1739,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8592,11 +8532,11 @@
       "Australia, New Zealand":"Common Capture Area",
       "MaxCP":1875,
       "MaxHP":2043,
-      "gender": {
-         "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"f",
+         "male_ratio":"0",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8666,11 +8606,11 @@
       ],
       "MaxCP":688,
       "MaxHP":794,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8736,11 +8676,11 @@
       ],
       "MaxCP":1559,
       "MaxHP":1713,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8810,11 +8750,11 @@
       ],
       "MaxCP":851,
       "MaxHP":965,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8880,11 +8820,11 @@
       ],
       "MaxCP":1877,
       "MaxHP":2043,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -8954,11 +8894,11 @@
       ],
       "MaxCP":821,
       "MaxHP":937,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -9030,11 +8970,11 @@
       ],
       "MaxCP":2007,
       "MaxHP":2182,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -9097,11 +9037,11 @@
       "Western Europe":"Common Capture Area",
       "MaxCP":1345,
       "MaxHP":1494,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9165,11 +9105,11 @@
       "FleeRate":0.09,
       "MaxCP":1905,
       "MaxHP":2073,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9232,11 +9172,11 @@
       "FleeRate":0.09,
       "MaxCP":1563,
       "MaxHP":1716,
-      "gender": {
-         "abbreviation": "f",
-         "male_ratio": "0",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"f",
+         "male_ratio":"0",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9294,11 +9234,11 @@
       "FleeRate":0.09,
       "MaxCP":1947,
       "MaxHP":2119,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9361,11 +9301,11 @@
       "FleeRate":0.09,
       "MaxCP":2086,
       "MaxHP":2265,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "3",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"3",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9425,11 +9365,11 @@
       "FleeRate":0.09,
       "MaxCP":1950,
       "MaxHP":2121,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9487,11 +9427,11 @@
       "North America":"Common Capture Area",
       "MaxCP":1686,
       "MaxHP":1844,
-      "gender": {
-         "abbreviation": "m",
-         "male_ratio": "1",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"m",
+         "male_ratio":"1",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -9546,11 +9486,11 @@
       ],
       "MaxCP":203,
       "MaxHP":262,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9619,11 +9559,11 @@
       ],
       "MaxCP":2498,
       "MaxHP":2688,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9684,11 +9624,11 @@
       "FleeRate":0.09,
       "MaxCP":2777,
       "MaxHP":2980,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9729,11 +9669,11 @@
       "FleeRate":0.1,
       "MaxCP":809,
       "MaxHP":919,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": false
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":false
       }
    },
    {
@@ -9807,11 +9747,11 @@
       ],
       "MaxCP":957,
       "MaxHP":1077,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9872,11 +9812,11 @@
       ],
       "MaxCP":2618,
       "MaxHP":2816,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -9935,11 +9875,11 @@
       ],
       "MaxCP":1968,
       "MaxHP":2140,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10003,11 +9943,11 @@
       ],
       "MaxCP":2448,
       "MaxHP":2643,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10063,11 +10003,11 @@
       "FleeRate":0.09,
       "MaxCP":1540,
       "MaxHP":1691,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": true
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":true
       }
    },
    {
@@ -10141,11 +10081,11 @@
       ],
       "MaxCP":992,
       "MaxHP":1119,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10215,11 +10155,11 @@
       ],
       "MaxCP":2058,
       "MaxHP":2233,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10293,11 +10233,11 @@
       ],
       "MaxCP":975,
       "MaxHP":1104,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10367,11 +10307,11 @@
       ],
       "MaxCP":1957,
       "MaxHP":2130,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10436,11 +10376,11 @@
       "FleeRate":0.09,
       "MaxCP":1994,
       "MaxHP":2165,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10496,11 +10436,11 @@
       "FleeRate":0.09,
       "MaxCP":2901,
       "MaxHP":3112,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "7",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"7",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10559,11 +10499,11 @@
       "LEGENDARY":"Pokèmon Class",
       "MaxCP":2776,
       "MaxHP":2978,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": false
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":false
       }
    },
    {
@@ -10622,11 +10562,11 @@
       "LEGENDARY":"Pokèmon Class",
       "MaxCP":2907,
       "MaxHP":3114,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": false
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":false
       }
    },
    {
@@ -10687,11 +10627,11 @@
       "LEGENDARY":"Pokèmon Class",
       "MaxCP":3028,
       "MaxHP":3240,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": false
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":false
       }
    },
    {
@@ -10757,11 +10697,11 @@
       ],
       "MaxCP":867,
       "MaxHP":983,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10833,11 +10773,11 @@
       ],
       "MaxCP":1593,
       "MaxHP":1747,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10902,21 +10842,17 @@
       "FleeRate":0.05,
       "Previous_evolutions":[
          {
-            "Number":147,
-            "Name":"Dratini"
-         },
-         {
             "Number":148,
             "Name":"Dragonair"
          }
       ],
       "MaxCP":3280,
       "MaxHP":3500,
-      "gender": {
-         "abbreviation": "h",
-         "male_ratio": "1",
-         "female_ratio": "1",
-         "breedable": true
+      "gender":{
+         "abbreviation":"h",
+         "male_ratio":"1",
+         "female_ratio":"1",
+         "breedable":true
       }
    },
    {
@@ -10977,11 +10913,11 @@
       "LEGENDARY":"Pokèmon Class",
       "MaxCP":3904,
       "MaxHP":4144,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": false
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":false
       }
    },
    {
@@ -11067,11 +11003,11 @@
       "MYTHIC":"Pokèmon Class",
       "MaxCP":3087,
       "MaxHP":3299,
-      "gender": {
-         "abbreviation": "g",
-         "male_ratio": "0",
-         "female_ratio": "0",
-         "breedable": false
+      "gender":{
+         "abbreviation":"g",
+         "male_ratio":"0",
+         "female_ratio":"0",
+         "breedable":false
       }
    }
 ]
