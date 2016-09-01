@@ -1,7 +1,8 @@
 "use strict";
 
 let fs = require('fs'),
-    pokemon = require(__resourcebase + '/pokemonGoData.json');
+    pokemon = require(__resourcebase + '/pokemonGoData.json'),
+    pokemonIconDir = __resourcebase + '../pokemonIcons/';
     const Pokemon = require(__appbase + '/models/pokemon');
 
 module.exports = {
@@ -109,6 +110,11 @@ module.exports = {
                 }
 
             }
+
+            let iconPath = pokemonIconDir + base.name.toLowerCase() + '.gif';
+            let data = fs.readFileSync(iconPath);
+            base.icon = new Buffer(data).toString('base64');
+
             base.save(function (err) {
                 if (err) {
                     logger.error("Error in insertion");
