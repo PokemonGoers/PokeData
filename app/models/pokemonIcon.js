@@ -8,4 +8,5 @@ let pokemonIcon = new Schema({
     icon      : {data: String, contentType: String},
 });
 
+pokemonIcon.index({"pokemonID": 1}, {"unique": true});
 module.exports = mongoose.model('pokemonIcon', pokemonIcon);

@@ -4,7 +4,7 @@ let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json'),
     pokemonIconDir = __resourcebase + '../pokemonIcons/';
     const Pokemon = require(__appbase + '/models/pokemon'),
-          PokemonIcon = require(___appbase + '/models/pokemonIcon')
+          PokemonIcon = require(__appbase + '/models/pokemonIcon')
 
 module.exports = {
 
@@ -112,6 +112,14 @@ module.exports = {
                 }
 
             }
+
+            base.save(function (err) {
+                if (err) {
+                    logger.error("Error in insertion");
+                } else {
+                    logger.success("Insertion Successful");
+                }
+            });
 
             let iconPath = pokemonIconDir + base.name.toLowerCase() + '.gif';
             let data = fs.readFileSync(iconPath);

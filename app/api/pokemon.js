@@ -129,7 +129,7 @@ module.exports = {
             else
                 res.status(404).json({message: 'Failure. No pokemon icon with this id exists!', data: message});
         });
-    }
+    },
     /**
      * @api {get} /api/pokemon/gender/:gender GetPokemonByGender
      * @apiVersion 0.0.1
