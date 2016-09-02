@@ -27,6 +27,9 @@ module.exports = function (app, router) {
     //route for getting pokemon details by specific id
     router.get('/pokemon/id/:id', pokemon.getById);
 
+    //route for getting pokemon icon by specific id
+    router.get('/pokemon/id/:id/icon', pokemon.getIconById);
+
     //route for getting pokemon details by specific gender
     router.get('/pokemon/gender/:gender', pokemon.getByGender);
 
