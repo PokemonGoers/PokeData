@@ -1,7 +1,7 @@
 module.exports = function (app, router) {
     const pokemon = require(__appbase + 'api/pokemon'),
         sighting = require(__appbase + 'api/sighting');
-
+    
     //route for all pokemon sightings
     router.get('/pokemon/sighting/', sighting.getAll);
 
@@ -26,6 +26,9 @@ module.exports = function (app, router) {
 
     //route for getting pokemon details by specific id
     router.get('/pokemon/id/:id', pokemon.getById);
+
+    //route for getting pokemon icon by specific id
+    router.get('/pokemon/id/:id/icon', pokemon.getIconById);
 
     //route for getting pokemon details by specific gender
     router.get('/pokemon/gender/:gender', pokemon.getByGender);

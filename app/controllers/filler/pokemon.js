@@ -1,8 +1,10 @@
 "use strict";
 
 let fs = require('fs'),
-    pokemon = require(__resourcebase + '/pokemonGoData.json');
-    const Pokemon = require(__appbase + '/models/pokemon');
+    pokemon = require(__resourcebase + '/pokemonGoData.json'),
+    pokemonIconDir = __resourcebase + '../pokemonIcons/';
+    const Pokemon = require(__appbase + '/models/pokemon'),
+          PokemonIcon = require(__appbase + '/models/pokemonIcon')
 
 module.exports = {
 
@@ -13,6 +15,7 @@ module.exports = {
         for (var i = 0; i < len; i++) {
 
             var base = new Pokemon();
+            var pokemonIcon = new PokemonIcon();
 
             base.pokemonID = Number(pokemon[i]['Number']);
             base.name = pokemon[i]['Name'];
@@ -109,7 +112,21 @@ module.exports = {
                 }
 
             }
+
             base.save(function (err) {
+                if (err) {
+                    logger.error("Error in insertion");
+                } else {
+                    logger.success("Insertion Successful");
+                }
+            });
+
+            let iconPath = pokemonIconDir + base.name.toLowerCase() + '.gif';
+            let data = fs.readFileSync(iconPath);
+            pokemonIcon.pokemonID = Number(pokemon[i]['Number']);
+            pokemonIcon.icon.data = new Buffer(data).toString('base64');
+            pokemonIcon.icon.contentType = 'image/gif';
+            pokemonIcon.save(function (err) {
                 if (err) {
                     logger.error("Error in insertion");
                 } else {

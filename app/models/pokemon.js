@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 var pokemonGoBasicSchema = new Schema({
     pokemonID: Number,
     name: {type: String},
+    icon: {type: String},
     classification: {type: String},
     types: [String],
     resistance: [String],

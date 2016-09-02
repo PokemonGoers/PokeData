@@ -1,6 +1,7 @@
 "use strict";
 
-const Pokemon = require(__appbase + 'models/pokemon');
+const Pokemon = require(__appbase + 'models/pokemon'),
+      PokemonIcon = require(__appbase + 'models/pokemonIcon');
 
 module.exports = {
     /*
@@ -31,6 +32,18 @@ module.exports = {
     getById: function (id, callback) {
         this.get({'pokemonID': id}, function (status, response) {
             callback(status, response);
+        });
+    },
+    /*
+     * searching the pokemonIcon details by Id
+     */
+    getIconById: function (id, callback) {
+        PokemonIcon.find({'pokemonID': id}, function (err, obj) {
+            if (!obj || err) {// already existing data and return 0 for indicating
+                callback(0, data);
+            } else { // new data and return 1 for indicating
+                callback(1, obj);
+            }
         });
     },
     /*
