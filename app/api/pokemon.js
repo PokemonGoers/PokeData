@@ -124,8 +124,10 @@ module.exports = {
         logger.info('Get Pokemon icon of particular pokemon by id');
 
         pokemon.getIconById(req.params.id, function(success, message) {
-            if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+            if(success === 1) {
+                res.set('Content-Type', 'image/gif');
+                res.status(200).send(Buffer.from(message[0].icon.data, 'base64'));
+            }
             else
                 res.status(404).json({message: 'Failure. No pokemon icon with this id exists!', data: message});
         });
