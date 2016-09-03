@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var pokemonGoBasicSchema = new Schema({
-    pokemonID: Number,
+    pokemonId: Number,
     name: {type: String},
     icon: {type: String},
     classification: {type: String},
@@ -22,8 +22,8 @@ var pokemonGoBasicSchema = new Schema({
         maximum: {type: String}
     },
     fleeRate: Number,
-    nextEvolutions: [{pokemonID: Number, name: {type: String}}],
-    previousEvolutions: [{pokemonID: Number, name: {type: String}}],
+    nextEvolutions: [{pokemonId: Number, name: {type: String}}],
+    previousEvolutions: [{pokemonId: Number, name: {type: String}}],
     maxCP: Number,
     maxHP: Number,
     gender: {
@@ -36,6 +36,6 @@ var pokemonGoBasicSchema = new Schema({
     }
 });
 
-pokemonGoBasicSchema.index({"pokemonID": 1}, {"unique": true});
+pokemonGoBasicSchema.index({"pokemonId": 1}, {"unique": true});
 
 module.exports = mongoose.model('pokemon', pokemonGoBasicSchema);

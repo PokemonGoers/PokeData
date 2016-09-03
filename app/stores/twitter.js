@@ -11,7 +11,7 @@ module.exports = {
     add: function (data, pokemonName) {
         let location = null,
             pokemonId = parseInt(common.getPokemonIdByName(pokemonName)),
-            pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, pokemonID: pokemonId, appearedOn: moment.unix(data.timestamp_ms/1000)});
+            pokemonSighting = new PokemonSighting({source: config.pokemonDataSources.twitter, pokemonId: pokemonId, appearedOn: moment.unix(data.timestamp_ms/1000)});
         
         //get the location of the tweet if exist
         if (data.coordinates){
