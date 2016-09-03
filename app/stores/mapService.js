@@ -17,16 +17,16 @@ module.exports = {
             case 'pokeRadar':
                 pokemon['pokemonID'] = data['pokemonId'];
                 pokemon['appearedOn'] = new Date(data['created'] * 1000);
-                pokemon['location'] = {"type": "Point", "coordinats": [data['longitude'], data['latitude']]};
+                pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 break;
             case 'skiplagged':
                 pokemon['pokemonID'] = data['pokemon_id'];
                 pokemon['appearedOn'] = new Date((data['expires'] * 1000) - 15 * 60 * 1000);
-                pokemon['location'] = {"type": "Point", "coordinats": [data['longitude'], data['latitude']]};
+                pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 break;
             case 'pokecrew':
                 pokemon['pokemonID'] = data['pokemon_id'];
-                pokemon['location'] = {"type": "Point", "coordinats": [data['longitude'], data['latitude']]};
+                pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 if (data['expires_at'].endsWith('Z')) {
                     pokemon['appearedOn'] = new Date(Date.parse(data['expires_at']) - 15 * 60 * 1000);
                 } else {
