@@ -52,7 +52,7 @@ module.exports = {
             // extracting pokemon id from the names
             pokemonStore.getByName(pokemonName, function (success, data) {
                 if (success === 1) {
-                    rarePokemon['id'] = data[0]['pokemonID'];
+                    rarePokemon['id'] = data[0]['pokemonId'];
                     module.exports.addRarePokemon(rarePokemon);
                 } else {
                     logger.error('Error: no master data for the pokemon ' + pokemonName);
