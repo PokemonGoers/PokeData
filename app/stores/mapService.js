@@ -2,7 +2,8 @@
 
 const commonPokemon = require(__appbase + 'models/pokemonSighting'),
       async = require('async'),
-      config = require(__base + 'config');
+      config = require(__base + 'config'),
+      common = require(__appbase + 'services/common');
 
 module.exports = {
     /*
@@ -11,25 +12,40 @@ module.exports = {
     add: function (data, callback) {
         var pokemon = new commonPokemon();
         pokemon['source'] = config.pokemonDataSources[collection];
-        pokemon['location']['type'] = "Point";
-        pokemon['location']['coordinates'] = [data['longitude'], data['latitude']];
 
         switch (collection) {
             case 'pokeRadar':
                 pokemon['pokemonID'] = data['pokemonId'];
                 pokemon['appearedOn'] = new Date(data['created'] * 1000);
+                pokemon['location'] = {"type": "Point", "coordinats": [data['longitude'], data['latitude']]};
                 break;
             case 'skiplagged':
                 pokemon['pokemonID'] = data['pokemon_id'];
                 pokemon['appearedOn'] = new Date((data['expires'] * 1000) - 15 * 60 * 1000);
+                pokemon['location'] = {"type": "Point", "coordinats": [data['longitude'], data['latitude']]};
                 break;
             case 'pokecrew':
                 pokemon['pokemonID'] = data['pokemon_id'];
+                pokemon['location'] = {"type": "Point", "coordinats": [data['longitude'], data['latitude']]};
                 if (data['expires_at'].endsWith('Z')) {
                     pokemon['appearedOn'] = new Date(Date.parse(data['expires_at']) - 15 * 60 * 1000);
                 } else {
                     pokemon['appearedOn'] = new Date(Date.parse(data['expires_at'] + ' GMT') - 15 * 60 * 1000);
                 }
+                break;
+            case 'fastpokemap':
+                pokemon['location'] = data['lnglat'];
+                switch (pokemon['pokemonID']) {
+                    case 'NIDORAN_FEMALE':
+                        pokemon['pokemonID'] = 29;
+                        break;
+                    case 'NIDORAN_MALE':
+                        pokemon['pokemonID'] = 32;
+                        break;
+                    default:
+                        pokemon['pokemonID'] = common.getPokemonIdByName(data['pokemon_id']);
+                }
+                pokemon['appearedOn'] = new Date(Date.parse(data['expireAt']) - 15 * 60 * 1000);
                 break;
             default:
                 logger.error("Collection not known!");

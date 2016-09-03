@@ -6,6 +6,7 @@ const http = require('http'),
       q = require('q'),
       async = require('async'),
       _ = require('underscore'),
+      zlib = require('zlib'),
       coords = require(__base + 'resources/json/coords/' + collection + 'Coords.json'),
       config = require(__base + 'config'),
       store = require(__appbase + 'stores/mapService');
@@ -21,7 +22,7 @@ if (scanType === 'global') {
 //constructs URL for request to the services API
 //service will return pokemon in the window of lat to lat+delta and lng to lng+delta
 const baseLink = function (lat, lng, delta) {
-    var hd = {
+    var hd_sl = {
         'Host': 'skiplagged.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -30,14 +31,25 @@ const baseLink = function (lat, lng, delta) {
         'Referer': 'https://skiplagged.com/catch-that/',
         'Connection': 'keep-alive'
     };
+    var hd_fp = {
+        'Host': 'cache.fastpokemap.se',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'de,en-US;q=0.7,en;q=0.3',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Origin': 'https://fastpokemap.se',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Cache-Control': 'max-age=0'
+    };
     var queryString = '';
     var link = {};
     if (proxyPointer > 0) {
         var hp = proxyList[proxyPointer - 1].split(':');
         link.host = hp[0];
         link.port = hp[1];
-        //TODO: https for pokecrew has to be implemented
-        link.path = 'http://' + config[collection].host + config[collection].path;
+        var scheme = collection === 'pokecrew' ? 'https://' : 'http://';
+        link.path = scheme + config[collection].host + config[collection].path;
     } else {
         link.host = config[collection].host;
         link.path = config[collection].path;
@@ -45,20 +57,22 @@ const baseLink = function (lat, lng, delta) {
     switch (collection) {
         case 'pokeRadar':
             queryString = '?minLatitude=' + lat.toString() + '&maxLatitude=' + (lat + delta).toString() + '&minLongitude=' + lng.toString() + '&maxLongitude=' + (lng + delta).toString();
-            link.path += queryString;
             break;
         case 'skiplagged':
             queryString = '?bounds=' + lat.toFixed(6) + ',' + lng.toFixed(6) + ',' + (lat + delta).toFixed(6) + ',' + (lng + delta).toFixed(6);
-            link.path += queryString;
-            link['headers'] = hd;
+            link['headers'] = hd_sl;
             break;
         case 'pokecrew':
             queryString = '?northeast_latitude=' + lat.toString() + '&northeast_longitude=' + lng.toString() + '&southwest_latitude=' + (lat + delta).toString() + '&southwest_longitude=' + (lng + delta).toString();
-            link.path += queryString;
+            break;
+        case 'fastpokemap':
+            queryString = '?key=allow-all&ts=0&lat='+ lat.toString() + '&lng=' + lng.toString();
+            link['headers'] = hd_fp;
             break;
         default:
             logger.error("Collection not known!");
     }
+    link.path += queryString;
     return link;
 
 };
@@ -91,23 +105,16 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
             //generate url
             var options = baseLink(i, j, delta);
             //generate api call
-            var proto;
-            switch (collection) {
-                case 'pokecrew':
-                    proto = https;
-                    break;
-                default:
-                    proto = http;
-            }
+            var proto = collection === 'pokecrew' ? https : http;
             var req = proto.request(options, function (response) {
                 //needed for control flow
                 var deferred = q.defer();
                 promises.push(deferred.promise);
                 //stores response
-                var str = '';
+                var body = [];
                 //another chunk of data has been received, so append it to `str`
                 response.on('data', function (chunk) {
-                    str += chunk;
+                    body.push(chunk);
                 });
                 //error handling
                 response.on('error', function () {
@@ -120,7 +127,13 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                     count++;
                     try {
                         //parse the received string into a JSON
-                        var data = JSON.parse(str);
+                        var data;
+                        if (collection === 'fastpokemap') {
+                            body = Buffer.concat(body);
+                            data = JSON.parse(zlib.inflateSync(body).toString('utf8'));
+                        } else {
+                            data = JSON.parse(body.toString());
+                        }
                         //array to hold pokemon
                         var arr = [];
                         switch (collection) {
@@ -132,6 +145,9 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                                 break;
                             case 'pokecrew':
                                 arr = data.seens;
+                                break;
+                            case 'fastpokemap':
+                                arr = data;
                                 break;
                             default:
                                 logger.error("Collection not known!");
@@ -196,9 +212,15 @@ module.exports = {
     search: function() {
         //initialize variables
         var funcs = [];
-        var boxSize = 5.0;
-        //experimental: above 0.5 it does not find as much pokemon as below
-        var delta = 0.5;
+        var boxSize;
+        var delta;
+        if (collection === 'fastpokemap') {
+            boxSize = 0.5;
+            delta = 0.026 * Math.sqrt(2);
+        } else {
+            boxSize = 5.0;
+            delta = 0.5;
+        }
 
         //scan for whole world, generates array of functions
         //currently takes 1-2 hours, also pokeradar doesnt answer requests after like 30 seconds of continous scanning
@@ -210,9 +232,17 @@ module.exports = {
                 }
             }
         } else if (scanType === 'optimized') {
-            for (var i = 0; i < coords.length; i++){
+            for (var i = 0; i < coords.length; i++) {
                 var c = coords[i].split(',');
-                funcs.push(createfunc(parseFloat(c[0]), parseFloat(c[1]), boxSize, delta));
+                if (collection === 'fastpokemap') {
+                    for (var j = 0; j < 5; j+=0.5) {
+                        for (var k = 0; k < 5; k+=0.5) {
+                            funcs.push(createfunc(parseFloat(c[0]) + j, parseFloat(c[1]) + k, boxSize, delta));
+                        }
+                    }
+                } else {
+                    funcs.push(createfunc(parseFloat(c[0]), parseFloat(c[1]), boxSize, delta));
+                }
             }
         } else {
             logger.error("Wrong scanType specified!");
@@ -231,7 +261,7 @@ module.exports = {
                         }
                     });
                 }
-                module.exports.search();
+                this.search();
             });
     }
 };
