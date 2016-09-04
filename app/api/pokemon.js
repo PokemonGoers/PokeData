@@ -43,16 +43,6 @@ module.exports = {
      * @apiDefine PokemonIconResponse
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *  "icon": {
-     *      "contentType": "image/gif",
-     *      "data": {
-     *          "type": "Buffer",
-     *          "data": [71,73,70, 56,5,5,0,15,0,44,0,0,0,0,37,0,38,0,0,4,255,240,201,73,171, 2]"
-     *     }
-     * }] 
-     * }
      */
 
 
@@ -116,7 +106,7 @@ module.exports = {
 
         pokemon.getIconById(req.params.id, function(success, message) {
             if(success === 1) {
-                res.writeHead(200, {'Content-Type': 'image/gif' });
+                res.writeHead(200, {'Content-Type': message[0].icon.contentType });
                 res.end(message[0].icon.data, 'binary');
             } else {
                 res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
