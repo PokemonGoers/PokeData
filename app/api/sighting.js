@@ -47,7 +47,10 @@ module.exports = {
 
         sighting.getAll(function(success, pokemonSighting) {
             logger.info(pokemonSighting);
-            res.status(200).json(pokemonSighting);
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: pokemonSighting});
+            else
+                res.status(404).json({message: 'Failure. No sighting details found!', data: pokemonSighting});
         });
     },
     /**

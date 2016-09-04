@@ -80,8 +80,11 @@ module.exports = {
         logger.info('GetAllPokemons');
 
         pokemon.getAll(function(success, pokemons) {
-            logger.info(pokemons);
-            res.status(200).json(pokemons);
+            if(success === 1) {
+                res.status(200).json({message: 'Success', data: pokemons});
+            } else {
+                res.status(404).json({message: 'Failure. No pokemon details found!', data: pokemons});
+            }
         });
     },
 
