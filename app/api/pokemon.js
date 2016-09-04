@@ -116,9 +116,10 @@ module.exports = {
 
         pokemon.getIconById(req.params.id, function(success, message) {
             if(success === 1) {
-                    res.status(200).json({message: 'Success', data: message});
+                res.writeHead(200, {'Content-Type': 'image/gif' });
+                res.end(message[0].icon.data, 'binary');
             } else {
-                    res.status(404).json({message: 'Failure. No pokemon icon with this id exists!', data: message});
+                res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
             }
         });
     },
