@@ -39,8 +39,8 @@ module.exports = {
      */
     getIconById: function (id, callback) {
         PokemonIcon.find({'pokemonId': id}, function (err, obj) {
-            if (!obj || err) {// already existing data and return 0 for indicating
-                callback(0, data);
+            if (!obj || obj.length === 0 || err) {// already existing data and return 0 for indicating
+                callback(0, obj);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }

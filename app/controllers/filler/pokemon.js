@@ -123,8 +123,9 @@ module.exports = {
 
             let iconPath = pokemonIconDir + base.name.toLowerCase() + '.gif';
             let data = fs.readFileSync(iconPath);
+
             pokemonIcon.pokemonId = Number(pokemon[i]['Number']);
-            pokemonIcon.icon.data = new Buffer(data).toString('base64');
+            pokemonIcon.icon.data = new Buffer(data);
             pokemonIcon.icon.contentType = 'image/gif';
             pokemonIcon.save(function (err) {
                 if (err) {

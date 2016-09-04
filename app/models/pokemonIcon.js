@@ -5,7 +5,7 @@ var Schema   = mongoose.Schema;
 
 let pokemonIcon = new Schema({
     pokemonId : {type: Number},
-    icon      : {data: String, contentType: String},
+    icon      : {data: Buffer, contentType: String},
 });
 
 pokemonIcon.index({"pokemonId": 1}, {"unique": true});
