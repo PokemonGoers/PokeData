@@ -131,52 +131,66 @@ const jsonFileName = 'twitterPokemonData';
 // array of names of pokemons
 var pokemonNameList = [];
 
+
 module.exports = {
-    insertToDb : function () {
-		pokemonNameList = common.getPokemonNameList();
-		if(pokemonNameList) {
-			logger.info('Got pokemon name list');
+	getPokemonTwitterStream: function (){
+		if (!this._streaming){
+			pokemonNameList = common.getPokemonNameList();
+			if(pokemonNameList) {
+				logger.info('Got pokemon name list');
+			}
+			var listenFor =  config.twitterKeyWords + "," + pokemonNameList.join(",");
+			logger.info("Listening for : " + listenFor);
+			Twitter.stream(
+				'statuses/filter',
+				{
+					track: listenFor,
+					language: 'en'
+				}
+			);
+
+			Twitter.on('connection success', function (uri) {
+				logger.success('Connection successful', 'Twitter stream connection success' + uri);
+			});
+
+			Twitter.on('connection aborted', function () {
+				logger.info('Twitter stream connection aborted');
+			});
+
+			Twitter.on('connection error network', function () {
+				logger.error('Twitter stream connection error network');
+			});
+
+			Twitter.on('connection error stall', function () {
+				logger.error('Twitter stream connection error stall');
+			});
+
+			Twitter.on('connection error http', function (err) {
+				logger.error('Twitter stream connection error http', err);
+			});
+
+			Twitter.on('connection rate limit', function () {
+				logger.info('Twitter stream connection rate limit');
+			});
+
+			Twitter.on('connection error unknown', function () {
+				logger.error('Twitter stream connection error unknown');
+			});
+
+			Twitter.on('data keep-alive', function () {
+				logger.info('Twitter stream data keep-alive');
+			});
+
+			Twitter.on('data error', function () {
+				logger.error('Twitter stream data error');
+			});
+			this._streaming = true;
 		}
-
+		return Twitter;
+	},
+    insertToDb : function () {
 		// listen to keywords, get tweets in english language
-		Twitter.stream('statuses/filter', {track: config.twitterKeyWords, language: 'en'});
-
-		//Twitter stream events
-		Twitter.on('connection success', function (uri) {
-			logger.success('Connection successful', 'Twitter stream connection success' + uri);
-		});
-
-		Twitter.on('connection aborted', function () {
-			logger.info('Twitter stream connection aborted');
-		});
-
-		Twitter.on('connection error network', function () {
-			logger.error('Twitter stream connection error network');
-		});
-
-		Twitter.on('connection error stall', function () {
-			logger.error('Twitter stream connection error stall');
-		});
-
-		Twitter.on('connection error http', function (err) {
-			logger.error('Twitter stream connection error http', err);
-		});
-
-		Twitter.on('connection rate limit', function () {
-			logger.info('Twitter stream connection rate limit');
-		});
-
-		Twitter.on('connection error unknown', function () {
-			logger.error('Twitter stream connection error unknown');
-		});
-
-		Twitter.on('data keep-alive', function () {
-			logger.info('Twitter stream data keep-alive');
-		});
-
-		Twitter.on('data error', function () {
-			logger.error('Twitter stream data error');
-		});
+		var stream = this.getPokemonTwitterStream();
 
 		/*
 			check if tweet object has pokemon term
@@ -188,6 +202,10 @@ module.exports = {
 				tweetText.indexOf('saw') != -1 || 
 				tweetText.indexOf('attacked') != -1 ||
 				tweetText.indexOf('found') != -1  ||
+				tweetText.indexOf('got you') != -1  ||
+				tweetText.indexOf('gotcha') != -1  ||
+				tweetText.indexOf('gotcha') != -1  ||
+				tweetText.indexOf('gotcha') != -1  ||
 				tweetText.indexOf('appeared') != -1 ) {
 
 				// for each pokemon name check if it is inside the tweet text
@@ -213,7 +231,7 @@ module.exports = {
 			next();
 		};
 
-		Twitter.pipe(Output);
+		stream.pipe(Output);
 
 		/*
 			add pokemon appearance to DB 
