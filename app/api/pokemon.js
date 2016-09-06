@@ -381,5 +381,27 @@ module.exports = {
             else
                 res.status(404).json({message: 'Failure.', data: message});
         });
+    },
+
+    /**
+     * @api {get} /api/pokemon/search SearchPokemon
+     * @apiVersion 0.0.1
+     * @apiName SearchPokemon
+     * @apiDescription Get pokemon by specified search parameters
+     * @apiGroup Pokemon
+     *
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     *
+     */
+    search: function (req, res) {
+        logger.info('Get Pokemon details by search parameters');
+
+        pokemon.search(req.query, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
+        });
     }
 };

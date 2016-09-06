@@ -136,5 +136,10 @@ module.exports = {
         this.get({'previousEvolutions.name': name}, function (status, response) {
             callback(status, response);
         });
+    },
+    search: function (query, callback) {
+        this.get(query, function (status, response) {
+            callback(status, response);
+        });
     }
 };

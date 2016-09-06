@@ -59,4 +59,7 @@ module.exports = function (app, router) {
 
     //route for getting pokemon details by specific weakness
     router.get('/pokemon/evolution/:category(prev|next)/name/:name', pokemon.getByEvolutionName);
+
+    //route for getting pokemon details by specified query parameters
+    router.get('/pokemon/search', pokemon.search);
 };
