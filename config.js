@@ -1,7 +1,7 @@
 module.exports = {
     "database" : {
-        "username": process.env.DB_USERNAME || "",
-        "password": process.env.DB_PASSWORD || "",
+        "username": process.env.DB_USERNAME ,
+        "password": process.env.DB_PASSWORD,
         "port": process.env.DB_PORT || "27017",
         "uri": process.env.DB_URI || "localhost",
         "collection": process.env.DB_COLLECTION || "PokeData"
