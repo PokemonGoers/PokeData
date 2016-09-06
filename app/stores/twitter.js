@@ -26,8 +26,8 @@ module.exports = {
             pokemonFoundLatitude = data.coordinates.coordinates[1];
             location = {type: "Point",coordinates: [pokemonFoundLongitude, pokemonFoundLatitude]};
             savePokemonSighthing(pokemonSighting);
-        } else if(data.text.indexOf('https://t.co') != -1) {
-                let url = data.text.substr(data.text.indexOf('https://t.co'), twitterLinkLength);
+        } else if(data.text.indexOf('https://t.co') != -1) { // check if external link exist in the tweet
+                let url = data.text.substr(data.text.indexOf('https://t.co'), twitterLinkLength); // get the required external url
                 logger.info(url);
                 request.get(url)
                 .on('response', function(response) {
