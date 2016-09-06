@@ -46,7 +46,7 @@ module.exports = {
         logger.info('Get all pokemon sightings');
 
         sighting.getAll(function(success, pokemonSighting) {
-            logger.info(pokemonSighting);
+            /*logger.info(pokemonSighting);*/
             if(success === 1)
                 res.status(200).json({message: 'Success', data: pokemonSighting});
             else
@@ -170,6 +170,27 @@ module.exports = {
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure. No sighting details within this time range exists!', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/sighting/search SearchPokemonSighting
+     * @apiVersion 0.0.1
+     * @apiName SearchPokemonSighting
+     * @apiDescription Get pokemon sightings by specified search parameters
+     * @apiGroup PokemonSighting
+     *
+     * @apiUse SampleSighting
+     * @apiUse NoRecords
+     *
+     */
+    search: function (req, res) {
+        logger.info('Get Pokemon sightings by search parameters');
+
+        sighting.search(req.query, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure.', data: message});
         });
     }
 };

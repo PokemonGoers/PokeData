@@ -382,7 +382,6 @@ module.exports = {
                 res.status(404).json({message: 'Failure.', data: message});
         });
     },
-
     /**
      * @api {get} /api/pokemon/search SearchPokemon
      * @apiVersion 0.0.1

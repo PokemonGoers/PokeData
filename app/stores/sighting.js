@@ -132,5 +132,13 @@ module.exports = {
         }}, function (status, response) {
             callback(status, response);
         });
+    },
+    /*
+     * get the pokemon sightings matching the specified search parameters
+     */
+    search: function (query, callback) {
+        this.get(query, function (status, response) {
+            callback(status, response);
+        });
     }
 };

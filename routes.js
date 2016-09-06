@@ -21,6 +21,9 @@ module.exports = function (app, router) {
     router.get('/pokemon/sighting/ts/:ts/range/:range', sighting.getByTimeRange);
     router.get('/pokemon/sighting/ts/:ts/', sighting.getByTimeRange);
 
+    //route for getting pokemon sightings by specified query parameters
+    router.get('/pokemon/sighting/search', sighting.search);
+
     //route for getting all pokemon details
     router.get('/pokemon/', pokemon.getAll);
 
