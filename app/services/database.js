@@ -18,7 +18,7 @@ module.exports = {
         databaseParams = appConfig['IS_LOCAL_DB'] ? config['database'] : config['shared_database'];
 
         // check whether there is username and password for database connection
-        if (databaseParams.username != undefined && databaseParams.password != undefined) {
+        if (databaseParams.username && databaseParams.password) {
             dbConnection += databaseParams.username + ":" + databaseParams.password + "@";
         }
 
