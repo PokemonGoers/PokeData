@@ -4,7 +4,7 @@
 let log = function(type, message, description) {
     const env = appConfig['APP_ENV'];
     /*Print the message only if the environment is dev.*/
-    if (env === 'development') {
+    if (env !== 'production') {
         console.log(type, message, description || "");
     }
 };
