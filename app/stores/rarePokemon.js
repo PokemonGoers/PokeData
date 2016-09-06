@@ -24,19 +24,7 @@ module.exports = {
                                    break;
 
                     case 'until' :  // calculations for getting the actual spawn time of pokemon
-                                    let temp = data[key].split('T'),
-                                        date = temp[0],
-                                        temp1 = temp[1].split('.'),
-                                        time = temp1[0],
-                                        timeArr = time.split(':'),
-                                        spawnTimeInseconds = (Number(timeArr[0]*60*60) + Number(timeArr[1]*60) + Number(timeArr[2]) )- config.pokemonSpawnTime,
-                                        tempTime = Number(spawnTimeInseconds),
-                                        h = Math.floor(tempTime / 3600),
-                                        m = Math.floor(tempTime % 3600 / 60),
-                                        s = Math.floor(tempTime % 3600 % 60),
-                                        spawnTime = (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s  < 10 ? "0" + s : s),
-                                        spawnTimeStamp = date + 'T' + spawnTime +'.' + temp1[1];
-                                    rarePokemons['appearedOn'] = spawnTimeStamp;
+                                    rarePokemons['appearedOn'] = new Date(Date.parse(data[key]) - (15 * 60 * 1000));
                                     break;
 
                 }
