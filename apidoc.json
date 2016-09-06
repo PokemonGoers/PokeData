@@ -7,6 +7,7 @@
   "order": [
     "GetAllPokemons",
     "GetPokemonById",
+    "GetIconById",
     "GetPokemonByName",
     "GetPokemonByGender",
     "GetPokemonByType",
@@ -17,11 +18,13 @@
     "GetPokemonByAttackDamage",
     "GetPokemonByEvolutionId",
     "GetPokemonByEvolutionName",
+    "SearchPokemon",
     "GetAllSightings",
     "GetSightingById",
     "GetSightingBySource",
     "GetSightingAtCoordinates",
     "GetSightingBetweenCoordinates",
-    "GetSightingByTimeRange"
+    "GetSightingByTimeRange",
+    "SearchPokemonSighting"
   ]
 }
