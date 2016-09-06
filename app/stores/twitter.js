@@ -3,6 +3,7 @@ const config = require(__base+'config'),
       PokemonSighting = require(__appbase + 'models/pokemonSighting'),
       common = require(__base + 'app/services/common'),
       moment = require('moment'),
+      request = require('request'),
       twitterLinkLength = 23;
 
 module.exports = {
@@ -10,7 +11,6 @@ module.exports = {
      * inserting the pokemon sighting details extracted from twitter
      */
     add: function (data, pokemonName) {
-        const request = require('request');
 
         let location = null,
             pokemonId = parseInt(common.getPokemonIdByName(pokemonName)),
@@ -37,6 +37,7 @@ module.exports = {
                             let googleMapsPath = response.request.uri.pathname;
                             logger.info(googleMapsPath);
                             
+                            // check the link path and get the latitude and longitude 
                             if(googleMapsPath.indexOf('search') != -1) { // path is of the form /maps/place/40.4377315739453,-79.9990332286566
                                 pokemonFoundLatitude = parseFloat(googleMapsPath.substr(googleMapsPath.indexOf('search/') + 7, googleMapsPath.indexOf(',') - googleMapsPath.indexOf('search/') - 5 ));
                                 pokemonFoundLongitude = parseFloat(googleMapsPath.substr(googleMapsPath.indexOf(',') + 1, googleMapsPath.length));
@@ -47,17 +48,20 @@ module.exports = {
                                 pokemonFoundLatitude = parseFloat(googleMapsPath.substr(googleMapsPath.lastIndexOf('Location/') + 9, googleMapsPath.indexOf(',') - googleMapsPath.lastIndexOf('Location/') - 7));
                                 pokemonFoundLongitude = parseFloat(googleMapsPath.substr(googleMapsPath.indexOf(',') + 1, googleMapsPath.length));
                             }
-                            
+
                             location = {type: "Point",coordinates: [pokemonFoundLongitude, pokemonFoundLatitude]};
                             savePokemonSighthing(pokemonSighting);
                         } else {
+                            // save null location when link is not google maps related
                             savePokemonSighthing(pokemonSighting);
                         }
                     } else {
+                        // save null location when response is not 200
                         savePokemonSighthing(pokemonSighting);
                     }
                 });
         } else {
+            // save null location when no location related data is found
             savePokemonSighthing(pokemonSighting);
         }
 
