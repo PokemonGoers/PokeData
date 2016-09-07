@@ -129,9 +129,15 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         //parse the received string into a JSON
                         var data;
                         if (collection === 'fastpokemap') {
-                            body = Buffer.concat(body);
-                            data = JSON.parse(zlib.inflateSync(body).toString('utf8'));
+                            try {
+                                //check if it uses deflate encoding
+                                var buf = Buffer.concat(body);
+                                data = JSON.parse(zlib.inflateSync(buf).toString('utf8'));
+                            } catch (err) {
+                                data = JSON.parse(body.toString());
+                            }
                         } else {
+                            //if not just parse it as ascii/utf8
                             data = JSON.parse(body.toString());
                         }
                         //array to hold pokemon
@@ -160,7 +166,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         }
                     } catch (err) {
                         // Redirect or error in response. Unimportant.
-                        //logger.error(err);
+                        logger.error(err);
                     } finally {
                         deferred.resolve();
                     }
