@@ -1,6 +1,8 @@
 "use strict";
 
-const Sighting = require(__appbase + 'models/pokemonSighting');
+const _ = require('underscore'),
+    sightingModel = require(__appbase + 'models/pokemonSighting'),
+    Sighting = sightingModel.getSchema();
 
 module.exports = {
     /*
@@ -137,6 +139,10 @@ module.exports = {
      * get the pokemon sightings matching the specified search parameters
      */
     search: function (query, callback) {
+        query = sightingModel.getMappedModel(query);
+        query = _.omit(query, function(value) {
+            return _.isUndefined(value) || _.isNull(value);
+        });
         this.get(query, function (status, response) {
             callback(status, response);
         });

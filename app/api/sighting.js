@@ -173,11 +173,13 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/sighting/search SearchPokemonSighting
+     * @api {get} /api/pokemon/sighting/search?id=:id&source=:source SearchPokemonSighting
      * @apiVersion 0.0.1
      * @apiName SearchPokemonSighting
      * @apiDescription Get pokemon sightings by specified search parameters
      * @apiGroup PokemonSighting
+     * @apiParam {Integer{1-151}} id Pokemon ID
+     * @apiParam {String=twitter,pokesniper,pokeradar,skiplagged,pokecrew} source Source of the data extraction
      *
      * @apiUse SampleSighting
      * @apiUse NoRecords

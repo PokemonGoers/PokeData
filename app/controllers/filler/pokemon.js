@@ -3,7 +3,7 @@
 let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json'),
     pokemonIconDir = __resourcebase + '../pokemonIcons/';
-    const Pokemon = require(__appbase + '/models/pokemon'),
+    const Pokemon = require(__appbase + '/models/pokemon').getSchema(),
           PokemonIcon = require(__appbase + '/models/pokemonIcon');
 
 module.exports = {

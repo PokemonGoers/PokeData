@@ -383,11 +383,13 @@ module.exports = {
         });
     },
     /**
-     * @api {get} /api/pokemon/search SearchPokemon
+     * @api {get} /api/pokemon/search?gender=:gender&type=:type SearchPokemon
      * @apiVersion 0.0.1
      * @apiName SearchPokemon
      * @apiDescription Get pokemon by specified search parameters
      * @apiGroup Pokemon
+     * @apiParam {String{1}=m,f,g,h} gender Gender of the pokemon
+     * @apiParam {String} type Type of the pokemon
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords

@@ -1,7 +1,9 @@
 "use strict";
 
-const Pokemon = require(__appbase + 'models/pokemon'),
-      PokemonIcon = require(__appbase + 'models/pokemonIcon');
+const _ = require('underscore'),
+    pokemonModel = require(__appbase + 'models/pokemon'),
+    Pokemon = pokemonModel.getSchema(),
+    PokemonIcon = require(__appbase + 'models/pokemonIcon');
 
 module.exports = {
     /*
@@ -138,6 +140,10 @@ module.exports = {
         });
     },
     search: function (query, callback) {
+        query = pokemonModel.getMappedModel(query);
+        query = _.omit(query, function(value) {
+            return _.isUndefined(value) || _.isNull(value);
+        });
         this.get(query, function (status, response) {
             callback(status, response);
         });
