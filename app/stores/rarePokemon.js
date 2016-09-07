@@ -24,7 +24,7 @@ module.exports = {
                                    break;
 
                     case 'until' :  // calculations for getting the actual spawn time of pokemon
-                                    rarePokemons['appearedOn'] = new Date(Date.parse(data[key]) - (15 * 60 * 1000));
+                                    rarePokemons['appearedOn'] = new Date(Date.parse(data[key]) - config.pokemonSpawnTime);
                                     break;
 
                 }
