@@ -4,20 +4,21 @@ let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json'),
     pokemonIconDir = __resourcebase + '../pokemonIcons/';
     const Pokemon = require(__appbase + '/models/pokemon'),
-          PokemonIcon = require(__appbase + '/models/pokemonIcon')
+          PokemonIcon = require(__appbase + '/models/pokemonIcon');
 
 module.exports = {
 
-    insertToDb: function () {
+    insertToDb: function (callback) {
 
         logger.info('Loading Basic Pokemon Details');
         let len = pokemon.length;
+        var count = 0;
         for (var i = 0; i < len; i++) {
 
             var base = new Pokemon();
             var pokemonIcon = new PokemonIcon();
 
-            base.pokemonID = Number(pokemon[i]['Number']);
+            base.pokemonId = Number(pokemon[i]['Number']);
             base.name = pokemon[i]['Name'];
             base.classification = pokemon[i]['Classification'];
 
@@ -93,7 +94,7 @@ module.exports = {
                 for (let j = 0; j < nextEvoultionlen; j++) {
                     let next = pokemon[i]['Next_evolutions'][j],
                         evolution = {
-                            'pokemonID': Number(next['Number']),
+                            'pokemonId': Number(next['Number']),
                             'name': next['Name']
                         };
                     base.nextEvolutions.push(evolution);
@@ -105,7 +106,7 @@ module.exports = {
                 for (let j = 0; j < previousEvoultionlen; j++) {
                     let prev = pokemon[i]['Previous_evolutions'][j],
                         evolution = {
-                        'pokemonID': Number(prev['Number']),
+                        'pokemonId': Number(prev['Number']),
                         'name': prev['Name']
                     };
                     base.previousEvolutions.push(evolution);
@@ -114,24 +115,31 @@ module.exports = {
             }
 
             base.save(function (err) {
+                count++;
                 if (err) {
                     logger.error("Error in insertion");
                 } else {
                     logger.success("Insertion Successful");
                 }
+                if (count == 2*len)
+                    callback();
             });
 
             let iconPath = pokemonIconDir + base.name.toLowerCase() + '.gif';
             let data = fs.readFileSync(iconPath);
-            pokemonIcon.pokemonID = Number(pokemon[i]['Number']);
-            pokemonIcon.icon.data = new Buffer(data).toString('base64');
+
+            pokemonIcon.pokemonId = Number(pokemon[i]['Number']);
+            pokemonIcon.icon.data = new Buffer(data);
             pokemonIcon.icon.contentType = 'image/gif';
             pokemonIcon.save(function (err) {
+                count++;
                 if (err) {
                     logger.error("Error in insertion");
                 } else {
                     logger.success("Insertion Successful");
                 }
+                if (count == 2*len)
+                    callback();
             });
         }
     }

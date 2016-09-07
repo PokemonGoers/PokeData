@@ -21,7 +21,7 @@ module.exports = {
      *  "data": [{
      *      "_id": "57c029e830632cbc2954518d",
      *      "source": "TWITTER",
-     *      "pokemonID": 54,
+     *      "pokemonId": 54,
      *      "appearedOn": "2016-08-26T11:37:12.469Z",
      *      "__v": 0,
      *      "location": {
@@ -47,7 +47,10 @@ module.exports = {
 
         sighting.getAll(function(success, pokemonSighting) {
             logger.info(pokemonSighting);
-            res.status(200).json(pokemonSighting);
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: pokemonSighting});
+            else
+                res.status(404).json({message: 'Failure. No sighting details found!', data: pokemonSighting});
         });
     },
     /**

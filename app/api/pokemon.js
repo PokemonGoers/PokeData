@@ -24,10 +24,10 @@ module.exports = {
      *          "fleeRate":0.1,
      *          "classification":"Seed Pokèmon",
      *          "name":"Bulbasaur",
-     *          "pokemonID":1,
+     *          "pokemonId":1,
      *          "gender":{ "abbreviation":"h", "maleRatio":7, "femaleRatio":1, "breedable":true },
      *          "previousEvolutions":[],
-     *          "nextEvolutions":[{ "pokemonID":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
+     *          "nextEvolutions":[{ "pokemonId":2, "name":"Ivysaur", "_id":"57c58dd4a9da492b16052d8d" }],
      *          "height":{ "maximum":"0.79m", "minimum":"0.61m" },
      *          "weight":{ "maximum":"7.76kg", "minimum":"6.04kg" },
      *          "specialAttacks":[{ "type":"Poison", "name":"Sludge Bomb", "damage":55, "_id":"57c58dd4a9da492b16052d8c" }],
@@ -43,25 +43,6 @@ module.exports = {
      * @apiDefine PokemonIconResponse
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
-     * {"message":"Success",
-     *  "data": [{
-     *        icon: {
-     *          data: "R0lGODlhJQAmAPMPADqUlBlKShAQEL3/c6XWQnOtMVJjKYTvxWPWtTFzc/////9rYI5fCZNJWrd
-     *          6SPn69BARcGFCfQQBLtvV6ZKvUmwQLW4Xgk08fNoiTXbC5axBQYwgFHR16/MiEwscE5WLKbJASosEl6CpsNNSAQb16NXf
-     *          iu3QafXWrcbPugL53QTdltsNQhce3F/BUaCUF9pTQcJDg4Bh1xSizCBAQw0kAddXwkMDQqWawIBfy6MnZ8
-     *          aqOTpgoKAaqsQy8oApQMClqFAMENpw5ruawovTEJCqcAoU0ApwsLqGsJXAHNr88Ix9N6e8fYyXjK3pwxKuXw5d3qyu2rcJe
-     *          HTgnwCSoCXLh1ywXAWycA0RqU8xdCgAKB8wYS9HaEYIJjGDM2gFhQHQllFU1CBGzAABs2jiLxcCx4ISU9OC4FEuyYyUKuhjh
-     *          dKsskseaMPTOVvekGsCecC9zeqNhJjug6gmUkJMUE8x4ip0yjmtHjc9pVlr/OiJURAQAhFAjFjmwThMKjq
-     *          QQJBQAAACwAAAAAIwAhAAACIISPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8vwVACH5BAUKAA8ALAAABwAjABoAAAT/8M
-     *          lJq7Xm6q2NIYKgBQEnFUUgeB6BGoVYAcdBPkmu6+SBCAOCsECAySi0Wq7GRDgDTeAANTQcJ7QkE8D1IZo/VLB6lQASzBq363U
-     *          6AdJxMVZBp9datxs6AvndBN2W2w1CFx7cX8FRoJQX2lNBwkODgGHXFKLMIEBDDSQB11fCQwNCpZrQH8ujJ2fPmqjk6YKCg
-     *          GqAYsvKAKUDApahQDADacOayRDKK4xCQqnAKFNAKcLC6hrCQABzLzOCMbSenvG18h4XN3fMSrk7+Tq6dzdnO1wl4dOCe8JKgJ
-     *          ctqVb1wkAtAbk/IUQoECgPHW4uPWaEDGBsYsYGzjkhodERBUVTEIEbMDg2rWNIgdG5HYh5Tw4LvFsZGkB18KbMQM+5JipZseXP+
-     *          UQdwaE8L25bCFBBxaVKncC5ExZT1wUqkTR/KiAAAOw=="
-     *          contentype: "image/gif"
-     *        }
-     * }] }
-     * 
      */
 
 
@@ -80,8 +61,11 @@ module.exports = {
         logger.info('GetAllPokemons');
 
         pokemon.getAll(function(success, pokemons) {
-            logger.info(pokemons);
-            res.status(200).json(pokemons);
+            if(success === 1) {
+                res.status(200).json({message: 'Success', data: pokemons});
+            } else {
+                res.status(404).json({message: 'Failure. No pokemon details found!', data: pokemons});
+            }
         });
     },
 
@@ -124,10 +108,12 @@ module.exports = {
         logger.info('Get Pokemon icon of particular pokemon by id');
 
         pokemon.getIconById(req.params.id, function(success, message) {
-            if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
-            else
-                res.status(404).json({message: 'Failure. No pokemon icon with this id exists!', data: message});
+            if(success === 1) {
+                res.writeHead(200, {'Content-Type': message[0].icon.contentType });
+                res.end(message[0].icon.data, 'binary');
+            } else {
+                res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
+            }
         });
     },
     /**

@@ -30,7 +30,7 @@ module.exports = {
      * searching the pokemon details by Id
      */
     getById: function (id, callback) {
-        this.get({'pokemonID': id}, function (status, response) {
+        this.get({'pokemonId': id}, function (status, response) {
             callback(status, response);
         });
     },
@@ -38,9 +38,9 @@ module.exports = {
      * searching the pokemonIcon details by Id
      */
     getIconById: function (id, callback) {
-        PokemonIcon.find({'pokemonID': id}, function (err, obj) {
-            if (!obj || err) {// already existing data and return 0 for indicating
-                callback(0, data);
+        PokemonIcon.find({'pokemonId': id}, function (err, obj) {
+            if (!obj || obj.length === 0 || err) {// already existing data and return 0 for indicating
+                callback(0, obj);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
@@ -118,12 +118,12 @@ module.exports = {
         });
     },
     getByPrevEvolutionId: function (id, callback) {
-        this.get({'nextEvolutions.pokemonID': id}, function (status, response) {
+        this.get({'nextEvolutions.pokemonId': id}, function (status, response) {
             callback(status, response);
         });
     },
     getByNextEvolutionId: function (id, callback) {
-        this.get({'previousEvolutions.pokemonID': id}, function (status, response) {
+        this.get({'previousEvolutions.pokemonId': id}, function (status, response) {
             callback(status, response);
         });
     },

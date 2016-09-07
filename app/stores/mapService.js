@@ -15,12 +15,12 @@ module.exports = {
 
         switch (collection) {
             case 'pokeRadar':
-                pokemon['pokemonID'] = data['pokemonId'];
+                pokemon['pokemonId'] = data['pokemonId'];
                 pokemon['appearedOn'] = new Date(data['created'] * 1000);
                 pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 break;
             case 'skiplagged':
-                pokemon['pokemonID'] = data['pokemon_id'];
+                pokemon['pokemonId'] = data['pokemon_id'];
                 pokemon['appearedOn'] = new Date((data['expires'] * 1000) - 15 * 60 * 1000);
                 pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 break;
