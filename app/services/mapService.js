@@ -166,7 +166,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                         }
                     } catch (err) {
                         // Redirect or error in response. Unimportant.
-                        logger.error(err);
+                        //logger.error(err);
                     } finally {
                         deferred.resolve();
                     }
@@ -267,7 +267,7 @@ module.exports = {
                         }
                     });
                 }
-                this.search();
+                module.exports.search();
             });
     }
 };

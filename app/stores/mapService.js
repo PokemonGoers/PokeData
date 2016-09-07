@@ -34,7 +34,7 @@ module.exports = {
                 }
                 break;
             case 'fastpokemap':
-                pokemon['location'] = data['lnglat'];
+                pokemon['location'] = {"type": "Point", "coordinates": data['lnglat']['coordinates']};
                 switch (data['pokemon_id']) {
                     case 'NIDORAN_FEMALE':
                         pokemon['pokemonId'] = 29;
