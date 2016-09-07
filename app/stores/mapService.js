@@ -35,12 +35,12 @@ module.exports = {
                 break;
             case 'fastpokemap':
                 pokemon['location'] = data['lnglat'];
-                switch (pokemon['pokemonID']) {
+                switch (data['pokemon_id']) {
                     case 'NIDORAN_FEMALE':
-                        pokemon['pokemonID'] = 29;
+                        pokemon['pokemonId'] = 29;
                         break;
                     case 'NIDORAN_MALE':
-                        pokemon['pokemonID'] = 32;
+                        pokemon['pokemonId'] = 32;
                         break;
                     default:
                         pokemon['pokemonId'] = common.getPokemonIdByName(data['pokemon_id']);
