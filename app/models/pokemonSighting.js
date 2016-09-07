@@ -24,16 +24,23 @@ module.exports = {
         return mongoose.model('pokemonSighting', pokemonSighting);
     },
     getMappedModel: function (sighting) {
-        return {
-            source        : sighting.source.toUpperCase(),
-            location      : sighting.location && {
-                "$near" : {
-                    "$geometry" : { "coordinates" : sighting.location.split(',').map(Number) },
-                    "$maxDistance" : 0
-                }
-            },
-            pokemonId     : sighting.id || sighting.pokemonId,
-            appearedOn    : sighting.appearedOn
-        };
+        /*Check if the sighting object contains any invalid keys.*/
+        if (Object.keys(sighting).every(function(key) {
+            return ["source", "lng", "lat", "pokemonId", "id", "appearedOn"].indexOf(key) !== -1;
+        })) {
+            return {
+                source        : sighting.source.toUpperCase(),
+                location      : sighting.lng && sighting.lat && {
+                    "$near" : {
+                        "$geometry" : { "coordinates" : [Number(sighting.lng), Number(sighting.lat)] },
+                        "$maxDistance" : 0
+                    }
+                },
+                pokemonId     : sighting.id || sighting.pokemonId,
+                appearedOn    : sighting.appearedOn
+            };
+        } else {
+            return false;
+        }
     }
 };

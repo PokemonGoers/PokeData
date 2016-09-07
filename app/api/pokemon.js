@@ -202,7 +202,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -224,7 +224,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -255,7 +255,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -286,7 +286,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -317,7 +317,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -348,7 +348,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -379,7 +379,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -402,7 +402,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     }
 };

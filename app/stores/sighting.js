@@ -139,12 +139,17 @@ module.exports = {
      * get the pokemon sightings matching the specified search parameters
      */
     search: function (query, callback) {
-        query = sightingModel.getMappedModel(query);
-        query = _.omit(query, function(value) {
-            return _.isUndefined(value) || _.isNull(value);
-        });
-        this.get(query, function (status, response) {
-            callback(status, response);
-        });
+        let formatted_query = sightingModel.getMappedModel(query);
+        if (formatted_query) {
+            /*Exclude parameters that are undefined or null i.e., parameters that were not set in the query*/
+            formatted_query = _.omit(formatted_query, function(value) {
+                return _.isUndefined(value) || _.isNull(value);
+            });
+            this.get(formatted_query, function (status, response) {
+                callback(status, response);
+            });
+        } else {
+            callback(0, "Invalid query parameters");
+        }
     }
 };
