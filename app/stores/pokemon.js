@@ -12,7 +12,8 @@ module.exports = {
     get: function (data, callback) {
         Pokemon.find(data, function (err, obj) {
             if (!obj || err) {// already existing data and return 0 for indicating
-                callback(0, data);
+                let error = err && err.message;
+                callback(0, error || data);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
