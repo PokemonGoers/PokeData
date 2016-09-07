@@ -25,7 +25,7 @@ module.exports = {
                 pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 break;
             case 'pokecrew':
-                pokemon['pokemonID'] = data['pokemon_id'];
+                pokemon['pokemonId'] = data['pokemon_id'];
                 pokemon['location'] = {"type": "Point", "coordinates": [data['longitude'], data['latitude']]};
                 if (data['expires_at'].endsWith('Z')) {
                     pokemon['appearedOn'] = new Date(Date.parse(data['expires_at']) - 15 * 60 * 1000);
@@ -43,7 +43,7 @@ module.exports = {
                         pokemon['pokemonID'] = 32;
                         break;
                     default:
-                        pokemon['pokemonID'] = common.getPokemonIdByName(data['pokemon_id']);
+                        pokemon['pokemonId'] = common.getPokemonIdByName(data['pokemon_id']);
                 }
                 pokemon['appearedOn'] = new Date(Date.parse(data['expireAt']) - 15 * 60 * 1000);
                 break;
