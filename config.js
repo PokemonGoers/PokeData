@@ -37,7 +37,7 @@ module.exports = {
         "url" : "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
         "listeningInterval" : 600000 // 10 minutes in milliseconds
     },
-    "pokemonSpawnTime" : 900 ,// 15 minutes in seconds
+    "pokemonSpawnTime" : 900000 ,// 15 minutes in milliseconds
     "server": {
         "port": "8080"
     },

@@ -23,8 +23,9 @@ module.exports = {
                                    rarePokemons['location']['coordinates'] = [parseFloat(coordsArr[1]), parseFloat(coordsArr[0])];
                                    break;
 
-                    case 'until' : rarePokemons['appearedOn'] = data[key];
-                                   break;
+                    case 'until' :  // calculations for getting the actual spawn time of pokemon
+                                    rarePokemons['appearedOn'] = new Date(Date.parse(data[key]) - config.pokemonSpawnTime);
+                                    break;
 
                 }
             }
