@@ -1,6 +1,6 @@
 "use strict";
 const config = require(__base+'config'),
-      PokemonSighting = require(__appbase + 'models/pokemonSighting'),
+      PokemonSighting = require(__appbase + 'models/pokemonSighting').getSchema(),
       common = require(__base + 'app/services/common'),
       moment = require('moment'),
       request = require('request'),

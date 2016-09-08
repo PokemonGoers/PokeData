@@ -202,7 +202,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -224,7 +224,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -255,7 +255,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -286,7 +286,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -317,7 +317,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -348,7 +348,7 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
         });
     },
     /**
@@ -379,7 +379,30 @@ module.exports = {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure.', data: message});
+                res.status(404).json({message: 'Failure', data: message});
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/search?gender=:gender&type=:type SearchPokemon
+     * @apiVersion 0.0.1
+     * @apiName SearchPokemon
+     * @apiDescription Get pokemon by specified search parameters
+     * @apiGroup Pokemon
+     * @apiParam {String{1}=m,f,g,h} gender Gender of the pokemon
+     * @apiParam {String} type Type of the pokemon
+     *
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     *
+     */
+    search: function (req, res) {
+        logger.info('Get Pokemon details by search parameters');
+
+        pokemon.search(req.query, function(success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure', data: message});
         });
     }
 };

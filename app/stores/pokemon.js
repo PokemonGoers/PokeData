@@ -1,7 +1,9 @@
 "use strict";
 
-const Pokemon = require(__appbase + 'models/pokemon'),
-      PokemonIcon = require(__appbase + 'models/pokemonIcon');
+const _ = require('underscore'),
+    pokemonModel = require(__appbase + 'models/pokemon'),
+    Pokemon = pokemonModel.getSchema(),
+    PokemonIcon = require(__appbase + 'models/pokemonIcon');
 
 module.exports = {
     /*
@@ -10,7 +12,8 @@ module.exports = {
     get: function (data, callback) {
         Pokemon.find(data, function (err, obj) {
             if (!obj || err) {// already existing data and return 0 for indicating
-                callback(0, data);
+                let error = err && err.message;
+                callback(0, error || data);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
@@ -88,22 +91,22 @@ module.exports = {
         });
     },
     getByFastAttackType: function (type, callback) {
-        this.get({'fastAttacks.type': type}, function (status, response) {
+        this.get({'fastAttacks.type': new RegExp('^' + type + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
     getBySpecialAttackType: function (type, callback) {
-        this.get({'specialAttacks.type': type}, function (status, response) {
+        this.get({'specialAttacks.type': new RegExp('^' + type + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
     getByFastAttackName: function (name, callback) {
-        this.get({'fastAttacks.name': name}, function (status, response) {
+        this.get({'fastAttacks.name': new RegExp('^' + name + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
     getBySpecialAttackName: function (name, callback) {
-        this.get({'specialAttacks.name': name}, function (status, response) {
+        this.get({'specialAttacks.name': new RegExp('^' + name + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
@@ -134,6 +137,15 @@ module.exports = {
     },
     getByNextEvolutionName: function (name, callback) {
         this.get({'previousEvolutions.name': name}, function (status, response) {
+            callback(status, response);
+        });
+    },
+    search: function (query, callback) {
+        query = pokemonModel.getMappedModel(query);
+        query = _.omit(query, function(value) {
+            return _.isUndefined(value) || _.isNull(value);
+        });
+        this.get(query, function (status, response) {
             callback(status, response);
         });
     }

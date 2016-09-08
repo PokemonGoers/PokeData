@@ -1,5 +1,5 @@
 "use strict";
-const rarePokemon = require(__appbase + 'models/pokemonSighting'),
+const rarePokemon = require(__appbase + 'models/pokemonSighting').getSchema(),
       config      = require(__base+'config');
 
 module.exports = {

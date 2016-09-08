@@ -1,7 +1,10 @@
 "use strict";
 
-const Sighting = require(__appbase + 'models/pokemonSighting'),
-      config = require(__base +'config');
+const _ = require('underscore'),
+    sightingModel = require(__appbase + 'models/pokemonSighting'),
+    Sighting = sightingModel.getSchema(),
+    config = require(__base +'config');
+
 
 module.exports = {
     /*
@@ -32,7 +35,8 @@ module.exports = {
     get: function (data, callback) {
         Sighting.find(data, function (err, obj) {
             if (!obj || err) {// already existing data and return 0 for indicating
-                callback(0, data);
+                let error = err && err.message;
+                callback(0, error || data);
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
@@ -133,5 +137,25 @@ module.exports = {
         }}, function (status, response) {
             callback(status, response);
         });
+    },
+    /*
+     * get the pokemon sightings matching the specified search parameters
+     */
+    search: function (query, callback) {
+        console.log("query", query);
+        let formatted_query = sightingModel.getMappedModel(query);
+        console.log("query map", formatted_query);
+        if (formatted_query) {
+            /*Exclude parameters that are undefined or null i.e., parameters that were not set in the query*/
+            formatted_query = _.omit(formatted_query, function(value) {
+                return _.isUndefined(value) || _.isNull(value);
+            });
+            console.log("query clean", formatted_query);
+            this.get(formatted_query, function (status, response) {
+                callback(status, response);
+            });
+        } else {
+            callback(0, "Invalid query parameters");
+        }
     }
 };

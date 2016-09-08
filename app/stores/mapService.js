@@ -1,6 +1,6 @@
 "use strict";
 
-const commonPokemon = require(__appbase + 'models/pokemonSighting'),
+const commonPokemon = require(__appbase + 'models/pokemonSighting').getSchema(),
       async = require('async'),
       config = require(__base + 'config'),
       common = require(__appbase + 'services/common');
