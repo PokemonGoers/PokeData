@@ -23,21 +23,24 @@ module.exports = {
         "pokesniper": "POKESNIPER",
         "pokeRadar": "POKERADAR",
         "skiplagged": "SKIPLAGGED",
-        "pokecrew": "POKECREW"
+        "pokecrew": "POKECREW",
+        "fastpokemap": "FASTPOKEMAP"
     },
     "sourceToFiller": {
         "twitter": "twitter",
         "rarePokemon": "rarePokemon",
         "pokeRadar": "mapService",
         "skiplagged": "mapService",
-        "pokecrew": "mapService"
+        "pokecrew": "mapService",
+        "fastpokemap": "mapService"
     },
     "twitterKeyWords" : 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{
         "url" : "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
         "listeningInterval" : 600000 // 10 minutes in milliseconds
     },
-    "pokemonSpawnTime" : 900 ,// 15 minutes in seconds
+    "pokemonSpawnTime" : 900000 ,// 15 minutes in milliseconds,
+    "limit" : 2500,
     "server": {
         "port": "8080"
     },
@@ -52,5 +55,9 @@ module.exports = {
     "pokecrew": {
         "host": "api.pokecrew.com",
         "path": "/api/v1/seens"
+    },
+    "fastpokemap": {
+        "host": "cache.fastpokemap.se",
+        "path": "/"
     }
 };

@@ -12,7 +12,8 @@ var possibleListeners = [
     'pokeRadar',
     'twitter',
     'skiplagged',
-    'pokecrew'
+    'pokecrew',
+    'fastpokemap'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process

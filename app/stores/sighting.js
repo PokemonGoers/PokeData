@@ -2,7 +2,9 @@
 
 const _ = require('underscore'),
     sightingModel = require(__appbase + 'models/pokemonSighting'),
-    Sighting = sightingModel.getSchema();
+    Sighting = sightingModel.getSchema(),
+    config = require(__base +'config');
+
 
 module.exports = {
     /*
@@ -38,7 +40,7 @@ module.exports = {
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
-        });
+        }).limit(config.limit);
     },
 
     /*
