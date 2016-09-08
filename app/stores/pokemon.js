@@ -91,22 +91,22 @@ module.exports = {
         });
     },
     getByFastAttackType: function (type, callback) {
-        this.get({'fastAttacks.type': type}, function (status, response) {
+        this.get({'fastAttacks.type': new RegExp('^' + type + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
     getBySpecialAttackType: function (type, callback) {
-        this.get({'specialAttacks.type': type}, function (status, response) {
+        this.get({'specialAttacks.type': new RegExp('^' + type + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
     getByFastAttackName: function (name, callback) {
-        this.get({'fastAttacks.name': name}, function (status, response) {
+        this.get({'fastAttacks.name': new RegExp('^' + name + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
     getBySpecialAttackName: function (name, callback) {
-        this.get({'specialAttacks.name': name}, function (status, response) {
+        this.get({'specialAttacks.name': new RegExp('^' + name + '$', 'i')}, function (status, response) {
             callback(status, response);
         });
     },
