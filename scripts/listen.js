@@ -15,7 +15,8 @@ var possibleListeners = [
     'pokecrew',
     'fastpokemap',
     'pokezz',
-    'pokedexs'
+    'pokedexs',
+    'pokemap'
 ];
 
 // when the choices of collection to be filled doesn't match, then exit the process

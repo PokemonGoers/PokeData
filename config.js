@@ -26,7 +26,8 @@ module.exports = {
         "pokecrew": "POKECREW",
         "fastpokemap": "FASTPOKEMAP",
         "pokezz": "POKEZZ",
-        "pokedexs": "POKEDEXS"
+        "pokedexs": "POKEDEXS",
+        "pokemap": "POKEMAP"
     },
     "sourceToFiller": {
         "twitter": "twitter",
@@ -36,7 +37,8 @@ module.exports = {
         "pokecrew": "mapService",
         "fastpokemap": "mapService",
         "pokezz": "webSocket",
-        "pokedexs": "webSocket"
+        "pokedexs": "webSocket",
+        "pokemap": "mapService"
     },
     "twitterKeyWords" : 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
     "pokesniper":{
@@ -71,5 +73,9 @@ module.exports = {
     "pokedexs": {
         "host": "pokedexs.com",
         "path": "/socket.io/?EIO=3&transport=websocket"
+    },
+    "pokemap": {
+        "host": "www.pokemap.net",
+        "path": "/api/mewto.php"
     }
 };
