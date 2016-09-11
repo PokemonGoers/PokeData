@@ -11,6 +11,14 @@ const http = require('http'),
       config = require(__base + 'config'),
       store = require(__appbase + 'stores/mapService');
 
+//encode and decode function for pokemap
+function encode(str) {
+    return Buffer.from(str).toString('base64').replace(/W/g, '_').replace(/=/g, '.').replace(/X/g, '---');
+}
+function decode(str) {
+    return Buffer.from(str.replace(/_/g, 'W').replace(/\./g, '=').replace(/---/g, 'X'), 'base64').toString('ascii');
+}
+
 //To point to currently used proxy in proxyList (0 is no proxy, 1 is first in list...)
 var proxyPointer = 0;
 //must be array of Strings in format "host:port"
@@ -48,7 +56,7 @@ const baseLink = function (lat, lng, delta) {
         var hp = proxyList[proxyPointer - 1].split(':');
         link.host = hp[0];
         link.port = hp[1];
-        var scheme = collection === 'pokecrew' ? 'https://' : 'http://';
+        var scheme = collection === 'pokecrew' || collection === 'pokemap' ? 'https://' : 'http://';
         link.path = scheme + config[collection].host + config[collection].path;
     } else {
         link.host = config[collection].host;
@@ -68,6 +76,9 @@ const baseLink = function (lat, lng, delta) {
         case 'fastpokemap':
             queryString = '?key=allow-all&ts=0&lat='+ lat.toString() + '&lng=' + lng.toString();
             link['headers'] = hd_fp;
+            break;
+        case 'pokemap':
+            queryString = '?move=' + encode('latitude=' + lat.toString() + '&longitude=' + lng.toString());
             break;
         default:
             logger.error("Collection not known!");
@@ -105,7 +116,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
             //generate url
             var options = baseLink(i, j, delta);
             //generate api call
-            var proto = collection === 'pokecrew' ? https : http;
+            var proto = collection === 'pokecrew' || collection === 'pokemap' ? https : http;
             var req = proto.request(options, function (response) {
                 //needed for control flow
                 var deferred = q.defer();
@@ -138,7 +149,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                             }
                         } else {
                             //if not just parse it as ascii/utf8
-                            data = JSON.parse(body.toString());
+                            data = JSON.parse(collection === 'pokemap' ? decode(body.toString()) : body.toString());
                         }
                         //array to hold pokemon
                         var arr = [];
@@ -153,6 +164,7 @@ function searcher(minLat, minLng, boxSize, delta, callback) {
                                 arr = data.seens;
                                 break;
                             case 'fastpokemap':
+                            case 'pokemap':
                                 arr = data;
                                 break;
                             default:
@@ -220,12 +232,18 @@ module.exports = {
         var funcs = [];
         var boxSize;
         var delta;
-        if (collection === 'fastpokemap') {
-            boxSize = 0.5;
-            delta = 0.026 * Math.sqrt(2);
-        } else {
-            boxSize = 5.0;
-            delta = 0.5;
+        switch (collection) {
+            case 'fastpokemap':
+                boxSize = 0.5;
+                delta = 0.026 * Math.sqrt(2);
+                break;
+            case 'pokemap':
+                boxSize = 0.25;
+                delta = 0.011 * Math.sqrt(2);
+                break;
+            default:
+                boxSize = 5.0;
+                delta = 0.5;
         }
 
         //scan for whole world, generates array of functions
@@ -241,8 +259,14 @@ module.exports = {
             for (var i = 0; i < coords.length; i++) {
                 var c = coords[i].split(',');
                 if (collection === 'fastpokemap') {
-                    for (var j = 0; j < 5; j+=0.5) {
-                        for (var k = 0; k < 5; k+=0.5) {
+                    for (var j = 0; j < 10; j+=0.5) {
+                        for (var k = 0; k < 10; k+=0.5) {
+                            funcs.push(createfunc(parseFloat(c[0]) + j, parseFloat(c[1]) + k, boxSize, delta));
+                        }
+                    }
+                } else if (collection === 'pokemap') {
+                    for (var j = 0; j < 20; j+=0.25) {
+                        for (var k = 0; k < 20; k+=0.25) {
                             funcs.push(createfunc(parseFloat(c[0]) + j, parseFloat(c[1]) + k, boxSize, delta));
                         }
                     }
