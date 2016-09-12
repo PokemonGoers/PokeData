@@ -14,6 +14,8 @@ var possibleListeners = [
     'skiplagged',
     'pokecrew',
     'fastpokemap',
+    'pokezz',
+    'pokedexs',
     'pokemap'
 ];
 

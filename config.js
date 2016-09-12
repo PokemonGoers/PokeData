@@ -25,6 +25,8 @@ module.exports = {
         "skiplagged": "SKIPLAGGED",
         "pokecrew": "POKECREW",
         "fastpokemap": "FASTPOKEMAP",
+        "pokezz": "POKEZZ",
+        "pokedexs": "POKEDEXS",
         "pokemap": "POKEMAP"
     },
     "sourceToFiller": {
@@ -34,6 +36,8 @@ module.exports = {
         "skiplagged": "mapService",
         "pokecrew": "mapService",
         "fastpokemap": "mapService",
+        "pokezz": "webSocket",
+        "pokedexs": "webSocket",
         "pokemap": "mapService"
     },
     "twitterKeyWords" : 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
@@ -61,6 +65,14 @@ module.exports = {
     "fastpokemap": {
         "host": "cache.fastpokemap.se",
         "path": "/"
+    },
+    "pokezz": {
+        "host": "pokezz.com",
+        "path": "/socket.io/?EIO=3&transport=websocket"
+    },
+    "pokedexs": {
+        "host": "pokedexs.com",
+        "path": "/socket.io/?EIO=3&transport=websocket"
     },
     "pokemap": {
         "host": "www.pokemap.net",
