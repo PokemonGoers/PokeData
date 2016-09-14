@@ -60,9 +60,6 @@ module.exports = {
                         savePokemonSighthing(pokemonSighting);
                     }
                 });
-        } else {
-            // save null location when no location related data is found
-            savePokemonSighthing(pokemonSighting);
         }
 
         function savePokemonSighthing(pokemonSighting) {
