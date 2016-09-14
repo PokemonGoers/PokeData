@@ -37,6 +37,54 @@ module.exports = {
             callback(status, response);
         });
     },
+
+    /*
+     * get the distance between a pair of strings
+     */
+    getStrDistance: function (str1, str2) {
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+        let dist = 0;
+
+        if (str2.length > str1.length) {
+            let temp = str1;
+            str1 = str2;
+            str2 = temp;
+        }
+        let str_length = str1.length;
+        for (let i = 0; i < str_length; i++) {
+            if (str2[i] && str2[i] !== str1[i]) {
+                dist++;
+            }
+        }
+        return dist;
+    },
+    /*
+     * searching the pokemon details by closest name
+     */
+    getClosest: function (name, data, callback) {
+        name = name.toLowerCase();
+
+        /*Filter the records that match the first 3 characters of the query*/
+        let data_clone = _.filter(data, function (datum) {
+            let datumName = datum.name.toLowerCase();
+            return datum.name.length > 3 && name.substring(0, 2) === datumName.substring(0, 2);
+        });
+        /*Loop through the data and compute the distance between the query and each name value in the data*/
+        data_clone.forEach(function (pokemon) {
+            let pokemonName = pokemon.name.toLowerCase();
+                pokemon.distance = this.getStrDistance(name, pokemonName);
+        }.bind(this));
+
+        /*Sort the data in ascending order of distance*/
+        data_clone = _.sortBy(data_clone, "distance");
+        /*Select the first 3 data records (3 records that are closest to the query).
+        * Remove the "distance"  */
+        let matches = _.map(_.first(data_clone, 3), function (match) {
+            return match;//_.omit(match, "distance");
+        });
+        callback(1, matches);
+    },
     /*
      * searching the pokemonIcon details by Id
      */
@@ -61,9 +109,24 @@ module.exports = {
      * get the pokemon details of particular pokemon based on name
      */
     getByName : function (name, callback) {
-        this.get({'name': new RegExp('^' + name + '$', 'i')}, function (status, response) {
-            callback(status, response);
-        });
+        this.get({'name': new RegExp('^.*' + name + '.*$', 'i')}, function (status, response) {
+            /*If no records were found matching the name, get the closest matches by performing a Fuzzy string matching*/
+            if (status === 1 && _.isEmpty(response) && name.length > 3) {
+                /*Retrieve all records from the database*/
+                this.getAll(function (status, response) {
+                    if (status === 1) {
+                        /*Get the closest matches for the specified name*/
+                        this.getClosest(name, response, function (status, response) {
+                            callback(status, response);
+                        });
+                    } else {
+                        callback(status, response);
+                    }
+                }.bind(this));
+            } else {
+                callback(status, response);
+            }
+        }.bind(this));
     },
     /*
      * get the pokemon details of particular pokemon based on type
