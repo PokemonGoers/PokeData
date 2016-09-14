@@ -21,23 +21,25 @@
 - change the script part of package.json to the following
 ```
 "scripts": {
-    "start": "node app.js",
+    "start" : "node app.js",
     "listen": "node scripts/listen.js",
-    "build": "node scripts/build.js",
-    "test": "node test/main.js"
+    "build" : "node scripts/build.js",
+    "test"  : "node test/main.js"
   }
 ```
 # Build pokemon database
+```
 npm run build -collection=pokemon
+```
 
 ## Listen for PokemonSightings
 
-- Liste for pokemon sightings
+- Listen for pokemon sightings
 
 ```
+// data-source-name - rarePokemon, pokeRadar, skiplagged, pokecrew, fastpokemap, pokezz, pokedexs, pokemap
 npm run listen -collection=<data-source-name>
 ```
-- data-source-name - rarePokemon, pokeRadar, skiplagged, pokecrew, fastpokemap, pokezz, pokedexs, pokemap
 
 - Listen for Twitter pokemon sightings:
 
@@ -48,6 +50,29 @@ CONSUMER_KEY=<CONSUMER_KEY> CONSUMER_SECRET=<CONSUMER_SECRET> ACCESS_TOKEN=<ACCE
 - CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET - keys provided by twitter (https://apps.twitter.com/)
 
 # To run in production
+- To use mlab as a database, get the username, password, uri and the collection name.
+
+# Build pokemon database
+
+```
+MLAB_USERNAME=<MLAB_USERNAME> MLAB_PASSWORD=<MLAB_PASSWORD> MLAB_URI=<MLAB_URI> MLAB_COLLECTION=<MLAB_COLLECTION> npm run build -collection=pokemon
+```
+## Listen for PokemonSightings
+
+- Listen for pokemon sightings
+
+```
+// data-source-name - rarePokemon, pokeRadar, skiplagged, pokecrew, fastpokemap, pokezz, pokedexs, pokemap
+MLAB_USERNAME=<MLAB_USERNAME> MLAB_PASSWORD=<MLAB_PASSWORD> MLAB_URI=<MLAB_URI> MLAB_COLLECTION=<MLAB_COLLECTION> npm run listen -collection=<data-source-name>
+```
+
+- Listen for Twitter pokemon sightings:
+
+```
+MLAB_USERNAME=<MLAB_USERNAME> MLAB_PASSWORD=<MLAB_PASSWORD> MLAB_URI=<MLAB_URI> MLAB_COLLECTION=<MLAB_COLLECTION> CONSUMER_KEY=<CONSUMER_KEY> CONSUMER_SECRET=<CONSUMER_SECRET> ACCESS_TOKEN=<ACCESS_TOKEN> ACCESS_TOKEN_SECRET=<ACCESS_TOKEN_SECRET> NODE_ENV=<NODE_ENV> npm run listen -collection=twitter
+```
+
+- CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET - keys provided by twitter (https://apps.twitter.com/)
 
 ## Docker Build
 
