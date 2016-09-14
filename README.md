@@ -5,6 +5,9 @@
 ## API Documentation
  A detailed documentation of the API is available [here](http://pokedata.c4e3f8c7.svc.dockerapp.io:65014/doc/).
  
+## API Demo
+ A demo of our API can also be found [here](http://pokedata.c4e3f8c7.svc.dockerapp.io:65014/doc/).
+ 
 ## Data Sources
  Data accessible through the API has been extracted from these sources:
   - [Twitter](https://twitter.com/)
@@ -19,10 +22,12 @@
 
 ## Build pokemon database and listen for pokemon sightings
 
-## To run locally
+## To run locally without docker
 
-- To run locally, mongodb is required, use 'mongod' to do so
+- Clone this repo
+- To run locally, mongodb is required, use 'mongod' to do so (standard port 27017, no credentials)
 - change the script part of package.json to the following
+- then start listeners to fill the DB, build the pokemon collection (see below) and run "npm start" to expose the API on `localhost:8080`
 ```
 "scripts": {
     "start" : "node app.js",
