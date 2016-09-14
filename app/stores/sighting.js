@@ -142,15 +142,12 @@ module.exports = {
      * get the pokemon sightings matching the specified search parameters
      */
     search: function (query, callback) {
-        console.log("query", query);
         let formatted_query = sightingModel.getMappedModel(query);
-        console.log("query map", formatted_query);
         if (formatted_query) {
             /*Exclude parameters that are undefined or null i.e., parameters that were not set in the query*/
             formatted_query = _.omit(formatted_query, function(value) {
                 return _.isUndefined(value) || _.isNull(value);
             });
-            console.log("query clean", formatted_query);
             this.get(formatted_query, function (status, response) {
                 callback(status, response);
             });
