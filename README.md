@@ -103,3 +103,10 @@ MLAB_USERNAME=<MLAB_USERNAME> MLAB_PASSWORD=<MLAB_PASSWORD> MLAB_URI=<MLAB_URI> 
   ```
 
  2. The application can be accessed at the URL `HOST_IP:49160`.
+
+##Contributors
+- swathi-ssunder
+- samitsv
+- vivek-sethia
+- jonas-he
+- fabe85
