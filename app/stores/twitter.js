@@ -51,13 +51,7 @@ module.exports = {
 
                             location = {type: "Point",coordinates: [pokemonFoundLongitude, pokemonFoundLatitude]};
                             savePokemonSighthing(pokemonSighting);
-                        } else {
-                            // save null location when link is not google maps related
-                            savePokemonSighthing(pokemonSighting);
                         }
-                    } else {
-                        // save null location when response is not 200
-                        savePokemonSighthing(pokemonSighting);
                     }
                 });
         }
