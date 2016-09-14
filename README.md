@@ -10,8 +10,12 @@
   - [Twitter](https://twitter.com/)
   - [PokeSniper](https://pokesnipers.com)
   - [PokeRadar](https://www.pokeradar.io)
-  - [SkipLagged](https://skiplagged.com/catch-that)
+  - [Skiplagged](https://skiplagged.com/catch-that)
   - [PokeCrew](https://www.pokecrew.com)
+  - [PokeZZ](http://pokezz.com/)
+  - [PokeDexs](https://pokedexs.com/)
+  - [FastPokeMap](https://fastpokemap.se/)
+  - [PokeMap](https://www.pokemap.net/)
 
 ## Build pokemon database and listen for pokemon sightings
 
