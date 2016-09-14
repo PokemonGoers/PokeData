@@ -40,7 +40,7 @@ module.exports = {
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
-        }).limit(config.limit);
+        }).sort({"appearedOn": -1}).limit(config.limit);
     },
 
     /*
