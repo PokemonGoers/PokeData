@@ -13,9 +13,9 @@
   - [SkipLagged](https://skiplagged.com/catch-that)
   - [PokeCrew](https://www.pokecrew.com)
 
-# Build pokemon database and listen for pokemon sightings
+## Build pokemon database and listen for pokemon sightings
 
-# To run locally
+## To run locally
 
 - To run locally, mongodb is required, use 'mongod' to do so
 - change the script part of package.json to the following
@@ -27,7 +27,7 @@
     "test"  : "node test/main.js"
   }
 ```
-# Build pokemon database
+## Build pokemon database
 ```
 npm run build -collection=pokemon
 ```
@@ -49,10 +49,10 @@ CONSUMER_KEY=<CONSUMER_KEY> CONSUMER_SECRET=<CONSUMER_SECRET> ACCESS_TOKEN=<ACCE
 
 - CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET - keys provided by twitter (https://apps.twitter.com/)
 
-# To run in production
+## To run in production
 - To use mlab as a database, get the username, password, uri and the collection name.
 
-# Build pokemon database
+## Build pokemon database
 
 ```
 MLAB_USERNAME=<MLAB_USERNAME> MLAB_PASSWORD=<MLAB_PASSWORD> MLAB_URI=<MLAB_URI> MLAB_COLLECTION=<MLAB_COLLECTION> npm run build -collection=pokemon
