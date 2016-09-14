@@ -113,6 +113,11 @@ MLAB_USERNAME=<MLAB_USERNAME> MLAB_PASSWORD=<MLAB_PASSWORD> MLAB_URI=<MLAB_URI> 
 
  2. The application can be accessed at the URL `HOST_IP:49160`.
 
+##Config
+There is a configuration file `config.js` in the root folder.
+If you don't want to pass parameters for DB connection and twitter credentials everytime you can adapt it.
+Just replace the `process.env.*` with the desired value. The `"database"` key is  development mode, `"shared_database"` for production mode and `"twitter"` holds the twitter information.
+
 ##Contributors
 - swathi-ssunder
 - samitsv
