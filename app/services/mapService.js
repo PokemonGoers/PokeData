@@ -13,10 +13,10 @@ const http = require('http'),
 
 //encode and decode function for pokemap
 function encode(str) {
-    return Buffer.from(str).toString('base64').replace(/W/g, '_').replace(/=/g, '.').replace(/X/g, '---');
+    return new Buffer(str).toString('base64').replace(/W/g, '_').replace(/=/g, '.').replace(/X/g, '---');
 }
 function decode(str) {
-    return Buffer.from(str.replace(/_/g, 'W').replace(/\./g, '=').replace(/---/g, 'X'), 'base64').toString('ascii');
+    return new Buffer(str.replace(/_/g, 'W').replace(/\./g, '=').replace(/---/g, 'X'), 'base64').toString('ascii');
 }
 
 //To point to currently used proxy in proxyList (0 is no proxy, 1 is first in list...)
