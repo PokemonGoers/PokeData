@@ -176,11 +176,11 @@ module.exports = {
      */
     getByDescription: function(req, res) {
         logger.info('Get Pokemon description');
-        pokemon.getByDescription(req.params.name, function (success, message) {
+        pokemon.getByDescription(req.params.description, function (success, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon description of that kind exists!', data: {'name': req.params.description}});
+                res.status(404).json({message: 'Failure. No pokemon description of that kind exists!', data: {'description': req.params.description}});
         });
     },
     /**
