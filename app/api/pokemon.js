@@ -163,7 +163,7 @@ module.exports = {
     },
 
     /**
-     * @api {get} /api/pokemon/name/:name/ GetPokemonByDescription
+     * @api {get} /api/pokemon/description/:description/ GetPokemonByDescription
      * @apiVersion 0.0.1
      * @apiName GetPokemonByDescription
      * @apiDescription Get pokemon by specific description
