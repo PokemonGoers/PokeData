@@ -86,6 +86,32 @@ module.exports = {
         callback(1, matches);
     },
     /*
+     * searching the pokemon details by closest description
+     */
+    getClosestDescription: function (description, data, callback) {
+        description = description.toLowerCase();
+
+        /*Filter the records that match the first 3 characters of the query*/
+        let data_clone = _.filter(data, function (datum) {
+            let datumDescription = datum.description.toLowerCase();
+            return datum.description.length > 8 && description.substring(0, 7) === datumDescription.substring(0, 7);
+        });
+        /*Loop through the data and compute the distance between the query and each name value in the data*/
+        data_clone.forEach(function (pokemon) {
+            let pokemonDescription = pokemon.description.toLowerCase();
+            pokemon.distance = this.getStrDistance(description, pokemonDescription);
+        }.bind(this));
+
+        /*Sort the data in ascending order of distance*/
+        data_clone = _.sortBy(data_clone, "distance");
+        /*Select the first 3 data records (3 records that are closest to the query).
+         * Remove the "distance"  */
+        let matches = _.map(_.first(data_clone, 3), function (match) {
+            return match;//_.omit(match, "distance");
+        });
+        callback(1, matches);
+    },
+    /*
      * searching the pokemonIcon details by Id
      */
     getIconById: function (id, callback) {
@@ -136,7 +162,7 @@ module.exports = {
             if (status === 1 && _.isEmpty(response) && description.length > 8) {
                 this.getAll(function (status, response) {
                     if (status === 1) {
-                        this.getClosest(description, response, function (status, response) {
+                        this.getClosestDescription(description, response, function (status, response) {
                             callback(status, response);
                         });
                     } else {
