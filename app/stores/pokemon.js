@@ -129,6 +129,26 @@ module.exports = {
         }.bind(this));
     },
     /*
+     * get the pokemon details of particular pokemon based on description
+     */
+    getByDescription : function (description, callback) {
+        this.get({'description': new RegExp('^.*' + description + '.*$', 'i')}, function (status, response) {
+            if (status === 1 && _.isEmpty(response) && description.length > 8) {
+                this.getAll(function (status, response) {
+                    if (status === 1) {
+                        this.getClosest(description, response, function (status, response) {
+                            callback(status, response);
+                        });
+                    } else {
+                        callback(status, response);
+                    }
+                }.bind(this));
+            } else {
+                callback(status, response);
+            }
+        }.bind(this));
+    },
+    /*
      * get the pokemon details of particular pokemon based on type
      */
     getByType : function (type, callback) {
