@@ -38,7 +38,7 @@
 ```
 ## Build pokemon database
 ```
-npm run build -collection=pokemon
+npm run build --collection=pokemon
 ```
 
 ## Listen for PokemonSightings
