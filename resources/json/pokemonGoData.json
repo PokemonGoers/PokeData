@@ -1,6 +1,7 @@
 [
    {
       "Number":"001",
+      "Description":"Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
       "Name":"Bulbasaur",
       "Classification":"Seed Pokèmon",
       "Types":[
@@ -79,6 +80,7 @@
    },
    {
       "Number":"002",
+      "Description":"There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.",
       "Name":"Ivysaur",
       "Classification":"Seed Pokèmon",
       "Types":[
@@ -163,6 +165,7 @@
    },
    {
       "Number":"003",
+      "Description":"There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.",
       "Name":"Venusaur",
       "Classification":"Seed Pokèmon",
       "Types":[
@@ -237,6 +240,7 @@
    },
    {
       "Number":"004",
+      "Description":"The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
       "Name":"Charmander",
       "Classification":"Lizard Pokèmon",
       "Types":[
@@ -314,6 +318,7 @@
    },
    {
       "Number":"005",
+      "Description":"Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.",
       "Name":"Charmeleon",
       "Classification":"Flame Pokèmon",
       "Types":[
@@ -397,6 +402,7 @@
    },
    {
       "Number":"006",
+      "Description":"Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.",
       "Name":"Charizard",
       "Classification":"Flame Pokèmon",
       "Types":[
@@ -471,6 +477,7 @@
    },
    {
       "Number":"007",
+      "Description":"Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
       "Name":"Squirtle",
       "Classification":"Tiny Turtle Pokèmon",
       "Types":[
@@ -545,6 +552,7 @@
    },
    {
       "Number":"008",
+      "Description":"Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon's toughness as a battler.",
       "Name":"Wartortle",
       "Classification":"Turtle Pokèmon",
       "Types":[
@@ -630,6 +638,7 @@
    },
    {
       "Number":"009",
+      "Description":"Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.",
       "Name":"Blastoise",
       "Classification":"Shellfish Pokèmon",
       "Types":[
@@ -705,6 +714,7 @@
    },
    {
       "Number":"010",
+      "Description":"Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.",
       "Name":"Caterpie",
       "Classification":"Worm Pokèmon",
       "Types":[
@@ -769,6 +779,7 @@
    },
    {
       "Number":"011",
+      "Description":"The shell covering this Pokémon's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.",
       "Name":"Metapod",
       "Classification":"Cocoon Pokèmon",
       "Types":[
@@ -839,6 +850,7 @@
    },
    {
       "Number":"012",
+      "Description":"Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.",
       "Name":"Butterfree",
       "Classification":"Butterfly Pokèmon",
       "Types":[
@@ -913,6 +925,7 @@
    },
    {
       "Number":"013",
+      "Description":"Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
       "Name":"Weedle",
       "Classification":"Hairy Pokèmon",
       "Types":[
@@ -981,6 +994,7 @@
    },
    {
       "Number":"014",
+      "Description":"Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
       "Name":"Kakuna",
       "Classification":"Cocoon Pokèmon",
       "Types":[
@@ -1055,6 +1069,7 @@
    },
    {
       "Number":"015",
+      "Description":"Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.",
       "Name":"Beedrill",
       "Classification":"Poison Bee Pokèmon",
       "Types":[
@@ -1129,6 +1144,7 @@
    },
    {
       "Number":"016",
+      "Description":"Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.",
       "Name":"Pidgey",
       "Classification":"Tiny Bird Pokèmon",
       "Types":[
@@ -1205,6 +1221,7 @@
    },
    {
       "Number":"017",
+      "Description":"Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.",
       "Name":"Pidgeotto",
       "Classification":"Bird Pokèmon",
       "Types":[
@@ -1287,6 +1304,7 @@
    },
    {
       "Number":"018",
+      "Description":"This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.",
       "Name":"Pidgeot",
       "Classification":"Bird Pokèmon",
       "Types":[
@@ -1429,6 +1447,7 @@
    },
    {
       "Number":"020",
+      "Description":"Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.",
       "Name":"Raticate",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -1495,6 +1514,7 @@
    },
    {
       "Number":"021",
+      "Description":"Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.",
       "Name":"Spearow",
       "Classification":"Tiny Bird Pokèmon",
       "Types":[
@@ -1571,6 +1591,7 @@
    },
    {
       "Number":"022",
+      "Description":"Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.",
       "Name":"Fearow",
       "Classification":"Beak Pokèmon",
       "Types":[
@@ -1643,6 +1664,7 @@
    },
    {
       "Number":"023",
+      "Description":"Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.",
       "Name":"Ekans",
       "Classification":"Snake Pokèmon",
       "Types":[
@@ -1718,6 +1740,7 @@
    },
    {
       "Number":"024",
+      "Description":"This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.",
       "Name":"Arbok",
       "Classification":"Cobra Pokèmon",
       "Types":[
@@ -1789,6 +1812,7 @@
    },
    {
       "Number":"025",
+      "Description":"Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.",
       "Name":"Pikachu",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -1861,6 +1885,7 @@
    },
    {
       "Number":"026",
+      "Description":"If the electrical sacs become excessively charged, Raichu plants its tail in the ground and discharges. Scorched patches of ground will be found near this Pokémon's nest.",
       "Name":"Raichu",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -1929,6 +1954,7 @@
    },
    {
       "Number":"027",
+      "Description":"Sandshrew's body is configured to absorb water without waste, enabling it to survive in an arid desert. This Pokémon curls up to protect itself from its enemies.",
       "Name":"Sandshrew",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -2003,6 +2029,7 @@
    },
    {
       "Number":"028",
+      "Description":"Sandslash's body is covered by tough spikes, which are hardened sections of its hide. Once a year, the old spikes fall out, to be replaced with new spikes that grow out from beneath the old ones.",
       "Name":"Sandslash",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -2073,6 +2100,7 @@
    },
    {
       "Number":"029",
+      "Description":"Nidoran? has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
       "Name":"Nidoran ♀",
       "Classification":"Poison Pin Pokèmon",
       "Types":[
@@ -2148,6 +2176,7 @@
    },
    {
       "Number":"030",
+      "Description":"When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.",
       "Name":"Nidorina",
       "Classification":"Poison Pin Pokèmon",
       "Types":[
@@ -2229,6 +2258,7 @@
    },
    {
       "Number":"031",
+      "Description":"Nidoqueen's body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.",
       "Name":"Nidoqueen",
       "Classification":"Drill Pokèmon",
       "Types":[
@@ -2304,6 +2334,7 @@
    },
    {
       "Number":"032",
+      "Description":"Nidoran? has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon's notice.",
       "Name":"Nidoran ♂",
       "Classification":"Poison Pin Pokèmon",
       "Types":[
@@ -2379,6 +2410,7 @@
    },
    {
       "Number":"033",
+      "Description":"Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.",
       "Name":"Nidorino",
       "Classification":"Poison Pin Pokèmon",
       "Types":[
@@ -2460,6 +2492,7 @@
    },
    {
       "Number":"034",
+      "Description":"Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.",
       "Name":"Nidoking",
       "Classification":"Drill Pokèmon",
       "Types":[
@@ -2535,6 +2568,7 @@
    },
    {
       "Number":"035",
+      "Description":"On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other.",
       "Name":"Clefairy",
       "Classification":"Fairy Pokèmon",
       "Types":[
@@ -2609,6 +2643,7 @@
    },
    {
       "Number":"036",
+      "Description":"Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights.",
       "Name":"Clefable",
       "Classification":"Fairy Pokèmon",
       "Types":[
@@ -2679,6 +2714,7 @@
    },
    {
       "Number":"037",
+      "Description":"At the time of its birth, Vulpix has one white tail. The tail separates into six if this Pokémon receives plenty of love from its Trainer. The six tails become magnificently curled.",
       "Name":"Vulpix",
       "Classification":"Fox Pokèmon",
       "Types":[
@@ -2756,6 +2792,7 @@
    },
    {
       "Number":"038",
+      "Description":"Ninetales casts a sinister light from its bright red eyes to gain total control over its foe's mind. This Pokémon is said to live for a thousand years.",
       "Name":"Ninetales",
       "Classification":"Fox Pokèmon",
       "Types":[
@@ -2829,6 +2866,7 @@
    },
    {
       "Number":"039",
+      "Description":"Jigglypuff's vocal cords can freely adjust the wavelength of its voice. This Pokémon uses this ability to sing at precisely the right wavelength to make its foes most drowsy.",
       "Name":"Jigglypuff",
       "Classification":"Balloon Pokèmon",
       "Types":[
@@ -2904,6 +2942,7 @@
    },
    {
       "Number":"040",
+      "Descripiton":"Wigglytuff has large, saucerlike eyes. The surfaces of its eyes are always covered with a thin layer of tears. If any dust gets in this Pokémon's eyes, it is quickly washed away.",
       "Name":"Wigglytuff",
       "Classification":"Balloon Pokèmon",
       "Types":[
@@ -2975,6 +3014,7 @@
    },
    {
       "Number":"041",
+      "Description":"Zubat remains quietly unmoving in a dark spot during the bright daylight hours. It does so because prolonged exposure to the sun causes its body to become slightly burned.",
       "Name":"Zubat",
       "Classification":"Bat Pokèmon",
       "Types":[
@@ -3053,6 +3093,7 @@
    },
    {
       "Number":"042",
+      "Description":"Golbat loves to drink the blood of living things. It is particularly active in the pitch black of night. This Pokémon flits around in the night skies, seeking fresh blood.",
       "Name":"Golbat",
       "Classification":"Bat Pokèmon",
       "Types":[
@@ -3127,6 +3168,7 @@
    },
    {
       "Number":"043",
+      "Description":"During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body. The more fertile the soil, the glossier its leaves become.",
       "Name":"Oddish",
       "Classification":"Weed Pokèmon",
       "Types":[
@@ -3205,6 +3247,7 @@
    },
    {
       "Number":"044",
+      "Description":"Gloom releases a foul fragrance from the pistil of its flower. When faced with danger, the stench worsens. If this Pokémon is feeling calm and secure, it does not release its usual stinky aroma.",
       "Name":"Gloom",
       "Classification":"Weed Pokèmon",
       "Types":[
@@ -3289,6 +3332,7 @@
    },
    {
       "Number":"045",
+      "Description":"Vileplume's toxic pollen triggers atrocious allergy attacks. That's why it is advisable never to approach any attractive flowers in a jungle, however pretty they may be.",
       "Name":"Vileplume",
       "Classification":"Flower Pokèmon",
       "Types":[
@@ -3363,6 +3407,7 @@
    },
    {
       "Number":"046",
+      "Description":"Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life.",
       "Name":"Paras",
       "Classification":"Mushroom Pokèmon",
       "Types":[
@@ -3443,6 +3488,7 @@
    },
    {
       "Number":"047",
+      "Description":"Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.",
       "Name":"Parasect",
       "Classification":"Mushroom Pokèmon",
       "Types":[
@@ -3519,6 +3565,7 @@
    },
    {
       "Number":"048",
+      "Description":"Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.",
       "Name":"Venonat",
       "Classification":"Insect Pokèmon",
       "Types":[
@@ -3597,6 +3644,7 @@
    },
    {
       "Number":"049",
+      "Description":"Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.",
       "Name":"Venomoth",
       "Classification":"Poison Moth Pokèmon",
       "Types":[
@@ -3671,6 +3719,7 @@
    },
    {
       "Number":"050",
+      "Description":"Diglett are raised in most farms. The reason is simple— wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.",
       "Name":"Diglett",
       "Classification":"Mole Pokèmon",
       "Types":[
@@ -3745,6 +3794,7 @@
    },
    {
       "Number":"051",
+      "Description":"Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly.",
       "Name":"Dugtrio",
       "Classification":"Mole Pokèmon",
       "Types":[
@@ -3815,6 +3865,7 @@
    },
    {
       "Number":"052",
+      "Description":"Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.",
       "Name":"Meowth",
       "Classification":"Scratch Cat Pokèmon",
       "Types":[
@@ -3885,6 +3936,7 @@
    },
    {
       "Number":"053",
+      "Description":"Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon's surrounding vicinity. It becomes docile if grabbed by the whiskers.",
       "Name":"Persian",
       "Classification":"Classy Cat Pokèmon",
       "Types":[
@@ -3951,6 +4003,7 @@
    },
    {
       "Number":"054",
+      "Description":"Psyduck uses a mysterious power. When it does so, this Pokémon generates brain waves that are supposedly only seen in sleepers. This discovery spurred controversy among scholars.",
       "Name":"Psyduck",
       "Classification":"Duck Pokèmon",
       "Types":[
@@ -4025,6 +4078,7 @@
    },
    {
       "Number":"055",
+      "Description":"The webbed flippers on its forelegs and hind legs and the streamlined body of Golduck give it frightening speed. This Pokémon is definitely much faster than even the most athletic swimmer.",
       "Name":"Golduck",
       "Classification":"Duck Pokèmon",
       "Types":[
@@ -4100,6 +4154,7 @@
    },
    {
       "Number":"056",
+      "Description":"When Mankey starts shaking and its nasal breathing turns rough, it's a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.",
       "Name":"Mankey",
       "Classification":"Pig Monkey Pokèmon",
       "Types":[
@@ -4174,6 +4229,7 @@
    },
    {
       "Number":"057",
+      "Description":"When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.",
       "Name":"Primeape",
       "Classification":"Pig Monkey Pokèmon",
       "Types":[
@@ -4244,6 +4300,7 @@
    },
    {
       "Number":"058",
+      "Description":"Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won't forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.",
       "Name":"Growlithe",
       "Classification":"Puppy Pokèmon",
       "Types":[
@@ -4321,6 +4378,7 @@
    },
    {
       "Number":"059",
+      "Description":"Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon's body is its source of power.",
       "Name":"Arcanine",
       "Classification":"Legendary Pokèmon",
       "Types":[
@@ -4394,6 +4452,7 @@
    },
    {
       "Number":"060",
+      "Description":"Poliwag has a very thin skin. It is possible to see the Pokémon's spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.",
       "Name":"Poliwag",
       "Classification":"Tadpole Pokèmon",
       "Types":[
@@ -4468,6 +4527,7 @@
    },
    {
       "Number":"061",
+      "Description":"The surface of Poliwhirl's body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.",
       "Name":"Poliwhirl",
       "Classification":"Tadpole Pokèmon",
       "Types":[
@@ -4548,6 +4608,7 @@
    },
    {
       "Number":"062",
+      "Description":"Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.",
       "Name":"Poliwrath",
       "Classification":"Tadpole Pokèmon",
       "Types":[
@@ -4625,6 +4686,7 @@
    },
    {
       "Number":"063",
+      "Description":"Abra sleeps for eighteen hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this Pokémon immediately teleports to safety.",
       "Name":"Abra",
       "Classification":"Psi Pokèmon",
       "Types":[
@@ -4696,6 +4758,7 @@
    },
    {
       "Number":"064",
+      "Description":"Kadabra emits a peculiar alpha wave if it develops a headache. Only those people with a particularly strong psyche can hope to become a Trainer of this Pokémon.",
       "Name":"Kadabra",
       "Classification":"Psi Pokèmon",
       "Types":[
@@ -4775,6 +4838,7 @@
    },
    {
       "Number":"065",
+      "Description":"Alakazam's brain continually grows, making its head far too heavy to support with its neck. This Pokémon holds its head up using its psychokinetic power instead.",
       "Name":"Alakazam",
       "Classification":"Psi Pokèmon",
       "Types":[
@@ -4844,6 +4908,7 @@
    },
    {
       "Number":"066",
+      "Description":"Machop's muscles are special—they never get sore no matter how much they are used in exercise. This Pokémon has sufficient power to hurl a hundred adult humans.",
       "Name":"Machop",
       "Classification":"Superpower Pokèmon",
       "Types":[
@@ -4918,6 +4983,7 @@
    },
    {
       "Number":"067",
+      "Description":"Machoke's thoroughly toned muscles possess the hardness of steel. This Pokémon has so much strength, it can easily hold aloft a sumo wrestler on just one finger.",
       "Name":"Machoke",
       "Classification":"Superpower Pokèmon",
       "Types":[
@@ -4998,6 +5064,7 @@
    },
    {
       "Number":"068",
+      "Description":"Machamp has the power to hurl anything aside. However, trying to do any work requiring care and dexterity causes its arms to get tangled. This Pokémon tends to leap into action before it thinks.",
       "Name":"Machamp",
       "Classification":"Superpower Pokèmon",
       "Types":[
@@ -5068,6 +5135,7 @@
    },
    {
       "Number":"069",
+      "Description":"Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.",
       "Name":"Bellsprout",
       "Classification":"Flower Pokèmon",
       "Types":[
@@ -5146,6 +5214,7 @@
    },
    {
       "Number":"070",
+      "Description":"Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.",
       "Name":"Weepinbell",
       "Classification":"Flycatcher Pokèmon",
       "Types":[
@@ -5230,6 +5299,7 @@
    },
    {
       "Number":"071",
+      "Description":"Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.",
       "Name":"Victreebel",
       "Classification":"Flycatcher Pokèmon",
       "Types":[
@@ -5304,6 +5374,7 @@
    },
    {
       "Number":"072",
+      "Description":"Tentacool's body is largely composed of water. If it is removed from the sea, it dries up like parchment. If this Pokémon happens to become dehydrated, put it back into the sea.",
       "Name":"Tentacool",
       "Classification":"Jellyfish Pokèmon",
       "Types":[
@@ -5384,6 +5455,7 @@
    },
    {
       "Number":"073",
+      "Description":"Tentacruel has large red orbs on its head. The orbs glow before lashing the vicinity with a harsh ultrasonic blast. This Pokémon's outburst creates rough waves around it.",
       "Name":"Tentacruel",
       "Classification":"Jellyfish Pokèmon",
       "Types":[
@@ -5460,6 +5532,7 @@
    },
    {
       "Number":"074",
+      "Description":"The longer a Geodude lives, the more its edges are chipped and worn away, making it more rounded in appearance. However, this Pokémon's heart will remain hard, craggy, and rough always.",
       "Name":"Geodude",
       "Classification":"Rock Pokèmon",
       "Types":[
@@ -5541,6 +5614,7 @@
    },
    {
       "Number":"075",
+      "Description":"Graveler grows by feeding on rocks. Apparently, it prefers to eat rocks that are covered in moss. This Pokémon eats its way through a ton of rocks on a daily basis.",
       "Name":"Graveler",
       "Classification":"Rock Pokèmon",
       "Types":[
@@ -5628,6 +5702,7 @@
    },
    {
       "Number":"076",
+      "Description":"Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below.",
       "Name":"Golem",
       "Classification":"Megaton Pokèmon",
       "Types":[
@@ -5705,6 +5780,7 @@
    },
    {
       "Number":"077",
+      "Description":"Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.",
       "Name":"Ponyta",
       "Classification":"Fire Horse Pokèmon",
       "Types":[
@@ -5782,6 +5858,7 @@
    },
    {
       "Number":"078",
+      "Description":"Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.",
       "Name":"Rapidash",
       "Classification":"Fire Horse Pokèmon",
       "Types":[
@@ -5855,6 +5932,7 @@
    },
    {
       "Number":"079",
+      "Description":"Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it's doing and often spends entire days just loafing at water's edge.",
       "Name":"Slowpoke",
       "Classification":"Dopey Pokèmon",
       "Types":[
@@ -5935,6 +6013,7 @@
    },
    {
       "Number":"080",
+      "Description":"Slowbro's tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.",
       "Name":"Slowbro",
       "Classification":"Hermit Crab Pokèmon",
       "Types":[
@@ -6011,6 +6090,7 @@
    },
    {
       "Number":"081",
+      "Description":"Magnemite attaches itself to power lines to feed on electricity. If your house has a power outage, check your circuit breakers. You may find a large number of this Pokémon clinging to the breaker box.",
       "Name":"Magnemite",
       "Classification":"Magnet Pokèmon",
       "Types":[
@@ -6095,6 +6175,7 @@
    },
    {
       "Number":"082",
+      "Description":"Magneton emits a powerful magnetic force that is fatal to mechanical devices. As a result, large cities sound sirens to warn citizens of large-scale outbreaks of this Pokémon.",
       "Name":"Magneton",
       "Classification":"Magnet Pokèmon",
       "Types":[
@@ -6175,6 +6256,7 @@
    },
    {
       "Number":"083",
+      "Description":"Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.",
       "Name":"Farfetch'd",
       "Classification":"Wild Duck Pokèmon",
       "Types":[
@@ -6241,6 +6323,7 @@
    },
    {
       "Number":"084",
+      "Description":"Doduo's two heads never sleep at the same time. Its two heads take turns sleeping, so one head can always keep watch for enemies while the other one sleeps.",
       "Name":"Doduo",
       "Classification":"Twin Bird Pokèmon",
       "Types":[
@@ -6317,6 +6400,7 @@
    },
    {
       "Number":"085",
+      "Description":"Watch out if Dodrio's three heads are looking in three separate directions. It's a sure sign that it is on its guard. Don't go near this Pokémon if it's being wary—it may decide to peck you.",
       "Name":"Dodrio",
       "Classification":"Triple Bird Pokèmon",
       "Types":[
@@ -6389,6 +6473,7 @@
    },
    {
       "Number":"086",
+      "Description":"Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.",
       "Name":"Seel",
       "Classification":"Sea Lion Pokèmon",
       "Types":[
@@ -6463,6 +6548,7 @@
    },
    {
       "Number":"087",
+      "Description":"Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.",
       "Name":"Dewgong",
       "Classification":"Sea Lion Pokèmon",
       "Types":[
@@ -6534,6 +6620,7 @@
    },
    {
       "Number":"088",
+      "Description":"Grimer's sludgy and rubbery body can be forced through any opening, however small it may be. This Pokémon enters sewer pipes to drink filthy wastewater.",
       "Name":"Grimer",
       "Classification":"Sludge Pokèmon",
       "Types":[
@@ -6609,6 +6696,7 @@
    },
    {
       "Number":"089",
+      "Description":"From Muk's body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Pokémon's body fluid can turn a pool stagnant and rancid.",
       "Name":"Muk",
       "Classification":"Sludge Pokèmon",
       "Types":[
@@ -6680,6 +6768,7 @@
    },
    {
       "Number":"090",
+      "Description":"At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.",
       "Name":"Shellder",
       "Classification":"Bivalve Pokèmon",
       "Types":[
@@ -6754,6 +6843,7 @@
    },
    {
       "Number":"091",
+      "Description":"Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.",
       "Name":"Cloyster",
       "Classification":"Bivalve Pokèmon",
       "Types":[
@@ -6825,6 +6915,7 @@
    },
    {
       "Number":"092",
+      "Description":"Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.",
       "Name":"Gastly",
       "Classification":"Gas Pokèmon",
       "Types":[
@@ -6904,6 +6995,7 @@
    },
    {
       "Number":"093",
+      "Description":"Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.",
       "Name":"Haunter",
       "Classification":"Gas Pokèmon",
       "Types":[
@@ -6989,6 +7081,7 @@
    },
    {
       "Number":"094",
+      "Description":"Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.",
       "Name":"Gengar",
       "Classification":"Shadow Pokèmon",
       "Types":[
@@ -7064,6 +7157,7 @@
    },
    {
       "Number":"095",
+      "Description":"Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.",
       "Name":"Onix",
       "Classification":"Rock Snake Pokèmon",
       "Types":[
@@ -7135,6 +7229,7 @@
    },
    {
       "Number":"096",
+      "Description":"If your nose becomes itchy while you are sleeping, it's a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.",
       "Name":"Drowzee",
       "Classification":"Hypnosis Pokèmon",
       "Types":[
@@ -7208,6 +7303,7 @@
    },
    {
       "Number":"097",
+      "Description":"Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.",
       "Name":"Hypno",
       "Classification":"Hypnosis Pokèmon",
       "Types":[
@@ -7277,6 +7373,7 @@
    },
    {
       "Number":"098",
+      "Description":"Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.",
       "Name":"Krabby",
       "Classification":"River Crab Pokèmon",
       "Types":[
@@ -7351,6 +7448,7 @@
    },
    {
       "Number":"099",
+      "Description":"Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.",
       "Name":"Kingler",
       "Classification":"Pincer Pokèmon",
       "Types":[
@@ -7421,6 +7519,7 @@
    },
    {
       "Number":"100",
+      "Description":"Voltorb was first sighted at a company that manufactures Poké Balls. The link between that sighting and the fact that this Pokémon looks very similar to a Poké Ball remains a mystery.",
       "Name":"Voltorb",
       "Classification":"Ball Pokèmon",
       "Types":[
@@ -7493,6 +7592,7 @@
    },
    {
       "Number":"101",
+      "Description":"Electrode eats electricity in the atmosphere. On days when lightning strikes, you can see this Pokémon exploding all over the place from eating too much electricity.",
       "Name":"Electrode",
       "Classification":"Ball Pokèmon",
       "Types":[
@@ -7561,6 +7661,7 @@
    },
    {
       "Number":"102",
+      "Description":"This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.",
       "Name":"Exeggcute",
       "Classification":"Egg Pokèmon",
       "Types":[
@@ -7638,6 +7739,7 @@
    },
    {
       "Number":"103",
+      "Description":"Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute.",
       "Name":"Exeggutor",
       "Classification":"Coconut Pokèmon",
       "Types":[
@@ -7716,6 +7818,7 @@
    },
    {
       "Number":"104",
+      "Description":"Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds.",
       "Name":"Cubone",
       "Classification":"Lonely Pokèmon",
       "Types":[
@@ -7790,6 +7893,7 @@
    },
    {
       "Number":"105",
+      "Description":"Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon's tempered and hardened spirit is not easily broken.",
       "Name":"Marowak",
       "Classification":"Bone Keeper Pokèmon",
       "Types":[
@@ -7860,6 +7964,7 @@
    },
    {
       "Number":"106",
+      "Description":"Hitmonlee's legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.",
       "Name":"Hitmonlee",
       "Classification":"Kicking Pokèmon",
       "Types":[
@@ -7924,6 +8029,7 @@
    },
    {
       "Number":"107",
+      "Description":"Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.",
       "Name":"Hitmonchan",
       "Classification":"Punching Pokèmon",
       "Types":[
@@ -7993,6 +8099,7 @@
    },
    {
       "Number":"108",
+      "Description":"Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.",
       "Name":"Lickitung",
       "Classification":"Licking Pokèmon",
       "Types":[
@@ -8053,6 +8160,7 @@
    },
    {
       "Number":"109",
+      "Description":"If Koffing becomes agitated, it raises the toxicity of its internal gases and jets them out from all over its body. This Pokémon may also overinflate its round body, then explode.",
       "Name":"Koffing",
       "Classification":"Poison Gas Pokèmon",
       "Types":[
@@ -8128,6 +8236,7 @@
    },
    {
       "Number":"110",
+      "Description":"Weezing loves the gases given off by rotted kitchen garbage. This Pokémon will find a dirty, unkempt house and make it its home. At night, when the people in the house are asleep, it will go through the trash.",
       "Name":"Weezing",
       "Classification":"Poison Gas Pokèmon",
       "Types":[
@@ -8199,6 +8308,7 @@
    },
    {
       "Number":"111",
+      "Description":"Rhyhorn runs in a straight line, smashing everything in its path. It is not bothered even if it rushes headlong into a block of steel. This Pokémon may feel some pain from the collision the next day, however.",
       "Name":"Rhyhorn",
       "Classification":"Spikes Pokèmon",
       "Types":[
@@ -8280,6 +8390,7 @@
    },
    {
       "Number":"112",
+      "Description":"Rhydon's horn can crush even uncut diamonds. One sweeping blow of its tail can topple a building. This Pokémon's hide is extremely tough. Even direct cannon hits don't leave a scratch.",
       "Name":"Rhydon",
       "Classification":"Drill Pokèmon",
       "Types":[
@@ -8357,6 +8468,7 @@
    },
    {
       "Number":"113",
+      "Description":"Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite.",
       "Name":"Chansey",
       "Classification":"Egg Pokèmon",
       "Types":[
@@ -8417,6 +8529,7 @@
    },
    {
       "Number":"114",
+      "Description":"Tangela's vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.",
       "Name":"Tangela",
       "Classification":"Vine Pokèmon",
       "Types":[
@@ -8479,6 +8592,7 @@
    },
    {
       "Number":"115",
+      "Description":"If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon's parent is sure to be in the area, and it will become violently enraged at you.",
       "Name":"Kangaskhan",
       "Classification":"Parent Pokèmon",
       "Types":[
@@ -8541,6 +8655,7 @@
    },
    {
       "Number":"116",
+      "Description":"Horsea eats small insects and moss off of rocks. If the ocean current turns fast, this Pokémon anchors itself by wrapping its tail around rocks or coral to prevent being washed away.",
       "Name":"Horsea",
       "Classification":"Dragon Pokèmon",
       "Types":[
@@ -8615,6 +8730,7 @@
    },
    {
       "Number":"117",
+      "Description":"Seadra sleeps after wriggling itself between the branches of coral. Those trying to harvest coral are occasionally stung by this Pokémon's poison barbs if they fail to notice it.",
       "Name":"Seadra",
       "Classification":"Dragon Pokèmon",
       "Types":[
@@ -8685,6 +8801,7 @@
    },
    {
       "Number":"118",
+      "Description":"Goldeen is a very beautiful Pokémon with fins that billow elegantly in water. However, don't let your guard down around this Pokémon—it could ram you powerfully with its horn.",
       "Name":"Goldeen",
       "Classification":"Goldfish Pokèmon",
       "Types":[
@@ -8759,6 +8876,7 @@
    },
    {
       "Number":"119",
+      "Description":"In the autumn, Seaking males can be seen performing courtship dances in riverbeds to woo females. During this season, this Pokémon's body coloration is at its most beautiful.",
       "Name":"Seaking",
       "Classification":"Goldfish Pokèmon",
       "Types":[
@@ -8829,6 +8947,7 @@
    },
    {
       "Number":"120",
+      "Description":"Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky.",
       "Name":"Staryu",
       "Classification":"Starshape Pokèmon",
       "Types":[
@@ -8903,6 +9022,7 @@
    },
    {
       "Number":"121",
+      "Description":"Starmie's center section—the core—glows brightly in seven colors. Because of its luminous nature, this Pokémon has been given the nickname 'the gem of the sea.'",
       "Name":"Starmie",
       "Classification":"Mysterious Pokèmon",
       "Types":[
@@ -8979,6 +9099,7 @@
    },
    {
       "Number":"122",
+      "Description":"Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real.",
       "Name":"Mr. Mime",
       "Classification":"Barrier Pokèmon",
       "Types":[
@@ -9046,6 +9167,7 @@
    },
    {
       "Number":"123",
+      "Description":"Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon's scythes are so effective, they can slice through thick logs in one wicked stroke.",
       "Name":"Scyther",
       "Classification":"Mantis Pokèmon",
       "Types":[
@@ -9114,6 +9236,7 @@
    },
    {
       "Number":"124",
+      "Description":"Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.",
       "Name":"Jynx",
       "Classification":"Humanshape Pokèmon",
       "Types":[
@@ -9181,6 +9304,7 @@
    },
    {
       "Number":"125",
+      "Description":"When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods.",
       "Name":"Electabuzz",
       "Classification":"Electric Pokèmon",
       "Types":[
@@ -9243,6 +9367,7 @@
    },
    {
       "Number":"126",
+      "Description":"In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon's fiery bursts create heat waves that ignite grass and trees in its surroundings.",
       "Name":"Magmar",
       "Classification":"Spitfire Pokèmon",
       "Types":[
@@ -9310,6 +9435,7 @@
    },
    {
       "Number":"127",
+      "Description":"Pinsir is astoundingly strong. It can grip a foe weighing twice its weight in its horns and easily lift it. This Pokémon's movements turn sluggish in cold places.",
       "Name":"Pinsir",
       "Classification":"Stagbeetle Pokèmon",
       "Types":[
@@ -9374,6 +9500,7 @@
    },
    {
       "Number":"128",
+      "Description":"This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.",
       "Name":"Tauros",
       "Classification":"Wild Bull Pokèmon",
       "Types":[
@@ -9436,6 +9563,7 @@
    },
    {
       "Number":"129",
+      "Description":"Magikarp is a pathetic excuse for a Pokémon that is only capable of flopping and splashing. This behavior prompted scientists to undertake research into it.",
       "Name":"Magikarp",
       "Classification":"Fish Pokèmon",
       "Types":[
@@ -9495,6 +9623,7 @@
    },
    {
       "Number":"130",
+      "Description":"When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Pokémon's wildly violent nature.",
       "Name":"Gyarados",
       "Classification":"Atrocious Pokèmon",
       "Types":[
@@ -9568,6 +9697,7 @@
    },
    {
       "Number":"131",
+      "Description":"People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.",
       "Name":"Lapras",
       "Classification":"Transport Pokèmon",
       "Types":[
@@ -9633,6 +9763,7 @@
    },
    {
       "Number":"132",
+      "Description":"Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.",
       "Name":"Ditto",
       "Classification":"Transform Pokèmon",
       "Types":[
@@ -9678,6 +9809,7 @@
    },
    {
       "Number":"133",
+      "Description":"Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.",
       "Name":"Eevee",
       "Classification":"Evolution Pokèmon",
       "Types":[
@@ -9756,6 +9888,7 @@
    },
    {
       "Number":"134",
+      "Description":"Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.",
       "Name":"Vaporeon",
       "Classification":"Bubble Jet Pokèmon",
       "Types":[
@@ -9821,6 +9954,7 @@
    },
    {
       "Number":"135",
+      "Description":"Jolteon's cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.",
       "Name":"Jolteon",
       "Classification":"Lightning Pokèmon",
       "Types":[
@@ -9884,6 +10018,7 @@
    },
    {
       "Number":"136",
+      "Description":"Flareon's fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon's body temperature can rise to a maximum of 1,650 degrees Fahrenheit.",
       "Name":"Flareon",
       "Classification":"Flame Pokèmon",
       "Types":[
@@ -9952,6 +10087,7 @@
    },
    {
       "Number":"137",
+      "Description":"Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.",
       "Name":"Porygon",
       "Classification":"Virtual Pokèmon",
       "Types":[
@@ -10012,6 +10148,7 @@
    },
    {
       "Number":"138",
+      "Description":"Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.",
       "Name":"Omanyte",
       "Classification":"Spiral Pokèmon",
       "Types":[
@@ -10090,6 +10227,7 @@
    },
    {
       "Number":"139",
+      "Description":"Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.",
       "Name":"Omastar",
       "Classification":"Spiral Pokèmon",
       "Types":[
@@ -10164,6 +10302,7 @@
    },
    {
       "Number":"140",
+      "Description":"Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.",
       "Name":"Kabuto",
       "Classification":"Shellfish Pokèmon",
       "Types":[
@@ -10242,6 +10381,7 @@
    },
    {
       "Number":"141",
+      "Description":"Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.",
       "Name":"Kabutops",
       "Classification":"Shellfish Pokèmon",
       "Types":[
@@ -10316,6 +10456,7 @@
    },
    {
       "Number":"142",
+      "Description":"Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.",
       "Name":"Aerodactyl",
       "Classification":"Fossil Pokèmon",
       "Types":[
@@ -10385,6 +10526,7 @@
    },
    {
       "Number":"143",
+      "Description":"Snorlax's typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.",
       "Name":"Snorlax",
       "Classification":"Sleeping Pokèmon",
       "Types":[
@@ -10445,6 +10587,7 @@
    },
    {
       "Number":"144",
+      "Description":"Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.",
       "Name":"Articuno",
       "Classification":"Freeze Pokèmon",
       "Types":[
@@ -10508,6 +10651,7 @@
    },
    {
       "Number":"145",
+      "Description":"Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.",
       "Name":"Zapdos",
       "Classification":"Electric Pokèmon",
       "Types":[
@@ -10571,6 +10715,7 @@
    },
    {
       "Number":"146",
+      "Description":"Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.",
       "Name":"Moltres",
       "Classification":"Flame Pokèmon",
       "Types":[
@@ -10636,6 +10781,7 @@
    },
    {
       "Number":"147",
+      "Description":"Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.",
       "Name":"Dratini",
       "Classification":"Dragon Pokèmon",
       "Types":[
@@ -10706,6 +10852,7 @@
    },
    {
       "Number":"148",
+      "Description":"Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.",
       "Name":"Dragonair",
       "Classification":"Dragon Pokèmon",
       "Types":[
@@ -10782,6 +10929,7 @@
    },
    {
       "Number":"149",
+      "Description":"Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.",
       "Name":"Dragonite",
       "Classification":"Dragon Pokèmon",
       "Types":[
@@ -10857,6 +11005,7 @@
    },
    {
       "Number":"150",
+      "Description":"Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon's body, they failed to endow Mewtwo with a compassionate heart.",
       "Name":"Mewtwo",
       "Classification":"Genetic Pokèmon",
       "Types":[
@@ -10922,6 +11071,7 @@
    },
    {
       "Number":"151",
+      "Description":"Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.",
       "Name":"Mew",
       "Classification":"New Species Pokèmon",
       "Types":[
