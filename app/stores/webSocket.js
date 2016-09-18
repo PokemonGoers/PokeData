@@ -25,7 +25,8 @@ module.exports = {
                 logger.error("Collection not known!");
         }
 
-        pokemon['localTime'] = common.getRelativeTime(pokemon['appearedOn'], pokemon['location']['lat'], pokemon['location']['lng']);
+        pokemon['localTime'] = common.getRelativeTime(pokemon['appearedOn'], pokemon['location']['coordinates'][1], pokemon['location']['coordinates'][0]);
+        console.log(pokemon['localTime']);
 
         // saving the data to the database
         pokemon.save(function (err) {
