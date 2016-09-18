@@ -7,7 +7,8 @@ let sighting = {
     source        : {type: String},
     location      : {type: {type: String, default: 'Point'}, coordinates: {type: [Number]}},
     pokemonId     : {type: Number},
-    appearedOn    : {type: Date}
+    appearedOn    : {type: Date},
+    localTime     : {type: String}
 };
 let pokemonSighting = new Schema(sighting);
 
@@ -26,7 +27,7 @@ module.exports = {
     getMappedModel: function (sighting) {
         /*Check if the sighting object contains any invalid keys.*/
         if (Object.keys(sighting).every(function(key) {
-            return ["source", "lng", "lat", "pokemonId", "id", "appearedOn"].indexOf(key) !== -1;
+            return ["source", "lng", "lat", "pokemonId", "id", "appearedOn", "localTime"].indexOf(key) !== -1;
         })) {
             return {
                 source        : sighting.source.toUpperCase(),
@@ -37,7 +38,8 @@ module.exports = {
                     }
                 },
                 pokemonId     : sighting.id || sighting.pokemonId,
-                appearedOn    : sighting.appearedOn
+                appearedOn    : sighting.appearedOn,
+                localTime     : sighting.localTime
             };
         } else {
             return false;

@@ -32,6 +32,7 @@ module.exports = {
         }
 
         rarePokemons['source'] = config.pokemonDataSources.pokesniper;
+        rarePokemons['localTime'] = common.getRelativeTime(rarePokemons['appearedOn'], rarePokemons['location']['lat'], rarePokemons['location']['lng']);
         // saving the data to the database
         rarePokemons.save(function (err) {
             // on error
