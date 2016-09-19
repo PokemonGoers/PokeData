@@ -58,6 +58,7 @@ module.exports = {
 
         function savePokemonSighthing(pokemonSighting) {
             pokemonSighting.location = location;
+            pokemonSighting['localTime'] = common.getRelativeTime(pokemonSighting['appearedOn'], pokemonSighting['location']['coordinates'][1], pokemonSighting['location']['coordinates'][0]);
             // saving the data to the database
             pokemonSighting.save(function (err) {
                 // on error

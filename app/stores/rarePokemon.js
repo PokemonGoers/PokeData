@@ -1,6 +1,7 @@
 "use strict";
 const rarePokemon = require(__appbase + 'models/pokemonSighting').getSchema(),
-      config      = require(__base+'config');
+      config      = require(__base+'config'),
+      common      = require(__appbase + 'services/common');
 
 module.exports = {
     /*
@@ -32,6 +33,7 @@ module.exports = {
         }
 
         rarePokemons['source'] = config.pokemonDataSources.pokesniper;
+        rarePokemons['localTime'] = common.getRelativeTime(rarePokemons['appearedOn'], rarePokemons['location']['coordinates'][1], rarePokemons['location']['coordinates'][0]);
         // saving the data to the database
         rarePokemons.save(function (err) {
             // on error
