@@ -161,6 +161,28 @@ module.exports = {
                 res.status(404).json({message: 'Failure. No pokemon details with this name exists!', data: {'name': req.params.name}});
         });
     },
+
+    /**
+     * @api {get} /api/pokemon/description/:description/ GetPokemonByDescription
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonByDescription
+     * @apiDescription Get pokemon by specific description
+     * @apiGroup Pokemon
+     * @apiParam {String} description Description of the pokemon
+     *
+     * @apiUse SamplePokemon
+     * @apiUse NoRecords
+     *
+     */
+    getByDescription: function(req, res) {
+        logger.info('Get Pokemon description');
+        pokemon.getByDescription(req.params.description, function (success, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', data: message});
+            else
+                res.status(404).json({message: 'Failure. No pokemon description of that kind exists!', data: {'description': req.params.description}});
+        });
+    },
     /**
      * @api {get} /api/pokemon/type/:type/ GetPokemonByType
      * @apiVersion 0.0.1

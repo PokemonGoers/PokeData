@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 
 let pokemon = {
     pokemonId: Number,
+    description: {type: String},
     name: {type: String},
     icon: {type: String},
     classification: {type: String},

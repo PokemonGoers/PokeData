@@ -20,6 +20,7 @@ module.exports = {
 
             base.pokemonId = Number(pokemon[i]['Number']);
             base.name = pokemon[i]['Name'];
+            base.description = pokemon[i]['Description'];
             base.classification = pokemon[i]['Classification'];
 
             base.types = [];
