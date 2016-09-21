@@ -25,6 +25,9 @@
     "GetSightingAtCoordinates",
     "GetSightingBetweenCoordinates",
     "GetSightingByTimeRange",
+    "GetPokemonSentiments",
+    "GetPokemonSentimentsByLocation",
     "SearchPokemonSighting"
+
   ]
 }
