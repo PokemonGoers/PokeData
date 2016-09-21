@@ -1,7 +1,7 @@
 module.exports = function (app, router) {
     const pokemon = require(__appbase + 'api/pokemon'),
         sighting = require(__appbase + 'api/sighting');
-    
+
     //route for all pokemon sightings
     router.get('/pokemon/sighting/', sighting.getAll);
 
@@ -68,4 +68,14 @@ module.exports = function (app, router) {
 
     //route for getting pokemon details by specified query parameters
     router.get('/pokemon/search', pokemon.search);
+
+    // route for getting sentiments about a given pokemon
+    router.get('/pokemon/:pokemonNumber/sentiments', function (req, resp) {
+        pokemon.sentiments(req, resp, config.shared_database.uri);
+    })
+
+    // route for getting sentiments about a given pokemon at a given location
+    router.get('/pokemon/:pokemonNumber/sentiments/:lat/:lng', function (req, resp) {
+        pokemon.sentiments(req, resp, config.shared_database.uri);
+    })
 };

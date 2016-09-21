@@ -1,6 +1,7 @@
 "use strict";
 
 const pokemon = require('../stores/pokemon');
+const hashPokemonGo = require('hashpokemongo');
 
 module.exports = {
     /**
@@ -10,7 +11,7 @@ module.exports = {
      * {"message":"Success",
      *  "data": []
      * }
-     * 
+     *
      */
 
     /**
@@ -36,7 +37,7 @@ module.exports = {
      *          "resistance":["water","electric","grass","fighting","fairy"],
      *          "types":["grass","poison"]
      * }] }
-     * 
+     *
      */
 
     /**
@@ -60,8 +61,8 @@ module.exports = {
     getAll: function (req, res) {
         logger.info('GetAllPokemons');
 
-        pokemon.getAll(function(success, pokemons) {
-            if(success === 1) {
+        pokemon.getAll(function (success, pokemons) {
+            if (success === 1) {
                 res.status(200).json({message: 'Success', data: pokemons});
             } else {
                 res.status(404).json({message: 'Failure. No pokemon details found!', data: pokemons});
@@ -79,20 +80,20 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getById : function (req, res) {
+    getById: function (req, res) {
         logger.info('Get Pokemon details of a particular pokemon by id');
 
-        pokemon.getById(req.params.id, function(success, message) {
-            if(success === 1)
+        pokemon.getById(req.params.id, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure. No pokemon details with this id exists!', data: message});
         });
-   },
+    },
 
-   /**
+    /**
      * @api {get} /api/pokemon/id/:id/icon GetIconById
      * @apiVersion 0.0.1
      * @apiName GetIconById
@@ -102,14 +103,14 @@ module.exports = {
      *
      * @apiUse PokemonIconResponse
      * @apiUse NoRecords
-     * 
+     *
      */
-    getIconById: function(req, res) {
+    getIconById: function (req, res) {
         logger.info('Get Pokemon icon of particular pokemon by id');
 
-        pokemon.getIconById(req.params.id, function(success, message) {
-            if(success === 1) {
-                res.writeHead(200, {'Content-Type': message[0].icon.contentType });
+        pokemon.getIconById(req.params.id, function (success, message) {
+            if (success === 1) {
+                res.writeHead(200, {'Content-Type': message[0].icon.contentType});
                 res.end(message[0].icon.data, 'binary');
             } else {
                 res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
@@ -126,13 +127,13 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByGender : function (req, res) {
+    getByGender: function (req, res) {
         logger.info('Get Pokemon details by gender');
 
-        pokemon.getByGender(req.params.gender, function(success, message) {
-            if(success === 1)
+        pokemon.getByGender(req.params.gender, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure. No pokemon details with this gender exists!', data: message});
@@ -149,16 +150,19 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByName : function (req, res) {
+    getByName: function (req, res) {
         logger.info('Get Pokemon details by name');
 
-        pokemon.getByName(req.params.name, function(success, message) {
-            if(success === 1)
+        pokemon.getByName(req.params.name, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon details with this name exists!', data: {'name': req.params.name}});
+                res.status(404).json({
+                    message: 'Failure. No pokemon details with this name exists!',
+                    data: {'name': req.params.name}
+                });
         });
     },
 
@@ -174,13 +178,16 @@ module.exports = {
      * @apiUse NoRecords
      *
      */
-    getByDescription: function(req, res) {
+    getByDescription: function (req, res) {
         logger.info('Get Pokemon description');
         pokemon.getByDescription(req.params.description, function (success, message) {
-            if(success === 1)
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon description of that kind exists!', data: {'description': req.params.description}});
+                res.status(404).json({
+                    message: 'Failure. No pokemon description of that kind exists!',
+                    data: {'description': req.params.description}
+                });
         });
     },
     /**
@@ -195,14 +202,17 @@ module.exports = {
      * @apiUse NoRecords
      *
      */
-    getByType : function (req, res) {
+    getByType: function (req, res) {
         logger.info('Get Pokemon details by type');
 
-        pokemon.getByType(req.params.type, function(success, message) {
-            if(success === 1)
+        pokemon.getByType(req.params.type, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
-                res.status(404).json({message: 'Failure. No pokemon details with this type exists!', data: {'type': req.params.type}});
+                res.status(404).json({
+                    message: 'Failure. No pokemon details with this type exists!',
+                    data: {'type': req.params.type}
+                });
         });
     },
     /**
@@ -215,13 +225,13 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByResistance : function (req, res) {
+    getByResistance: function (req, res) {
         logger.info('Get Pokemon details by resistance');
 
-        pokemon.getByResistance(req.params.resistance, function(success, message) {
-            if(success === 1)
+        pokemon.getByResistance(req.params.resistance, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -237,13 +247,13 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByWeakness : function (req, res) {
+    getByWeakness: function (req, res) {
         logger.info('Get Pokemon details by weakness');
 
-        pokemon.getByWeakness(req.params.weakness, function(success, message) {
-            if(success === 1)
+        pokemon.getByWeakness(req.params.weakness, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -260,9 +270,9 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByAttackType : function (req, res) {
+    getByAttackType: function (req, res) {
         logger.info('Get Pokemon details by attack type');
 
         let handler;
@@ -273,8 +283,8 @@ module.exports = {
             handler = pokemon.getBySpecialAttackType.bind(pokemon);
         }
 
-        handler(req.params.type, function(success, message) {
-            if(success === 1)
+        handler(req.params.type, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -291,9 +301,9 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByAttackName : function (req, res) {
+    getByAttackName: function (req, res) {
         logger.info('Get Pokemon details by attack name');
 
         let handler;
@@ -304,8 +314,8 @@ module.exports = {
             handler = pokemon.getBySpecialAttackName.bind(pokemon);
         }
 
-        handler(req.params.name, function(success, message) {
-            if(success === 1)
+        handler(req.params.name, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -322,9 +332,9 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
-    getByAttackDamage : function (req, res) {
+    getByAttackDamage: function (req, res) {
         logger.info('Get Pokemon details by attack damage');
 
         let handler;
@@ -335,8 +345,8 @@ module.exports = {
             handler = pokemon.getBySpecialAttackDamage.bind(pokemon);
         }
 
-        handler(req.params.damage, function(success, message) {
-            if(success === 1)
+        handler(req.params.damage, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -353,7 +363,7 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
     getByEvolutionId: function (req, res) {
         logger.info('Get Pokemon details by evolution id');
@@ -366,8 +376,8 @@ module.exports = {
             handler = pokemon.getByNextEvolutionId.bind(pokemon);
         }
 
-        handler(req.params.id, function(success, message) {
-            if(success === 1)
+        handler(req.params.id, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -384,7 +394,7 @@ module.exports = {
      *
      * @apiUse SamplePokemon
      * @apiUse NoRecords
-     * 
+     *
      */
     getByEvolutionName: function (req, res) {
         logger.info('Get Pokemon details by evolution name');
@@ -397,8 +407,8 @@ module.exports = {
             handler = pokemon.getByNextEvolutionName.bind(pokemon);
         }
 
-        handler(req.params.name, function(success, message) {
-            if(success === 1)
+        handler(req.params.name, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
@@ -420,11 +430,112 @@ module.exports = {
     search: function (req, res) {
         logger.info('Get Pokemon details by search parameters');
 
-        pokemon.search(req.query, function(success, message) {
-            if(success === 1)
+        pokemon.search(req.query, function (success, message) {
+            if (success === 1)
                 res.status(200).json({message: 'Success', data: message});
             else
                 res.status(404).json({message: 'Failure', data: message});
         });
+    },
+
+    /**
+     * @api {get} /api/pokemon/sentiments/:pokemonNumber GetPokemonSentiments
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonSentiments
+     * @apiDescription Get sentiments for a specific pokemon by pokemon number (like 025 for Pikatchu, please note the leading 0)
+     * @apiGroup Pokemon
+     * @apiParam {String} pokemonNumber The pokemon number / id of a given pokemon like 025 for Pikatchu (leading 0 required)
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     *      "date": "Sun Sep 18 2016 00:00:00 GMT+0200 (CEST)",
+     *      "pos": 7,
+     *      "neg": 0
+     *    },
+     *    {
+     *      "date": "Mon Sep 19 2016 00:00:00 GMT+0200 (CEST)",
+     *      "pos": 13,
+     *      "neg": 0
+     *    },
+     *    {
+     *      "date": Tue Sep 20 2016 00:00:00 GMT+0200 (CEST),
+     *      "pos": 67,
+     *      "neg": -46
+     *    },
+     *    {
+     *      "date": Wed Sep 21 2016 00:00:00 GMT+0200 (CEST),
+     *      "pos": 45,
+     *      "neg": 0
+     *    }
+     * ]
+     *
+     */
+    sentiments: function (req, res, databaseUrl) {
+        try {
+            hashPokemonGo.TwitterSentiments.setimentsForPokemon(databaseUrl, req.params.pokemonNumber, function (data) {
+                    res.json(data);
+                },
+                function (error) {
+                    logger.error(error);
+                    res.status(500);
+                    res.send(error);
+                });
+        } catch (e) {
+            res.status(500);
+            res.send(e);
+        }
+    },
+
+    /**
+     * @api {get} /api/pokemon/sentiments/:pokemonNumber/:lat/:lng GetPokemonSentimentsByLocation
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonSentimentsByLocation
+     * @apiDescription Get sentiments for a specific pokemon by pokemon number (like 025 for Pikatchu, please note the leading 0) for a specific location (radius of 2000 meters)
+     * @apiGroup Pokemon
+     * @apiParam {String} pokemonNumber The pokemon number / id of a given pokemon like 025 for Pikatchu (leading 0 required)
+     * @apiParam {Double} lat The latitude of the position you want to get sentiments for this pokemon
+     * @apiParam {Double} lng The longitude of the position you want tot get sentiments for this pokemon
+     *
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *    {
+     *      "date": "Sun Sep 18 2016 00:00:00 GMT+0200 (CEST)",
+     *      "pos": 7,
+     *      "neg": 0
+     *    },
+     *    {
+     *      "date": "Mon Sep 19 2016 00:00:00 GMT+0200 (CEST)",
+     *      "pos": 13,
+     *      "neg": 0
+     *    },
+     *    {
+     *      "date": Tue Sep 20 2016 00:00:00 GMT+0200 (CEST),
+     *      "pos": 67,
+     *      "neg": -46
+     *    },
+     *    {
+     *      "date": Wed Sep 21 2016 00:00:00 GMT+0200 (CEST),
+     *      "pos": 45,
+     *      "neg": 0
+     *    }
+     * ]
+     */
+    sentimentsByLocation: function (req, res, databaseUrl) {
+        try {
+            hashPokemonGo.TwitterSentiments.sentimentsForPokemonByLocation(databaseUrl, req.params.pokemonNumber, parseFloat(req.params.lat), parseFloat(req.params.lng), function (data) {
+                    res.json(data);
+                },
+                function (error) {
+                    logger.error(error);
+                    res.status(500);
+                    res.send(error);
+                });
+        } catch (e) {
+            res.status(500);
+            res.send(e);
+        }
     }
 };
