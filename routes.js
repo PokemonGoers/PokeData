@@ -101,4 +101,6 @@ function getMongoDbUrl() {
     //Connection parameters for a shared database instance
     else
         dbConnection += databaseParams.uri;
+    
+    return dbConnection;
 }
