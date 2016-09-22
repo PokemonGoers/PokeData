@@ -2,7 +2,9 @@
 
 let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json'),
-    pokemonIconDir = __resourcebase + '../pokemonIcons/';
+    pokemonIconGifDir = __resourcebase + '../pokemonIcons/',
+    pokemonIconPngDir = __resourcebase + '../pokemonIcons-png/',
+    pokemonIconSvgDir = __resourcebase + '../pokemonIconsLarge-svg/';
     const Pokemon = require(__appbase + '/models/pokemon').getSchema(),
           PokemonIcon = require(__appbase + '/models/pokemonIcon');
 
@@ -126,12 +128,25 @@ module.exports = {
                     callback();
             });
 
-            let iconPath = pokemonIconDir + base.name.toLowerCase() + '.gif';
-            let data = fs.readFileSync(iconPath);
+            let iconGifPath = pokemonIconGifDir + base.name.toLowerCase() + '.gif';
+            let gifData = fs.readFileSync(iconGifPath);
 
             pokemonIcon.pokemonId = Number(pokemon[i]['Number']);
-            pokemonIcon.icon.data = new Buffer(data);
-            pokemonIcon.icon.contentType = 'image/gif';
+            pokemonIcon.iconGif.data = new Buffer(gifData);
+            pokemonIcon.iconGif.contentType = 'image/gif';
+            
+            let iconPngPath = pokemonIconPngDir + pokemonIcon.pokemonId + '.png';
+            let pngData = fs.readFileSync(iconPngPath);
+
+            pokemonIcon.iconPng.data = new Buffer(pngData);
+            pokemonIcon.iconPng.contentType = 'image/png';
+
+            let iconSvgPath = pokemonIconSvgDir + pokemonIcon.pokemonId + '.svg';
+            let svgData = fs.readFileSync(iconSvgPath);
+
+            pokemonIcon.iconSvg.data = new Buffer(svgData);
+            pokemonIcon.iconSvg.contentType = 'image/svg+xml';
+
             pokemonIcon.save(function (err) {
                 count++;
                 if (err) {
