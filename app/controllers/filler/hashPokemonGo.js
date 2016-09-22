@@ -4,7 +4,8 @@ const hashPokemonGo = require('hashpokemongo'),
     config = require(__base + 'config'),
     common = require(__base + 'app/services/common'),
     io = require('socket.io')(config.hashPokemonGoWebSocketPort),
-    pokemonSearchTerms = config.twitterKeyWords;
+    pokemonSearchTerms = config.twitterKeyWords,
+    database = require(__appbase + 'services/database');
 
 const twitterOptions = {
     consumer_key: config.twitter.consumer_key,
@@ -28,8 +29,8 @@ module.exports = {
     insertToDb : function () {
         //
 		// start scanning twitter for tweets about certain pokemons to compute sentiment analysis by periodically querying twitter search api
-		//
-		hashPokemonGo.TwitterSentimentsMiner.start(twitterClient, "mongodb://localhost:27017/PokeData", 1000); // Mine every minute, so it takes about 2,5 hours to mine all pokemons
+		// 
+		hashPokemonGo.TwitterSentimentsMiner.start(twitterClient, database.getMongoDbUrl(), 1 * 6 * 1000); // Mine every minute, so it takes about 2,5 hours to mine all pokemons
 
 		//
 		// WebSocket connections for twitter live sentiment feed and mob detection

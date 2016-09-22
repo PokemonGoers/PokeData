@@ -2,11 +2,10 @@
 
 /*Expose Database functions that can be used by other files */
 module.exports = {
-
-    /*
-     *  Connect to the MongoDB
+     /**
+     * Reads the config to compute the mongodb database url (without collection as part of the url)
      */
-    connect: function (callback) {
+    getMongoDbUrl: function (){
         /*Create the DB connection string*/
         let databaseParams,
             dbConnection = "mongodb://";
@@ -29,6 +28,17 @@ module.exports = {
         //Connection parameters for a shared database instance
         else
             dbConnection +=  databaseParams.uri + "/" + databaseParams.collection;
+
+        return dbConnection;
+    },
+    /*
+     *  Connect to the MongoDB
+     */
+    connect: function (callback) {
+        
+        let mongoose = require('mongoose');
+        let dbConnection = this.getMongoDbUrl();
+        console.log(dbConnection);
 
         /*Create the connection to mongodb*/
         logger.info('Going to connect to ' + dbConnection);
@@ -57,30 +67,5 @@ module.exports = {
         });
 
         callback(db);
-    },
-
-    /**
-     * Reads the config to compute the mongodb database url (without collection as part of the url)
-     */
-    getMongoDbUrl: function (){
-        const config = require(__base + 'config'),
-            mongoose = require('mongoose');
-        var dbConnection = "mongodb://";
-        var databaseParams = appConfig['IS_LOCAL_DB'] ? config['database'] : config['shared_database'];
-
-        // check whether there is username and password for database connection
-        if (databaseParams.username && databaseParams.password) {
-            dbConnection += databaseParams.username + ":" + databaseParams.password + "@";
-        }
-
-        //Connection parameters for a local database instance
-        if (appConfig['IS_LOCAL_DB'])
-            dbConnection += databaseParams.uri + ":" + databaseParams.port + "/" + databaseParams.collection;
-
-        //Connection parameters for a shared database instance
-        else
-            dbConnection +=  databaseParams.uri + "/" + databaseParams.collection;
-        
-        return dbConnection;
     }
 };
