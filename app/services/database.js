@@ -57,5 +57,30 @@ module.exports = {
         });
 
         callback(db);
+    },
+
+    /**
+     * Reads the config to compute the mongodb database url (without collection as part of the url)
+     */
+    getMongoDbUrl: function (){
+        const config = require(__base + 'config'),
+            mongoose = require('mongoose');
+        var dbConnection = "mongodb://";
+        var databaseParams = appConfig['IS_LOCAL_DB'] ? config['database'] : config['shared_database'];
+
+        // check whether there is username and password for database connection
+        if (databaseParams.username && databaseParams.password) {
+            dbConnection += databaseParams.username + ":" + databaseParams.password + "@";
+        }
+
+        //Connection parameters for a local database instance
+        if (appConfig['IS_LOCAL_DB'])
+            dbConnection += databaseParams.uri + ":" + databaseParams.port + "/" + databaseParams.collection;
+
+        //Connection parameters for a shared database instance
+        else
+            dbConnection +=  databaseParams.uri + "/" + databaseParams.collection;
+        
+        return dbConnection;
     }
 };
