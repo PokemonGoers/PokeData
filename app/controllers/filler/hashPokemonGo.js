@@ -1,7 +1,10 @@
 // Required for WebSocket connection
-const hashPokemonGo = require('hashpokemongo');
-const TwitterModule = require("twitter");
-const config = require(__base + 'config');
+const hashPokemonGo = require('hashpokemongo'),
+    TwitterModule = require("twitter"),
+    config = require(__base + 'config'),
+    common = require(__base + 'app/services/common'),
+    io = require('socket.io')(config.hashPokemonGoWebSocketPort),
+    pokemonSearchTerms = config.twitterKeyWords;
 
 const twitterOptions = {
     consumer_key: config.twitter.consumer_key,
@@ -10,11 +13,16 @@ const twitterOptions = {
     access_token_secret: config.twitter.token_secret
 };
 
+var pokemonNameList = common.getPokemonNameList();
+if(pokemonNameList) {
+    logger.info('Got pokemon name list');
+}
+var listenFor =  config.twitterKeyWords + "," + pokemonNameList.join(",");
+
 const twitterClient = new TwitterModule(twitterOptions);
-const io = require('socket.io')(config.hashPokemonGoWebSocketPort);
-const pokemonSearchTerms = config.twitterKeyWords;
+
 const pokemonNames = config.pokemonNames;
-const twitterStreamForHashPokemonGo = twitterClient.stream('statuses/filter', {track: pokemonSearchTerms + "," + pokemonNames});
+const twitterStreamForHashPokemonGo = twitterClient.stream('statuses/filter', {track: listenFor});
 
 module.exports = {
     insertToDb : function () {
