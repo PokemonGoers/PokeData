@@ -45,12 +45,12 @@ module.exports = {
     getAll: function (req, res) {
         logger.info('Get all pokemon sightings');
 
-        sighting.getAll(function(success, pokemonSighting) {
+        sighting.getAll(function(success, limited, pokemonSighting) {
             /*logger.info(pokemonSighting);*/
             if(success === 1)
-                res.status(200).json({message: 'Success', data: pokemonSighting});
+                res.status(200).json({message: 'Success', limited: limited, data: pokemonSighting});
             else
-                res.status(404).json({message: 'Failure. No sighting details found!', data: pokemonSighting});
+                res.status(404).json({message: 'Failure. No sighting details found!', limited: limited, data: pokemonSighting});
         });
     },
     /**
@@ -68,11 +68,11 @@ module.exports = {
     getById: function (req, res) {
         logger.info('Get all pokemon sightings by pokemon id');
 
-        sighting.getById(req.params.id, function(success, message) {
+        sighting.getById(req.params.id, function(success, limited, message) {
             if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+                res.status(200).json({message: 'Success', limited: limited, data: message});
             else
-                res.status(404).json({message: 'Failure. No sighting details with the particular pokemon id exists!', data: message });
+                res.status(404).json({message: 'Failure. No sighting details with the particular pokemon id exists!', limited: limited, data: message });
         });
     },
     /**
@@ -92,11 +92,11 @@ module.exports = {
     getAtCoordinates: function (req, res) {
         logger.info('Get Pokemon Sightings at particular coordinates');
 
-        sighting.getAtCoordinates(req.params, function(success, message) {
+        sighting.getAtCoordinates(req.params, function(success, limited, message) {
             if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+                res.status(200).json({message: 'Success', limited: limited, data: message});
             else
-                res.status(404).json({message: 'Failure. No sighting details along this latitude exists!', data: message});
+                res.status(404).json({message: 'Failure. No sighting details along this latitude exists!', limited: limited, data: message});
         });
     },
     /**
@@ -117,11 +117,11 @@ module.exports = {
     getBetweenCoordinates: function (req, res) {
         logger.info('Get Pokemon Sightings between particular coordinates');
 
-        sighting.getBetweenCoordinates(req.params, function(success, message) {
+        sighting.getBetweenCoordinates(req.params, function(success, limited, message) {
             if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+                res.status(200).json({message: 'Success', limited: limited, data: message});
             else
-                res.status(404).json({message: 'Failure. No sighting details between these set of coordinate exists!', data: message });
+                res.status(404).json({message: 'Failure. No sighting details between these set of coordinate exists!', limited: limited, data: message });
         });
     },
     /**
@@ -139,11 +139,11 @@ module.exports = {
     getBySource: function (req, res) {
         logger.info('Get Pokemon Sightings from a particular source');
 
-        sighting.getFromSource(req.params.source.toUpperCase(), function(success, message) {
+        sighting.getFromSource(req.params.source.toUpperCase(), function(success, limited, message) {
             if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+                res.status(200).json({message: 'Success', limited: limited, data: message});
             else
-                res.status(404).json({message: 'Failure. No sighting details from this source exists!', data: message});
+                res.status(404).json({message: 'Failure. No sighting details from this source exists!', limited: limited, data: message});
         });
     },
     /**
@@ -165,11 +165,11 @@ module.exports = {
     getByTimeRange: function (req, res) {
         logger.info('Get Pokemon Sightings within a specific time range');
 
-        sighting.getByTimeRange(req.params, function(success, message) {
+        sighting.getByTimeRange(req.params, function(success, limited, message) {
             if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+                res.status(200).json({message: 'Success', limited: limited, data: message});
             else
-                res.status(404).json({message: 'Failure. No sighting details within this time range exists!', data: message});
+                res.status(404).json({message: 'Failure. No sighting details within this time range exists!', limited: limited, data: message});
         });
     },
     /**
@@ -188,11 +188,11 @@ module.exports = {
     search: function (req, res) {
         logger.info('Get Pokemon sightings by search parameters');
 
-        sighting.search(req.query, function(success, message) {
+        sighting.search(req.query, function(success, limited, message) {
             if(success === 1)
-                res.status(200).json({message: 'Success', data: message});
+                res.status(200).json({message: 'Success', limited: limited, data: message});
             else
-                res.status(404).json({message: 'Failure', data: message});
+                res.status(404).json({message: 'Failure', limited: limited, data: message});
         });
     }
 };

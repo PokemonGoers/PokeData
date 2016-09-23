@@ -46,7 +46,7 @@ module.exports = {
         "listeningInterval" : 600000 // 10 minutes in milliseconds
     },
     "pokemonSpawnTime" : 900000 ,// 15 minutes in milliseconds,
-    "limit" : 2500,
+    "limit" : 1000,
     "server": {
         "port": "8080"
     },
