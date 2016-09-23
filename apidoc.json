@@ -7,7 +7,9 @@
   "order": [
     "GetAllPokemons",
     "GetPokemonById",
-    "GetIconById",
+    "GetGifIconById",
+    "GetPngIconById",
+    "GetSvgIconById",
     "GetPokemonByName",
     "GetPokemonByGender",
     "GetPokemonByType",
