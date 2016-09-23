@@ -93,10 +93,58 @@ module.exports = {
         });
     },
 
-    /**
-     * @api {get} /api/pokemon/id/:id/icon GetIconById
+   /**
+     * @api {get} /api/pokemon/id/:id/icon/gif GetGifIconById
      * @apiVersion 0.0.1
-     * @apiName GetIconById
+     * @apiName GetGifIconById
+     * @apiDescription Get gif pokemon icon by specific id
+     * @apiGroup Pokemon
+     * @apiParam {Integer{1-151}} id Pokemon ID
+     *
+     * @apiUse PokemonIconResponse
+     * @apiUse NoRecords
+     * 
+     */
+    getGifIconById: function(req, res) {
+        logger.info('Get Pokemon icon of particular pokemon by id');
+
+        pokemon.getIconById(req.params.id, function(success, message) {
+            if(success === 1) {
+                res.writeHead(200, {'Content-Type': message[0].iconGif.contentType });
+                res.end(message[0].iconGif.data, 'binary');
+            } else {
+                res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
+            }
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/id/:id/icon/png GetPngIconById
+     * @apiVersion 0.0.1
+     * @apiName GetPngIconById
+     * @apiDescription Get pokemon icon by specific id
+     * @apiGroup Pokemon
+     * @apiParam {Integer{1-151}} id Pokemon ID
+     *
+     * @apiUse PokemonIconResponse
+     * @apiUse NoRecords
+     * 
+     */
+    getPngIconById: function(req, res) {
+        logger.info('Get Pokemon icon of particular pokemon by id');
+
+        pokemon.getIconById(req.params.id, function(success, message) {
+            if(success === 1) {
+                res.writeHead(200, {'Content-Type': message[0].iconPng.contentType });
+                res.end(message[0].iconPng.data, 'binary');
+            } else {
+                res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
+            }
+        });
+    },
+    /**
+     * @api {get} /api/pokemon/id/:id/icon/svg GetSvgIconById
+     * @apiVersion 0.0.1
+     * @apiName GetSvgIconById
      * @apiDescription Get pokemon icon by specific id
      * @apiGroup Pokemon
      * @apiParam {Integer{1-151}} id Pokemon ID
@@ -105,13 +153,13 @@ module.exports = {
      * @apiUse NoRecords
      *
      */
-    getIconById: function (req, res) {
+    getSvgIconById: function(req, res) {
         logger.info('Get Pokemon icon of particular pokemon by id');
 
-        pokemon.getIconById(req.params.id, function (success, message) {
-            if (success === 1) {
-                res.writeHead(200, {'Content-Type': message[0].icon.contentType});
-                res.end(message[0].icon.data, 'binary');
+        pokemon.getIconById(req.params.id, function(success, message) {
+            if(success === 1) {
+                res.writeHead(200, {'Content-Type': message[0].iconSvg.contentType });
+                res.end(message[0].iconSvg.data, 'binary');
             } else {
                 res.status(404).json({message: 'Failure. No pokemon icon with this id exists!'});
             }
