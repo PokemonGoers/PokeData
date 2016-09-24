@@ -27,7 +27,7 @@ module.exports = {
 
         //Connection parameters for a shared database instance
         else
-            dbConnection +=  databaseParams.uri + "/" + databaseParams.collection;
+            dbConnection +=  databaseParams.uri;
 
         return dbConnection;
     },
