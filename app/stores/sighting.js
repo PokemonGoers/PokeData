@@ -36,19 +36,23 @@ module.exports = {
         Sighting.find(data, function (err, obj) {
             if (!obj || err) {// already existing data and return 0 for indicating
                 let error = err && err.message;
-                callback(0, error || data);
+                callback(0, false, error || data);
             } else { // new data and return 1 for indicating
-                callback(1, obj);
+                if (obj.length === config.limit + 1) {
+                    callback(1, true, obj.slice(0, -1));
+                } else {
+                    callback(1, false, obj);
+                }
             }
-        }).sort({"appearedOn": -1}).limit(config.limit);
+        }).sort({"appearedOn": -1}).limit(config.limit + 1);
     },
 
     /*
      * fetching all the pokemon details
      */
     getAll: function (callback) {
-        this.get(undefined, function (status, response) {
-            callback(status, response);
+        this.get(undefined, function (status, limited, response) {
+            callback(status, limited, response);
         });
     },
 
@@ -56,8 +60,8 @@ module.exports = {
      * searching the pokemon details by Id
      */
     getById: function (id, callback) {
-        this.get({'pokemonId': id}, function (status, response) {
-            callback(status, response);
+        this.get({'pokemonId': id}, function (status, limited, response) {
+            callback(status, limited, response);
         });
     },
 
@@ -72,8 +76,8 @@ module.exports = {
                     "$maxDistance" : 0
                 }
             }
-        }, function (status, response) {
-            callback(status, response);
+        }, function (status, limited, response) {
+            callback(status, limited, response);
         });
     },
 
@@ -88,16 +92,16 @@ module.exports = {
                         [reqObj.startLongitude, reqObj.startLatitude], [reqObj.endLongitude,reqObj.endLatitude] ]
                 }
             }
-        }, function (status, response) {
-            callback(status, response);
+        }, function (status, limited, response) {
+            callback(status, limited, response);
         });
     },
     /*
      * get the pokemon sightings from a particular source
      */
     getFromSource : function (source, callback) {
-        this.get({'source': source}, function (status, response) {
-            callback(status, response);
+        this.get({'source': source}, function (status, limited, response) {
+            callback(status, limited, response);
         });
     },
 
@@ -134,8 +138,8 @@ module.exports = {
         this.get({"appearedOn": {
             $gte: fromTs.toUTCString(),
             $lte: toTs.toUTCString()
-        }}, function (status, response) {
-            callback(status, response);
+        }}, function (status, limited, response) {
+            callback(status, limited, response);
         });
     },
     /*
@@ -148,11 +152,11 @@ module.exports = {
             formatted_query = _.omit(formatted_query, function(value) {
                 return _.isUndefined(value) || _.isNull(value);
             });
-            this.get(formatted_query, function (status, response) {
-                callback(status, response);
+            this.get(formatted_query, function (status, limited, response) {
+                callback(status, limited, response);
             });
         } else {
-            callback(0, "Invalid query parameters");
+            callback(0, false, "Invalid query parameters");
         }
     }
 };
