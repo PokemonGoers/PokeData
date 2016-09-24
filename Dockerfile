@@ -13,6 +13,6 @@ COPY . /usr/src/app
 
 RUN grunt apidoc
 
-EXPOSE 8080
+EXPOSE 8080 3322
 
 CMD [ "npm", "start" ]
