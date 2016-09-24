@@ -2,11 +2,10 @@
 
 /*Expose Database functions that can be used by other files */
 module.exports = {
-
-    /*
-     *  Connect to the MongoDB
+     /**
+     * Reads the config to compute the mongodb database url (without collection as part of the url)
      */
-    connect: function (callback) {
+    getMongoDbUrl: function (){
         /*Create the DB connection string*/
         let databaseParams,
             dbConnection = "mongodb://";
@@ -28,7 +27,18 @@ module.exports = {
 
         //Connection parameters for a shared database instance
         else
-            dbConnection +=  databaseParams.uri + "/" + databaseParams.collection;
+            dbConnection +=  databaseParams.uri;
+
+        return dbConnection;
+    },
+    /*
+     *  Connect to the MongoDB
+     */
+    connect: function (callback) {
+        
+        let mongoose = require('mongoose');
+        let dbConnection = this.getMongoDbUrl();
+        console.log(dbConnection);
 
         /*Create the connection to mongodb*/
         logger.info('Going to connect to ' + dbConnection);

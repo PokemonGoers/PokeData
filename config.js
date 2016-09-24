@@ -1,5 +1,5 @@
 module.exports = {
-    "database" : {
+    "database": {
         "username": process.env.DB_USERNAME || "",
         "password": process.env.DB_PASSWORD || "",
         "port": process.env.DB_PORT || "27017",
@@ -12,7 +12,7 @@ module.exports = {
         "uri": process.env.MLAB_URI,
         "collection": process.env.MLAB_COLLECTION
     },
-    "twitter" : {
+    "twitter": {
         "consumer_key": process.env.CONSUMER_KEY,
         "consumer_secret": process.env.CONSUMER_SECRET,
         "token": process.env.ACCESS_TOKEN,
@@ -38,12 +38,13 @@ module.exports = {
         "fastpokemap": "mapService",
         "pokezz": "webSocket",
         "pokedexs": "webSocket",
-        "pokemap": "mapService"
+        "pokemap": "mapService",
+        "hashPokemonGo": "hashPokemonGo",
     },
-    "twitterKeyWords" : 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
-    "pokesniper":{
-        "url" : "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
-        "listeningInterval" : 600000 // 10 minutes in milliseconds
+    "twitterKeyWords": 'caught #pokemongo,saw #pokemongo,found #pokemongo,appeared #pokemongo,attacked #pokemongo,pokemon catch,pokemon saw,pokemon attack,pokemon find,pokemon caught,pokemon attacked,pokemon found,pokemon appeared,#foundPokemon,#caughtPokemon,#pokemongo,a wild appeared until #pokemongo',
+    "pokesniper": {
+        "url": "https://pokesnipers.com/api/v1/pokemon.json?referrer=home",
+        "listeningInterval": 600000 // 10 minutes in milliseconds
     },
     "pokemonSpawnTime" : 900000 ,// 15 minutes in milliseconds,
     "limit" : 1000,
@@ -77,5 +78,6 @@ module.exports = {
     "pokemap": {
         "host": "www.pokemap.net",
         "path": "/api/mewto.php"
-    }
+    },
+    "hashPokemonGoWebSocketPort": 3322
 };
