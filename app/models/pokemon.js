@@ -87,7 +87,7 @@ module.exports = {
 
         let mappedModel = {
             "pokemonId": pokemon.id || pokemon.pokemonId,
-            "name": new RegExp('^.*' + pokemon.name + '.*$', 'i'),
+            "name": new RegExp('^.*' + (pokemon.name || '') + '.*$', 'i'),
             "icon": pokemon.icon,
             "classification": pokemon.classification,
             "types": pokemon.type && pokemon.type.toLowerCase(),
