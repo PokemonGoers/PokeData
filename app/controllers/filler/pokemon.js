@@ -2,6 +2,8 @@
 
 let fs = require('fs'),
     pokemon = require(__resourcebase + '/pokemonGoData.json'),
+    rarity = fs.readFileSync(__resourcebase + '../rarity.csv').toString().split(/\r?\n/).map(x => x.split(',').map(Number)).sort((a, b) => b[1] - a[1]),
+    overAllSum = rarity.reduce((pv, cv) => pv + cv[1], 0),
     pokemonIconGifDir = __resourcebase + '../pokemonIcons/',
     pokemonIconPngDir = __resourcebase + '../pokemonIcons-png/',
     pokemonIconSvgDir = __resourcebase + '../pokemonIconsLarge-svg/';
@@ -24,6 +26,15 @@ module.exports = {
             base.name = pokemon[i]['Name'];
             base.description = pokemon[i]['Description'];
             base.classification = pokemon[i]['Classification'];
+
+            let rarityIndex = rarity.findIndex(x => x[0] == base.pokemonId);
+            if (rarityIndex !== -1) {
+                base.rarityRank = rarityIndex + 1;
+                base.appearanceLikelihood = rarity[rarityIndex][1]/overAllSum;
+            } else {
+                base.rarityRank = len;
+                base.appearanceLikelihood = 0;
+            }
 
             base.types = [];
             let typeLength = pokemon[i]['Types'].length;

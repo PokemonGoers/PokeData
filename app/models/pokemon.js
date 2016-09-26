@@ -34,7 +34,9 @@ let pokemon = {
         maleRatio: Number,
         femaleRatio: Number,
         breedable: Boolean
-    }
+    },
+    rarityRank: Number,
+    appearanceLikelihood: Number
 };
 
 var pokemonGoBasicSchema = new Schema(pokemon);
@@ -98,7 +100,9 @@ module.exports = {
             "fleeRate": pokemon.fleeRate,
             "maxCP": pokemon.maxCP,
             "maxHP": pokemon.maxHP,
-            "gender.abbreviation": pokemon.gender && pokemon.gender.toLowerCase()
+            "gender.abbreviation": pokemon.gender && pokemon.gender.toLowerCase(),
+            "rarityRank": pokemon.rarityRank,
+            "appearanceLikelihood": pokemon.appearanceLikelihood
         };
 
         if (search_by.length > 1) {
