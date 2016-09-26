@@ -27,7 +27,7 @@ module.exports = {
 
         //Connection parameters for a shared database instance
         else
-            dbConnection +=  databaseParams.uri;
+            dbConnection +=  databaseParams.uri + "/" + databaseParams.collection;
 
         return dbConnection;
     },
@@ -38,7 +38,6 @@ module.exports = {
         
         let mongoose = require('mongoose');
         let dbConnection = this.getMongoDbUrl();
-        console.log(dbConnection);
 
         /*Create the connection to mongodb*/
         logger.info('Going to connect to ' + dbConnection);
