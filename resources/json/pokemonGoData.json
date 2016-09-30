@@ -1377,6 +1377,7 @@
    },
    {
       "Number":"019",
+      "Description":"Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.",
       "Name":"Rattata",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -1447,7 +1448,7 @@
    },
    {
       "Number":"020",
-      "Description":"Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.",
+      "Description":"Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.",
       "Name":"Raticate",
       "Classification":"Mouse Pokèmon",
       "Types":[
@@ -1514,7 +1515,7 @@
    },
    {
       "Number":"021",
-      "Description":"Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.",
+      "Description":"Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.",
       "Name":"Spearow",
       "Classification":"Tiny Bird Pokèmon",
       "Types":[
@@ -1591,7 +1592,7 @@
    },
    {
       "Number":"022",
-      "Description":"Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.",
+      "Description": "Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.",
       "Name":"Fearow",
       "Classification":"Beak Pokèmon",
       "Types":[
