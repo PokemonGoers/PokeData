@@ -16,10 +16,10 @@
                 db.on('open', function () {
                     /*Perform operations that require DB connection*/
                     //start hashPokemonGo module
-                    const listener = require(__base + 'app/controllers/filler/hashPokemonGo');
+                    /*const listener = require(__base + 'app/controllers/filler/hashPokemonGo');
                     listener.insertToDb(function () {
                         return;
-                    });
+                    });*/
                 });
             });
 
