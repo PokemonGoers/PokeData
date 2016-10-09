@@ -17,7 +17,7 @@ module.exports = {
             } else { // new data and return 1 for indicating
                 callback(1, obj);
             }
-        });
+        }).sort({"pokemonId": 1});
     },
 
     /*
