@@ -23,6 +23,7 @@
     "grunt": "^1.0.1"
   },
   "dependencies": {
+    "apicache": "^0.2.3",
     "apidoc": "^0.16.1",
     "async": "^2.0.1",
     "body-parser": "^1.15.2",
