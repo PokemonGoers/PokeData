@@ -110,8 +110,10 @@ module.exports = {
      */
     getByTimeRange : function (req, callback) {
         let range = (req.range) || '1d',
-            fromTs = new Date(req.ts),
+            fromTs,
             toTs;
+
+        fromTs = new Date(req.ts) || new Date();
 
         let rangeValue = parseInt(range, 10),
             rangeSpan = range.replace(/\d+/g, '');
@@ -134,6 +136,8 @@ module.exports = {
                 toTs = new Date(fromTs.getTime() + rangeValue * 60 * 1000);
                 break;
         }
+
+        toTs = toTs || fromTs - 24 * 60 * 60 * 1000;
 
         this.get({"appearedOn": {
             $gte: fromTs.toUTCString(),
