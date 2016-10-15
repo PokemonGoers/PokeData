@@ -28,6 +28,9 @@ module.exports = function (app, router) {
     //route for getting pokemon sightings by specified query parameters
     router.get('/pokemon/sighting/search', cache('5 minutes'), sighting.search);
 
+    // route for getting pokemon predictions
+    router.get('/pokemon/prediction/coordinates/:longitude,:latitude/ts/:ts', sighting.getPrediction);
+
     //route for getting all pokemon details
     router.get('/pokemon/', cache('60 minutes'), pokemon.getAll);
 
@@ -87,5 +90,5 @@ module.exports = function (app, router) {
     // route for getting sentiments about a given pokemon at a given location
     router.get('/pokemon/:pokemonNumber/sentiments/:lat/:lng', function (req, resp) {
         pokemon.sentiments(req, resp, database.getMongoDbUrl());
-    })
+    });
 };

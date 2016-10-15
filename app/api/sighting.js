@@ -32,6 +32,20 @@ module.exports = {
      */
 
     /**
+     * @apiDefine SamplePrediction
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * {"message":"Success",
+     *  "data": [{
+     *      "pokemonId": "54",
+     *      "confidence": "0.242",
+     *      "latitude": 11.6088567,
+     *      "longitude": 48.1679286
+     *  }] }
+     *
+     */
+
+    /**
      * @api {get} /api/pokemon/sighting/ GetAllSightings
      * @apiVersion 0.0.1
      * @apiName GetAllSightings
@@ -152,7 +166,7 @@ module.exports = {
      * @apiName GetSightingByTimeRange
      * @apiDescription Get pokemon sightings within a specific time range
      * @apiGroup PokemonSighting
-     * @apiParam {String} ts Starting time-stamp in UTC format
+     * @apiParam {String} ts Starting time-stamp in anything that is accepted by new Date()
      * @apiParam {String=w,d,h,m} range w(Week), d(Day), h(Hour), m(Minute)
      * Values can be specified preceding the letters. Example: 1w, 5d, 2h, 30m etc.
      *
@@ -194,5 +208,30 @@ module.exports = {
             else
                 res.status(404).json({message: 'Failure', limited: limited, data: message});
         });
+    },
+
+    /**
+     * @api {get} /api/pokemon/prediction/coordinates/:longitude,:latitude/ts/:ts GetPokemonPrediction
+     * @apiVersion 0.0.1
+     * @apiName GetPokemonPrediction
+     * @apiDescription Get pokemon predictions by specified search parameters
+     * @apiGroup PokemonSighting
+     * @apiParam {String} ts Starting time-stamp in anything that is accepted by new Date()
+     * @apiParam {String=Longitude,Latitude} coordinates Coordinates of location specified by Longitude, Latitude
+     *
+     * @apiUse SamplePrediction
+     * @apiUse NoRecords
+     *
+     */
+    getPrediction: function (req, res) {
+        logger.info('Get Pokemon predictions by search parameters');
+
+        // TODO To be uncommented after getPredictions function is made available
+        /*getPredictions(req.latitude, req.longitude, req.ts, function(success, limited, message) {
+            if(success === 1)
+                res.status(200).json({message: 'Success', limited: limited, data: message});
+            else
+                res.status(404).json({message: 'Failure', limited: limited, data: message});
+        });*/
     }
 };
