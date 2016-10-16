@@ -4,6 +4,10 @@ FROM node:4.0
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+# Install java
+RUN apt-get update
+RUN apt-get install -y default-jre
+RUN apt-get install -y default-jdk
 # Install app dependencies
 COPY package.json /usr/src/app/
 RUN npm install -g grunt-cli
