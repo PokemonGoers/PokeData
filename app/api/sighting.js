@@ -1,7 +1,7 @@
 "use strict";
 
 const sighting = require('../stores/sighting');
-const prediction = require('predict-pokemon');
+const prediction = require('predict-pokemon').predictor;
 
 module.exports = {
     /**
