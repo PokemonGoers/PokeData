@@ -1,6 +1,7 @@
 "use strict";
 
 const sighting = require('../stores/sighting');
+const prediction = require('predict-pokemon');
 
 module.exports = {
     /**
@@ -226,12 +227,11 @@ module.exports = {
     getPrediction: function (req, res) {
         logger.info('Get Pokemon predictions by search parameters');
 
-        // TODO To be uncommented after getPredictions function is made available
-        /*getPredictions(req.latitude, req.longitude, req.ts, function(success, limited, message) {
+        prediction.predict(req.latitude, req.longitude, req.ts, function(success, limited, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', limited: limited, data: message});
             else
                 res.status(404).json({message: 'Failure', limited: limited, data: message});
-        });*/
+        });
     }
 };
