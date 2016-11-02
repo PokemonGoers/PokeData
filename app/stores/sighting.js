@@ -32,7 +32,7 @@ module.exports = {
     /*
      * fetching the particular pokemon details
      */
-    get: function (data, callback) {
+    get: function (data, callback, token) {
         Sighting.find(data, function (err, obj) {
             if (!obj || err) {// already existing data and return 0 for indicating
                 let error = err && err.message;
@@ -44,7 +44,7 @@ module.exports = {
                     callback(1, false, obj);
                 }
             }
-        }).sort({"appearedOn": -1}).limit(config.limit + 1);
+        }).sort({"appearedOn": -1}).limit(token === config.token ? 0 : config.limit + 1);
     },
 
     /*
@@ -109,11 +109,11 @@ module.exports = {
      * get the pokemon sightings within a specific time range
      */
     getByTimeRange : function (req, callback) {
-        let range = (req.range) || '1d',
+        let range = (req.params.range) || '1d',
             fromTs,
             toTs;
 
-        fromTs = new Date(req.ts) || new Date();
+        fromTs = new Date(req.params.ts) || new Date();
 
         let rangeValue = parseInt(range, 10),
             rangeSpan = range.replace(/\d+/g, '');
@@ -144,7 +144,7 @@ module.exports = {
             $lte: toTs.toUTCString()
         }}, function (status, limited, response) {
             callback(status, limited, response);
-        });
+        }, req.query.token);
     },
     /*
      * get the pokemon sightings matching the specified search parameters
