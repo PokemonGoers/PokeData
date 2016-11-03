@@ -48,6 +48,7 @@ module.exports = {
     },
     "pokemonSpawnTime" : 900000 ,// 15 minutes in milliseconds,
     "limit" : 1000,
+    "token" : process.env.API_TOKEN || "I0TPIIpCLH8lR8iDrCMV", //please choose secret token and communicate it privately
     "server": {
         "port": "8080"
     },

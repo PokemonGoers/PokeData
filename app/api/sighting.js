@@ -179,7 +179,7 @@ module.exports = {
     getByTimeRange: function (req, res) {
         logger.info('Get Pokemon Sightings within a specific time range');
 
-        sighting.getByTimeRange(req.params, function(success, limited, message) {
+        sighting.getByTimeRange(req, function(success, limited, message) {
             if(success === 1)
                 res.status(200).json({message: 'Success', limited: limited, data: message});
             else
