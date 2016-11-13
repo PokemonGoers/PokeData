@@ -3,7 +3,7 @@
 const sighting = require('../stores/sighting');
 const prediction = require('predict-pokemon');
 
-prediction.unzipFiles();
+//prediction.unzipFiles(); not needed anymore since this is done in postinstallscript of predict-pokemon
 
 module.exports = {
     /**
