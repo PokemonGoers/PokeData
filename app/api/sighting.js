@@ -229,12 +229,12 @@ module.exports = {
      */
     getPrediction: function (req, res) {
         logger.info('Get Pokemon predictions by search parameters');
-
-        prediction.predictor.predict(req.params.latitude, req.params.longitude, req.params.ts, function(success, limited, message) {
-            if(success === 1)
-                res.status(200).json({message: 'Success', limited: limited, data: message});
-            else
-                res.status(404).json({message: 'Failure', limited: limited, data: message});
-        });
+        prediction.predictor.predict(req.params.latitude, req.params.longitude, req.params.ts)
+            .then(function (result) {
+                res.status(200).json({message: 'Success', data: result});
+            })
+            .catch(function (err) {
+                res.status(404).json({message: 'Failure', data: err});
+            });
     }
 };
