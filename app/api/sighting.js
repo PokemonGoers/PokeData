@@ -3,6 +3,7 @@
 const sighting = require('../stores/sighting');
 const prediction = require('predict-pokemon');
 prediction.predictor.url = "https://predictemall.online/api/pokemon/sighting";
+prediction.predictor.init();
 
 //prediction.unzipFiles(); not needed anymore since this is done in postinstallscript of predict-pokemon
 
@@ -229,7 +230,7 @@ module.exports = {
      */
     getPrediction: function (req, res) {
         logger.info('Get Pokemon predictions by search parameters');
-        prediction.predictor.predict(req.params.latitude, req.params.longitude, req.params.ts)
+        prediction.predictor.predict(parseFloat(req.params.latitude), parseFloat(req.params.longitude), req.params.ts)
             .then(function (result) {
                 res.status(200).json({message: 'Success', data: result});
             })

@@ -44,7 +44,7 @@ module.exports = {
                     callback(1, false, obj);
                 }
             }
-        }).sort({"appearedOn": -1}).limit(token === config.token ? 0 : config.limit + 1);
+        }).sort({"appearedOn": -1}).limit(token === config.token ? 100000 : config.limit + 1);
     },
 
     /*
